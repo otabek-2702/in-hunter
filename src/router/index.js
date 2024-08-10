@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, RouterView } from 'vue-router'
 import Home from '@/pages/Home.vue'
+import { routeMiddleware } from '@/helpers/switchLanguage'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
@@ -8,6 +9,7 @@ const router = createRouter({
     {
       path: '/:locale?',
       component: RouterView,
+      beforeEnter: routeMiddleware,
       children: [
         {
           path: "",

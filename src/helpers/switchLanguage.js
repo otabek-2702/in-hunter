@@ -1,6 +1,4 @@
-import { useI18n } from "vue-i18n"
-
-const { availableLocales, locale } = useI18n()
+import i18n from "@/i18n"
 
 
 const getUserLocale = () => {
@@ -15,7 +13,7 @@ const getUserLocale = () => {
 }
 
 const isLocaleSupported = (locale) => {
-    return availableLocales.includes(locale)
+    return i18n.global.availableLocales.includes(locale)
 }
 
 export const guessDefaultLanguage = () => {
@@ -33,7 +31,7 @@ export const guessDefaultLanguage = () => {
 
 export const switchLanguage = (passedLocale) => {
     if (isLocaleSupported(passedLocale)) {
-        locale.value = passedLocale
+        i18n.global.locale.value = passedLocale
         document.querySelector("html").setAttribute("lang", passedLocale)
         localStorage.setItem('lang', passedLocale)
     }

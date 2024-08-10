@@ -6,7 +6,7 @@ const { t, availableLocales: availableLocalesOld, locale } = useI18n();
 
 const availableLocales = computed(() =>
   availableLocalesOld
-    .filter((l) => l != locale.value)
+    .filter((l) => l !== locale.value)
     .map((l) => ({ title: t(`locale.${l}`), path: l })),
 );
 console.log(availableLocales);
