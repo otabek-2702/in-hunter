@@ -1,13 +1,14 @@
+document.addEventListener('DOMContentLoaded', function () {
 
-/*!
- * Webflow: Front-end site library
- * @license MIT
- * Inline scripts may access the api using an async handler:
- *   var Webflow = Webflow || [];
- *   Webflow.push(readyFunction);
- */
+  /*!
+   * Webflow: Front-end site library
+   * @license MIT
+   * Inline scripts may access the api using an async handler:
+   *   var Webflow = Webflow || [];
+   *   Webflow.push(readyFunction);
+   */
 
-(() => {
+  (() => {
     var __create = Object.create;
     var __defProp = Object.defineProperty;
     var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -41,18 +42,18 @@
       mod
     ));
     var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-  
+
     // packages/shared/render/plugins/BaseSiteModules/tram-min.js
     var require_tram_min = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/tram-min.js"() {
         "use strict";
-        window.tram = function(a) {
+        window.tram = function (a) {
           function b(a2, b2) {
             var c2 = new M.Bare();
             return c2.init(a2, b2);
           }
           function c(a2) {
-            return a2.replace(/[A-Z]/g, function(a3) {
+            return a2.replace(/[A-Z]/g, function (a3) {
               return "-" + a3.toLowerCase();
             });
           }
@@ -81,13 +82,13 @@
             U.debug && window && window.console.warn(a2);
           }
           function k(a2) {
-            for (var b2 = -1, c2 = a2 ? a2.length : 0, d2 = []; ++b2 < c2; ) {
+            for (var b2 = -1, c2 = a2 ? a2.length : 0, d2 = []; ++b2 < c2;) {
               var e2 = a2[b2];
               e2 && d2.push(e2);
             }
             return d2;
           }
-          var l = function(a2, b2, c2) {
+          var l = function (a2, b2, c2) {
             function d2(a3) {
               return "object" == typeof a3;
             }
@@ -105,9 +106,9 @@
               }
               i2 === c2 && (i2 = h2, h2 = Object), j2.Bare = k2;
               var l2, m2 = f2[a2] = h2[a2], n2 = k2[a2] = j2[a2] = new f2();
-              return n2.constructor = j2, j2.mixin = function(b3) {
+              return n2.constructor = j2, j2.mixin = function (b3) {
                 return k2[a2] = j2[a2] = g2(j2, b3)[a2], j2;
-              }, j2.open = function(a3) {
+              }, j2.open = function (a3) {
                 if (l2 = {}, e2(a3) ? l2 = a3.call(j2, n2, m2, j2, h2) : d2(a3) && (l2 = a3), d2(l2))
                   for (var c3 in l2)
                     b2.call(l2, c3) && (n2[c3] = l2[c3]);
@@ -116,102 +117,102 @@
             }
             return g2;
           }("prototype", {}.hasOwnProperty), m = {
-            ease: ["ease", function(a2, b2, c2, d2) {
+            ease: ["ease", function (a2, b2, c2, d2) {
               var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
               return b2 + c2 * (-2.75 * f2 * e2 + 11 * e2 * e2 + -15.5 * f2 + 8 * e2 + 0.25 * a2);
             }],
-            "ease-in": ["ease-in", function(a2, b2, c2, d2) {
+            "ease-in": ["ease-in", function (a2, b2, c2, d2) {
               var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
               return b2 + c2 * (-1 * f2 * e2 + 3 * e2 * e2 + -3 * f2 + 2 * e2);
             }],
-            "ease-out": ["ease-out", function(a2, b2, c2, d2) {
+            "ease-out": ["ease-out", function (a2, b2, c2, d2) {
               var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
               return b2 + c2 * (0.3 * f2 * e2 + -1.6 * e2 * e2 + 2.2 * f2 + -1.8 * e2 + 1.9 * a2);
             }],
-            "ease-in-out": ["ease-in-out", function(a2, b2, c2, d2) {
+            "ease-in-out": ["ease-in-out", function (a2, b2, c2, d2) {
               var e2 = (a2 /= d2) * a2, f2 = e2 * a2;
               return b2 + c2 * (2 * f2 * e2 + -5 * e2 * e2 + 2 * f2 + 2 * e2);
             }],
-            linear: ["linear", function(a2, b2, c2, d2) {
+            linear: ["linear", function (a2, b2, c2, d2) {
               return c2 * a2 / d2 + b2;
             }],
-            "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function(a2, b2, c2, d2) {
+            "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (a2, b2, c2, d2) {
               return c2 * (a2 /= d2) * a2 + b2;
             }],
-            "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function(a2, b2, c2, d2) {
+            "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (a2, b2, c2, d2) {
               return -c2 * (a2 /= d2) * (a2 - 2) + b2;
             }],
-            "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function(a2, b2, c2, d2) {
+            "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (a2, b2, c2, d2) {
               return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 + b2 : -c2 / 2 * (--a2 * (a2 - 2) - 1) + b2;
             }],
-            "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function(a2, b2, c2, d2) {
+            "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (a2, b2, c2, d2) {
               return c2 * (a2 /= d2) * a2 * a2 + b2;
             }],
-            "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function(a2, b2, c2, d2) {
+            "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (a2, b2, c2, d2) {
               return c2 * ((a2 = a2 / d2 - 1) * a2 * a2 + 1) + b2;
             }],
-            "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function(a2, b2, c2, d2) {
+            "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (a2, b2, c2, d2) {
               return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * a2 + b2 : c2 / 2 * ((a2 -= 2) * a2 * a2 + 2) + b2;
             }],
-            "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function(a2, b2, c2, d2) {
+            "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (a2, b2, c2, d2) {
               return c2 * (a2 /= d2) * a2 * a2 * a2 + b2;
             }],
-            "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function(a2, b2, c2, d2) {
+            "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (a2, b2, c2, d2) {
               return -c2 * ((a2 = a2 / d2 - 1) * a2 * a2 * a2 - 1) + b2;
             }],
-            "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function(a2, b2, c2, d2) {
+            "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (a2, b2, c2, d2) {
               return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * a2 * a2 + b2 : -c2 / 2 * ((a2 -= 2) * a2 * a2 * a2 - 2) + b2;
             }],
-            "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function(a2, b2, c2, d2) {
+            "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (a2, b2, c2, d2) {
               return c2 * (a2 /= d2) * a2 * a2 * a2 * a2 + b2;
             }],
-            "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function(a2, b2, c2, d2) {
+            "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (a2, b2, c2, d2) {
               return c2 * ((a2 = a2 / d2 - 1) * a2 * a2 * a2 * a2 + 1) + b2;
             }],
-            "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function(a2, b2, c2, d2) {
+            "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (a2, b2, c2, d2) {
               return (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * a2 * a2 * a2 + b2 : c2 / 2 * ((a2 -= 2) * a2 * a2 * a2 * a2 + 2) + b2;
             }],
-            "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function(a2, b2, c2, d2) {
+            "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (a2, b2, c2, d2) {
               return -c2 * Math.cos(a2 / d2 * (Math.PI / 2)) + c2 + b2;
             }],
-            "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function(a2, b2, c2, d2) {
+            "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (a2, b2, c2, d2) {
               return c2 * Math.sin(a2 / d2 * (Math.PI / 2)) + b2;
             }],
-            "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function(a2, b2, c2, d2) {
+            "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (a2, b2, c2, d2) {
               return -c2 / 2 * (Math.cos(Math.PI * a2 / d2) - 1) + b2;
             }],
-            "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function(a2, b2, c2, d2) {
+            "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (a2, b2, c2, d2) {
               return 0 === a2 ? b2 : c2 * Math.pow(2, 10 * (a2 / d2 - 1)) + b2;
             }],
-            "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function(a2, b2, c2, d2) {
+            "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (a2, b2, c2, d2) {
               return a2 === d2 ? b2 + c2 : c2 * (-Math.pow(2, -10 * a2 / d2) + 1) + b2;
             }],
-            "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function(a2, b2, c2, d2) {
+            "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (a2, b2, c2, d2) {
               return 0 === a2 ? b2 : a2 === d2 ? b2 + c2 : (a2 /= d2 / 2) < 1 ? c2 / 2 * Math.pow(2, 10 * (a2 - 1)) + b2 : c2 / 2 * (-Math.pow(2, -10 * --a2) + 2) + b2;
             }],
-            "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function(a2, b2, c2, d2) {
+            "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (a2, b2, c2, d2) {
               return -c2 * (Math.sqrt(1 - (a2 /= d2) * a2) - 1) + b2;
             }],
-            "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function(a2, b2, c2, d2) {
+            "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (a2, b2, c2, d2) {
               return c2 * Math.sqrt(1 - (a2 = a2 / d2 - 1) * a2) + b2;
             }],
-            "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function(a2, b2, c2, d2) {
+            "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (a2, b2, c2, d2) {
               return (a2 /= d2 / 2) < 1 ? -c2 / 2 * (Math.sqrt(1 - a2 * a2) - 1) + b2 : c2 / 2 * (Math.sqrt(1 - (a2 -= 2) * a2) + 1) + b2;
             }],
-            "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function(a2, b2, c2, d2, e2) {
+            "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (a2, b2, c2, d2, e2) {
               return void 0 === e2 && (e2 = 1.70158), c2 * (a2 /= d2) * a2 * ((e2 + 1) * a2 - e2) + b2;
             }],
-            "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function(a2, b2, c2, d2, e2) {
+            "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (a2, b2, c2, d2, e2) {
               return void 0 === e2 && (e2 = 1.70158), c2 * ((a2 = a2 / d2 - 1) * a2 * ((e2 + 1) * a2 + e2) + 1) + b2;
             }],
-            "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function(a2, b2, c2, d2, e2) {
+            "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (a2, b2, c2, d2, e2) {
               return void 0 === e2 && (e2 = 1.70158), (a2 /= d2 / 2) < 1 ? c2 / 2 * a2 * a2 * (((e2 *= 1.525) + 1) * a2 - e2) + b2 : c2 / 2 * ((a2 -= 2) * a2 * (((e2 *= 1.525) + 1) * a2 + e2) + 2) + b2;
             }]
           }, n = {
             "ease-in-back": "cubic-bezier(0.600, 0, 0.735, 0.045)",
             "ease-out-back": "cubic-bezier(0.175, 0.885, 0.320, 1)",
             "ease-in-out-back": "cubic-bezier(0.680, 0, 0.265, 1)"
-          }, o = document, p = window, q = "bkwld-tram", r = /[\-\.0-9]/g, s = /[A-Z]/, t = "number", u = /^(rgb|#)/, v = /(em|cm|mm|in|pt|pc|px)$/, w = /(em|cm|mm|in|pt|pc|px|%)$/, x = /(deg|rad|turn)$/, y = "unitless", z = /(all|none) 0s ease 0s/, A = /^(width|height)$/, B = " ", C = o.createElement("a"), D = ["Webkit", "Moz", "O", "ms"], E = ["-webkit-", "-moz-", "-o-", "-ms-"], F = function(a2) {
+          }, o = document, p = window, q = "bkwld-tram", r = /[\-\.0-9]/g, s = /[A-Z]/, t = "number", u = /^(rgb|#)/, v = /(em|cm|mm|in|pt|pc|px)$/, w = /(em|cm|mm|in|pt|pc|px|%)$/, x = /(deg|rad|turn)$/, y = "unitless", z = /(all|none) 0s ease 0s/, A = /^(width|height)$/, B = " ", C = o.createElement("a"), D = ["Webkit", "Moz", "O", "ms"], E = ["-webkit-", "-moz-", "-o-", "-ms-"], F = function (a2) {
             if (a2 in C.style)
               return {
                 dom: a2,
@@ -239,17 +240,17 @@
               for (var I in n)
                 m[I][0] = n[I];
           }
-          var J = b.frame = function() {
+          var J = b.frame = function () {
             var a2 = p.requestAnimationFrame || p.webkitRequestAnimationFrame || p.mozRequestAnimationFrame || p.oRequestAnimationFrame || p.msRequestAnimationFrame;
-            return a2 && G.bind ? a2.bind(p) : function(a3) {
+            return a2 && G.bind ? a2.bind(p) : function (a3) {
               p.setTimeout(a3, 16);
             };
-          }(), K = b.now = function() {
+          }(), K = b.now = function () {
             var a2 = p.performance, b2 = a2 && (a2.now || a2.webkitNow || a2.msNow || a2.mozNow);
-            return b2 && G.bind ? b2.bind(a2) : Date.now || function() {
+            return b2 && G.bind ? b2.bind(a2) : Date.now || function () {
               return +/* @__PURE__ */ new Date();
             };
-          }(), L = l(function(b2) {
+          }(), L = l(function (b2) {
             function d2(a2, b3) {
               var c2 = k(("" + a2).split(B)), d3 = c2[0];
               b3 = b3 || {};
@@ -290,17 +291,17 @@
                   return void a2.call(this, this);
                 if ("object" == e3) {
                   var f3 = 0;
-                  u2.call(this, a2, function(a3, b4) {
+                  u2.call(this, a2, function (a3, b4) {
                     a3.span > f3 && (f3 = a3.span), a3.stop(), a3.animate(b4);
-                  }, function(a3) {
+                  }, function (a3) {
                     "wait" in a3 && (f3 = i(a3.wait, 0));
                   }), t2.call(this), f3 > 0 && (this.timer = new S({
                     duration: f3,
                     context: this
                   }), this.active = true, b3 && (this.timer.complete = h2));
                   var g3 = this, j2 = false, k2 = {};
-                  J(function() {
-                    u2.call(g3, a2, function(a3) {
+                  J(function () {
+                    u2.call(g3, a2, function (a3) {
                       a3.active && (j2 = true, k2[a3.name] = a3.nextStyle);
                     }), j2 && g3.$el.css(k2);
                   });
@@ -379,7 +380,7 @@
               this.$el.css(a2);
             }
             function y2(a2, c2) {
-              b2[a2] = function() {
+              b2[a2] = function () {
                 return this.children ? A2.call(this, c2, arguments) : (this.el && c2.apply(this, arguments), this);
               };
             }
@@ -389,30 +390,30 @@
                 a2.apply(this.children[c2], b3);
               return this;
             }
-            b2.init = function(b3) {
+            b2.init = function (b3) {
               if (this.$el = a(b3), this.el = this.$el[0], this.props = {}, this.queue = [], this.style = "", this.active = false, U.keepInherited && !U.fallback) {
                 var c2 = W(this.el, "transition");
                 c2 && !z.test(c2) && (this.upstream = c2);
               }
               G.backface && U.hideBackface && V(this.el, G.backface.css, "hidden");
             }, y2("add", d2), y2("start", e2), y2("wait", f2), y2("then", g2), y2("next", h2), y2("stop", l2), y2("set", m2), y2("show", n2), y2("hide", o2), y2("redraw", p2), y2("destroy", r2);
-          }), M = l(L, function(b2) {
+          }), M = l(L, function (b2) {
             function c2(b3, c3) {
               var d2 = a.data(b3, q) || a.data(b3, q, new L.Bare());
               return d2.el || d2.init(b3), c3 ? d2.start(c3) : d2;
             }
-            b2.init = function(b3, d2) {
+            b2.init = function (b3, d2) {
               var e2 = a(b3);
               if (!e2.length)
                 return this;
               if (1 === e2.length)
                 return c2(e2[0], d2);
               var f2 = [];
-              return e2.each(function(a2, b4) {
+              return e2.each(function (a2, b4) {
                 f2.push(c2(b4, d2));
               }), this.children = f2, this;
             };
-          }), N = l(function(a2) {
+          }), N = l(function (a2) {
             function b2() {
               var a3 = this.get();
               this.update("auto");
@@ -431,15 +432,15 @@
               ease: "ease",
               delay: 0
             };
-            a2.init = function(a3, b3, d3, e2) {
+            a2.init = function (a3, b3, d3, e2) {
               this.$el = a3, this.el = a3[0];
               var g2 = b3[0];
               d3[2] && (g2 = d3[2]), X[g2] && (g2 = X[g2]), this.name = g2, this.type = d3[1], this.duration = i(b3[1], this.duration, f2.duration), this.ease = c2(b3[2], this.ease, f2.ease), this.delay = i(b3[3], this.delay, f2.delay), this.span = this.duration + this.delay, this.active = false, this.nextStyle = null, this.auto = A.test(this.name), this.unit = e2.unit || this.unit || U.defaultUnit, this.angle = e2.angle || this.angle || U.defaultAngle, U.fallback || e2.fallback ? this.animate = this.fallback : (this.animate = this.transition, this.string = this.name + B + this.duration + "ms" + ("ease" != this.ease ? B + m[this.ease][0] : "") + (this.delay ? B + this.delay + "ms" : ""));
-            }, a2.set = function(a3) {
+            }, a2.set = function (a3) {
               a3 = this.convert(a3, this.type), this.update(a3), this.redraw();
-            }, a2.transition = function(a3) {
+            }, a2.transition = function (a3) {
               this.active = true, a3 = this.convert(a3, this.type), this.auto && ("auto" == this.el.style[this.name] && (this.update(this.get()), this.redraw()), "auto" == a3 && (a3 = b2.call(this))), this.nextStyle = a3;
-            }, a2.fallback = function(a3) {
+            }, a2.fallback = function (a3) {
               var c3 = this.el.style[this.name] || this.convert(this.get(), this.type);
               a3 = this.convert(a3, this.type), this.auto && ("auto" == c3 && (c3 = this.convert(this.get(), this.type)), "auto" == a3 && (a3 = b2.call(this))), this.tween = new R({
                 from: c3,
@@ -450,15 +451,15 @@
                 update: this.update,
                 context: this
               });
-            }, a2.get = function() {
+            }, a2.get = function () {
               return W(this.el, this.name);
-            }, a2.update = function(a3) {
+            }, a2.update = function (a3) {
               V(this.el, this.name, a3);
-            }, a2.stop = function() {
+            }, a2.stop = function () {
               (this.active || this.nextStyle) && (this.active = false, this.nextStyle = null, V(this.el, this.name, this.get()));
               var a3 = this.tween;
               a3 && a3.context && a3.destroy();
-            }, a2.convert = function(a3, b3) {
+            }, a2.convert = function (a3, b3) {
               if ("auto" == a3 && this.auto)
                 return a3;
               var c3, e2 = "number" == typeof a3, f3 = "string" == typeof a3;
@@ -508,34 +509,34 @@
                   c3 = "number(unitless) or string(unit or %)";
               }
               return g(c3, a3), a3;
-            }, a2.redraw = function() {
+            }, a2.redraw = function () {
               this.el.offsetHeight;
             };
-          }), O = l(N, function(a2, b2) {
-            a2.init = function() {
+          }), O = l(N, function (a2, b2) {
+            a2.init = function () {
               b2.init.apply(this, arguments), this.original || (this.original = this.convert(this.get(), u));
             };
-          }), P = l(N, function(a2, b2) {
-            a2.init = function() {
+          }), P = l(N, function (a2, b2) {
+            a2.init = function () {
               b2.init.apply(this, arguments), this.animate = this.fallback;
-            }, a2.get = function() {
+            }, a2.get = function () {
               return this.$el[this.name]();
-            }, a2.update = function(a3) {
+            }, a2.update = function (a3) {
               this.$el[this.name](a3);
             };
-          }), Q = l(N, function(a2, b2) {
+          }), Q = l(N, function (a2, b2) {
             function c2(a3, b3) {
               var c3, d2, e2, f2, g2;
               for (c3 in a3)
                 f2 = Z[c3], e2 = f2[0], d2 = f2[1] || c3, g2 = this.convert(a3[c3], e2), b3.call(this, d2, g2, e2);
             }
-            a2.init = function() {
+            a2.init = function () {
               b2.init.apply(this, arguments), this.current || (this.current = {}, Z.perspective && U.perspective && (this.current.perspective = U.perspective, V(this.el, this.name, this.style(this.current)), this.redraw()));
-            }, a2.set = function(a3) {
-              c2.call(this, a3, function(a4, b3) {
+            }, a2.set = function (a3) {
+              c2.call(this, a3, function (a4, b3) {
                 this.current[a4] = b3;
               }), V(this.el, this.name, this.style(this.current)), this.redraw();
-            }, a2.transition = function(a3) {
+            }, a2.transition = function (a3) {
               var b3 = this.values(a3);
               this.tween = new T({
                 current: this.current,
@@ -548,7 +549,7 @@
               for (c3 in this.current)
                 d2[c3] = c3 in b3 ? b3[c3] : this.current[c3];
               this.active = true, this.nextStyle = this.style(d2);
-            }, a2.fallback = function(a3) {
+            }, a2.fallback = function (a3) {
               var b3 = this.values(a3);
               this.tween = new T({
                 current: this.current,
@@ -559,27 +560,27 @@
                 update: this.update,
                 context: this
               });
-            }, a2.update = function() {
+            }, a2.update = function () {
               V(this.el, this.name, this.style(this.current));
-            }, a2.style = function(a3) {
+            }, a2.style = function (a3) {
               var b3, c3 = "";
               for (b3 in a3)
                 c3 += b3 + "(" + a3[b3] + ") ";
               return c3;
-            }, a2.values = function(a3) {
+            }, a2.values = function (a3) {
               var b3, d2 = {};
-              return c2.call(this, a3, function(a4, c3, e2) {
+              return c2.call(this, a3, function (a4, c3, e2) {
                 d2[a4] = c3, void 0 === this.current[a4] && (b3 = 0, ~a4.indexOf("scale") && (b3 = 1), this.current[a4] = this.convert(b3, e2));
               }), d2;
             };
-          }), R = l(function(b2) {
+          }), R = l(function (b2) {
             function c2(a2) {
               1 === n2.push(a2) && J(g2);
             }
             function g2() {
               var a2, b3, c3, d2 = n2.length;
               if (d2)
-                for (J(g2), b3 = K(), a2 = d2; a2--; )
+                for (J(g2), b3 = K(), a2 = d2; a2--;)
                   c3 = n2[a2], c3 && c3.render(b3);
             }
             function i2(b3) {
@@ -597,17 +598,17 @@
               from: 0,
               to: 1
             };
-            b2.init = function(a2) {
+            b2.init = function (a2) {
               this.duration = a2.duration || 0, this.delay = a2.delay || 0;
               var b3 = a2.ease || l2.ease;
               m[b3] && (b3 = m[b3][1]), "function" != typeof b3 && (b3 = l2.ease), this.ease = b3, this.update = a2.update || f, this.complete = a2.complete || f, this.context = a2.context || this, this.name = a2.name;
               var c3 = a2.from, d2 = a2.to;
               void 0 === c3 && (c3 = l2.from), void 0 === d2 && (d2 = l2.to), this.unit = a2.unit || "", "number" == typeof c3 && "number" == typeof d2 ? (this.begin = c3, this.change = d2 - c3) : this.format(d2, c3), this.value = this.begin + this.unit, this.start = K(), a2.autoplay !== false && this.play();
-            }, b2.play = function() {
+            }, b2.play = function () {
               this.active || (this.start || (this.start = K()), this.active = true, c2(this));
-            }, b2.stop = function() {
+            }, b2.stop = function () {
               this.active && (this.active = false, i2(this));
-            }, b2.render = function(a2) {
+            }, b2.render = function (a2) {
               var b3, c3 = a2 - this.start;
               if (this.delay) {
                 if (c3 <= this.delay)
@@ -619,7 +620,7 @@
                 return b3 = this.startRGB ? k2(this.startRGB, this.endRGB, d2) : j2(this.begin + d2 * this.change), this.value = b3 + this.unit, void this.update.call(this.context, this.value);
               }
               b3 = this.endHex || this.begin + this.change, this.value = b3 + this.unit, this.update.call(this.context, this.value), this.complete.call(this.context), this.destroy();
-            }, b2.format = function(a2, b3) {
+            }, b2.format = function (a2, b3) {
               if (b3 += "", a2 += "", "#" == a2.charAt(0))
                 return this.startRGB = d(b3), this.endRGB = d(a2), this.endHex = a2, this.begin = 0, void (this.change = 1);
               if (!this.unit) {
@@ -627,19 +628,19 @@
                 c3 !== e2 && h("tween", b3, a2), this.unit = c3;
               }
               b3 = parseFloat(b3), a2 = parseFloat(a2), this.begin = this.value = b3, this.change = a2 - b3;
-            }, b2.destroy = function() {
+            }, b2.destroy = function () {
               this.stop(), this.context = null, this.ease = this.update = this.complete = f;
             };
             var n2 = [], o2 = 1e3;
-          }), S = l(R, function(a2) {
-            a2.init = function(a3) {
+          }), S = l(R, function (a2) {
+            a2.init = function (a3) {
               this.duration = a3.duration || 0, this.complete = a3.complete || f, this.context = a3.context, this.play();
-            }, a2.render = function(a3) {
+            }, a2.render = function (a3) {
               var b2 = a3 - this.start;
               b2 < this.duration || (this.complete.call(this.context), this.destroy());
             };
-          }), T = l(R, function(a2, b2) {
-            a2.init = function(a3) {
+          }), T = l(R, function (a2, b2) {
+            a2.init = function (a3) {
               this.context = a3.context, this.update = a3.update, this.tweens = [], this.current = a3.current;
               var b3, c2;
               for (b3 in a3.values)
@@ -653,15 +654,15 @@
                   autoplay: false
                 }));
               this.play();
-            }, a2.render = function(a3) {
+            }, a2.render = function (a3) {
               var b3, c2, d2 = this.tweens.length, e2 = false;
-              for (b3 = d2; b3--; )
+              for (b3 = d2; b3--;)
                 c2 = this.tweens[b3], c2.context && (c2.render(a3), this.current[c2.name] = c2.value, e2 = true);
               return e2 ? void (this.update && this.update.call(this.context)) : this.destroy();
-            }, a2.destroy = function() {
+            }, a2.destroy = function () {
               if (b2.destroy.call(this), this.tweens) {
                 var a3, c2 = this.tweens.length;
-                for (a3 = c2; a3--; )
+                for (a3 = c2; a3--;)
                   this.tweens[a3].destroy();
                 this.tweens = null, this.current = null;
               }
@@ -676,21 +677,21 @@
             fallback: !G.transition,
             agentTests: []
           };
-          b.fallback = function(a2) {
+          b.fallback = function (a2) {
             if (!G.transition)
               return U.fallback = true;
             U.agentTests.push("(" + a2 + ")");
             var b2 = new RegExp(U.agentTests.join("|"), "i");
             U.fallback = b2.test(navigator.userAgent);
-          }, b.fallback("6.0.[2-5] Safari"), b.tween = function(a2) {
+          }, b.fallback("6.0.[2-5] Safari"), b.tween = function (a2) {
             return new R(a2);
-          }, b.delay = function(a2, b2, c2) {
+          }, b.delay = function (a2, b2, c2) {
             return new S({
               complete: b2,
               duration: a2,
               context: c2
             });
-          }, a.fn.tram = function(a2) {
+          }, a.fn.tram = function (a2) {
             return b.call(null, this, a2);
           };
           var V = a.style, W = a.css, X = {
@@ -758,21 +759,21 @@
         }(window.jQuery);
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/underscore-custom.js
     var require_underscore_custom = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/underscore-custom.js"(exports, module) {
         "use strict";
         var $ = window.$;
         var tram = require_tram_min() && $.tram;
-        module.exports = function() {
+        module.exports = function () {
           var _ = {};
           _.VERSION = "1.6.0-Webflow";
           var breaker = {};
           var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
           var push = ArrayProto.push, slice = ArrayProto.slice, concat = ArrayProto.concat, toString = ObjProto.toString, hasOwnProperty = ObjProto.hasOwnProperty;
           var nativeForEach = ArrayProto.forEach, nativeMap = ArrayProto.map, nativeReduce = ArrayProto.reduce, nativeReduceRight = ArrayProto.reduceRight, nativeFilter = ArrayProto.filter, nativeEvery = ArrayProto.every, nativeSome = ArrayProto.some, nativeIndexOf = ArrayProto.indexOf, nativeLastIndexOf = ArrayProto.lastIndexOf, nativeIsArray = Array.isArray, nativeKeys = Object.keys, nativeBind = FuncProto.bind;
-          var each = _.each = _.forEach = function(obj, iterator, context) {
+          var each = _.each = _.forEach = function (obj, iterator, context) {
             if (obj == null)
               return obj;
             if (nativeForEach && obj.forEach === nativeForEach) {
@@ -791,20 +792,20 @@
             }
             return obj;
           };
-          _.map = _.collect = function(obj, iterator, context) {
+          _.map = _.collect = function (obj, iterator, context) {
             var results = [];
             if (obj == null)
               return results;
             if (nativeMap && obj.map === nativeMap)
               return obj.map(iterator, context);
-            each(obj, function(value, index, list) {
+            each(obj, function (value, index, list) {
               results.push(iterator.call(context, value, index, list));
             });
             return results;
           };
-          _.find = _.detect = function(obj, predicate, context) {
+          _.find = _.detect = function (obj, predicate, context) {
             var result;
-            any(obj, function(value, index, list) {
+            any(obj, function (value, index, list) {
               if (predicate.call(context, value, index, list)) {
                 result = value;
                 return true;
@@ -812,66 +813,66 @@
             });
             return result;
           };
-          _.filter = _.select = function(obj, predicate, context) {
+          _.filter = _.select = function (obj, predicate, context) {
             var results = [];
             if (obj == null)
               return results;
             if (nativeFilter && obj.filter === nativeFilter)
               return obj.filter(predicate, context);
-            each(obj, function(value, index, list) {
+            each(obj, function (value, index, list) {
               if (predicate.call(context, value, index, list))
                 results.push(value);
             });
             return results;
           };
-          var any = _.some = _.any = function(obj, predicate, context) {
+          var any = _.some = _.any = function (obj, predicate, context) {
             predicate || (predicate = _.identity);
             var result = false;
             if (obj == null)
               return result;
             if (nativeSome && obj.some === nativeSome)
               return obj.some(predicate, context);
-            each(obj, function(value, index, list) {
+            each(obj, function (value, index, list) {
               if (result || (result = predicate.call(context, value, index, list)))
                 return breaker;
             });
             return !!result;
           };
-          _.contains = _.include = function(obj, target) {
+          _.contains = _.include = function (obj, target) {
             if (obj == null)
               return false;
             if (nativeIndexOf && obj.indexOf === nativeIndexOf)
               return obj.indexOf(target) != -1;
-            return any(obj, function(value) {
+            return any(obj, function (value) {
               return value === target;
             });
           };
-          _.delay = function(func, wait) {
+          _.delay = function (func, wait) {
             var args = slice.call(arguments, 2);
-            return setTimeout(function() {
+            return setTimeout(function () {
               return func.apply(null, args);
             }, wait);
           };
-          _.defer = function(func) {
+          _.defer = function (func) {
             return _.delay.apply(_, [func, 1].concat(slice.call(arguments, 1)));
           };
-          _.throttle = function(func) {
+          _.throttle = function (func) {
             var wait, args, context;
-            return function() {
+            return function () {
               if (wait)
                 return;
               wait = true;
               args = arguments;
               context = this;
-              tram.frame(function() {
+              tram.frame(function () {
                 wait = false;
                 func.apply(context, args);
               });
             };
           };
-          _.debounce = function(func, wait, immediate) {
+          _.debounce = function (func, wait, immediate) {
             var timeout, args, context, timestamp, result;
-            var later = function() {
+            var later = function () {
               var last = _.now() - timestamp;
               if (last < wait) {
                 timeout = setTimeout(later, wait - last);
@@ -883,7 +884,7 @@
                 }
               }
             };
-            return function() {
+            return function () {
               context = this;
               args = arguments;
               timestamp = _.now();
@@ -898,7 +899,7 @@
               return result;
             };
           };
-          _.defaults = function(obj) {
+          _.defaults = function (obj) {
             if (!_.isObject(obj))
               return obj;
             for (var i = 1, length = arguments.length; i < length; i++) {
@@ -910,7 +911,7 @@
             }
             return obj;
           };
-          _.keys = function(obj) {
+          _.keys = function (obj) {
             if (!_.isObject(obj))
               return [];
             if (nativeKeys)
@@ -921,13 +922,13 @@
                 keys.push(key);
             return keys;
           };
-          _.has = function(obj, key) {
+          _.has = function (obj, key) {
             return hasOwnProperty.call(obj, key);
           };
-          _.isObject = function(obj) {
+          _.isObject = function (obj) {
             return obj === Object(obj);
           };
-          _.now = Date.now || function() {
+          _.now = Date.now || function () {
             return (/* @__PURE__ */ new Date()).getTime();
           };
           _.templateSettings = {
@@ -945,18 +946,18 @@
             "\u2029": "u2029"
           };
           var escapeRegExp = /\\|'|\r|\n|\u2028|\u2029/g;
-          var escapeChar = function(match) {
+          var escapeChar = function (match) {
             return "\\" + escapes[match];
           };
           var bareIdentifier = /^\s*(\w|\$)+\s*$/;
-          _.template = function(text, settings, oldSettings) {
+          _.template = function (text, settings, oldSettings) {
             if (!settings && oldSettings)
               settings = oldSettings;
             settings = _.defaults({}, settings, _.templateSettings);
             var matcher = RegExp([(settings.escape || noMatch).source, (settings.interpolate || noMatch).source, (settings.evaluate || noMatch).source].join("|") + "|$", "g");
             var index = 0;
             var source = "__p+='";
-            text.replace(matcher, function(match, escape, interpolate, evaluate, offset) {
+            text.replace(matcher, function (match, escape, interpolate, evaluate, offset) {
               source += text.slice(index, offset).replace(escapeRegExp, escapeChar);
               index = offset + match.length;
               if (escape) {
@@ -985,7 +986,7 @@
               e.source = source;
               throw e;
             }
-            var template = function(data) {
+            var template = function (data) {
               return render.call(this, data, _);
             };
             template.source = "function(" + argument + "){\n" + source + "}";
@@ -995,7 +996,7 @@
         }();
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-lib.js
     var require_webflow_lib = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-lib.js"(exports, module) {
@@ -1014,7 +1015,7 @@
         var destroyed = false;
         tram.config.hideBackface = false;
         tram.config.keepInherited = true;
-        Webflow.define = function(name, factory, options) {
+        Webflow.define = function (name, factory, options) {
           if (modules[name]) {
             unbindModule(modules[name]);
           }
@@ -1022,7 +1023,7 @@
           bindModule(instance);
           return instance;
         };
-        Webflow.require = function(name) {
+        Webflow.require = function (name) {
           return modules[name];
         };
         function bindModule(module2) {
@@ -1054,18 +1055,18 @@
           }
         }
         function removeReady(module2) {
-          primary = _.filter(primary, function(readyFn) {
+          primary = _.filter(primary, function (readyFn) {
             return readyFn !== module2.ready;
           });
         }
-        Webflow.push = function(ready) {
+        Webflow.push = function (ready) {
           if (domready) {
             isFunction(ready) && ready();
             return;
           }
           secondary.push(ready);
         };
-        Webflow.env = function(mode) {
+        Webflow.env = function (mode) {
           var designFlag = window.__wf_design;
           var inApp = typeof designFlag !== "undefined";
           if (!mode) {
@@ -1096,12 +1097,12 @@
         var ios = Webflow.env.ios = /(ipod|iphone|ipad)/.test(userAgent);
         Webflow.env.safari = /safari/.test(userAgent) && !chrome && !ios;
         var touchTarget;
-        touch && $doc.on("touchstart mousedown", function(evt) {
+        touch && $doc.on("touchstart mousedown", function (evt) {
           touchTarget = evt.target;
         });
-        Webflow.validClick = touch ? function(clickTarget) {
+        Webflow.validClick = touch ? function (clickTarget) {
           return clickTarget === touchTarget || $.contains(clickTarget, touchTarget);
-        } : function() {
+        } : function () {
           return true;
         };
         var resizeEvents = "resize.webflow orientationchange.webflow load.webflow";
@@ -1112,15 +1113,15 @@
         function eventProxy(target, types) {
           var handlers = [];
           var proxy = {};
-          proxy.up = _.throttle(function(evt) {
-            _.each(handlers, function(h) {
+          proxy.up = _.throttle(function (evt) {
+            _.each(handlers, function (h) {
               h(evt);
             });
           });
           if (target && types) {
             target.on(types, proxy.up);
           }
-          proxy.on = function(handler) {
+          proxy.on = function (handler) {
             if (typeof handler !== "function") {
               return;
             }
@@ -1129,25 +1130,25 @@
             }
             handlers.push(handler);
           };
-          proxy.off = function(handler) {
+          proxy.off = function (handler) {
             if (!arguments.length) {
               handlers = [];
               return;
             }
-            handlers = _.filter(handlers, function(h) {
+            handlers = _.filter(handlers, function (h) {
               return h !== handler;
             });
           };
           return proxy;
         }
-        Webflow.location = function(url) {
+        Webflow.location = function (url) {
           window.location = url;
         };
         if (Webflow.env()) {
-          Webflow.location = function() {
+          Webflow.location = function () {
           };
         }
-        Webflow.ready = function() {
+        Webflow.ready = function () {
           domready = true;
           if (destroyed) {
             restoreModules();
@@ -1165,7 +1166,7 @@
           _.each(modules, bindModule);
         }
         var deferLoad;
-        Webflow.load = function(handler) {
+        Webflow.load = function (handler) {
           deferLoad.then(handler);
         };
         function bindLoad() {
@@ -1176,7 +1177,7 @@
           deferLoad = new $.Deferred();
           $win.on("load", deferLoad.resolve);
         }
-        Webflow.destroy = function(options) {
+        Webflow.destroy = function (options) {
           options = options || {};
           destroyed = true;
           $win.triggerHandler("__wf_destroy");
@@ -1198,13 +1199,13 @@
         module.exports = window.Webflow = Webflow;
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-brand.js
     var require_webflow_brand = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-brand.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("brand", module.exports = function($) {
+        Webflow.define("brand", module.exports = function ($) {
           var api = {};
           var doc = document;
           var $html = $("html");
@@ -1214,7 +1215,7 @@
           var isPhantom = /PhantomJS/i.test(navigator.userAgent);
           var fullScreenEvents = "fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange";
           var brandElement;
-          api.ready = function() {
+          api.ready = function () {
             var shouldBrand = $html.attr("data-wf-status");
             var publishedDomain = $html.attr("data-wf-domain") || "";
             if (/\.webflow\.io$/i.test(publishedDomain) && location.hostname !== publishedDomain) {
@@ -1262,13 +1263,13 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-focus-visible.js
     var require_webflow_focus_visible = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-focus-visible.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("focus-visible", module.exports = function() {
+        Webflow.define("focus-visible", module.exports = function () {
           function applyFocusVisiblePolyfill(scope) {
             var hadKeyboardEvent = true;
             var hadFocusVisibleRecently = false;
@@ -1347,7 +1348,7 @@
               if (e.target.hasAttribute("data-wf-focus-visible")) {
                 hadFocusVisibleRecently = true;
                 window.clearTimeout(hadFocusVisibleRecentlyTimeout);
-                hadFocusVisibleRecentlyTimeout = window.setTimeout(function() {
+                hadFocusVisibleRecentlyTimeout = window.setTimeout(function () {
                   hadFocusVisibleRecently = false;
                 }, 100);
                 removeFocusVisibleAttribute(e.target);
@@ -1414,13 +1415,13 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-focus.js
     var require_webflow_focus = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-focus.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("focus", module.exports = function() {
+        Webflow.define("focus", module.exports = function () {
           var capturedEvents = [];
           var capturing = false;
           function captureEvent(e) {
@@ -1435,11 +1436,11 @@
             var el = e.target;
             var tag = el.tagName;
             return /^a$/i.test(tag) && el.href != null || // (A)
-            /^(button|textarea)$/i.test(tag) && el.disabled !== true || // (B) (C)
-            /^input$/i.test(tag) && /^(button|reset|submit|radio|checkbox)$/i.test(el.type) && !el.disabled || // (D)
-            !/^(button|input|textarea|select|a)$/i.test(tag) && !Number.isNaN(Number.parseFloat(el.tabIndex)) || // (E)
-            /^audio$/i.test(tag) || // (F)
-            /^video$/i.test(tag) && el.controls === true;
+              /^(button|textarea)$/i.test(tag) && el.disabled !== true || // (B) (C)
+              /^input$/i.test(tag) && /^(button|reset|submit|radio|checkbox)$/i.test(el.type) && !el.disabled || // (D)
+              !/^(button|input|textarea|select|a)$/i.test(tag) && !Number.isNaN(Number.parseFloat(el.tabIndex)) || // (E)
+              /^audio$/i.test(tag) || // (F)
+              /^video$/i.test(tag) && el.controls === true;
           }
           function handler(e) {
             if (isPolyfilledFocusEvent(e)) {
@@ -1467,7 +1468,7 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-ix-events.js
     var require_webflow_ix_events = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-ix-events.js"(exports, module) {
@@ -1477,17 +1478,17 @@
         var eventQueue = [];
         var namespace = ".w-ix";
         var eventTriggers = {
-          reset: function(i, el) {
+          reset: function (i, el) {
             el.__wf_intro = null;
           },
-          intro: function(i, el) {
+          intro: function (i, el) {
             if (el.__wf_intro) {
               return;
             }
             el.__wf_intro = true;
             $(el).triggerHandler(api.types.INTRO);
           },
-          outro: function(i, el) {
+          outro: function (i, el) {
             if (!el.__wf_intro) {
               return;
             }
@@ -1500,7 +1501,7 @@
           INTRO: "w-ix-intro" + namespace,
           OUTRO: "w-ix-outro" + namespace
         };
-        api.init = function() {
+        api.init = function () {
           var count = eventQueue.length;
           for (var i = 0; i < count; i++) {
             var memo = eventQueue[i];
@@ -1509,13 +1510,13 @@
           eventQueue = [];
           $.extend(api.triggers, eventTriggers);
         };
-        api.async = function() {
+        api.async = function () {
           for (var key in eventTriggers) {
             var func = eventTriggers[key];
             if (!eventTriggers.hasOwnProperty(key)) {
               continue;
             }
-            api.triggers[key] = function(i, el) {
+            api.triggers[key] = function (i, el) {
               eventQueue.push([func, el]);
             };
           }
@@ -1524,7 +1525,7 @@
         module.exports = api;
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-ix2-events.js
     var require_webflow_ix2_events = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-ix2-events.js"(exports, module) {
@@ -1539,14 +1540,14 @@
         var api = {};
         var namespace = ".w-ix";
         var eventTriggers = {
-          reset: function(i, el) {
+          reset: function (i, el) {
             IXEvents.triggers.reset(i, el);
           },
-          intro: function(i, el) {
+          intro: function (i, el) {
             IXEvents.triggers.intro(i, el);
             dispatchCustomEvent2(el, "COMPONENT_ACTIVE");
           },
-          outro: function(i, el) {
+          outro: function (i, el) {
             IXEvents.triggers.outro(i, el);
             dispatchCustomEvent2(el, "COMPONENT_INACTIVE");
           }
@@ -1560,22 +1561,22 @@
         module.exports = api;
       }
     });
-  
+
     // node_modules/@babel/runtime/helpers/typeof.js
     var require_typeof = __commonJS({
       "node_modules/@babel/runtime/helpers/typeof.js"(exports, module) {
         function _typeof(o) {
           "@babel/helpers - typeof";
-          return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o2) {
+          return module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o2) {
             return typeof o2;
-          } : function(o2) {
+          } : function (o2) {
             return o2 && "function" == typeof Symbol && o2.constructor === Symbol && o2 !== Symbol.prototype ? "symbol" : typeof o2;
           }, module.exports.__esModule = true, module.exports["default"] = module.exports, _typeof(o);
         }
         module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
       }
     });
-  
+
     // node_modules/@babel/runtime/helpers/interopRequireWildcard.js
     var require_interopRequireWildcard = __commonJS({
       "node_modules/@babel/runtime/helpers/interopRequireWildcard.js"(exports, module) {
@@ -1611,7 +1612,7 @@
         module.exports = _interopRequireWildcard, module.exports.__esModule = true, module.exports["default"] = module.exports;
       }
     });
-  
+
     // node_modules/@babel/runtime/helpers/interopRequireDefault.js
     var require_interopRequireDefault = __commonJS({
       "node_modules/@babel/runtime/helpers/interopRequireDefault.js"(exports, module) {
@@ -1623,26 +1624,26 @@
         module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
       }
     });
-  
+
     // node_modules/core-js/internals/global.js
     var require_global = __commonJS({
       "node_modules/core-js/internals/global.js"(exports, module) {
-        var check = function(it) {
+        var check = function (it) {
           return it && it.Math == Math && it;
         };
         module.exports = // eslint-disable-next-line es/no-global-this -- safe
-        check(typeof globalThis == "object" && globalThis) || check(typeof window == "object" && window) || // eslint-disable-next-line no-restricted-globals -- safe
-        check(typeof self == "object" && self) || check(typeof global == "object" && global) || // eslint-disable-next-line no-new-func -- fallback
-        function() {
-          return this;
-        }() || Function("return this")();
+          check(typeof globalThis == "object" && globalThis) || check(typeof window == "object" && window) || // eslint-disable-next-line no-restricted-globals -- safe
+          check(typeof self == "object" && self) || check(typeof global == "object" && global) || // eslint-disable-next-line no-new-func -- fallback
+          function () {
+            return this;
+          }() || Function("return this")();
       }
     });
-  
+
     // node_modules/core-js/internals/fails.js
     var require_fails = __commonJS({
       "node_modules/core-js/internals/fails.js"(exports, module) {
-        module.exports = function(exec) {
+        module.exports = function (exec) {
           try {
             return !!exec();
           } catch (error) {
@@ -1651,29 +1652,31 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/descriptors.js
     var require_descriptors = __commonJS({
       "node_modules/core-js/internals/descriptors.js"(exports, module) {
         var fails = require_fails();
-        module.exports = !fails(function() {
-          return Object.defineProperty({}, 1, { get: function() {
-            return 7;
-          } })[1] != 7;
+        module.exports = !fails(function () {
+          return Object.defineProperty({}, 1, {
+            get: function () {
+              return 7;
+            }
+          })[1] != 7;
         });
       }
     });
-  
+
     // node_modules/core-js/internals/function-call.js
     var require_function_call = __commonJS({
       "node_modules/core-js/internals/function-call.js"(exports, module) {
         var call = Function.prototype.call;
-        module.exports = call.bind ? call.bind(call) : function() {
+        module.exports = call.bind ? call.bind(call) : function () {
           return call.apply(call, arguments);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-property-is-enumerable.js
     var require_object_property_is_enumerable = __commonJS({
       "node_modules/core-js/internals/object-property-is-enumerable.js"(exports) {
@@ -1687,11 +1690,11 @@
         } : $propertyIsEnumerable;
       }
     });
-  
+
     // node_modules/core-js/internals/create-property-descriptor.js
     var require_create_property_descriptor = __commonJS({
       "node_modules/core-js/internals/create-property-descriptor.js"(exports, module) {
-        module.exports = function(bitmap, value) {
+        module.exports = function (bitmap, value) {
           return {
             enumerable: !(bitmap & 1),
             configurable: !(bitmap & 2),
@@ -1701,7 +1704,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/function-uncurry-this.js
     var require_function_uncurry_this = __commonJS({
       "node_modules/core-js/internals/function-uncurry-this.js"(exports, module) {
@@ -1709,28 +1712,28 @@
         var bind = FunctionPrototype.bind;
         var call = FunctionPrototype.call;
         var callBind = bind && bind.bind(call);
-        module.exports = bind ? function(fn) {
+        module.exports = bind ? function (fn) {
           return fn && callBind(call, fn);
-        } : function(fn) {
-          return fn && function() {
+        } : function (fn) {
+          return fn && function () {
             return call.apply(fn, arguments);
           };
         };
       }
     });
-  
+
     // node_modules/core-js/internals/classof-raw.js
     var require_classof_raw = __commonJS({
       "node_modules/core-js/internals/classof-raw.js"(exports, module) {
         var uncurryThis = require_function_uncurry_this();
         var toString = uncurryThis({}.toString);
         var stringSlice = uncurryThis("".slice);
-        module.exports = function(it) {
+        module.exports = function (it) {
           return stringSlice(toString(it), 8, -1);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/indexed-object.js
     var require_indexed_object = __commonJS({
       "node_modules/core-js/internals/indexed-object.js"(exports, module) {
@@ -1740,71 +1743,71 @@
         var classof = require_classof_raw();
         var Object2 = global2.Object;
         var split = uncurryThis("".split);
-        module.exports = fails(function() {
+        module.exports = fails(function () {
           return !Object2("z").propertyIsEnumerable(0);
-        }) ? function(it) {
+        }) ? function (it) {
           return classof(it) == "String" ? split(it, "") : Object2(it);
         } : Object2;
       }
     });
-  
+
     // node_modules/core-js/internals/require-object-coercible.js
     var require_require_object_coercible = __commonJS({
       "node_modules/core-js/internals/require-object-coercible.js"(exports, module) {
         var global2 = require_global();
         var TypeError2 = global2.TypeError;
-        module.exports = function(it) {
+        module.exports = function (it) {
           if (it == void 0)
             throw TypeError2("Can't call method on " + it);
           return it;
         };
       }
     });
-  
+
     // node_modules/core-js/internals/to-indexed-object.js
     var require_to_indexed_object = __commonJS({
       "node_modules/core-js/internals/to-indexed-object.js"(exports, module) {
         var IndexedObject = require_indexed_object();
         var requireObjectCoercible = require_require_object_coercible();
-        module.exports = function(it) {
+        module.exports = function (it) {
           return IndexedObject(requireObjectCoercible(it));
         };
       }
     });
-  
+
     // node_modules/core-js/internals/is-callable.js
     var require_is_callable = __commonJS({
       "node_modules/core-js/internals/is-callable.js"(exports, module) {
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           return typeof argument == "function";
         };
       }
     });
-  
+
     // node_modules/core-js/internals/is-object.js
     var require_is_object = __commonJS({
       "node_modules/core-js/internals/is-object.js"(exports, module) {
         var isCallable = require_is_callable();
-        module.exports = function(it) {
+        module.exports = function (it) {
           return typeof it == "object" ? it !== null : isCallable(it);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/get-built-in.js
     var require_get_built_in = __commonJS({
       "node_modules/core-js/internals/get-built-in.js"(exports, module) {
         var global2 = require_global();
         var isCallable = require_is_callable();
-        var aFunction = function(argument) {
+        var aFunction = function (argument) {
           return isCallable(argument) ? argument : void 0;
         };
-        module.exports = function(namespace, method) {
+        module.exports = function (namespace, method) {
           return arguments.length < 2 ? aFunction(global2[namespace]) : global2[namespace] && global2[namespace][method];
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-is-prototype-of.js
     var require_object_is_prototype_of = __commonJS({
       "node_modules/core-js/internals/object-is-prototype-of.js"(exports, module) {
@@ -1812,7 +1815,7 @@
         module.exports = uncurryThis({}.isPrototypeOf);
       }
     });
-  
+
     // node_modules/core-js/internals/engine-user-agent.js
     var require_engine_user_agent = __commonJS({
       "node_modules/core-js/internals/engine-user-agent.js"(exports, module) {
@@ -1820,7 +1823,7 @@
         module.exports = getBuiltIn("navigator", "userAgent") || "";
       }
     });
-  
+
     // node_modules/core-js/internals/engine-v8-version.js
     var require_engine_v8_version = __commonJS({
       "node_modules/core-js/internals/engine-v8-version.js"(exports, module) {
@@ -1847,20 +1850,20 @@
         module.exports = version;
       }
     });
-  
+
     // node_modules/core-js/internals/native-symbol.js
     var require_native_symbol = __commonJS({
       "node_modules/core-js/internals/native-symbol.js"(exports, module) {
         var V8_VERSION = require_engine_v8_version();
         var fails = require_fails();
-        module.exports = !!Object.getOwnPropertySymbols && !fails(function() {
+        module.exports = !!Object.getOwnPropertySymbols && !fails(function () {
           var symbol = Symbol();
           return !String(symbol) || !(Object(symbol) instanceof Symbol) || // Chrome 38-40 symbols are not inherited from DOM collections prototypes to instances
-          !Symbol.sham && V8_VERSION && V8_VERSION < 41;
+            !Symbol.sham && V8_VERSION && V8_VERSION < 41;
         });
       }
     });
-  
+
     // node_modules/core-js/internals/use-symbol-as-uid.js
     var require_use_symbol_as_uid = __commonJS({
       "node_modules/core-js/internals/use-symbol-as-uid.js"(exports, module) {
@@ -1868,7 +1871,7 @@
         module.exports = NATIVE_SYMBOL && !Symbol.sham && typeof Symbol.iterator == "symbol";
       }
     });
-  
+
     // node_modules/core-js/internals/is-symbol.js
     var require_is_symbol = __commonJS({
       "node_modules/core-js/internals/is-symbol.js"(exports, module) {
@@ -1878,21 +1881,21 @@
         var isPrototypeOf = require_object_is_prototype_of();
         var USE_SYMBOL_AS_UID = require_use_symbol_as_uid();
         var Object2 = global2.Object;
-        module.exports = USE_SYMBOL_AS_UID ? function(it) {
+        module.exports = USE_SYMBOL_AS_UID ? function (it) {
           return typeof it == "symbol";
-        } : function(it) {
+        } : function (it) {
           var $Symbol = getBuiltIn("Symbol");
           return isCallable($Symbol) && isPrototypeOf($Symbol.prototype, Object2(it));
         };
       }
     });
-  
+
     // node_modules/core-js/internals/try-to-string.js
     var require_try_to_string = __commonJS({
       "node_modules/core-js/internals/try-to-string.js"(exports, module) {
         var global2 = require_global();
         var String2 = global2.String;
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           try {
             return String2(argument);
           } catch (error) {
@@ -1901,7 +1904,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/a-callable.js
     var require_a_callable = __commonJS({
       "node_modules/core-js/internals/a-callable.js"(exports, module) {
@@ -1909,25 +1912,25 @@
         var isCallable = require_is_callable();
         var tryToString = require_try_to_string();
         var TypeError2 = global2.TypeError;
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           if (isCallable(argument))
             return argument;
           throw TypeError2(tryToString(argument) + " is not a function");
         };
       }
     });
-  
+
     // node_modules/core-js/internals/get-method.js
     var require_get_method = __commonJS({
       "node_modules/core-js/internals/get-method.js"(exports, module) {
         var aCallable = require_a_callable();
-        module.exports = function(V, P) {
+        module.exports = function (V, P) {
           var func = V[P];
           return func == null ? void 0 : aCallable(func);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/ordinary-to-primitive.js
     var require_ordinary_to_primitive = __commonJS({
       "node_modules/core-js/internals/ordinary-to-primitive.js"(exports, module) {
@@ -1936,7 +1939,7 @@
         var isCallable = require_is_callable();
         var isObject = require_is_object();
         var TypeError2 = global2.TypeError;
-        module.exports = function(input, pref) {
+        module.exports = function (input, pref) {
           var fn, val;
           if (pref === "string" && isCallable(fn = input.toString) && !isObject(val = call(fn, input)))
             return val;
@@ -1948,20 +1951,20 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/is-pure.js
     var require_is_pure = __commonJS({
       "node_modules/core-js/internals/is-pure.js"(exports, module) {
         module.exports = false;
       }
     });
-  
+
     // node_modules/core-js/internals/set-global.js
     var require_set_global = __commonJS({
       "node_modules/core-js/internals/set-global.js"(exports, module) {
         var global2 = require_global();
         var defineProperty = Object.defineProperty;
-        module.exports = function(key, value) {
+        module.exports = function (key, value) {
           try {
             defineProperty(global2, key, { value, configurable: true, writable: true });
           } catch (error) {
@@ -1971,7 +1974,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/shared-store.js
     var require_shared_store = __commonJS({
       "node_modules/core-js/internals/shared-store.js"(exports, module) {
@@ -1982,13 +1985,13 @@
         module.exports = store;
       }
     });
-  
+
     // node_modules/core-js/internals/shared.js
     var require_shared = __commonJS({
       "node_modules/core-js/internals/shared.js"(exports, module) {
         var IS_PURE = require_is_pure();
         var store = require_shared_store();
-        (module.exports = function(key, value) {
+        (module.exports = function (key, value) {
           return store[key] || (store[key] = value !== void 0 ? value : {});
         })("versions", []).push({
           version: "3.19.0",
@@ -1997,19 +2000,19 @@
         });
       }
     });
-  
+
     // node_modules/core-js/internals/to-object.js
     var require_to_object = __commonJS({
       "node_modules/core-js/internals/to-object.js"(exports, module) {
         var global2 = require_global();
         var requireObjectCoercible = require_require_object_coercible();
         var Object2 = global2.Object;
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           return Object2(requireObjectCoercible(argument));
         };
       }
     });
-  
+
     // node_modules/core-js/internals/has-own-property.js
     var require_has_own_property = __commonJS({
       "node_modules/core-js/internals/has-own-property.js"(exports, module) {
@@ -2021,7 +2024,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/uid.js
     var require_uid = __commonJS({
       "node_modules/core-js/internals/uid.js"(exports, module) {
@@ -2029,12 +2032,12 @@
         var id = 0;
         var postfix = Math.random();
         var toString = uncurryThis(1 .toString);
-        module.exports = function(key) {
+        module.exports = function (key) {
           return "Symbol(" + (key === void 0 ? "" : key) + ")_" + toString(++id + postfix, 36);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/well-known-symbol.js
     var require_well_known_symbol = __commonJS({
       "node_modules/core-js/internals/well-known-symbol.js"(exports, module) {
@@ -2048,7 +2051,7 @@
         var Symbol2 = global2.Symbol;
         var symbolFor = Symbol2 && Symbol2["for"];
         var createWellKnownSymbol = USE_SYMBOL_AS_UID ? Symbol2 : Symbol2 && Symbol2.withoutSetter || uid;
-        module.exports = function(name) {
+        module.exports = function (name) {
           if (!hasOwn(WellKnownSymbolsStore, name) || !(NATIVE_SYMBOL || typeof WellKnownSymbolsStore[name] == "string")) {
             var description = "Symbol." + name;
             if (NATIVE_SYMBOL && hasOwn(Symbol2, name)) {
@@ -2063,7 +2066,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/to-primitive.js
     var require_to_primitive = __commonJS({
       "node_modules/core-js/internals/to-primitive.js"(exports, module) {
@@ -2076,7 +2079,7 @@
         var wellKnownSymbol = require_well_known_symbol();
         var TypeError2 = global2.TypeError;
         var TO_PRIMITIVE = wellKnownSymbol("toPrimitive");
-        module.exports = function(input, pref) {
+        module.exports = function (input, pref) {
           if (!isObject(input) || isSymbol(input))
             return input;
           var exoticToPrim = getMethod(input, TO_PRIMITIVE);
@@ -2095,19 +2098,19 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/to-property-key.js
     var require_to_property_key = __commonJS({
       "node_modules/core-js/internals/to-property-key.js"(exports, module) {
         var toPrimitive = require_to_primitive();
         var isSymbol = require_is_symbol();
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           var key = toPrimitive(argument, "string");
           return isSymbol(key) ? key : key + "";
         };
       }
     });
-  
+
     // node_modules/core-js/internals/document-create-element.js
     var require_document_create_element = __commonJS({
       "node_modules/core-js/internals/document-create-element.js"(exports, module) {
@@ -2115,28 +2118,28 @@
         var isObject = require_is_object();
         var document2 = global2.document;
         var EXISTS = isObject(document2) && isObject(document2.createElement);
-        module.exports = function(it) {
+        module.exports = function (it) {
           return EXISTS ? document2.createElement(it) : {};
         };
       }
     });
-  
+
     // node_modules/core-js/internals/ie8-dom-define.js
     var require_ie8_dom_define = __commonJS({
       "node_modules/core-js/internals/ie8-dom-define.js"(exports, module) {
         var DESCRIPTORS = require_descriptors();
         var fails = require_fails();
         var createElement = require_document_create_element();
-        module.exports = !DESCRIPTORS && !fails(function() {
+        module.exports = !DESCRIPTORS && !fails(function () {
           return Object.defineProperty(createElement("div"), "a", {
-            get: function() {
+            get: function () {
               return 7;
             }
           }).a != 7;
         });
       }
     });
-  
+
     // node_modules/core-js/internals/object-get-own-property-descriptor.js
     var require_object_get_own_property_descriptor = __commonJS({
       "node_modules/core-js/internals/object-get-own-property-descriptor.js"(exports) {
@@ -2162,7 +2165,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/an-object.js
     var require_an_object = __commonJS({
       "node_modules/core-js/internals/an-object.js"(exports, module) {
@@ -2170,14 +2173,14 @@
         var isObject = require_is_object();
         var String2 = global2.String;
         var TypeError2 = global2.TypeError;
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           if (isObject(argument))
             return argument;
           throw TypeError2(String2(argument) + " is not an object");
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-define-property.js
     var require_object_define_property = __commonJS({
       "node_modules/core-js/internals/object-define-property.js"(exports) {
@@ -2205,22 +2208,22 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/create-non-enumerable-property.js
     var require_create_non_enumerable_property = __commonJS({
       "node_modules/core-js/internals/create-non-enumerable-property.js"(exports, module) {
         var DESCRIPTORS = require_descriptors();
         var definePropertyModule = require_object_define_property();
         var createPropertyDescriptor = require_create_property_descriptor();
-        module.exports = DESCRIPTORS ? function(object, key, value) {
+        module.exports = DESCRIPTORS ? function (object, key, value) {
           return definePropertyModule.f(object, key, createPropertyDescriptor(1, value));
-        } : function(object, key, value) {
+        } : function (object, key, value) {
           object[key] = value;
           return object;
         };
       }
     });
-  
+
     // node_modules/core-js/internals/inspect-source.js
     var require_inspect_source = __commonJS({
       "node_modules/core-js/internals/inspect-source.js"(exports, module) {
@@ -2229,14 +2232,14 @@
         var store = require_shared_store();
         var functionToString = uncurryThis(Function.toString);
         if (!isCallable(store.inspectSource)) {
-          store.inspectSource = function(it) {
+          store.inspectSource = function (it) {
             return functionToString(it);
           };
         }
         module.exports = store.inspectSource;
       }
     });
-  
+
     // node_modules/core-js/internals/native-weak-map.js
     var require_native_weak_map = __commonJS({
       "node_modules/core-js/internals/native-weak-map.js"(exports, module) {
@@ -2247,26 +2250,26 @@
         module.exports = isCallable(WeakMap2) && /native code/.test(inspectSource(WeakMap2));
       }
     });
-  
+
     // node_modules/core-js/internals/shared-key.js
     var require_shared_key = __commonJS({
       "node_modules/core-js/internals/shared-key.js"(exports, module) {
         var shared = require_shared();
         var uid = require_uid();
         var keys = shared("keys");
-        module.exports = function(key) {
+        module.exports = function (key) {
           return keys[key] || (keys[key] = uid(key));
         };
       }
     });
-  
+
     // node_modules/core-js/internals/hidden-keys.js
     var require_hidden_keys = __commonJS({
       "node_modules/core-js/internals/hidden-keys.js"(exports, module) {
         module.exports = {};
       }
     });
-  
+
     // node_modules/core-js/internals/internal-state.js
     var require_internal_state = __commonJS({
       "node_modules/core-js/internals/internal-state.js"(exports, module) {
@@ -2285,11 +2288,11 @@
         var set3;
         var get3;
         var has;
-        var enforce = function(it) {
+        var enforce = function (it) {
           return has(it) ? get3(it) : set3(it, {});
         };
-        var getterFor = function(TYPE) {
-          return function(it) {
+        var getterFor = function (TYPE) {
+          return function (it) {
             var state;
             if (!isObject(it) || (state = get3(it)).type !== TYPE) {
               throw TypeError2("Incompatible receiver, " + TYPE + " required");
@@ -2302,33 +2305,33 @@
           wmget = uncurryThis(store.get);
           wmhas = uncurryThis(store.has);
           wmset = uncurryThis(store.set);
-          set3 = function(it, metadata) {
+          set3 = function (it, metadata) {
             if (wmhas(store, it))
               throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
             metadata.facade = it;
             wmset(store, it, metadata);
             return metadata;
           };
-          get3 = function(it) {
+          get3 = function (it) {
             return wmget(store, it) || {};
           };
-          has = function(it) {
+          has = function (it) {
             return wmhas(store, it);
           };
         } else {
           STATE = sharedKey("state");
           hiddenKeys[STATE] = true;
-          set3 = function(it, metadata) {
+          set3 = function (it, metadata) {
             if (hasOwn(it, STATE))
               throw new TypeError2(OBJECT_ALREADY_INITIALIZED);
             metadata.facade = it;
             createNonEnumerableProperty(it, STATE, metadata);
             return metadata;
           };
-          get3 = function(it) {
+          get3 = function (it) {
             return hasOwn(it, STATE) ? it[STATE] : {};
           };
-          has = function(it) {
+          has = function (it) {
             return hasOwn(it, STATE);
           };
         }
@@ -2346,7 +2349,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/function-name.js
     var require_function_name = __commonJS({
       "node_modules/core-js/internals/function-name.js"(exports, module) {
@@ -2365,7 +2368,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/redefine.js
     var require_redefine = __commonJS({
       "node_modules/core-js/internals/redefine.js"(exports, module) {
@@ -2380,7 +2383,7 @@
         var getInternalState = InternalStateModule.get;
         var enforceInternalState = InternalStateModule.enforce;
         var TEMPLATE = String(String).split("String");
-        (module.exports = function(O, key, value, options) {
+        (module.exports = function (O, key, value, options) {
           var unsafe = options ? !!options.unsafe : false;
           var simple = options ? !!options.enumerable : false;
           var noTargetGet = options ? !!options.noTargetGet : false;
@@ -2418,61 +2421,61 @@
         });
       }
     });
-  
+
     // node_modules/core-js/internals/to-integer-or-infinity.js
     var require_to_integer_or_infinity = __commonJS({
       "node_modules/core-js/internals/to-integer-or-infinity.js"(exports, module) {
         var ceil = Math.ceil;
         var floor = Math.floor;
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           var number = +argument;
           return number !== number || number === 0 ? 0 : (number > 0 ? floor : ceil)(number);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/to-absolute-index.js
     var require_to_absolute_index = __commonJS({
       "node_modules/core-js/internals/to-absolute-index.js"(exports, module) {
         var toIntegerOrInfinity = require_to_integer_or_infinity();
         var max = Math.max;
         var min = Math.min;
-        module.exports = function(index, length) {
+        module.exports = function (index, length) {
           var integer = toIntegerOrInfinity(index);
           return integer < 0 ? max(integer + length, 0) : min(integer, length);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/to-length.js
     var require_to_length = __commonJS({
       "node_modules/core-js/internals/to-length.js"(exports, module) {
         var toIntegerOrInfinity = require_to_integer_or_infinity();
         var min = Math.min;
-        module.exports = function(argument) {
+        module.exports = function (argument) {
           return argument > 0 ? min(toIntegerOrInfinity(argument), 9007199254740991) : 0;
         };
       }
     });
-  
+
     // node_modules/core-js/internals/length-of-array-like.js
     var require_length_of_array_like = __commonJS({
       "node_modules/core-js/internals/length-of-array-like.js"(exports, module) {
         var toLength = require_to_length();
-        module.exports = function(obj) {
+        module.exports = function (obj) {
           return toLength(obj.length);
         };
       }
     });
-  
+
     // node_modules/core-js/internals/array-includes.js
     var require_array_includes = __commonJS({
       "node_modules/core-js/internals/array-includes.js"(exports, module) {
         var toIndexedObject = require_to_indexed_object();
         var toAbsoluteIndex = require_to_absolute_index();
         var lengthOfArrayLike = require_length_of_array_like();
-        var createMethod = function(IS_INCLUDES) {
-          return function($this, el, fromIndex) {
+        var createMethod = function (IS_INCLUDES) {
+          return function ($this, el, fromIndex) {
             var O = toIndexedObject($this);
             var length = lengthOfArrayLike(O);
             var index = toAbsoluteIndex(fromIndex, length);
@@ -2501,7 +2504,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-keys-internal.js
     var require_object_keys_internal = __commonJS({
       "node_modules/core-js/internals/object-keys-internal.js"(exports, module) {
@@ -2511,7 +2514,7 @@
         var indexOf = require_array_includes().indexOf;
         var hiddenKeys = require_hidden_keys();
         var push = uncurryThis([].push);
-        module.exports = function(object, names) {
+        module.exports = function (object, names) {
           var O = toIndexedObject(object);
           var i = 0;
           var result = [];
@@ -2526,7 +2529,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/enum-bug-keys.js
     var require_enum_bug_keys = __commonJS({
       "node_modules/core-js/internals/enum-bug-keys.js"(exports, module) {
@@ -2541,7 +2544,7 @@
         ];
       }
     });
-  
+
     // node_modules/core-js/internals/object-get-own-property-names.js
     var require_object_get_own_property_names = __commonJS({
       "node_modules/core-js/internals/object-get-own-property-names.js"(exports) {
@@ -2553,14 +2556,14 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-get-own-property-symbols.js
     var require_object_get_own_property_symbols = __commonJS({
       "node_modules/core-js/internals/object-get-own-property-symbols.js"(exports) {
         exports.f = Object.getOwnPropertySymbols;
       }
     });
-  
+
     // node_modules/core-js/internals/own-keys.js
     var require_own_keys = __commonJS({
       "node_modules/core-js/internals/own-keys.js"(exports, module) {
@@ -2577,7 +2580,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/copy-constructor-properties.js
     var require_copy_constructor_properties = __commonJS({
       "node_modules/core-js/internals/copy-constructor-properties.js"(exports, module) {
@@ -2585,7 +2588,7 @@
         var ownKeys = require_own_keys();
         var getOwnPropertyDescriptorModule = require_object_get_own_property_descriptor();
         var definePropertyModule = require_object_define_property();
-        module.exports = function(target, source) {
+        module.exports = function (target, source) {
           var keys = ownKeys(source);
           var defineProperty = definePropertyModule.f;
           var getOwnPropertyDescriptor = getOwnPropertyDescriptorModule.f;
@@ -2597,18 +2600,18 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/is-forced.js
     var require_is_forced = __commonJS({
       "node_modules/core-js/internals/is-forced.js"(exports, module) {
         var fails = require_fails();
         var isCallable = require_is_callable();
         var replacement = /#|\.prototype\./;
-        var isForced = function(feature, detection) {
+        var isForced = function (feature, detection) {
           var value = data[normalize(feature)];
           return value == POLYFILL ? true : value == NATIVE ? false : isCallable(detection) ? fails(detection) : !!detection;
         };
-        var normalize = isForced.normalize = function(string) {
+        var normalize = isForced.normalize = function (string) {
           return String(string).replace(replacement, ".").toLowerCase();
         };
         var data = isForced.data = {};
@@ -2617,7 +2620,7 @@
         module.exports = isForced;
       }
     });
-  
+
     // node_modules/core-js/internals/export.js
     var require_export = __commonJS({
       "node_modules/core-js/internals/export.js"(exports, module) {
@@ -2628,7 +2631,7 @@
         var setGlobal = require_set_global();
         var copyConstructorProperties = require_copy_constructor_properties();
         var isForced = require_is_forced();
-        module.exports = function(options, source) {
+        module.exports = function (options, source) {
           var TARGET = options.target;
           var GLOBAL = options.global;
           var STATIC = options.stat;
@@ -2662,7 +2665,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-keys.js
     var require_object_keys = __commonJS({
       "node_modules/core-js/internals/object-keys.js"(exports, module) {
@@ -2673,7 +2676,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/object-define-properties.js
     var require_object_define_properties = __commonJS({
       "node_modules/core-js/internals/object-define-properties.js"(exports, module) {
@@ -2695,7 +2698,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/html.js
     var require_html = __commonJS({
       "node_modules/core-js/internals/html.js"(exports, module) {
@@ -2703,7 +2706,7 @@
         module.exports = getBuiltIn("document", "documentElement");
       }
     });
-  
+
     // node_modules/core-js/internals/object-create.js
     var require_object_create = __commonJS({
       "node_modules/core-js/internals/object-create.js"(exports, module) {
@@ -2719,19 +2722,19 @@
         var PROTOTYPE = "prototype";
         var SCRIPT = "script";
         var IE_PROTO = sharedKey("IE_PROTO");
-        var EmptyConstructor = function() {
+        var EmptyConstructor = function () {
         };
-        var scriptTag = function(content) {
+        var scriptTag = function (content) {
           return LT + SCRIPT + GT + content + LT + "/" + SCRIPT + GT;
         };
-        var NullProtoObjectViaActiveX = function(activeXDocument2) {
+        var NullProtoObjectViaActiveX = function (activeXDocument2) {
           activeXDocument2.write(scriptTag(""));
           activeXDocument2.close();
           var temp = activeXDocument2.parentWindow.Object;
           activeXDocument2 = null;
           return temp;
         };
-        var NullProtoObjectViaIFrame = function() {
+        var NullProtoObjectViaIFrame = function () {
           var iframe = documentCreateElement("iframe");
           var JS = "java" + SCRIPT + ":";
           var iframeDocument;
@@ -2745,7 +2748,7 @@
           return iframeDocument.F;
         };
         var activeXDocument;
-        var NullProtoObject = function() {
+        var NullProtoObject = function () {
           try {
             activeXDocument = new ActiveXObject("htmlfile");
           } catch (error) {
@@ -2770,7 +2773,7 @@
         };
       }
     });
-  
+
     // node_modules/core-js/internals/add-to-unscopables.js
     var require_add_to_unscopables = __commonJS({
       "node_modules/core-js/internals/add-to-unscopables.js"(exports, module) {
@@ -2785,12 +2788,12 @@
             value: create(null)
           });
         }
-        module.exports = function(key) {
+        module.exports = function (key) {
           ArrayPrototype[UNSCOPABLES][key] = true;
         };
       }
     });
-  
+
     // node_modules/core-js/modules/es.array.includes.js
     var require_es_array_includes = __commonJS({
       "node_modules/core-js/modules/es.array.includes.js"() {
@@ -2806,18 +2809,18 @@
         addToUnscopables("includes");
       }
     });
-  
+
     // node_modules/core-js/internals/entry-unbind.js
     var require_entry_unbind = __commonJS({
       "node_modules/core-js/internals/entry-unbind.js"(exports, module) {
         var global2 = require_global();
         var uncurryThis = require_function_uncurry_this();
-        module.exports = function(CONSTRUCTOR, METHOD) {
+        module.exports = function (CONSTRUCTOR, METHOD) {
           return uncurryThis(global2[CONSTRUCTOR].prototype[METHOD]);
         };
       }
     });
-  
+
     // node_modules/core-js/es/array/includes.js
     var require_includes = __commonJS({
       "node_modules/core-js/es/array/includes.js"(exports, module) {
@@ -2826,7 +2829,7 @@
         module.exports = entryUnbind("Array", "includes");
       }
     });
-  
+
     // node_modules/core-js/stable/array/includes.js
     var require_includes2 = __commonJS({
       "node_modules/core-js/stable/array/includes.js"(exports, module) {
@@ -2834,7 +2837,7 @@
         module.exports = parent;
       }
     });
-  
+
     // node_modules/core-js/features/array/includes.js
     var require_includes3 = __commonJS({
       "node_modules/core-js/features/array/includes.js"(exports, module) {
@@ -2842,7 +2845,7 @@
         module.exports = parent;
       }
     });
-  
+
     // node_modules/lodash/_freeGlobal.js
     var require_freeGlobal = __commonJS({
       "node_modules/lodash/_freeGlobal.js"(exports, module) {
@@ -2850,7 +2853,7 @@
         module.exports = freeGlobal;
       }
     });
-  
+
     // node_modules/lodash/_root.js
     var require_root = __commonJS({
       "node_modules/lodash/_root.js"(exports, module) {
@@ -2860,7 +2863,7 @@
         module.exports = root;
       }
     });
-  
+
     // node_modules/lodash/_Symbol.js
     var require_Symbol = __commonJS({
       "node_modules/lodash/_Symbol.js"(exports, module) {
@@ -2869,7 +2872,7 @@
         module.exports = Symbol2;
       }
     });
-  
+
     // node_modules/lodash/_getRawTag.js
     var require_getRawTag = __commonJS({
       "node_modules/lodash/_getRawTag.js"(exports, module) {
@@ -2898,7 +2901,7 @@
         module.exports = getRawTag;
       }
     });
-  
+
     // node_modules/lodash/_objectToString.js
     var require_objectToString = __commonJS({
       "node_modules/lodash/_objectToString.js"(exports, module) {
@@ -2910,7 +2913,7 @@
         module.exports = objectToString;
       }
     });
-  
+
     // node_modules/lodash/_baseGetTag.js
     var require_baseGetTag = __commonJS({
       "node_modules/lodash/_baseGetTag.js"(exports, module) {
@@ -2929,19 +2932,19 @@
         module.exports = baseGetTag;
       }
     });
-  
+
     // node_modules/lodash/_overArg.js
     var require_overArg = __commonJS({
       "node_modules/lodash/_overArg.js"(exports, module) {
         function overArg(func, transform) {
-          return function(arg) {
+          return function (arg) {
             return func(transform(arg));
           };
         }
         module.exports = overArg;
       }
     });
-  
+
     // node_modules/lodash/_getPrototype.js
     var require_getPrototype = __commonJS({
       "node_modules/lodash/_getPrototype.js"(exports, module) {
@@ -2950,7 +2953,7 @@
         module.exports = getPrototype;
       }
     });
-  
+
     // node_modules/lodash/isObjectLike.js
     var require_isObjectLike = __commonJS({
       "node_modules/lodash/isObjectLike.js"(exports, module) {
@@ -2960,7 +2963,7 @@
         module.exports = isObjectLike;
       }
     });
-  
+
     // node_modules/lodash/isPlainObject.js
     var require_isPlainObject = __commonJS({
       "node_modules/lodash/isPlainObject.js"(exports, module) {
@@ -2987,7 +2990,7 @@
         module.exports = isPlainObject;
       }
     });
-  
+
     // node_modules/redux/node_modules/symbol-observable/lib/ponyfill.js
     var require_ponyfill = __commonJS({
       "node_modules/redux/node_modules/symbol-observable/lib/ponyfill.js"(exports) {
@@ -3013,7 +3016,7 @@
         }
       }
     });
-  
+
     // node_modules/redux/node_modules/symbol-observable/lib/index.js
     var require_lib = __commonJS({
       "node_modules/redux/node_modules/symbol-observable/lib/index.js"(exports, module) {
@@ -3042,7 +3045,7 @@
         exports["default"] = result;
       }
     });
-  
+
     // node_modules/redux/lib/createStore.js
     var require_createStore = __commonJS({
       "node_modules/redux/lib/createStore.js"(exports) {
@@ -3159,7 +3162,7 @@
                 var unsubscribe = outerSubscribe(observeState);
                 return { unsubscribe };
               }
-            }, _ref[_symbolObservable2["default"]] = function() {
+            }, _ref[_symbolObservable2["default"]] = function () {
               return this;
             }, _ref;
           }
@@ -3173,7 +3176,7 @@
         }
       }
     });
-  
+
     // node_modules/redux/lib/utils/warning.js
     var require_warning = __commonJS({
       "node_modules/redux/lib/utils/warning.js"(exports) {
@@ -3191,7 +3194,7 @@
         }
       }
     });
-  
+
     // node_modules/redux/lib/combineReducers.js
     var require_combineReducers = __commonJS({
       "node_modules/redux/lib/combineReducers.js"(exports) {
@@ -3212,7 +3215,7 @@
           return "Given action " + actionName + ', reducer "' + key + '" returned undefined. To ignore an action, you must explicitly return the previous state.';
         }
         function assertReducerSanity(reducers) {
-          Object.keys(reducers).forEach(function(key) {
+          Object.keys(reducers).forEach(function (key) {
             var reducer = reducers[key];
             var initialState4 = reducer(void 0, { type: _createStore.ActionTypes.INIT });
             if (typeof initialState4 === "undefined") {
@@ -3279,7 +3282,7 @@
         }
       }
     });
-  
+
     // node_modules/redux/lib/bindActionCreators.js
     var require_bindActionCreators = __commonJS({
       "node_modules/redux/lib/bindActionCreators.js"(exports) {
@@ -3287,7 +3290,7 @@
         exports.__esModule = true;
         exports["default"] = bindActionCreators;
         function bindActionCreator(actionCreator, dispatch) {
-          return function() {
+          return function () {
             return dispatch(actionCreator.apply(void 0, arguments));
           };
         }
@@ -3311,7 +3314,7 @@
         }
       }
     });
-  
+
     // node_modules/redux/lib/compose.js
     var require_compose = __commonJS({
       "node_modules/redux/lib/compose.js"(exports) {
@@ -3323,7 +3326,7 @@
             funcs[_key] = arguments[_key];
           }
           if (funcs.length === 0) {
-            return function(arg) {
+            return function (arg) {
               return arg;
             };
           }
@@ -3332,21 +3335,21 @@
           }
           var last = funcs[funcs.length - 1];
           var rest = funcs.slice(0, -1);
-          return function() {
-            return rest.reduceRight(function(composed, f) {
+          return function () {
+            return rest.reduceRight(function (composed, f) {
               return f(composed);
             }, last.apply(void 0, arguments));
           };
         }
       }
     });
-  
+
     // node_modules/redux/lib/applyMiddleware.js
     var require_applyMiddleware = __commonJS({
       "node_modules/redux/lib/applyMiddleware.js"(exports) {
         "use strict";
         exports.__esModule = true;
-        var _extends = Object.assign || function(target) {
+        var _extends = Object.assign || function (target) {
           for (var i = 1; i < arguments.length; i++) {
             var source = arguments[i];
             for (var key in source) {
@@ -3367,8 +3370,8 @@
           for (var _len = arguments.length, middlewares = Array(_len), _key = 0; _key < _len; _key++) {
             middlewares[_key] = arguments[_key];
           }
-          return function(createStore) {
-            return function(reducer, preloadedState, enhancer) {
+          return function (createStore) {
+            return function (reducer, preloadedState, enhancer) {
               var store = createStore(reducer, preloadedState, enhancer);
               var _dispatch = store.dispatch;
               var chain = [];
@@ -3378,7 +3381,7 @@
                   return _dispatch(action);
                 }
               };
-              chain = middlewares.map(function(middleware) {
+              chain = middlewares.map(function (middleware) {
                 return middleware(middlewareAPI);
               });
               _dispatch = _compose2["default"].apply(void 0, chain)(store.dispatch);
@@ -3390,7 +3393,7 @@
         }
       }
     });
-  
+
     // node_modules/redux/lib/index.js
     var require_lib2 = __commonJS({
       "node_modules/redux/lib/index.js"(exports) {
@@ -3422,7 +3425,7 @@
         exports.compose = _compose2["default"];
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/trigger-events.ts
     var EventTypeConsts, EventAppliesTo, EventBasedOn, EventContinuousMouseAxes, EventLimitAffectedElements, QuickEffectIds, QuickEffectDirectionConsts;
     var init_trigger_events = __esm({
@@ -3510,7 +3513,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/animation-actions.ts
     var ActionTypeConsts, ActionAppliesTo;
     var init_animation_actions = __esm({
@@ -3548,7 +3551,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/trigger-interactions.ts
     var InteractionTypeConsts;
     var init_trigger_interactions = __esm({
@@ -3572,7 +3575,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/reduced-motion.ts
     var TRANSFORM_MOVE, TRANSFORM_SCALE, TRANSFORM_ROTATE, TRANSFORM_SKEW, STYLE_SIZE, STYLE_FILTER, STYLE_FONT_VARIATION, ReducedMotionTypes;
     var init_reduced_motion = __esm({
@@ -3599,7 +3602,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/IX2EngineActionTypes.ts
     var IX2EngineActionTypes_exports = {};
     __export(IX2EngineActionTypes_exports, {
@@ -3650,7 +3653,7 @@
         IX2_TEST_FRAME_RENDERED = "IX2_TEST_FRAME_RENDERED";
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/IX2EngineConstants.ts
     var IX2EngineConstants_exports = {};
     __export(IX2EngineConstants_exports, {
@@ -3773,7 +3776,7 @@
         RENDER_PLUGIN = "RENDER_PLUGIN";
       }
     });
-  
+
     // packages/systems/ix2/shared-constants/index.ts
     var shared_constants_exports = {};
     __export(shared_constants_exports, {
@@ -3804,7 +3807,7 @@
         init_trigger_events();
       }
     });
-  
+
     // packages/systems/ix2/engine/reducers/IX2DataReducer.ts
     var IX2_RAW_DATA_IMPORTED2, ixData;
     var init_IX2DataReducer = __esm({
@@ -3824,7 +3827,7 @@
         };
       }
     });
-  
+
     // node_modules/timm/lib/timm.js
     var require_timm = __commonJS({
       "node_modules/timm/lib/timm.js"(exports) {
@@ -3832,9 +3835,9 @@
         Object.defineProperty(exports, "__esModule", {
           value: true
         });
-        var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function(obj) {
+        var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
           return typeof obj;
-        } : function(obj) {
+        } : function (obj) {
           return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
         };
         exports.clone = clone;
@@ -4081,7 +4084,7 @@
         exports.default = timm;
       }
     });
-  
+
     // packages/systems/ix2/engine/reducers/IX2RequestReducer.ts
     var import_timm, IX2_PREVIEW_REQUESTED2, IX2_PLAYBACK_REQUESTED2, IX2_STOP_REQUESTED2, IX2_CLEAR_REQUESTED2, initialState, stateKeys, ixRequest;
     var init_IX2RequestReducer = __esm({
@@ -4116,7 +4119,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/engine/reducers/IX2SessionReducer.ts
     var import_timm2, IX2_SESSION_INITIALIZED2, IX2_SESSION_STARTED2, IX2_TEST_FRAME_RENDERED2, IX2_SESSION_STOPPED2, IX2_EVENT_LISTENER_ADDED2, IX2_EVENT_STATE_CHANGED2, IX2_ANIMATION_FRAME_CHANGED2, IX2_ACTION_LIST_PLAYBACK_CHANGED2, IX2_VIEWPORT_WIDTH_CHANGED2, IX2_MEDIA_QUERIES_DEFINED2, initialState2, TEST_FRAME_STEPS_SIZE, ixSession;
     var init_IX2SessionReducer = __esm({
@@ -4214,7 +4217,7 @@
         };
       }
     });
-  
+
     // node_modules/lodash/_listCacheClear.js
     var require_listCacheClear = __commonJS({
       "node_modules/lodash/_listCacheClear.js"(exports, module) {
@@ -4225,7 +4228,7 @@
         module.exports = listCacheClear;
       }
     });
-  
+
     // node_modules/lodash/eq.js
     var require_eq = __commonJS({
       "node_modules/lodash/eq.js"(exports, module) {
@@ -4235,7 +4238,7 @@
         module.exports = eq;
       }
     });
-  
+
     // node_modules/lodash/_assocIndexOf.js
     var require_assocIndexOf = __commonJS({
       "node_modules/lodash/_assocIndexOf.js"(exports, module) {
@@ -4252,7 +4255,7 @@
         module.exports = assocIndexOf;
       }
     });
-  
+
     // node_modules/lodash/_listCacheDelete.js
     var require_listCacheDelete = __commonJS({
       "node_modules/lodash/_listCacheDelete.js"(exports, module) {
@@ -4276,7 +4279,7 @@
         module.exports = listCacheDelete;
       }
     });
-  
+
     // node_modules/lodash/_listCacheGet.js
     var require_listCacheGet = __commonJS({
       "node_modules/lodash/_listCacheGet.js"(exports, module) {
@@ -4288,7 +4291,7 @@
         module.exports = listCacheGet;
       }
     });
-  
+
     // node_modules/lodash/_listCacheHas.js
     var require_listCacheHas = __commonJS({
       "node_modules/lodash/_listCacheHas.js"(exports, module) {
@@ -4299,7 +4302,7 @@
         module.exports = listCacheHas;
       }
     });
-  
+
     // node_modules/lodash/_listCacheSet.js
     var require_listCacheSet = __commonJS({
       "node_modules/lodash/_listCacheSet.js"(exports, module) {
@@ -4317,7 +4320,7 @@
         module.exports = listCacheSet;
       }
     });
-  
+
     // node_modules/lodash/_ListCache.js
     var require_ListCache = __commonJS({
       "node_modules/lodash/_ListCache.js"(exports, module) {
@@ -4342,7 +4345,7 @@
         module.exports = ListCache;
       }
     });
-  
+
     // node_modules/lodash/_stackClear.js
     var require_stackClear = __commonJS({
       "node_modules/lodash/_stackClear.js"(exports, module) {
@@ -4354,7 +4357,7 @@
         module.exports = stackClear;
       }
     });
-  
+
     // node_modules/lodash/_stackDelete.js
     var require_stackDelete = __commonJS({
       "node_modules/lodash/_stackDelete.js"(exports, module) {
@@ -4366,7 +4369,7 @@
         module.exports = stackDelete;
       }
     });
-  
+
     // node_modules/lodash/_stackGet.js
     var require_stackGet = __commonJS({
       "node_modules/lodash/_stackGet.js"(exports, module) {
@@ -4376,7 +4379,7 @@
         module.exports = stackGet;
       }
     });
-  
+
     // node_modules/lodash/_stackHas.js
     var require_stackHas = __commonJS({
       "node_modules/lodash/_stackHas.js"(exports, module) {
@@ -4386,7 +4389,7 @@
         module.exports = stackHas;
       }
     });
-  
+
     // node_modules/lodash/isObject.js
     var require_isObject = __commonJS({
       "node_modules/lodash/isObject.js"(exports, module) {
@@ -4397,7 +4400,7 @@
         module.exports = isObject;
       }
     });
-  
+
     // node_modules/lodash/isFunction.js
     var require_isFunction = __commonJS({
       "node_modules/lodash/isFunction.js"(exports, module) {
@@ -4417,7 +4420,7 @@
         module.exports = isFunction;
       }
     });
-  
+
     // node_modules/lodash/_coreJsData.js
     var require_coreJsData = __commonJS({
       "node_modules/lodash/_coreJsData.js"(exports, module) {
@@ -4426,12 +4429,12 @@
         module.exports = coreJsData;
       }
     });
-  
+
     // node_modules/lodash/_isMasked.js
     var require_isMasked = __commonJS({
       "node_modules/lodash/_isMasked.js"(exports, module) {
         var coreJsData = require_coreJsData();
-        var maskSrcKey = function() {
+        var maskSrcKey = function () {
           var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || "");
           return uid ? "Symbol(src)_1." + uid : "";
         }();
@@ -4441,7 +4444,7 @@
         module.exports = isMasked;
       }
     });
-  
+
     // node_modules/lodash/_toSource.js
     var require_toSource = __commonJS({
       "node_modules/lodash/_toSource.js"(exports, module) {
@@ -4463,7 +4466,7 @@
         module.exports = toSource;
       }
     });
-  
+
     // node_modules/lodash/_baseIsNative.js
     var require_baseIsNative = __commonJS({
       "node_modules/lodash/_baseIsNative.js"(exports, module) {
@@ -4490,7 +4493,7 @@
         module.exports = baseIsNative;
       }
     });
-  
+
     // node_modules/lodash/_getValue.js
     var require_getValue = __commonJS({
       "node_modules/lodash/_getValue.js"(exports, module) {
@@ -4500,7 +4503,7 @@
         module.exports = getValue;
       }
     });
-  
+
     // node_modules/lodash/_getNative.js
     var require_getNative = __commonJS({
       "node_modules/lodash/_getNative.js"(exports, module) {
@@ -4513,7 +4516,7 @@
         module.exports = getNative;
       }
     });
-  
+
     // node_modules/lodash/_Map.js
     var require_Map = __commonJS({
       "node_modules/lodash/_Map.js"(exports, module) {
@@ -4523,7 +4526,7 @@
         module.exports = Map2;
       }
     });
-  
+
     // node_modules/lodash/_nativeCreate.js
     var require_nativeCreate = __commonJS({
       "node_modules/lodash/_nativeCreate.js"(exports, module) {
@@ -4532,7 +4535,7 @@
         module.exports = nativeCreate;
       }
     });
-  
+
     // node_modules/lodash/_hashClear.js
     var require_hashClear = __commonJS({
       "node_modules/lodash/_hashClear.js"(exports, module) {
@@ -4544,7 +4547,7 @@
         module.exports = hashClear;
       }
     });
-  
+
     // node_modules/lodash/_hashDelete.js
     var require_hashDelete = __commonJS({
       "node_modules/lodash/_hashDelete.js"(exports, module) {
@@ -4556,7 +4559,7 @@
         module.exports = hashDelete;
       }
     });
-  
+
     // node_modules/lodash/_hashGet.js
     var require_hashGet = __commonJS({
       "node_modules/lodash/_hashGet.js"(exports, module) {
@@ -4575,7 +4578,7 @@
         module.exports = hashGet;
       }
     });
-  
+
     // node_modules/lodash/_hashHas.js
     var require_hashHas = __commonJS({
       "node_modules/lodash/_hashHas.js"(exports, module) {
@@ -4589,7 +4592,7 @@
         module.exports = hashHas;
       }
     });
-  
+
     // node_modules/lodash/_hashSet.js
     var require_hashSet = __commonJS({
       "node_modules/lodash/_hashSet.js"(exports, module) {
@@ -4604,7 +4607,7 @@
         module.exports = hashSet;
       }
     });
-  
+
     // node_modules/lodash/_Hash.js
     var require_Hash = __commonJS({
       "node_modules/lodash/_Hash.js"(exports, module) {
@@ -4629,7 +4632,7 @@
         module.exports = Hash;
       }
     });
-  
+
     // node_modules/lodash/_mapCacheClear.js
     var require_mapCacheClear = __commonJS({
       "node_modules/lodash/_mapCacheClear.js"(exports, module) {
@@ -4647,7 +4650,7 @@
         module.exports = mapCacheClear;
       }
     });
-  
+
     // node_modules/lodash/_isKeyable.js
     var require_isKeyable = __commonJS({
       "node_modules/lodash/_isKeyable.js"(exports, module) {
@@ -4658,7 +4661,7 @@
         module.exports = isKeyable;
       }
     });
-  
+
     // node_modules/lodash/_getMapData.js
     var require_getMapData = __commonJS({
       "node_modules/lodash/_getMapData.js"(exports, module) {
@@ -4670,7 +4673,7 @@
         module.exports = getMapData;
       }
     });
-  
+
     // node_modules/lodash/_mapCacheDelete.js
     var require_mapCacheDelete = __commonJS({
       "node_modules/lodash/_mapCacheDelete.js"(exports, module) {
@@ -4683,7 +4686,7 @@
         module.exports = mapCacheDelete;
       }
     });
-  
+
     // node_modules/lodash/_mapCacheGet.js
     var require_mapCacheGet = __commonJS({
       "node_modules/lodash/_mapCacheGet.js"(exports, module) {
@@ -4694,7 +4697,7 @@
         module.exports = mapCacheGet;
       }
     });
-  
+
     // node_modules/lodash/_mapCacheHas.js
     var require_mapCacheHas = __commonJS({
       "node_modules/lodash/_mapCacheHas.js"(exports, module) {
@@ -4705,7 +4708,7 @@
         module.exports = mapCacheHas;
       }
     });
-  
+
     // node_modules/lodash/_mapCacheSet.js
     var require_mapCacheSet = __commonJS({
       "node_modules/lodash/_mapCacheSet.js"(exports, module) {
@@ -4719,7 +4722,7 @@
         module.exports = mapCacheSet;
       }
     });
-  
+
     // node_modules/lodash/_MapCache.js
     var require_MapCache = __commonJS({
       "node_modules/lodash/_MapCache.js"(exports, module) {
@@ -4744,7 +4747,7 @@
         module.exports = MapCache;
       }
     });
-  
+
     // node_modules/lodash/_stackSet.js
     var require_stackSet = __commonJS({
       "node_modules/lodash/_stackSet.js"(exports, module) {
@@ -4770,7 +4773,7 @@
         module.exports = stackSet;
       }
     });
-  
+
     // node_modules/lodash/_Stack.js
     var require_Stack = __commonJS({
       "node_modules/lodash/_Stack.js"(exports, module) {
@@ -4792,7 +4795,7 @@
         module.exports = Stack;
       }
     });
-  
+
     // node_modules/lodash/_setCacheAdd.js
     var require_setCacheAdd = __commonJS({
       "node_modules/lodash/_setCacheAdd.js"(exports, module) {
@@ -4804,7 +4807,7 @@
         module.exports = setCacheAdd;
       }
     });
-  
+
     // node_modules/lodash/_setCacheHas.js
     var require_setCacheHas = __commonJS({
       "node_modules/lodash/_setCacheHas.js"(exports, module) {
@@ -4814,7 +4817,7 @@
         module.exports = setCacheHas;
       }
     });
-  
+
     // node_modules/lodash/_SetCache.js
     var require_SetCache = __commonJS({
       "node_modules/lodash/_SetCache.js"(exports, module) {
@@ -4833,7 +4836,7 @@
         module.exports = SetCache;
       }
     });
-  
+
     // node_modules/lodash/_arraySome.js
     var require_arraySome = __commonJS({
       "node_modules/lodash/_arraySome.js"(exports, module) {
@@ -4849,7 +4852,7 @@
         module.exports = arraySome;
       }
     });
-  
+
     // node_modules/lodash/_cacheHas.js
     var require_cacheHas = __commonJS({
       "node_modules/lodash/_cacheHas.js"(exports, module) {
@@ -4859,7 +4862,7 @@
         module.exports = cacheHas;
       }
     });
-  
+
     // node_modules/lodash/_equalArrays.js
     var require_equalArrays = __commonJS({
       "node_modules/lodash/_equalArrays.js"(exports, module) {
@@ -4894,7 +4897,7 @@
               break;
             }
             if (seen) {
-              if (!arraySome(other, function(othValue2, othIndex) {
+              if (!arraySome(other, function (othValue2, othIndex) {
                 if (!cacheHas(seen, othIndex) && (arrValue === othValue2 || equalFunc(arrValue, othValue2, bitmask, customizer, stack))) {
                   return seen.push(othIndex);
                 }
@@ -4914,7 +4917,7 @@
         module.exports = equalArrays;
       }
     });
-  
+
     // node_modules/lodash/_Uint8Array.js
     var require_Uint8Array = __commonJS({
       "node_modules/lodash/_Uint8Array.js"(exports, module) {
@@ -4923,13 +4926,13 @@
         module.exports = Uint8Array2;
       }
     });
-  
+
     // node_modules/lodash/_mapToArray.js
     var require_mapToArray = __commonJS({
       "node_modules/lodash/_mapToArray.js"(exports, module) {
         function mapToArray(map) {
           var index = -1, result = Array(map.size);
-          map.forEach(function(value, key) {
+          map.forEach(function (value, key) {
             result[++index] = [key, value];
           });
           return result;
@@ -4937,13 +4940,13 @@
         module.exports = mapToArray;
       }
     });
-  
+
     // node_modules/lodash/_setToArray.js
     var require_setToArray = __commonJS({
       "node_modules/lodash/_setToArray.js"(exports, module) {
         function setToArray(set3) {
           var index = -1, result = Array(set3.size);
-          set3.forEach(function(value) {
+          set3.forEach(function (value) {
             result[++index] = value;
           });
           return result;
@@ -4951,7 +4954,7 @@
         module.exports = setToArray;
       }
     });
-  
+
     // node_modules/lodash/_equalByTag.js
     var require_equalByTag = __commonJS({
       "node_modules/lodash/_equalByTag.js"(exports, module) {
@@ -5025,7 +5028,7 @@
         module.exports = equalByTag;
       }
     });
-  
+
     // node_modules/lodash/_arrayPush.js
     var require_arrayPush = __commonJS({
       "node_modules/lodash/_arrayPush.js"(exports, module) {
@@ -5039,7 +5042,7 @@
         module.exports = arrayPush;
       }
     });
-  
+
     // node_modules/lodash/isArray.js
     var require_isArray = __commonJS({
       "node_modules/lodash/isArray.js"(exports, module) {
@@ -5047,7 +5050,7 @@
         module.exports = isArray;
       }
     });
-  
+
     // node_modules/lodash/_baseGetAllKeys.js
     var require_baseGetAllKeys = __commonJS({
       "node_modules/lodash/_baseGetAllKeys.js"(exports, module) {
@@ -5060,7 +5063,7 @@
         module.exports = baseGetAllKeys;
       }
     });
-  
+
     // node_modules/lodash/_arrayFilter.js
     var require_arrayFilter = __commonJS({
       "node_modules/lodash/_arrayFilter.js"(exports, module) {
@@ -5077,7 +5080,7 @@
         module.exports = arrayFilter;
       }
     });
-  
+
     // node_modules/lodash/stubArray.js
     var require_stubArray = __commonJS({
       "node_modules/lodash/stubArray.js"(exports, module) {
@@ -5087,7 +5090,7 @@
         module.exports = stubArray;
       }
     });
-  
+
     // node_modules/lodash/_getSymbols.js
     var require_getSymbols = __commonJS({
       "node_modules/lodash/_getSymbols.js"(exports, module) {
@@ -5096,19 +5099,19 @@
         var objectProto = Object.prototype;
         var propertyIsEnumerable = objectProto.propertyIsEnumerable;
         var nativeGetSymbols = Object.getOwnPropertySymbols;
-        var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+        var getSymbols = !nativeGetSymbols ? stubArray : function (object) {
           if (object == null) {
             return [];
           }
           object = Object(object);
-          return arrayFilter(nativeGetSymbols(object), function(symbol) {
+          return arrayFilter(nativeGetSymbols(object), function (symbol) {
             return propertyIsEnumerable.call(object, symbol);
           });
         };
         module.exports = getSymbols;
       }
     });
-  
+
     // node_modules/lodash/_baseTimes.js
     var require_baseTimes = __commonJS({
       "node_modules/lodash/_baseTimes.js"(exports, module) {
@@ -5122,7 +5125,7 @@
         module.exports = baseTimes;
       }
     });
-  
+
     // node_modules/lodash/_baseIsArguments.js
     var require_baseIsArguments = __commonJS({
       "node_modules/lodash/_baseIsArguments.js"(exports, module) {
@@ -5135,7 +5138,7 @@
         module.exports = baseIsArguments;
       }
     });
-  
+
     // node_modules/lodash/isArguments.js
     var require_isArguments = __commonJS({
       "node_modules/lodash/isArguments.js"(exports, module) {
@@ -5144,15 +5147,15 @@
         var objectProto = Object.prototype;
         var hasOwnProperty = objectProto.hasOwnProperty;
         var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-        var isArguments = baseIsArguments(function() {
+        var isArguments = baseIsArguments(function () {
           return arguments;
-        }()) ? baseIsArguments : function(value) {
+        }()) ? baseIsArguments : function (value) {
           return isObjectLike(value) && hasOwnProperty.call(value, "callee") && !propertyIsEnumerable.call(value, "callee");
         };
         module.exports = isArguments;
       }
     });
-  
+
     // node_modules/lodash/stubFalse.js
     var require_stubFalse = __commonJS({
       "node_modules/lodash/stubFalse.js"(exports, module) {
@@ -5162,7 +5165,7 @@
         module.exports = stubFalse;
       }
     });
-  
+
     // node_modules/lodash/isBuffer.js
     var require_isBuffer = __commonJS({
       "node_modules/lodash/isBuffer.js"(exports, module) {
@@ -5177,7 +5180,7 @@
         module.exports = isBuffer;
       }
     });
-  
+
     // node_modules/lodash/_isIndex.js
     var require_isIndex = __commonJS({
       "node_modules/lodash/_isIndex.js"(exports, module) {
@@ -5191,7 +5194,7 @@
         module.exports = isIndex;
       }
     });
-  
+
     // node_modules/lodash/isLength.js
     var require_isLength = __commonJS({
       "node_modules/lodash/isLength.js"(exports, module) {
@@ -5202,7 +5205,7 @@
         module.exports = isLength;
       }
     });
-  
+
     // node_modules/lodash/_baseIsTypedArray.js
     var require_baseIsTypedArray = __commonJS({
       "node_modules/lodash/_baseIsTypedArray.js"(exports, module) {
@@ -5242,19 +5245,19 @@
         module.exports = baseIsTypedArray;
       }
     });
-  
+
     // node_modules/lodash/_baseUnary.js
     var require_baseUnary = __commonJS({
       "node_modules/lodash/_baseUnary.js"(exports, module) {
         function baseUnary(func) {
-          return function(value) {
+          return function (value) {
             return func(value);
           };
         }
         module.exports = baseUnary;
       }
     });
-  
+
     // node_modules/lodash/_nodeUtil.js
     var require_nodeUtil = __commonJS({
       "node_modules/lodash/_nodeUtil.js"(exports, module) {
@@ -5263,7 +5266,7 @@
         var freeModule = freeExports && typeof module == "object" && module && !module.nodeType && module;
         var moduleExports = freeModule && freeModule.exports === freeExports;
         var freeProcess = moduleExports && freeGlobal.process;
-        var nodeUtil = function() {
+        var nodeUtil = function () {
           try {
             var types = freeModule && freeModule.require && freeModule.require("util").types;
             if (types) {
@@ -5276,7 +5279,7 @@
         module.exports = nodeUtil;
       }
     });
-  
+
     // node_modules/lodash/isTypedArray.js
     var require_isTypedArray = __commonJS({
       "node_modules/lodash/isTypedArray.js"(exports, module) {
@@ -5288,7 +5291,7 @@
         module.exports = isTypedArray;
       }
     });
-  
+
     // node_modules/lodash/_arrayLikeKeys.js
     var require_arrayLikeKeys = __commonJS({
       "node_modules/lodash/_arrayLikeKeys.js"(exports, module) {
@@ -5304,10 +5307,10 @@
           var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes(value.length, String) : [], length = result.length;
           for (var key in value) {
             if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
-            (key == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
-            isBuff && (key == "offset" || key == "parent") || // PhantomJS 2 has enumerable non-index properties on typed arrays.
-            isType && (key == "buffer" || key == "byteLength" || key == "byteOffset") || // Skip index properties.
-            isIndex(key, length)))) {
+              (key == "length" || // Node.js 0.10 has enumerable non-index properties on buffers.
+                isBuff && (key == "offset" || key == "parent") || // PhantomJS 2 has enumerable non-index properties on typed arrays.
+                isType && (key == "buffer" || key == "byteLength" || key == "byteOffset") || // Skip index properties.
+                isIndex(key, length)))) {
               result.push(key);
             }
           }
@@ -5316,7 +5319,7 @@
         module.exports = arrayLikeKeys;
       }
     });
-  
+
     // node_modules/lodash/_isPrototype.js
     var require_isPrototype = __commonJS({
       "node_modules/lodash/_isPrototype.js"(exports, module) {
@@ -5328,7 +5331,7 @@
         module.exports = isPrototype;
       }
     });
-  
+
     // node_modules/lodash/_nativeKeys.js
     var require_nativeKeys = __commonJS({
       "node_modules/lodash/_nativeKeys.js"(exports, module) {
@@ -5337,7 +5340,7 @@
         module.exports = nativeKeys;
       }
     });
-  
+
     // node_modules/lodash/_baseKeys.js
     var require_baseKeys = __commonJS({
       "node_modules/lodash/_baseKeys.js"(exports, module) {
@@ -5360,7 +5363,7 @@
         module.exports = baseKeys;
       }
     });
-  
+
     // node_modules/lodash/isArrayLike.js
     var require_isArrayLike = __commonJS({
       "node_modules/lodash/isArrayLike.js"(exports, module) {
@@ -5372,7 +5375,7 @@
         module.exports = isArrayLike;
       }
     });
-  
+
     // node_modules/lodash/keys.js
     var require_keys = __commonJS({
       "node_modules/lodash/keys.js"(exports, module) {
@@ -5385,7 +5388,7 @@
         module.exports = keys;
       }
     });
-  
+
     // node_modules/lodash/_getAllKeys.js
     var require_getAllKeys = __commonJS({
       "node_modules/lodash/_getAllKeys.js"(exports, module) {
@@ -5398,7 +5401,7 @@
         module.exports = getAllKeys;
       }
     });
-  
+
     // node_modules/lodash/_equalObjects.js
     var require_equalObjects = __commonJS({
       "node_modules/lodash/_equalObjects.js"(exports, module) {
@@ -5452,7 +5455,7 @@
         module.exports = equalObjects;
       }
     });
-  
+
     // node_modules/lodash/_DataView.js
     var require_DataView = __commonJS({
       "node_modules/lodash/_DataView.js"(exports, module) {
@@ -5462,7 +5465,7 @@
         module.exports = DataView;
       }
     });
-  
+
     // node_modules/lodash/_Promise.js
     var require_Promise = __commonJS({
       "node_modules/lodash/_Promise.js"(exports, module) {
@@ -5472,7 +5475,7 @@
         module.exports = Promise2;
       }
     });
-  
+
     // node_modules/lodash/_Set.js
     var require_Set = __commonJS({
       "node_modules/lodash/_Set.js"(exports, module) {
@@ -5482,7 +5485,7 @@
         module.exports = Set;
       }
     });
-  
+
     // node_modules/lodash/_WeakMap.js
     var require_WeakMap = __commonJS({
       "node_modules/lodash/_WeakMap.js"(exports, module) {
@@ -5492,7 +5495,7 @@
         module.exports = WeakMap2;
       }
     });
-  
+
     // node_modules/lodash/_getTag.js
     var require_getTag = __commonJS({
       "node_modules/lodash/_getTag.js"(exports, module) {
@@ -5516,7 +5519,7 @@
         var weakMapCtorString = toSource(WeakMap2);
         var getTag = baseGetTag;
         if (DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag || Map2 && getTag(new Map2()) != mapTag || Promise2 && getTag(Promise2.resolve()) != promiseTag || Set && getTag(new Set()) != setTag || WeakMap2 && getTag(new WeakMap2()) != weakMapTag) {
-          getTag = function(value) {
+          getTag = function (value) {
             var result = baseGetTag(value), Ctor = result == objectTag ? value.constructor : void 0, ctorString = Ctor ? toSource(Ctor) : "";
             if (ctorString) {
               switch (ctorString) {
@@ -5538,7 +5541,7 @@
         module.exports = getTag;
       }
     });
-  
+
     // node_modules/lodash/_baseIsEqualDeep.js
     var require_baseIsEqualDeep = __commonJS({
       "node_modules/lodash/_baseIsEqualDeep.js"(exports, module) {
@@ -5589,7 +5592,7 @@
         module.exports = baseIsEqualDeep;
       }
     });
-  
+
     // node_modules/lodash/_baseIsEqual.js
     var require_baseIsEqual = __commonJS({
       "node_modules/lodash/_baseIsEqual.js"(exports, module) {
@@ -5607,7 +5610,7 @@
         module.exports = baseIsEqual;
       }
     });
-  
+
     // node_modules/lodash/_baseIsMatch.js
     var require_baseIsMatch = __commonJS({
       "node_modules/lodash/_baseIsMatch.js"(exports, module) {
@@ -5649,7 +5652,7 @@
         module.exports = baseIsMatch;
       }
     });
-  
+
     // node_modules/lodash/_isStrictComparable.js
     var require_isStrictComparable = __commonJS({
       "node_modules/lodash/_isStrictComparable.js"(exports, module) {
@@ -5660,7 +5663,7 @@
         module.exports = isStrictComparable;
       }
     });
-  
+
     // node_modules/lodash/_getMatchData.js
     var require_getMatchData = __commonJS({
       "node_modules/lodash/_getMatchData.js"(exports, module) {
@@ -5677,12 +5680,12 @@
         module.exports = getMatchData;
       }
     });
-  
+
     // node_modules/lodash/_matchesStrictComparable.js
     var require_matchesStrictComparable = __commonJS({
       "node_modules/lodash/_matchesStrictComparable.js"(exports, module) {
         function matchesStrictComparable(key, srcValue) {
-          return function(object) {
+          return function (object) {
             if (object == null) {
               return false;
             }
@@ -5692,7 +5695,7 @@
         module.exports = matchesStrictComparable;
       }
     });
-  
+
     // node_modules/lodash/_baseMatches.js
     var require_baseMatches = __commonJS({
       "node_modules/lodash/_baseMatches.js"(exports, module) {
@@ -5704,14 +5707,14 @@
           if (matchData.length == 1 && matchData[0][2]) {
             return matchesStrictComparable(matchData[0][0], matchData[0][1]);
           }
-          return function(object) {
+          return function (object) {
             return object === source || baseIsMatch(object, source, matchData);
           };
         }
         module.exports = baseMatches;
       }
     });
-  
+
     // node_modules/lodash/isSymbol.js
     var require_isSymbol = __commonJS({
       "node_modules/lodash/isSymbol.js"(exports, module) {
@@ -5724,7 +5727,7 @@
         module.exports = isSymbol;
       }
     });
-  
+
     // node_modules/lodash/_isKey.js
     var require_isKey = __commonJS({
       "node_modules/lodash/_isKey.js"(exports, module) {
@@ -5745,7 +5748,7 @@
         module.exports = isKey;
       }
     });
-  
+
     // node_modules/lodash/memoize.js
     var require_memoize = __commonJS({
       "node_modules/lodash/memoize.js"(exports, module) {
@@ -5755,7 +5758,7 @@
           if (typeof func != "function" || resolver != null && typeof resolver != "function") {
             throw new TypeError(FUNC_ERROR_TEXT);
           }
-          var memoized = function() {
+          var memoized = function () {
             var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
             if (cache.has(key)) {
               return cache.get(key);
@@ -5771,14 +5774,14 @@
         module.exports = memoize;
       }
     });
-  
+
     // node_modules/lodash/_memoizeCapped.js
     var require_memoizeCapped = __commonJS({
       "node_modules/lodash/_memoizeCapped.js"(exports, module) {
         var memoize = require_memoize();
         var MAX_MEMOIZE_SIZE = 500;
         function memoizeCapped(func) {
-          var result = memoize(func, function(key) {
+          var result = memoize(func, function (key) {
             if (cache.size === MAX_MEMOIZE_SIZE) {
               cache.clear();
             }
@@ -5790,19 +5793,19 @@
         module.exports = memoizeCapped;
       }
     });
-  
+
     // node_modules/lodash/_stringToPath.js
     var require_stringToPath = __commonJS({
       "node_modules/lodash/_stringToPath.js"(exports, module) {
         var memoizeCapped = require_memoizeCapped();
         var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
         var reEscapeChar = /\\(\\)?/g;
-        var stringToPath = memoizeCapped(function(string) {
+        var stringToPath = memoizeCapped(function (string) {
           var result = [];
           if (string.charCodeAt(0) === 46) {
             result.push("");
           }
-          string.replace(rePropName, function(match, number, quote, subString) {
+          string.replace(rePropName, function (match, number, quote, subString) {
             result.push(quote ? subString.replace(reEscapeChar, "$1") : number || match);
           });
           return result;
@@ -5810,7 +5813,7 @@
         module.exports = stringToPath;
       }
     });
-  
+
     // node_modules/lodash/_arrayMap.js
     var require_arrayMap = __commonJS({
       "node_modules/lodash/_arrayMap.js"(exports, module) {
@@ -5824,7 +5827,7 @@
         module.exports = arrayMap;
       }
     });
-  
+
     // node_modules/lodash/_baseToString.js
     var require_baseToString = __commonJS({
       "node_modules/lodash/_baseToString.js"(exports, module) {
@@ -5851,7 +5854,7 @@
         module.exports = baseToString;
       }
     });
-  
+
     // node_modules/lodash/toString.js
     var require_toString = __commonJS({
       "node_modules/lodash/toString.js"(exports, module) {
@@ -5862,7 +5865,7 @@
         module.exports = toString;
       }
     });
-  
+
     // node_modules/lodash/_castPath.js
     var require_castPath = __commonJS({
       "node_modules/lodash/_castPath.js"(exports, module) {
@@ -5879,7 +5882,7 @@
         module.exports = castPath;
       }
     });
-  
+
     // node_modules/lodash/_toKey.js
     var require_toKey = __commonJS({
       "node_modules/lodash/_toKey.js"(exports, module) {
@@ -5895,7 +5898,7 @@
         module.exports = toKey;
       }
     });
-  
+
     // node_modules/lodash/_baseGet.js
     var require_baseGet = __commonJS({
       "node_modules/lodash/_baseGet.js"(exports, module) {
@@ -5912,7 +5915,7 @@
         module.exports = baseGet;
       }
     });
-  
+
     // node_modules/lodash/get.js
     var require_get = __commonJS({
       "node_modules/lodash/get.js"(exports, module) {
@@ -5924,7 +5927,7 @@
         module.exports = get3;
       }
     });
-  
+
     // node_modules/lodash/_baseHasIn.js
     var require_baseHasIn = __commonJS({
       "node_modules/lodash/_baseHasIn.js"(exports, module) {
@@ -5934,7 +5937,7 @@
         module.exports = baseHasIn;
       }
     });
-  
+
     // node_modules/lodash/_hasPath.js
     var require_hasPath = __commonJS({
       "node_modules/lodash/_hasPath.js"(exports, module) {
@@ -5963,7 +5966,7 @@
         module.exports = hasPath;
       }
     });
-  
+
     // node_modules/lodash/hasIn.js
     var require_hasIn = __commonJS({
       "node_modules/lodash/hasIn.js"(exports, module) {
@@ -5975,7 +5978,7 @@
         module.exports = hasIn;
       }
     });
-  
+
     // node_modules/lodash/_baseMatchesProperty.js
     var require_baseMatchesProperty = __commonJS({
       "node_modules/lodash/_baseMatchesProperty.js"(exports, module) {
@@ -5992,7 +5995,7 @@
           if (isKey(path) && isStrictComparable(srcValue)) {
             return matchesStrictComparable(toKey(path), srcValue);
           }
-          return function(object) {
+          return function (object) {
             var objValue = get3(object, path);
             return objValue === void 0 && objValue === srcValue ? hasIn(object, path) : baseIsEqual(srcValue, objValue, COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG);
           };
@@ -6000,7 +6003,7 @@
         module.exports = baseMatchesProperty;
       }
     });
-  
+
     // node_modules/lodash/identity.js
     var require_identity = __commonJS({
       "node_modules/lodash/identity.js"(exports, module) {
@@ -6010,32 +6013,32 @@
         module.exports = identity;
       }
     });
-  
+
     // node_modules/lodash/_baseProperty.js
     var require_baseProperty = __commonJS({
       "node_modules/lodash/_baseProperty.js"(exports, module) {
         function baseProperty(key) {
-          return function(object) {
+          return function (object) {
             return object == null ? void 0 : object[key];
           };
         }
         module.exports = baseProperty;
       }
     });
-  
+
     // node_modules/lodash/_basePropertyDeep.js
     var require_basePropertyDeep = __commonJS({
       "node_modules/lodash/_basePropertyDeep.js"(exports, module) {
         var baseGet = require_baseGet();
         function basePropertyDeep(path) {
-          return function(object) {
+          return function (object) {
             return baseGet(object, path);
           };
         }
         module.exports = basePropertyDeep;
       }
     });
-  
+
     // node_modules/lodash/property.js
     var require_property = __commonJS({
       "node_modules/lodash/property.js"(exports, module) {
@@ -6049,7 +6052,7 @@
         module.exports = property;
       }
     });
-  
+
     // node_modules/lodash/_baseIteratee.js
     var require_baseIteratee = __commonJS({
       "node_modules/lodash/_baseIteratee.js"(exports, module) {
@@ -6073,7 +6076,7 @@
         module.exports = baseIteratee;
       }
     });
-  
+
     // node_modules/lodash/_createFind.js
     var require_createFind = __commonJS({
       "node_modules/lodash/_createFind.js"(exports, module) {
@@ -6081,12 +6084,12 @@
         var isArrayLike = require_isArrayLike();
         var keys = require_keys();
         function createFind(findIndexFunc) {
-          return function(collection, predicate, fromIndex) {
+          return function (collection, predicate, fromIndex) {
             var iterable = Object(collection);
             if (!isArrayLike(collection)) {
               var iteratee = baseIteratee(predicate, 3);
               collection = keys(collection);
-              predicate = function(key) {
+              predicate = function (key) {
                 return iteratee(iterable[key], key, iterable);
               };
             }
@@ -6097,7 +6100,7 @@
         module.exports = createFind;
       }
     });
-  
+
     // node_modules/lodash/_baseFindIndex.js
     var require_baseFindIndex = __commonJS({
       "node_modules/lodash/_baseFindIndex.js"(exports, module) {
@@ -6113,7 +6116,7 @@
         module.exports = baseFindIndex;
       }
     });
-  
+
     // node_modules/lodash/_trimmedEndIndex.js
     var require_trimmedEndIndex = __commonJS({
       "node_modules/lodash/_trimmedEndIndex.js"(exports, module) {
@@ -6127,7 +6130,7 @@
         module.exports = trimmedEndIndex;
       }
     });
-  
+
     // node_modules/lodash/_baseTrim.js
     var require_baseTrim = __commonJS({
       "node_modules/lodash/_baseTrim.js"(exports, module) {
@@ -6139,7 +6142,7 @@
         module.exports = baseTrim;
       }
     });
-  
+
     // node_modules/lodash/toNumber.js
     var require_toNumber = __commonJS({
       "node_modules/lodash/toNumber.js"(exports, module) {
@@ -6172,7 +6175,7 @@
         module.exports = toNumber;
       }
     });
-  
+
     // node_modules/lodash/toFinite.js
     var require_toFinite = __commonJS({
       "node_modules/lodash/toFinite.js"(exports, module) {
@@ -6193,7 +6196,7 @@
         module.exports = toFinite;
       }
     });
-  
+
     // node_modules/lodash/toInteger.js
     var require_toInteger = __commonJS({
       "node_modules/lodash/toInteger.js"(exports, module) {
@@ -6205,7 +6208,7 @@
         module.exports = toInteger;
       }
     });
-  
+
     // node_modules/lodash/findIndex.js
     var require_findIndex = __commonJS({
       "node_modules/lodash/findIndex.js"(exports, module) {
@@ -6227,7 +6230,7 @@
         module.exports = findIndex;
       }
     });
-  
+
     // node_modules/lodash/find.js
     var require_find = __commonJS({
       "node_modules/lodash/find.js"(exports, module) {
@@ -6237,7 +6240,7 @@
         module.exports = find3;
       }
     });
-  
+
     // packages/systems/ix2/shared/logic/IX2BrowserSupport.ts
     var IX2BrowserSupport_exports = {};
     __export(IX2BrowserSupport_exports, {
@@ -6316,7 +6319,7 @@
         TRANSFORM_STYLE_PREFIXED = TRANSFORM_PREFIX ? TRANSFORM_PREFIX + "TransformStyle" : "transformStyle";
       }
     });
-  
+
     // node_modules/bezier-easing/src/index.js
     var require_src = __commonJS({
       "node_modules/bezier-easing/src/index.js"(exports, module) {
@@ -6410,7 +6413,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/shared/logic/IX2Easings.ts
     var IX2Easings_exports = {};
     __export(IX2Easings_exports, {
@@ -6677,7 +6680,7 @@
         easeInOut = (0, import_bezier_easing.default)(0.42, 0, 0.58, 1);
       }
     });
-  
+
     // packages/systems/ix2/shared/logic/IX2EasingUtils.ts
     var IX2EasingUtils_exports = {};
     __export(IX2EasingUtils_exports, {
@@ -6715,7 +6718,7 @@
         import_bezier_easing2 = __toESM(require_src());
       }
     });
-  
+
     // packages/systems/ix2/shared/reducers/IX2ElementsReducer.ts
     var IX2ElementsReducer_exports = {};
     __export(IX2ElementsReducer_exports, {
@@ -6827,7 +6830,7 @@
         ];
       }
     });
-  
+
     // packages/systems/ix2/plugins/IX2Lottie.js
     var require_IX2Lottie = __commonJS({
       "packages/systems/ix2/plugins/IX2Lottie.js"(exports) {
@@ -6885,7 +6888,7 @@
         exports.clearPlugin = clearPlugin2;
       }
     });
-  
+
     // packages/systems/ix2/plugins/IX2Spline.js
     var require_IX2Spline = __commonJS({
       "packages/systems/ix2/plugins/IX2Spline.js"(exports) {
@@ -7004,7 +7007,7 @@
         exports.clearPlugin = clearPlugin2;
       }
     });
-  
+
     // packages/systems/ix2/shared-utils/normalizeColor.js
     var require_normalizeColor = __commonJS({
       "packages/systems/ix2/shared-utils/normalizeColor.js"(exports) {
@@ -7291,7 +7294,7 @@
         }
       }
     });
-  
+
     // packages/systems/ix2/plugins/IX2Variable.js
     var require_IX2Variable = __commonJS({
       "packages/systems/ix2/plugins/IX2Variable.js"(exports) {
@@ -7366,7 +7369,7 @@
         exports.clearPlugin = clearPlugin2;
       }
     });
-  
+
     // packages/systems/ix2/plugins/index.js
     var require_plugins = __commonJS({
       "packages/systems/ix2/plugins/index.js"(exports) {
@@ -7389,7 +7392,7 @@
         }]]);
       }
     });
-  
+
     // packages/systems/ix2/shared/logic/IX2VanillaPlugins.ts
     var IX2VanillaPlugins_exports = {};
     __export(IX2VanillaPlugins_exports, {
@@ -7434,7 +7437,7 @@
         clearPlugin = pluginMethod("clearPlugin");
       }
     });
-  
+
     // node_modules/lodash/defaultTo.js
     var require_defaultTo = __commonJS({
       "node_modules/lodash/defaultTo.js"(exports, module) {
@@ -7444,7 +7447,7 @@
         module.exports = defaultTo2;
       }
     });
-  
+
     // node_modules/lodash/_arrayReduce.js
     var require_arrayReduce = __commonJS({
       "node_modules/lodash/_arrayReduce.js"(exports, module) {
@@ -7461,12 +7464,12 @@
         module.exports = arrayReduce;
       }
     });
-  
+
     // node_modules/lodash/_createBaseFor.js
     var require_createBaseFor = __commonJS({
       "node_modules/lodash/_createBaseFor.js"(exports, module) {
         function createBaseFor(fromRight) {
-          return function(object, iteratee, keysFunc) {
+          return function (object, iteratee, keysFunc) {
             var index = -1, iterable = Object(object), props = keysFunc(object), length = props.length;
             while (length--) {
               var key = props[fromRight ? length : ++index];
@@ -7480,7 +7483,7 @@
         module.exports = createBaseFor;
       }
     });
-  
+
     // node_modules/lodash/_baseFor.js
     var require_baseFor = __commonJS({
       "node_modules/lodash/_baseFor.js"(exports, module) {
@@ -7489,7 +7492,7 @@
         module.exports = baseFor;
       }
     });
-  
+
     // node_modules/lodash/_baseForOwn.js
     var require_baseForOwn = __commonJS({
       "node_modules/lodash/_baseForOwn.js"(exports, module) {
@@ -7501,13 +7504,13 @@
         module.exports = baseForOwn;
       }
     });
-  
+
     // node_modules/lodash/_createBaseEach.js
     var require_createBaseEach = __commonJS({
       "node_modules/lodash/_createBaseEach.js"(exports, module) {
         var isArrayLike = require_isArrayLike();
         function createBaseEach(eachFunc, fromRight) {
-          return function(collection, iteratee) {
+          return function (collection, iteratee) {
             if (collection == null) {
               return collection;
             }
@@ -7526,7 +7529,7 @@
         module.exports = createBaseEach;
       }
     });
-  
+
     // node_modules/lodash/_baseEach.js
     var require_baseEach = __commonJS({
       "node_modules/lodash/_baseEach.js"(exports, module) {
@@ -7536,12 +7539,12 @@
         module.exports = baseEach;
       }
     });
-  
+
     // node_modules/lodash/_baseReduce.js
     var require_baseReduce = __commonJS({
       "node_modules/lodash/_baseReduce.js"(exports, module) {
         function baseReduce(collection, iteratee, accumulator, initAccum, eachFunc) {
-          eachFunc(collection, function(value, index, collection2) {
+          eachFunc(collection, function (value, index, collection2) {
             accumulator = initAccum ? (initAccum = false, value) : iteratee(accumulator, value, index, collection2);
           });
           return accumulator;
@@ -7549,7 +7552,7 @@
         module.exports = baseReduce;
       }
     });
-  
+
     // node_modules/lodash/reduce.js
     var require_reduce = __commonJS({
       "node_modules/lodash/reduce.js"(exports, module) {
@@ -7565,7 +7568,7 @@
         module.exports = reduce2;
       }
     });
-  
+
     // node_modules/lodash/findLastIndex.js
     var require_findLastIndex = __commonJS({
       "node_modules/lodash/findLastIndex.js"(exports, module) {
@@ -7589,7 +7592,7 @@
         module.exports = findLastIndex;
       }
     });
-  
+
     // node_modules/lodash/findLast.js
     var require_findLast = __commonJS({
       "node_modules/lodash/findLast.js"(exports, module) {
@@ -7599,7 +7602,7 @@
         module.exports = findLast2;
       }
     });
-  
+
     // packages/systems/ix2/shared/logic/shallowEqual.ts
     function is(x, y) {
       if (x === y) {
@@ -7625,7 +7628,7 @@
           // @ts-expect-error - TS2345 - Argument of type 'string | undefined' is not assignable to parameter of type 'PropertyKey'.
           keysA[i]
         ) || // @ts-expect-error - TS2538 - Type 'undefined' cannot be used as an index type. | TS2538 - Type 'undefined' cannot be used as an index type.
-        !is(objA[keysA[i]], objB[keysA[i]])) {
+          !is(objA[keysA[i]], objB[keysA[i]])) {
           return false;
         }
       }
@@ -7638,7 +7641,7 @@
         shallowEqual_default = shallowEqual;
       }
     });
-  
+
     // packages/systems/ix2/shared/logic/IX2VanillaUtils.ts
     var IX2VanillaUtils_exports = {};
     __export(IX2VanillaUtils_exports, {
@@ -8148,8 +8151,8 @@
     }
     function hasDefined3dTransform({ actionTypeId }, { xValue, yValue, zValue }) {
       return actionTypeId === TRANSFORM_MOVE2 && zValue !== void 0 || // SCALE_Z
-      actionTypeId === TRANSFORM_SCALE2 && zValue !== void 0 || // ROTATE_X or ROTATE_Y
-      actionTypeId === TRANSFORM_ROTATE2 && (xValue !== void 0 || yValue !== void 0);
+        actionTypeId === TRANSFORM_SCALE2 && zValue !== void 0 || // ROTATE_X or ROTATE_Y
+        actionTypeId === TRANSFORM_ROTATE2 && (xValue !== void 0 || yValue !== void 0);
     }
     function getFirstMatch(regex, value) {
       const match = regex.exec(value);
@@ -8300,16 +8303,16 @@
     function clearActionListStyles({ actionList = {}, event, elementApi }) {
       const { actionItemGroups, continuousParameterGroups } = actionList;
       actionItemGroups && // @ts-expect-error - TS7006 - Parameter 'actionGroup' implicitly has an 'any' type.
-      actionItemGroups.forEach((actionGroup) => {
-        clearActionGroupStyles({ actionGroup, event, elementApi });
-      });
-      continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
-      continuousParameterGroups.forEach((paramGroup) => {
-        const { continuousActionGroups } = paramGroup;
-        continuousActionGroups.forEach((actionGroup) => {
+        actionItemGroups.forEach((actionGroup) => {
           clearActionGroupStyles({ actionGroup, event, elementApi });
         });
-      });
+      continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
+        continuousParameterGroups.forEach((paramGroup) => {
+          const { continuousActionGroups } = paramGroup;
+          continuousActionGroups.forEach((actionGroup) => {
+            clearActionGroupStyles({ actionGroup, event, elementApi });
+          });
+        });
     }
     function clearActionGroupStyles({ actionGroup, event, elementApi }) {
       const { actionItems } = actionGroup;
@@ -8400,16 +8403,16 @@
         return actionItem.id === actionItemId;
       };
       actionItemGroups && // @ts-expect-error - TS7031 - Binding element 'actionItems' implicitly has an 'any' type.
-      actionItemGroups.some(({ actionItems }) => {
-        return actionItems.some(takeItemUntilMatch);
-      });
-      continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
-      continuousParameterGroups.some((paramGroup) => {
-        const { continuousActionGroups } = paramGroup;
-        return continuousActionGroups.some(({ actionItems }) => {
+        actionItemGroups.some(({ actionItems }) => {
           return actionItems.some(takeItemUntilMatch);
         });
-      });
+      continuousParameterGroups && // @ts-expect-error - TS7006 - Parameter 'paramGroup' implicitly has an 'any' type.
+        continuousParameterGroups.some((paramGroup) => {
+          const { continuousActionGroups } = paramGroup;
+          return continuousActionGroups.some(({ actionItems }) => {
+            return actionItems.some(takeItemUntilMatch);
+          });
+        });
       return (0, import_timm4.setIn)(rawData, ["actionLists"], {
         [actionList.id]: {
           id: actionList.id,
@@ -8538,7 +8541,7 @@
           filters.reduce((result, filter) => {
             if (result[filter.type] == null) {
               result[filter.type] = // @ts-expect-error - TS7053 - Element implicitly has an 'any' type because expression of type 'any' can't be used to index type 'Readonly<{ blur: 0; 'hue-rotate': 0; invert: 0; grayscale: 0; saturate: 100; sepia: 0; contrast: 100; brightness: 100; }>'.
-              filterDefaults[filter.type];
+                filterDefaults[filter.type];
             }
             return result;
           }, actionState || {})
@@ -8546,8 +8549,8 @@
         getFontVariationDefaults = (actionState, fontVariations) => fontVariations.reduce((result, fontVariation) => {
           if (result[fontVariation.type] == null) {
             result[fontVariation.type] = // @ts-expect-error - TS7053 - Element implicitly has an 'any' type because expression of type 'string' can't be used to index type 'Readonly<{ wght: 0; opsz: 0; wdth: 0; slnt: 0; }>'.
-            fontVariationDefaults[fontVariation.type] || // @ts-expect-error - TS2339 - Property 'defaultValue' does not exist on type 'FontVariationItemConfigType'.
-            fontVariation.defaultValue || 0;
+              fontVariationDefaults[fontVariation.type] || // @ts-expect-error - TS2339 - Property 'defaultValue' does not exist on type 'FontVariationItemConfigType'.
+              fontVariation.defaultValue || 0;
           }
           return result;
         }, actionState || {});
@@ -8681,7 +8684,7 @@
         );
       }
     });
-  
+
     // packages/systems/ix2/shared/index.js
     var require_shared2 = __commonJS({
       "packages/systems/ix2/shared/index.js"(exports) {
@@ -8705,7 +8708,7 @@
         exports.IX2VanillaUtils = IX2VanillaUtils5;
       }
     });
-  
+
     // packages/systems/ix2/engine/reducers/IX2InstancesReducer.ts
     var import_shared, import_timm5, IX2_RAW_DATA_IMPORTED3, IX2_SESSION_STOPPED4, IX2_INSTANCE_ADDED3, IX2_INSTANCE_STARTED2, IX2_INSTANCE_REMOVED2, IX2_ANIMATION_FRAME_CHANGED3, optimizeFloat2, applyEasing2, createBezierEasing2, RENDER_GENERAL3, getItemConfigByKey2, getRenderType2, getStyleProp2, continuousInstance, timedInstance, ixInstances;
     var init_IX2InstancesReducer = __esm({
@@ -8999,7 +9002,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/engine/reducers/IX2ParametersReducer.ts
     var IX2_RAW_DATA_IMPORTED4, IX2_SESSION_STOPPED5, IX2_PARAMETER_CHANGED2, ixParameters;
     var init_IX2ParametersReducer = __esm({
@@ -9033,7 +9036,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/engine/reducers/IX2Reducer.ts
     var IX2Reducer_exports = {};
     __export(IX2Reducer_exports, {
@@ -9062,7 +9065,7 @@
         });
       }
     });
-  
+
     // node_modules/lodash/isString.js
     var require_isString = __commonJS({
       "node_modules/lodash/isString.js"(exports, module) {
@@ -9076,7 +9079,7 @@
         module.exports = isString;
       }
     });
-  
+
     // node_modules/lodash/_asciiSize.js
     var require_asciiSize = __commonJS({
       "node_modules/lodash/_asciiSize.js"(exports, module) {
@@ -9085,7 +9088,7 @@
         module.exports = asciiSize;
       }
     });
-  
+
     // node_modules/lodash/_hasUnicode.js
     var require_hasUnicode = __commonJS({
       "node_modules/lodash/_hasUnicode.js"(exports, module) {
@@ -9103,7 +9106,7 @@
         module.exports = hasUnicode;
       }
     });
-  
+
     // node_modules/lodash/_unicodeSize.js
     var require_unicodeSize = __commonJS({
       "node_modules/lodash/_unicodeSize.js"(exports, module) {
@@ -9137,7 +9140,7 @@
         module.exports = unicodeSize;
       }
     });
-  
+
     // node_modules/lodash/_stringSize.js
     var require_stringSize = __commonJS({
       "node_modules/lodash/_stringSize.js"(exports, module) {
@@ -9150,7 +9153,7 @@
         module.exports = stringSize;
       }
     });
-  
+
     // node_modules/lodash/size.js
     var require_size = __commonJS({
       "node_modules/lodash/size.js"(exports, module) {
@@ -9177,7 +9180,7 @@
         module.exports = size2;
       }
     });
-  
+
     // node_modules/lodash/negate.js
     var require_negate = __commonJS({
       "node_modules/lodash/negate.js"(exports, module) {
@@ -9186,7 +9189,7 @@
           if (typeof predicate != "function") {
             throw new TypeError(FUNC_ERROR_TEXT);
           }
-          return function() {
+          return function () {
             var args = arguments;
             switch (args.length) {
               case 0:
@@ -9204,12 +9207,12 @@
         module.exports = negate;
       }
     });
-  
+
     // node_modules/lodash/_defineProperty.js
     var require_defineProperty = __commonJS({
       "node_modules/lodash/_defineProperty.js"(exports, module) {
         var getNative = require_getNative();
-        var defineProperty = function() {
+        var defineProperty = function () {
           try {
             var func = getNative(Object, "defineProperty");
             func({}, "", {});
@@ -9220,7 +9223,7 @@
         module.exports = defineProperty;
       }
     });
-  
+
     // node_modules/lodash/_baseAssignValue.js
     var require_baseAssignValue = __commonJS({
       "node_modules/lodash/_baseAssignValue.js"(exports, module) {
@@ -9240,7 +9243,7 @@
         module.exports = baseAssignValue;
       }
     });
-  
+
     // node_modules/lodash/_assignValue.js
     var require_assignValue = __commonJS({
       "node_modules/lodash/_assignValue.js"(exports, module) {
@@ -9257,7 +9260,7 @@
         module.exports = assignValue;
       }
     });
-  
+
     // node_modules/lodash/_baseSet.js
     var require_baseSet = __commonJS({
       "node_modules/lodash/_baseSet.js"(exports, module) {
@@ -9292,7 +9295,7 @@
         module.exports = baseSet;
       }
     });
-  
+
     // node_modules/lodash/_basePickBy.js
     var require_basePickBy = __commonJS({
       "node_modules/lodash/_basePickBy.js"(exports, module) {
@@ -9312,7 +9315,7 @@
         module.exports = basePickBy;
       }
     });
-  
+
     // node_modules/lodash/_getSymbolsIn.js
     var require_getSymbolsIn = __commonJS({
       "node_modules/lodash/_getSymbolsIn.js"(exports, module) {
@@ -9321,7 +9324,7 @@
         var getSymbols = require_getSymbols();
         var stubArray = require_stubArray();
         var nativeGetSymbols = Object.getOwnPropertySymbols;
-        var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+        var getSymbolsIn = !nativeGetSymbols ? stubArray : function (object) {
           var result = [];
           while (object) {
             arrayPush(result, getSymbols(object));
@@ -9332,7 +9335,7 @@
         module.exports = getSymbolsIn;
       }
     });
-  
+
     // node_modules/lodash/_nativeKeysIn.js
     var require_nativeKeysIn = __commonJS({
       "node_modules/lodash/_nativeKeysIn.js"(exports, module) {
@@ -9348,7 +9351,7 @@
         module.exports = nativeKeysIn;
       }
     });
-  
+
     // node_modules/lodash/_baseKeysIn.js
     var require_baseKeysIn = __commonJS({
       "node_modules/lodash/_baseKeysIn.js"(exports, module) {
@@ -9372,7 +9375,7 @@
         module.exports = baseKeysIn;
       }
     });
-  
+
     // node_modules/lodash/keysIn.js
     var require_keysIn = __commonJS({
       "node_modules/lodash/keysIn.js"(exports, module) {
@@ -9385,7 +9388,7 @@
         module.exports = keysIn;
       }
     });
-  
+
     // node_modules/lodash/_getAllKeysIn.js
     var require_getAllKeysIn = __commonJS({
       "node_modules/lodash/_getAllKeysIn.js"(exports, module) {
@@ -9398,7 +9401,7 @@
         module.exports = getAllKeysIn;
       }
     });
-  
+
     // node_modules/lodash/pickBy.js
     var require_pickBy = __commonJS({
       "node_modules/lodash/pickBy.js"(exports, module) {
@@ -9410,18 +9413,18 @@
           if (object == null) {
             return {};
           }
-          var props = arrayMap(getAllKeysIn(object), function(prop) {
+          var props = arrayMap(getAllKeysIn(object), function (prop) {
             return [prop];
           });
           predicate = baseIteratee(predicate);
-          return basePickBy(object, props, function(value, path) {
+          return basePickBy(object, props, function (value, path) {
             return predicate(value, path[0]);
           });
         }
         module.exports = pickBy;
       }
     });
-  
+
     // node_modules/lodash/omitBy.js
     var require_omitBy = __commonJS({
       "node_modules/lodash/omitBy.js"(exports, module) {
@@ -9434,7 +9437,7 @@
         module.exports = omitBy2;
       }
     });
-  
+
     // node_modules/lodash/isEmpty.js
     var require_isEmpty = __commonJS({
       "node_modules/lodash/isEmpty.js"(exports, module) {
@@ -9474,7 +9477,7 @@
         module.exports = isEmpty2;
       }
     });
-  
+
     // node_modules/lodash/mapValues.js
     var require_mapValues = __commonJS({
       "node_modules/lodash/mapValues.js"(exports, module) {
@@ -9484,7 +9487,7 @@
         function mapValues2(object, iteratee) {
           var result = {};
           iteratee = baseIteratee(iteratee, 3);
-          baseForOwn(object, function(value, key, object2) {
+          baseForOwn(object, function (value, key, object2) {
             baseAssignValue(result, key, iteratee(value, key, object2));
           });
           return result;
@@ -9492,7 +9495,7 @@
         module.exports = mapValues2;
       }
     });
-  
+
     // node_modules/lodash/_arrayEach.js
     var require_arrayEach = __commonJS({
       "node_modules/lodash/_arrayEach.js"(exports, module) {
@@ -9508,7 +9511,7 @@
         module.exports = arrayEach;
       }
     });
-  
+
     // node_modules/lodash/_castFunction.js
     var require_castFunction = __commonJS({
       "node_modules/lodash/_castFunction.js"(exports, module) {
@@ -9519,7 +9522,7 @@
         module.exports = castFunction;
       }
     });
-  
+
     // node_modules/lodash/forEach.js
     var require_forEach = __commonJS({
       "node_modules/lodash/forEach.js"(exports, module) {
@@ -9534,18 +9537,18 @@
         module.exports = forEach2;
       }
     });
-  
+
     // node_modules/lodash/now.js
     var require_now = __commonJS({
       "node_modules/lodash/now.js"(exports, module) {
         var root = require_root();
-        var now = function() {
+        var now = function () {
           return root.Date.now();
         };
         module.exports = now;
       }
     });
-  
+
     // node_modules/lodash/debounce.js
     var require_debounce = __commonJS({
       "node_modules/lodash/debounce.js"(exports, module) {
@@ -9639,7 +9642,7 @@
         module.exports = debounce;
       }
     });
-  
+
     // node_modules/lodash/throttle.js
     var require_throttle = __commonJS({
       "node_modules/lodash/throttle.js"(exports, module) {
@@ -9664,7 +9667,7 @@
         module.exports = throttle2;
       }
     });
-  
+
     // packages/systems/ix2/engine/actions/IX2EngineActions.ts
     var IX2EngineActions_exports = {};
     __export(IX2EngineActions_exports, {
@@ -9870,7 +9873,7 @@
         });
       }
     });
-  
+
     // packages/systems/ix2/engine/logic/IX2BrowserApi.ts
     var IX2BrowserApi_exports = {};
     __export(IX2BrowserApi_exports, {
@@ -10010,16 +10013,16 @@
         };
       }
     });
-  
+
     // node_modules/lodash/_baseCreate.js
     var require_baseCreate = __commonJS({
       "node_modules/lodash/_baseCreate.js"(exports, module) {
         var isObject = require_isObject();
         var objectCreate = Object.create;
-        var baseCreate = function() {
+        var baseCreate = function () {
           function object() {
           }
-          return function(proto) {
+          return function (proto) {
             if (!isObject(proto)) {
               return {};
             }
@@ -10035,7 +10038,7 @@
         module.exports = baseCreate;
       }
     });
-  
+
     // node_modules/lodash/_baseLodash.js
     var require_baseLodash = __commonJS({
       "node_modules/lodash/_baseLodash.js"(exports, module) {
@@ -10044,7 +10047,7 @@
         module.exports = baseLodash;
       }
     });
-  
+
     // node_modules/lodash/_LodashWrapper.js
     var require_LodashWrapper = __commonJS({
       "node_modules/lodash/_LodashWrapper.js"(exports, module) {
@@ -10062,7 +10065,7 @@
         module.exports = LodashWrapper;
       }
     });
-  
+
     // node_modules/lodash/_isFlattenable.js
     var require_isFlattenable = __commonJS({
       "node_modules/lodash/_isFlattenable.js"(exports, module) {
@@ -10076,7 +10079,7 @@
         module.exports = isFlattenable;
       }
     });
-  
+
     // node_modules/lodash/_baseFlatten.js
     var require_baseFlatten = __commonJS({
       "node_modules/lodash/_baseFlatten.js"(exports, module) {
@@ -10103,7 +10106,7 @@
         module.exports = baseFlatten;
       }
     });
-  
+
     // node_modules/lodash/flatten.js
     var require_flatten = __commonJS({
       "node_modules/lodash/flatten.js"(exports, module) {
@@ -10115,7 +10118,7 @@
         module.exports = flatten;
       }
     });
-  
+
     // node_modules/lodash/_apply.js
     var require_apply = __commonJS({
       "node_modules/lodash/_apply.js"(exports, module) {
@@ -10135,7 +10138,7 @@
         module.exports = apply;
       }
     });
-  
+
     // node_modules/lodash/_overRest.js
     var require_overRest = __commonJS({
       "node_modules/lodash/_overRest.js"(exports, module) {
@@ -10143,7 +10146,7 @@
         var nativeMax = Math.max;
         function overRest(func, start, transform) {
           start = nativeMax(start === void 0 ? func.length - 1 : start, 0);
-          return function() {
+          return function () {
             var args = arguments, index = -1, length = nativeMax(args.length - start, 0), array = Array(length);
             while (++index < length) {
               array[index] = args[start + index];
@@ -10160,26 +10163,26 @@
         module.exports = overRest;
       }
     });
-  
+
     // node_modules/lodash/constant.js
     var require_constant = __commonJS({
       "node_modules/lodash/constant.js"(exports, module) {
         function constant(value) {
-          return function() {
+          return function () {
             return value;
           };
         }
         module.exports = constant;
       }
     });
-  
+
     // node_modules/lodash/_baseSetToString.js
     var require_baseSetToString = __commonJS({
       "node_modules/lodash/_baseSetToString.js"(exports, module) {
         var constant = require_constant();
         var defineProperty = require_defineProperty();
         var identity = require_identity();
-        var baseSetToString = !defineProperty ? identity : function(func, string) {
+        var baseSetToString = !defineProperty ? identity : function (func, string) {
           return defineProperty(func, "toString", {
             "configurable": true,
             "enumerable": false,
@@ -10190,7 +10193,7 @@
         module.exports = baseSetToString;
       }
     });
-  
+
     // node_modules/lodash/_shortOut.js
     var require_shortOut = __commonJS({
       "node_modules/lodash/_shortOut.js"(exports, module) {
@@ -10199,7 +10202,7 @@
         var nativeNow = Date.now;
         function shortOut(func) {
           var count = 0, lastCalled = 0;
-          return function() {
+          return function () {
             var stamp = nativeNow(), remaining = HOT_SPAN - (stamp - lastCalled);
             lastCalled = stamp;
             if (remaining > 0) {
@@ -10215,7 +10218,7 @@
         module.exports = shortOut;
       }
     });
-  
+
     // node_modules/lodash/_setToString.js
     var require_setToString = __commonJS({
       "node_modules/lodash/_setToString.js"(exports, module) {
@@ -10225,7 +10228,7 @@
         module.exports = setToString;
       }
     });
-  
+
     // node_modules/lodash/_flatRest.js
     var require_flatRest = __commonJS({
       "node_modules/lodash/_flatRest.js"(exports, module) {
@@ -10238,7 +10241,7 @@
         module.exports = flatRest;
       }
     });
-  
+
     // node_modules/lodash/_metaMap.js
     var require_metaMap = __commonJS({
       "node_modules/lodash/_metaMap.js"(exports, module) {
@@ -10247,7 +10250,7 @@
         module.exports = metaMap;
       }
     });
-  
+
     // node_modules/lodash/noop.js
     var require_noop = __commonJS({
       "node_modules/lodash/noop.js"(exports, module) {
@@ -10256,19 +10259,19 @@
         module.exports = noop;
       }
     });
-  
+
     // node_modules/lodash/_getData.js
     var require_getData = __commonJS({
       "node_modules/lodash/_getData.js"(exports, module) {
         var metaMap = require_metaMap();
         var noop = require_noop();
-        var getData = !metaMap ? noop : function(func) {
+        var getData = !metaMap ? noop : function (func) {
           return metaMap.get(func);
         };
         module.exports = getData;
       }
     });
-  
+
     // node_modules/lodash/_realNames.js
     var require_realNames = __commonJS({
       "node_modules/lodash/_realNames.js"(exports, module) {
@@ -10276,7 +10279,7 @@
         module.exports = realNames;
       }
     });
-  
+
     // node_modules/lodash/_getFuncName.js
     var require_getFuncName = __commonJS({
       "node_modules/lodash/_getFuncName.js"(exports, module) {
@@ -10296,7 +10299,7 @@
         module.exports = getFuncName;
       }
     });
-  
+
     // node_modules/lodash/_LazyWrapper.js
     var require_LazyWrapper = __commonJS({
       "node_modules/lodash/_LazyWrapper.js"(exports, module) {
@@ -10317,7 +10320,7 @@
         module.exports = LazyWrapper;
       }
     });
-  
+
     // node_modules/lodash/_copyArray.js
     var require_copyArray = __commonJS({
       "node_modules/lodash/_copyArray.js"(exports, module) {
@@ -10332,7 +10335,7 @@
         module.exports = copyArray;
       }
     });
-  
+
     // node_modules/lodash/_wrapperClone.js
     var require_wrapperClone = __commonJS({
       "node_modules/lodash/_wrapperClone.js"(exports, module) {
@@ -10352,7 +10355,7 @@
         module.exports = wrapperClone;
       }
     });
-  
+
     // node_modules/lodash/wrapperLodash.js
     var require_wrapperLodash = __commonJS({
       "node_modules/lodash/wrapperLodash.js"(exports, module) {
@@ -10380,7 +10383,7 @@
         module.exports = lodash;
       }
     });
-  
+
     // node_modules/lodash/_isLaziable.js
     var require_isLaziable = __commonJS({
       "node_modules/lodash/_isLaziable.js"(exports, module) {
@@ -10402,7 +10405,7 @@
         module.exports = isLaziable;
       }
     });
-  
+
     // node_modules/lodash/_createFlow.js
     var require_createFlow = __commonJS({
       "node_modules/lodash/_createFlow.js"(exports, module) {
@@ -10418,7 +10421,7 @@
         var WRAP_ARY_FLAG = 128;
         var WRAP_REARG_FLAG = 256;
         function createFlow(fromRight) {
-          return flatRest(function(funcs) {
+          return flatRest(function (funcs) {
             var length = funcs.length, index = length, prereq = LodashWrapper.prototype.thru;
             if (fromRight) {
               funcs.reverse();
@@ -10442,7 +10445,7 @@
                 wrapper = func.length == 1 && isLaziable(func) ? wrapper[funcName]() : wrapper.thru(func);
               }
             }
-            return function() {
+            return function () {
               var args = arguments, value = args[0];
               if (wrapper && args.length == 1 && isArray(value)) {
                 return wrapper.plant(value).value();
@@ -10458,7 +10461,7 @@
         module.exports = createFlow;
       }
     });
-  
+
     // node_modules/lodash/flow.js
     var require_flow = __commonJS({
       "node_modules/lodash/flow.js"(exports, module) {
@@ -10467,7 +10470,7 @@
         module.exports = flow2;
       }
     });
-  
+
     // node_modules/lodash/_baseClamp.js
     var require_baseClamp = __commonJS({
       "node_modules/lodash/_baseClamp.js"(exports, module) {
@@ -10485,7 +10488,7 @@
         module.exports = baseClamp;
       }
     });
-  
+
     // node_modules/lodash/clamp.js
     var require_clamp = __commonJS({
       "node_modules/lodash/clamp.js"(exports, module) {
@@ -10509,7 +10512,7 @@
         module.exports = clamp2;
       }
     });
-  
+
     // packages/systems/ix2/engine/logic/IX2VanillaEvents.ts
     var import_flow, import_get, import_clamp, import_shared5, MOUSE_CLICK, MOUSE_SECOND_CLICK, MOUSE_DOWN, MOUSE_UP, MOUSE_OVER, MOUSE_OUT, DROPDOWN_CLOSE, DROPDOWN_OPEN, SLIDER_ACTIVE, SLIDER_INACTIVE, TAB_ACTIVE, TAB_INACTIVE, NAVBAR_CLOSE, NAVBAR_OPEN, MOUSE_MOVE, PAGE_SCROLL_DOWN, SCROLL_INTO_VIEW, SCROLL_OUT_OF_VIEW, PAGE_SCROLL_UP, SCROLLING_IN_VIEW, PAGE_FINISH, ECOMMERCE_CART_CLOSE, ECOMMERCE_CART_OPEN, PAGE_START, PAGE_SCROLL, COMPONENT_ACTIVE, COMPONENT_INACTIVE, COLON_DELIMITER3, getNamespacedParameterId2, composableFilter, isElement, containsElement, isOrContainsElement, getAutoStopEvent, hasAutoStopEvent, actionGroupCreator, withFilter, baseActionGroupOptions, baseActivityActionGroupOptions, SCROLL_EVENT_TYPES, MOUSE_OVER_OUT_TYPES, baseScrollActionGroupOptions, AUTO_STOP_DISABLED_EVENTS, getDocumentState, areBoxesIntersecting, isElementHovered, isElementVisible, whenComponentActiveChange, whenElementHoverChange, whenElementVisibiltyChange, whenScrollDirectionChange, pointIntersects, whenPageLoadFinish, whenPageLoadStart, whenClickCountChange, getComponentActiveOptions, getComponentInactiveOptions, scrollIntoOutOfViewOptions, MOUSE_OUT_ROUND_THRESHOLD, IX2VanillaEvents_default;
     var init_IX2VanillaEvents = __esm({
@@ -10687,18 +10690,18 @@
           });
         };
         whenComponentActiveChange = // @ts-expect-error - TS7006 - Parameter 'handler' implicitly has an 'any' type.
-        (handler) => (options, oldState) => {
-          const { type } = options.nativeEvent;
-          const isActive = [COMPONENT_ACTIVE, COMPONENT_INACTIVE].indexOf(type) !== -1 ? type === COMPONENT_ACTIVE : oldState.isActive;
-          const newState = {
-            ...oldState,
-            isActive
+          (handler) => (options, oldState) => {
+            const { type } = options.nativeEvent;
+            const isActive = [COMPONENT_ACTIVE, COMPONENT_INACTIVE].indexOf(type) !== -1 ? type === COMPONENT_ACTIVE : oldState.isActive;
+            const newState = {
+              ...oldState,
+              isActive
+            };
+            if (!oldState || newState.isActive !== oldState.isActive) {
+              return handler(options, newState) || newState;
+            }
+            return newState;
           };
-          if (!oldState || newState.isActive !== oldState.isActive) {
-            return handler(options, newState) || newState;
-          }
-          return newState;
-        };
         whenElementHoverChange = (handler) => (options, oldState) => {
           const newState = {
             elementHovered: isElementHovered(options)
@@ -10719,45 +10722,45 @@
           return newState;
         };
         whenScrollDirectionChange = // @ts-expect-error - TS7006 - Parameter 'handler' implicitly has an 'any' type.
-        (handler) => (options, oldState = {}) => {
-          const {
-            stiffScrollTop: scrollTop,
-            scrollHeight,
-            innerHeight
-          } = getDocumentState();
-          const {
-            event: { config, eventTypeId }
-          } = options;
-          const { scrollOffsetValue, scrollOffsetUnit } = config;
-          const isPX = scrollOffsetUnit === "PX";
-          const scrollHeightBounds = scrollHeight - innerHeight;
-          const percentTop = Number((scrollTop / scrollHeightBounds).toFixed(2));
-          if (oldState && oldState.percentTop === percentTop) {
-            return oldState;
-          }
-          const scrollTopPadding = (isPX ? scrollOffsetValue : innerHeight * (scrollOffsetValue || 0) / 100) / scrollHeightBounds;
-          let scrollingDown;
-          let scrollDirectionChanged;
-          let anchorTop = 0;
-          if (oldState) {
-            scrollingDown = percentTop > oldState.percentTop;
-            scrollDirectionChanged = oldState.scrollingDown !== scrollingDown;
-            anchorTop = scrollDirectionChanged ? percentTop : oldState.anchorTop;
-          }
-          const inBounds = eventTypeId === PAGE_SCROLL_DOWN ? percentTop >= anchorTop + scrollTopPadding : percentTop <= anchorTop - scrollTopPadding;
-          const newState = {
-            ...oldState,
-            percentTop,
-            inBounds,
-            anchorTop,
-            scrollingDown
+          (handler) => (options, oldState = {}) => {
+            const {
+              stiffScrollTop: scrollTop,
+              scrollHeight,
+              innerHeight
+            } = getDocumentState();
+            const {
+              event: { config, eventTypeId }
+            } = options;
+            const { scrollOffsetValue, scrollOffsetUnit } = config;
+            const isPX = scrollOffsetUnit === "PX";
+            const scrollHeightBounds = scrollHeight - innerHeight;
+            const percentTop = Number((scrollTop / scrollHeightBounds).toFixed(2));
+            if (oldState && oldState.percentTop === percentTop) {
+              return oldState;
+            }
+            const scrollTopPadding = (isPX ? scrollOffsetValue : innerHeight * (scrollOffsetValue || 0) / 100) / scrollHeightBounds;
+            let scrollingDown;
+            let scrollDirectionChanged;
+            let anchorTop = 0;
+            if (oldState) {
+              scrollingDown = percentTop > oldState.percentTop;
+              scrollDirectionChanged = oldState.scrollingDown !== scrollingDown;
+              anchorTop = scrollDirectionChanged ? percentTop : oldState.anchorTop;
+            }
+            const inBounds = eventTypeId === PAGE_SCROLL_DOWN ? percentTop >= anchorTop + scrollTopPadding : percentTop <= anchorTop - scrollTopPadding;
+            const newState = {
+              ...oldState,
+              percentTop,
+              inBounds,
+              anchorTop,
+              scrollingDown
+            };
+            if (oldState && inBounds && // @ts-expect-error - TS2339 - Property 'inBounds' does not exist on type '{}'.
+              (scrollDirectionChanged || newState.inBounds !== oldState.inBounds)) {
+              return handler(options, newState) || newState;
+            }
+            return newState;
           };
-          if (oldState && inBounds && // @ts-expect-error - TS2339 - Property 'inBounds' does not exist on type '{}'.
-          (scrollDirectionChanged || newState.inBounds !== oldState.inBounds)) {
-            return handler(options, newState) || newState;
-          }
-          return newState;
-        };
         pointIntersects = (point, rect) => point.left > rect.left && point.left < rect.right && point.top > rect.top && point.top < rect.bottom;
         whenPageLoadFinish = (handler) => (options, oldState) => {
           const newState = {
@@ -10956,8 +10959,8 @@
                 value = Math.round(value);
               }
               if (basedOn !== EventBasedOn.ELEMENT || elementHovered || // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
-              elementHovered !== state.elementHovered) {
+                // @ts-expect-error
+                elementHovered !== state.elementHovered) {
                 value = reverse ? 1 - value : value;
                 store.dispatch(parameterChanged(namespacedParameterId, value));
               }
@@ -11076,7 +11079,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/engine/logic/IX2VanillaEngine.ts
     var IX2VanillaEngine_exports = {};
     __export(IX2VanillaEngine_exports, {
@@ -11958,7 +11961,7 @@
         };
       }
     });
-  
+
     // packages/systems/ix2/engine/index.js
     var require_engine = __commonJS({
       "packages/systems/ix2/engine/index.js"(exports) {
@@ -11998,7 +12001,7 @@
         }
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-ix2.js
     var require_webflow_ix2 = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-ix2.js"(exports, module) {
@@ -12006,18 +12009,18 @@
         var Webflow = require_webflow_lib();
         var ix2 = require_engine();
         ix2.setEnv(Webflow.env);
-        Webflow.define("ix2", module.exports = function() {
+        Webflow.define("ix2", module.exports = function () {
           return ix2;
         });
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-links.js
     var require_webflow_links = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-links.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("links", module.exports = function($, _) {
+        Webflow.define("links", module.exports = function ($, _) {
           var api = {};
           var $win = $(window);
           var designer;
@@ -12075,7 +12078,7 @@
           function scroll() {
             var viewTop = $win.scrollTop();
             var viewHeight = $win.height();
-            _.each(anchors, function(anchor) {
+            _.each(anchors, function (anchor) {
               if (anchor.link.attr("hreflang")) {
                 return;
               }
@@ -12106,13 +12109,13 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-scroll.js
     var require_webflow_scroll = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-scroll.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("scroll", module.exports = function($) {
+        Webflow.define("scroll", module.exports = function ($) {
           var NS_EVENTS = {
             WF_CLICK_EMPTY: "click.wf-empty-link",
             WF_CLICK_SCROLL: "click.wf-scroll"
@@ -12122,7 +12125,7 @@
           var $win = $(window);
           var $doc = $(document);
           var $body = $(document.body);
-          var animate = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function(fn) {
+          var animate = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || function (fn) {
             window.setTimeout(fn, 15);
           };
           var rootTag = Webflow.env("editor") ? ".w-editor-body" : "body";
@@ -12191,7 +12194,7 @@
               evt.stopPropagation();
             }
             updateHistory(hash, evt);
-            window.setTimeout(function() {
+            window.setTimeout(function () {
               scroll($el, function setFocus() {
                 setFocusable($el, "add");
                 $el.get(0).focus({
@@ -12203,7 +12206,7 @@
           }
           function updateHistory(hash) {
             if (loc.hash !== hash && history && history.pushState && // Navigation breaks Chrome when the protocol is `file:`.
-            !(Webflow.env.chrome && loc.protocol === "file:")) {
+              !(Webflow.env.chrome && loc.protocol === "file:")) {
               var oldHash = history.state && history.state.hash;
               if (oldHash !== hash) {
                 history.pushState({
@@ -12219,7 +12222,7 @@
               return;
             var duration = calculateScrollDuration($targetEl, start, end);
             var clock = Date.now();
-            var step = function() {
+            var step = function () {
               var elapsed = Date.now() - clock;
               window.scroll(0, getY(start, end, elapsed, duration));
               if (elapsed <= duration) {
@@ -12247,7 +12250,7 @@
             if (reducedMotionEnabled())
               return 0;
             var mult = 1;
-            $body.add($targetEl).each(function(_, el) {
+            $body.add($targetEl).each(function (_, el) {
               var time = parseFloat(el.getAttribute("data-scroll-time"));
               if (!isNaN(time) && time >= 0) {
                 mult = time;
@@ -12270,7 +12273,7 @@
               WF_CLICK_SCROLL
             } = NS_EVENTS;
             $doc.on(WF_CLICK_SCROLL, localHrefSelector, validateScroll);
-            $doc.on(WF_CLICK_EMPTY, emptyHrefSelector, function(e) {
+            $doc.on(WF_CLICK_EMPTY, emptyHrefSelector, function (e) {
               e.preventDefault();
             });
             document.head.insertBefore(focusStylesEl, document.head.firstChild);
@@ -12281,20 +12284,20 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/BaseSiteModules/webflow-touch.js
     var require_webflow_touch = __commonJS({
       "packages/shared/render/plugins/BaseSiteModules/webflow-touch.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("touch", module.exports = function($) {
+        Webflow.define("touch", module.exports = function ($) {
           var api = {};
           var getSelection = window.getSelection;
           $.event.special.tap = {
             bindType: "click",
             delegateType: "click"
           };
-          api.init = function(el) {
+          api.init = function (el) {
             el = typeof el === "string" ? $(el).get(0) : el;
             return el ? new Touch(el) : null;
           };
@@ -12385,7 +12388,7 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/Dropdown/webflow-dropdown.js
     var require_webflow_dropdown = __commonJS({
       "packages/shared/render/plugins/Dropdown/webflow-dropdown.js"(exports, module) {
@@ -12405,7 +12408,7 @@
         };
         var FORCE_CLOSE = true;
         var INTERNAL_PAGE_LINK_HASHES_PATTERN = /^#[a-zA-Z0-9\-_]+$/;
-        Webflow.define("dropdown", module.exports = function($, _) {
+        Webflow.define("dropdown", module.exports = function ($, _) {
           var debounce = _.debounce;
           var api = {};
           var inApp = Webflow.env();
@@ -12427,14 +12430,14 @@
           var $doc = $(document);
           var $dropdowns;
           api.ready = init;
-          api.design = function() {
+          api.design = function () {
             if (inPreview) {
               closeAll();
             }
             inPreview = false;
             init();
           };
-          api.preview = function() {
+          api.preview = function () {
             inPreview = true;
             init();
           };
@@ -12483,7 +12486,7 @@
             }
             data.list.attr("id", listId);
             data.list.attr("aria-labelledby", toggleId);
-            data.links.each(function(idx, link) {
+            data.links.each(function (idx, link) {
               if (!link.hasAttribute("tabindex"))
                 link.setAttribute("tabindex", "0");
               if (INTERNAL_PAGE_LINK_HASHES_PATTERN.test(link.hash)) {
@@ -12525,7 +12528,7 @@
             };
           }
           function makeSettingEventHandler(data) {
-            return function(evt, options) {
+            return function (evt, options) {
               options = options || {};
               configure(data);
               options.open === true && open(data, true);
@@ -12535,7 +12538,7 @@
             };
           }
           function makeToggler(data, forceClose) {
-            return debounce(function(evt) {
+            return debounce(function (evt) {
               if (data.open || evt && evt.type === "w-close") {
                 return close(data, {
                   forceClose
@@ -12592,13 +12595,13 @@
             data.delayId = window.setTimeout(data.complete, config.delay);
           }
           function closeAll() {
-            $doc.find(namespace).each(function(i, el) {
+            $doc.find(namespace).each(function (i, el) {
               $(el).triggerHandler(closeEvent);
             });
           }
           function closeOthers(data) {
             var self2 = data.el[0];
-            $dropdowns.each(function(i, other) {
+            $dropdowns.each(function (i, other) {
               var $other = $(other);
               if ($other.is(self2) || $other.has(self2).length) {
                 return;
@@ -12610,7 +12613,7 @@
             if (data.mouseUpOutside) {
               $doc.off(mouseUpEvent, data.mouseUpOutside);
             }
-            return debounce(function(evt) {
+            return debounce(function (evt) {
               if (!data.open) {
                 return;
               }
@@ -12633,20 +12636,20 @@
             });
           }
           function complete(data) {
-            return function() {
+            return function () {
               data.list.removeClass(openStateClassName);
               data.toggle.removeClass(openStateClassName);
               data.manageZ && data.el.css("z-index", "");
             };
           }
           function makeMouseEnterHandler(data) {
-            return function() {
+            return function () {
               data.hovering = true;
               open(data);
             };
           }
           function makeMouseLeaveHandler(data) {
-            return function() {
+            return function () {
               data.hovering = false;
               if (!data.links.is(":focus")) {
                 close(data);
@@ -12654,7 +12657,7 @@
             };
           }
           function moveOutside(data) {
-            return debounce(function(evt) {
+            return debounce(function (evt) {
               if (!data.open) {
                 return;
               }
@@ -12674,7 +12677,7 @@
             });
           }
           function makeDropdownKeydownHandler(data) {
-            return function(evt) {
+            return function (evt) {
               if (inDesigner || !data.open) {
                 return;
               }
@@ -12721,7 +12724,7 @@
           }
           function makeToggleKeydownHandler(data) {
             var toggler = makeToggler(data, FORCE_CLOSE);
-            return function(evt) {
+            return function (evt) {
               if (inDesigner)
                 return;
               if (!data.open) {
@@ -12743,7 +12746,7 @@
             };
           }
           function makeDropdownFocusOutHandler(data) {
-            return debounce(function(evt) {
+            return debounce(function (evt) {
               var {
                 relatedTarget,
                 target
@@ -12760,13 +12763,13 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/Form/webflow-forms.js
     var require_webflow_forms = __commonJS({
       "packages/shared/render/plugins/Form/webflow-forms.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("forms", module.exports = function($, _) {
+        Webflow.define("forms", module.exports = function ($, _) {
           var api = {};
           var $doc = $(document);
           var $forms;
@@ -12782,10 +12785,10 @@
           var formUrl;
           var signFileUrl;
           var chimpRegex = /list-manage[1-9]?.com/i;
-          var disconnected = _.debounce(function() {
+          var disconnected = _.debounce(function () {
             alert("Oops! This page has improperly configured forms. Please contact your website administrator to fix this issue.");
           }, 100);
-          api.ready = api.design = api.preview = function() {
+          api.ready = api.design = api.preview = function () {
             init();
             if (!inApp && !listening) {
               addListeners();
@@ -12817,7 +12820,7 @@
             data.done = wrap.find("> .w-form-done");
             data.fail = wrap.find("> .w-form-fail");
             data.fileUploads = wrap.find(".w-file-upload");
-            data.fileUploads.each(function(j) {
+            data.fileUploads.each(function (j) {
               initFileUpload(j, data);
             });
             var formName = data.form.attr("aria-label") || data.form.attr("data-name") || "Form";
@@ -12855,7 +12858,7 @@
           }
           function addListeners() {
             listening = true;
-            $doc.on("submit", namespace + " form", function(evt) {
+            $doc.on("submit", namespace + " form", function (evt) {
               var data = $.data(this, namespace);
               if (data.handler) {
                 data.evt = evt;
@@ -12908,7 +12911,7 @@
           function findFields(form, result) {
             var status = null;
             result = result || {};
-            form.find(':input:not([type="submit"]):not([type="file"])').each(function(i, el) {
+            form.find(':input:not([type="submit"]):not([type="file"])').each(function (i, el) {
               var field = $(el);
               var type = field.attr("type");
               var name = field.attr("data-name") || field.attr("name") || "Field " + (i + 1);
@@ -12932,7 +12935,7 @@
           }
           function findFileUploads(form) {
             var result = {};
-            form.find(':input[type="file"]').each(function(i, el) {
+            form.find(':input[type="file"]').each(function (i, el) {
               var field = $(el);
               var name = field.attr("data-name") || field.attr("name") || "File " + (i + 1);
               var value = field.attr("data-value");
@@ -12948,7 +12951,7 @@
             // __hstc: 'hubspot',
           };
           function collectEnterpriseTrackingCookies() {
-            const cookies = document.cookie.split("; ").reduce(function(acc, cookie) {
+            const cookies = document.cookie.split("; ").reduce(function (acc, cookie) {
               const splitCookie = cookie.split("=");
               const name = splitCookie[0];
               if (name in trackingCookieNameMap) {
@@ -12996,7 +12999,7 @@
             }
             disableBtn(data);
             var fullName;
-            _.each(payload, function(value, key) {
+            _.each(payload, function (value, key) {
               if (emailField.test(key)) {
                 payload.EMAIL = value;
               }
@@ -13025,13 +13028,13 @@
               url,
               data: payload,
               dataType: "jsonp"
-            }).done(function(resp) {
+            }).done(function (resp) {
               data.success = resp.result === "success" || /already/.test(resp.msg);
               if (!data.success) {
                 console.info("MailChimp error: " + resp.msg);
               }
               afterSubmit(data);
-            }).fail(function() {
+            }).fail(function () {
               afterSubmit(data);
             });
           }
@@ -13078,7 +13081,7 @@
             var typeErrMsg = $errorMsgEl.attr("data-w-type-error");
             var genericErrMsg = $errorMsgEl.attr("data-w-generic-error");
             if (!inApp) {
-              $label.on("click keydown", function(e) {
+              $label.on("click keydown", function (e) {
                 if (e.type === "keydown" && e.which !== 13 && e.which !== 32) {
                   return;
                 }
@@ -13089,7 +13092,7 @@
             $label.find(".w-icon-file-upload-icon").attr("aria-hidden", "true");
             $removeEl.find(".w-icon-file-upload-remove").attr("aria-hidden", "true");
             if (!inApp) {
-              $removeEl.on("click keydown", function(e) {
+              $removeEl.on("click keydown", function (e) {
                 if (e.type === "keydown") {
                   if (e.which !== 13 && e.which !== 32) {
                     return;
@@ -13103,7 +13106,7 @@
                 $successWrap.toggle(false);
                 $label.focus();
               });
-              $input.on("change", function(e) {
+              $input.on("change", function (e) {
                 file = e.target && e.target.files && e.target.files[0];
                 if (!file) {
                   return;
@@ -13123,13 +13126,13 @@
               $input.height(height);
               $input.width(1);
             } else {
-              $input.on("click", function(e) {
+              $input.on("click", function (e) {
                 e.preventDefault();
               });
-              $label.on("click", function(e) {
+              $label.on("click", function (e) {
                 e.preventDefault();
               });
-              $labelChildren.on("click", function(e) {
+              $labelChildren.on("click", function (e) {
                 e.preventDefault();
               });
             }
@@ -13178,7 +13181,7 @@
             }
             function isUploading() {
               var uploads = form.fileUploads && form.fileUploads.toArray() || [];
-              return uploads.some(function(value) {
+              return uploads.some(function (value) {
                 return value.uploading;
               });
             }
@@ -13192,9 +13195,9 @@
               type: "GET",
               url: `${signFileUrl}?${payload}`,
               crossDomain: true
-            }).done(function(data) {
+            }).done(function (data) {
               cb(null, data);
-            }).fail(function(err) {
+            }).fail(function (err) {
               cb(err);
             });
           }
@@ -13210,9 +13213,9 @@
               data: formData,
               processData: false,
               contentType: false
-            }).done(function() {
+            }).done(function () {
               cb(null);
-            }).fail(function(err) {
+            }).fail(function (err) {
               cb(err);
             });
           }
@@ -13220,7 +13223,7 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/Lightbox/webflow-lightbox.js
     var require_webflow_lightbox = __commonJS({
       "packages/shared/render/plugins/Lightbox/webflow-lightbox.js"(exports, module) {
@@ -13229,7 +13232,7 @@
         var CONDITION_INVISIBLE_CLASS = "w-condition-invisible";
         var CONDVIS_SELECTOR = "." + CONDITION_INVISIBLE_CLASS;
         function withoutConditionallyHidden(items) {
-          return items.filter(function(item) {
+          return items.filter(function (item) {
             return !isConditionallyHidden(item);
           });
         }
@@ -13281,7 +13284,7 @@
             }
             if (withoutConditionallyHidden(items).length > 1) {
               $refs.items = $refs.empty;
-              items.forEach(function(item, idx) {
+              items.forEach(function (item, idx) {
                 var $thumbnail = dom("thumbnail");
                 var $item = dom("item").prop("tabIndex", 0).attr("aria-controls", "w-lightbox-view").attr("role", "tab").append($thumbnail);
                 setAriaLabelIfEmpty($item, `show item ${idx + 1} of ${items.length}`);
@@ -13289,7 +13292,7 @@
                   $item.addClass(CONDITION_INVISIBLE_CLASS);
                 }
                 $refs.items = $refs.items.add($item);
-                loadImage(item.thumbnailUrl || item.url, function($image) {
+                loadImage(item.thumbnailUrl || item.url, function ($image) {
                   if ($image.prop("width") > $image.prop("height")) {
                     addClass($image, "wide");
                   } else {
@@ -13310,7 +13313,7 @@
             addClass($refs.html, "noscroll");
             return lightbox.show(index || 0);
           }
-          lightbox.build = function() {
+          lightbox.build = function () {
             lightbox.destroy();
             $refs = {
               html: $(document2.documentElement),
@@ -13336,7 +13339,7 @@
             $(container).append($refs.lightbox);
             return lightbox;
           };
-          lightbox.destroy = function() {
+          lightbox.destroy = function () {
             if (!$refs) {
               return;
             }
@@ -13344,7 +13347,7 @@
             $refs.lightbox.remove();
             $refs = void 0;
           };
-          lightbox.show = function(index) {
+          lightbox.show = function (index) {
             if (index === currentIndex) {
               return;
             }
@@ -13367,7 +13370,7 @@
             $refs.spinner.attr("aria-hidden", false).attr("aria-busy", true).attr("aria-valuenow", 0).attr("aria-valuetext", "Loading image");
             spinner.show();
             var url = item.html && svgDataUri(item.width, item.height) || item.url;
-            loadImage(url, function($image) {
+            loadImage(url, function ($image) {
               if (index !== currentIndex) {
                 return;
               }
@@ -13438,7 +13441,7 @@
             $refs.close.prop("tabIndex", 0);
             $(":focus").addClass("active-lightbox");
             if (resetVisibilityState.length === 0) {
-              $("body").children().each(function() {
+              $("body").children().each(function () {
                 if ($(this).hasClass("w-lightbox-backdrop") || $(this).is("script")) {
                   return;
                 }
@@ -13453,26 +13456,26 @@
             }
             return lightbox;
           };
-          lightbox.hide = function() {
+          lightbox.hide = function () {
             tram($refs.lightbox).add("opacity .3s").start({
               opacity: 0
             }).then(hideLightbox);
             return lightbox;
           };
-          lightbox.prev = function() {
+          lightbox.prev = function () {
             var previousVisibleIndex = getPreviousVisibleIndex(currentIndex - 1, items);
             if (previousVisibleIndex > -1) {
               lightbox.show(previousVisibleIndex);
             }
           };
-          lightbox.next = function() {
+          lightbox.next = function () {
             var nextVisibleIndex = getNextVisibleIndex(currentIndex + 1, items);
             if (nextVisibleIndex > -1) {
               lightbox.show(nextVisibleIndex);
             }
           };
           function createHandler(action) {
-            return function(event) {
+            return function (event) {
               if (this !== event.target) {
                 return;
               }
@@ -13484,12 +13487,12 @@
           var handlerPrev = createHandler(lightbox.prev);
           var handlerNext = createHandler(lightbox.next);
           var handlerHide = createHandler(lightbox.hide);
-          var itemTapHandler = function(event) {
+          var itemTapHandler = function (event) {
             var index = $(this).index();
             event.preventDefault();
             lightbox.show(index);
           };
-          var swipeHandler = function(event, data) {
+          var swipeHandler = function (event, data) {
             event.preventDefault();
             if (data.direction === "left") {
               lightbox.next();
@@ -13497,7 +13500,7 @@
               lightbox.prev();
             }
           };
-          var focusThis = function() {
+          var focusThis = function () {
             this.focus();
           };
           function preventDefault(event) {
@@ -13533,7 +13536,7 @@
               addClass($refs.arrowLeft, "inactive");
               addClass($refs.arrowRight, "inactive");
               currentIndex = $refs.view = void 0;
-              resetVisibilityState.forEach(function(visibilityState) {
+              resetVisibilityState.forEach(function (visibilityState) {
                 var node = visibilityState.node;
                 if (!node) {
                   return;
@@ -13555,14 +13558,14 @@
           }
           function loadImage(url, callback) {
             var $image = dom("img", "img");
-            $image.one("load", function() {
+            $image.one("load", function () {
               callback($image);
             });
             $image.attr("src", url);
             return $image;
           }
           function remover($element) {
-            return function() {
+            return function () {
               $element.remove();
             };
           }
@@ -13592,17 +13595,17 @@
             this.delay = delay || 200;
             this.hide();
           }
-          Spinner.prototype.show = function() {
+          Spinner.prototype.show = function () {
             var spinner2 = this;
             if (spinner2.timeoutId) {
               return;
             }
-            spinner2.timeoutId = setTimeout(function() {
+            spinner2.timeoutId = setTimeout(function () {
               spinner2.$element.removeClass(spinner2.className);
               delete spinner2.timeoutId;
             }, spinner2.delay);
           };
-          Spinner.prototype.hide = function() {
+          Spinner.prototype.hide = function () {
             var spinner2 = this;
             if (spinner2.timeoutId) {
               clearTimeout(spinner2.timeoutId);
@@ -13636,7 +13639,7 @@
             var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '"/>';
             return "data:image/svg+xml;charset=utf-8," + encodeURI(svg);
           }
-          (function() {
+          (function () {
             var ua2 = window2.navigator.userAgent;
             var iOSRegex = /(iPhone|iPad|iPod);[^OS]*OS (\d)/;
             var iOSMatches = ua2.match(iOSRegex);
@@ -13657,7 +13660,7 @@
           })();
           return lightbox;
         }
-        Webflow.define("lightbox", module.exports = function($) {
+        Webflow.define("lightbox", module.exports = function ($) {
           var api = {};
           var inApp = Webflow.env();
           var lightbox = createLightbox(window, document, $, inApp ? "#lightbox-mountpoint" : "body");
@@ -13673,15 +13676,15 @@
             groups = {};
             $lightboxes = $doc.find(namespace);
             $lightboxes.webflowLightBox();
-            $lightboxes.each(function() {
+            $lightboxes.each(function () {
               setAriaLabelIfEmpty($(this), "open lightbox");
               $(this).attr("aria-haspopup", "dialog");
             });
           }
           jQuery.fn.extend({
-            webflowLightBox: function() {
+            webflowLightBox: function () {
               var $el = this;
-              $.each($el, function(i, el) {
+              $.each($el, function (i, el) {
                 var data = $.data(el, namespace);
                 if (!data) {
                   data = $.data(el, namespace, {
@@ -13696,7 +13699,7 @@
                 if (designer) {
                   data.el.on("setting" + namespace, configure.bind(null, data));
                 } else {
-                  data.el.on("click" + namespace, clickHandler(data)).on("click" + namespace, function(e) {
+                  data.el.on("click" + namespace, clickHandler(data)).on("click" + namespace, function (e) {
                     e.preventDefault();
                   });
                 }
@@ -13717,7 +13720,7 @@
               console.error("Malformed lightbox JSON configuration.", e);
             }
             supportOldLightboxJson(json);
-            json.items.forEach(function(item) {
+            json.items.forEach(function (item) {
               item.$el = data.el;
             });
             groupName = json.group;
@@ -13737,13 +13740,13 @@
             }
           }
           function clickHandler(data) {
-            return function() {
+            return function () {
               data.items.length && lightbox(data.items, data.index || 0);
             };
           }
           function supportOldLightboxJson(data) {
             if (data.images) {
-              data.images.forEach(function(item) {
+              data.images.forEach(function (item) {
                 item.type = "image";
               });
               data.items = data.images;
@@ -13760,7 +13763,7 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/Navbar/webflow-navbar.js
     var require_webflow_navbar = __commonJS({
       "packages/shared/render/plugins/Navbar/webflow-navbar.js"(exports, module) {
@@ -13778,7 +13781,7 @@
           HOME: 36,
           END: 35
         };
-        Webflow.define("navbar", module.exports = function($, _) {
+        Webflow.define("navbar", module.exports = function ($, _) {
           var api = {};
           var tram = $.tram;
           var $win = $(window);
@@ -13799,7 +13802,7 @@
           var ix = IXEvents.triggers;
           var menuSibling = $();
           api.ready = api.design = api.preview = init;
-          api.destroy = function() {
+          api.destroy = function () {
             menuSibling = $();
             removeListeners();
             if ($navbars && $navbars.length) {
@@ -13917,13 +13920,13 @@
             data.config = config;
           }
           function handler(data) {
-            return function(evt, options) {
+            return function (evt, options) {
               options = options || {};
               var winWidth = $win.width();
               configure(data);
               options.open === true && open(data, true);
               options.open === false && close(data, true);
-              data.open && _.defer(function() {
+              data.open && _.defer(function () {
                 if (winWidth !== $win.width()) {
                   reopen(data);
                 }
@@ -13931,7 +13934,7 @@
             };
           }
           function makeToggleButtonKeyboardHandler(data) {
-            return function(evt) {
+            return function (evt) {
               switch (evt.keyCode) {
                 case KEY_CODES.SPACE:
                 case KEY_CODES.ENTER: {
@@ -13965,7 +13968,7 @@
             };
           }
           function makeLinksKeyboardHandler(data) {
-            return function(evt) {
+            return function (evt) {
               if (!data.open) {
                 return;
               }
@@ -14020,12 +14023,12 @@
             open(data, true);
           }
           function toggle(data) {
-            return debounce(function() {
+            return debounce(function () {
               data.open ? close(data) : open(data);
             });
           }
           function navigate(data) {
-            return function(evt) {
+            return function (evt) {
               var link = $(this);
               var href = link.attr("href");
               if (!Webflow.validClick(evt.currentTarget)) {
@@ -14041,7 +14044,7 @@
             if (data.outside) {
               $doc.off("click" + namespace, data.outside);
             }
-            return function(evt) {
+            return function (evt) {
               var $target = $(evt.target);
               if (inEditor && $target.closest(".w-editor-bem-EditorOverlay").length) {
                 return;
@@ -14049,7 +14052,7 @@
               outsideDebounced(data, $target);
             };
           }
-          var outsideDebounced = debounce(function(data, $target) {
+          var outsideDebounced = debounce(function (data, $target) {
             if (!data.open) {
               return;
             }
@@ -14079,7 +14082,7 @@
             if (containMax === "none") {
               containMax = "";
             }
-            return function(i, link) {
+            return function (i, link) {
               link = $(link);
               link.css(maxWidth, "");
               if (link.css(maxWidth) === "none") {
@@ -14214,7 +14217,7 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/Slider/webflow-slider.js
     var require_webflow_slider = __commonJS({
       "packages/shared/render/plugins/Slider/webflow-slider.js"(exports, module) {
@@ -14232,7 +14235,7 @@
           END: 35
         };
         var FOCUSABLE_SELECTOR = 'a[href], area[href], [role="button"], input, select, textarea, button, iframe, object, embed, *[tabindex], *[contenteditable]';
-        Webflow.define("slider", module.exports = function($, _) {
+        Webflow.define("slider", module.exports = function ($, _) {
           var api = {};
           var tram = $.tram;
           var $doc = $(document);
@@ -14246,19 +14249,19 @@
           var ix = IXEvents.triggers;
           var fallback;
           var inRedraw = false;
-          api.ready = function() {
+          api.ready = function () {
             designer = Webflow.env("design");
             init();
           };
-          api.design = function() {
+          api.design = function () {
             designer = true;
             setTimeout(init, 1e3);
           };
-          api.preview = function() {
+          api.preview = function () {
             designer = false;
             init();
           };
-          api.redraw = function() {
+          api.redraw = function () {
             inRedraw = true;
             init();
             inRedraw = false;
@@ -14372,7 +14375,7 @@
             }
             data.nav.on("click" + namespace, "> div", handler(data));
             if (!inApp) {
-              data.mask.contents().filter(function() {
+              data.mask.contents().filter(function () {
                 return this.nodeType === 3;
               }).remove();
             }
@@ -14415,7 +14418,7 @@
               config.timerMax = parseInt(data.el.attr("data-autoplay-limit"), 10);
               var touchEvents = "mousedown" + namespace + " touchstart" + namespace;
               if (!designer) {
-                data.el.off(touchEvents).one(touchEvents, function() {
+                data.el.off(touchEvents).one(touchEvents, function () {
                   stopTimer(data);
                 });
               }
@@ -14428,7 +14431,7 @@
             return value === "1" || value === "true";
           }
           function hasFocus(data, focusIn, eventType) {
-            return function(evt) {
+            return function (evt) {
               if (!focusIn) {
                 if ($.contains(data.el.get(0), evt.relatedTarget)) {
                   return;
@@ -14455,7 +14458,7 @@
             };
           }
           function keyboardSlideButtonsFunction(data, directionFunction) {
-            return function(evt) {
+            return function (evt) {
               switch (evt.keyCode) {
                 case KEY_CODES.SPACE:
                 case KEY_CODES.ENTER: {
@@ -14467,7 +14470,7 @@
             };
           }
           function previousFunction(data) {
-            return function() {
+            return function () {
               change(data, {
                 index: data.index - 1,
                 vector: -1
@@ -14475,7 +14478,7 @@
             };
           }
           function next(data) {
-            return function() {
+            return function () {
               change(data, {
                 index: data.index + 1,
                 vector: 1
@@ -14488,8 +14491,8 @@
               init();
               layout(data);
             }
-            _.each(data.anchors, function(anchor, index) {
-              $(anchor.els).each(function(i, el) {
+            _.each(data.anchors, function (anchor, index) {
+              $(anchor.els).each(function (i, el) {
                 if ($(el).index() === value) {
                   found = index;
                 }
@@ -14509,7 +14512,7 @@
             if (timerMax && data.timerCount++ > timerMax) {
               return;
             }
-            data.timerId = window.setTimeout(function() {
+            data.timerId = window.setTimeout(function () {
               if (data.timerId == null || designer) {
                 return;
               }
@@ -14522,7 +14525,7 @@
             data.timerId = null;
           }
           function handler(data) {
-            return function(evt, options) {
+            return function (evt, options) {
               options = options || {};
               var config = data.config;
               if (designer && evt.type === "setting") {
@@ -14785,7 +14788,7 @@
               x: 0,
               width: 0
             }];
-            data.slides.each(function(i, el) {
+            data.slides.each(function (i, el) {
               if (anchor - offset > threshold) {
                 pages++;
                 offset += maskWidth;
@@ -14853,7 +14856,7 @@
           }
           function slidesChanged(data) {
             var slidesWidth = 0;
-            data.slides.each(function(i, el) {
+            data.slides.each(function (i, el) {
               slidesWidth += $(el).outerWidth(true);
             });
             if (data.slidesWidth !== slidesWidth) {
@@ -14866,20 +14869,20 @@
         });
       }
     });
-  
+
     // packages/shared/render/plugins/Widget/webflow-maps.js
     var require_webflow_maps = __commonJS({
       "packages/shared/render/plugins/Widget/webflow-maps.js"(exports, module) {
         "use strict";
         var Webflow = require_webflow_lib();
-        Webflow.define("maps", module.exports = function($, _) {
+        Webflow.define("maps", module.exports = function ($, _) {
           var api = {};
           var $doc = $(document);
           var google = null;
           var $maps;
           var namespace = ".w-widget-map";
           var googleMapsApiKey = "";
-          api.ready = function() {
+          api.ready = function () {
             if (!Webflow.env()) {
               initMaps();
             }
@@ -14897,7 +14900,7 @@
               mapsLoaded();
             }
             function mapsLoaded() {
-              window._wf_maps_loaded = function() {
+              window._wf_maps_loaded = function () {
               };
               google = window.google;
               $maps.each(renderMap);
@@ -14981,7 +14984,7 @@
               mapTypeId: state.style
             });
             state.marker.setMap(state.map);
-            state.setMapPosition = function() {
+            state.setMapPosition = function () {
               state.map.setCenter(state.latLngObj);
               var offsetX = 0;
               var offsetY = 0;
@@ -14995,7 +14998,7 @@
               }
               $el.css("position", "");
             };
-            google.maps.event.addListener(state.map, "tilesloaded", function() {
+            google.maps.event.addListener(state.map, "tilesloaded", function () {
               google.maps.event.clearListeners(state.map, "tilesloaded");
               state.setMapPosition();
             });
@@ -15020,7 +15023,7 @@
               state.zoom = zoom;
               state.map.setZoom(Number(zoom));
             }
-            google.maps.event.addListener(state.marker, "click", function() {
+            google.maps.event.addListener(state.marker, "click", function () {
               window.open("https://maps.google.com/?z=" + state.zoom + "&daddr=" + state.latLng);
             });
             return state;
@@ -15029,7 +15032,7 @@
         });
       }
     });
-  
+
     // <stdin>
     require_webflow_brand();
     require_webflow_focus_visible();
@@ -15077,6 +15080,7 @@
    * Webflow: Interactions 2.0: Init
    */
   Webflow.require('ix2').init(
-  {"events":{"e":{"id":"e","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-18"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".faq-item","originalId":"6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc7","appliesTo":"CLASS"},"targets":[{"selector":".faq-item","originalId":"6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc7","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1651748631297},"e-3":{"id":"e-3","name":"","animationType":"custom","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-4"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1650437894959},"e-4":{"id":"e-4","name":"","animationType":"custom","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-3"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1650437894964},"e-5":{"id":"e-5","name":"","animationType":"preset","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-6"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678168576914},"e-6":{"id":"e-6","name":"","animationType":"preset","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-5"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678168576914},"e-7":{"id":"e-7","name":"","animationType":"preset","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-8"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678168580632},"e-8":{"id":"e-8","name":"","animationType":"preset","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-7"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678168580632},"e-9":{"id":"e-9","name":"","animationType":"preset","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-10"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188384682},"e-10":{"id":"e-10","name":"","animationType":"preset","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-9"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188384682},"e-11":{"id":"e-11","name":"","animationType":"preset","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-12"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188440860},"e-12":{"id":"e-12","name":"","animationType":"preset","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-11"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188440860},"e-13":{"id":"e-13","name":"","animationType":"preset","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-14"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188441504},"e-14":{"id":"e-14","name":"","animationType":"preset","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-13"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188441504},"e-15":{"id":"e-15","name":"","animationType":"preset","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-16"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188442096},"e-16":{"id":"e-16","name":"","animationType":"preset","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-2","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-15"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678188442096},"e-17":{"id":"e-17","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FADE_EFFECT","instant":false,"config":{"actionListId":"fadeIn","autoStopEventId":"e-67"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".button-primary-2","originalId":"63391ae20a9495ba2f40c3c6|916cc880-9a02-ea9c-f44a-b112db342cb5","appliesTo":"CLASS"},"targets":[{"selector":".button-primary-2","originalId":"63391ae20a9495ba2f40c3c6|916cc880-9a02-ea9c-f44a-b112db342cb5","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":null,"effectIn":true},"createdOn":1664773992990},"e-19":{"id":"e-19","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-20"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678695945795},"e-20":{"id":"e-20","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-19"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678695945795},"e-21":{"id":"e-21","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-22"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678697664175},"e-22":{"id":"e-22","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-21"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678697664176},"e-23":{"id":"e-23","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-24"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699114539},"e-24":{"id":"e-24","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-23"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699114539},"e-25":{"id":"e-25","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-26"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699114539},"e-26":{"id":"e-26","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-25"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699114539},"e-27":{"id":"e-27","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-28"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699121651},"e-28":{"id":"e-28","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-27"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699121651},"e-29":{"id":"e-29","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-30"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699121651},"e-30":{"id":"e-30","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-29"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699121651},"e-31":{"id":"e-31","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-32"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699130799},"e-32":{"id":"e-32","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-31"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699130799},"e-33":{"id":"e-33","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-34"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699130799},"e-34":{"id":"e-34","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-33"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699130799},"e-35":{"id":"e-35","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-36"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699138791},"e-36":{"id":"e-36","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-35"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699138791},"e-37":{"id":"e-37","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-38"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699138791},"e-38":{"id":"e-38","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-37"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699138791},"e-43":{"id":"e-43","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-44"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699758766},"e-44":{"id":"e-44","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-43"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699758766},"e-45":{"id":"e-45","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-46"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699758766},"e-46":{"id":"e-46","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-45"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678699758766},"e-47":{"id":"e-47","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-7","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-48"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".hero-video-wrap","originalId":"6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc","appliesTo":"CLASS"},"targets":[{"selector":".hero-video-wrap","originalId":"6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678764549865},"e-48":{"id":"e-48","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-8","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-47"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".hero-video-wrap","originalId":"6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc","appliesTo":"CLASS"},"targets":[{"selector":".hero-video-wrap","originalId":"6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678764549866},"e-49":{"id":"e-49","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-50"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765627784},"e-50":{"id":"e-50","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-49"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765627784},"e-51":{"id":"e-51","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-52"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765627784},"e-52":{"id":"e-52","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-51"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765627784},"e-53":{"id":"e-53","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-3","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-54"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765860681},"e-54":{"id":"e-54","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-53"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765860681},"e-55":{"id":"e-55","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-56"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765860681},"e-56":{"id":"e-56","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-6","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-55"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678765860681},"e-58":{"id":"e-58","name":"","animationType":"custom","eventTypeId":"PAGE_FINISH","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-13","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-57"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825","appliesTo":"PAGE","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678782028513},"e-61":{"id":"e-61","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-11","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-62"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".single-team","originalId":"6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b","appliesTo":"CLASS"},"targets":[{"selector":".single-team","originalId":"6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678857897145},"e-62":{"id":"e-62","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-12","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-61"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".single-team","originalId":"6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b","appliesTo":"CLASS"},"targets":[{"selector":".single-team","originalId":"6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678857897146},"e-63":{"id":"e-63","name":"","animationType":"custom","eventTypeId":"PAGE_START","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-14","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-64"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825","appliesTo":"PAGE","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678881422942},"e-65":{"id":"e-65","name":"","animationType":"custom","eventTypeId":"PAGE_START","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-15","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-66"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825","appliesTo":"PAGE","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1678881698597},"e-67":{"id":"e-67","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-16","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-68"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".dropdown-toggle-main-menu","originalId":"6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8","appliesTo":"CLASS"},"targets":[{"selector":".dropdown-toggle-main-menu","originalId":"6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679300949092},"e-68":{"id":"e-68","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-67"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".dropdown-toggle-main-menu","originalId":"6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8","appliesTo":"CLASS"},"targets":[{"selector":".dropdown-toggle-main-menu","originalId":"6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679300949094},"e-69":{"id":"e-69","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-70"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679301574365},"e-70":{"id":"e-70","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-69"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679301574366},"e-71":{"id":"e-71","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-72"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|78a5cd7f-6c69-736d-0921-7027de9afd62","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|78a5cd7f-6c69-736d-0921-7027de9afd62","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":500,"direction":"LEFT","effectIn":true},"createdOn":1679303453784},"e-73":{"id":"e-73","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-74"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|61ed2c7a-7cad-acf9-9841-6cc58f01cef0","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|61ed2c7a-7cad-acf9-9841-6cc58f01cef0","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":700,"direction":"LEFT","effectIn":true},"createdOn":1679303538296},"e-75":{"id":"e-75","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-76"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|48b2428a-2be8-0d5e-f790-eb74eef24e09","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|48b2428a-2be8-0d5e-f790-eb74eef24e09","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":900,"direction":"LEFT","effectIn":true},"createdOn":1679303568752},"e-77":{"id":"e-77","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-78"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|a0e29bfc-4880-812e-b21a-9580756b6973","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|a0e29bfc-4880-812e-b21a-9580756b6973","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":1100,"direction":"LEFT","effectIn":true},"createdOn":1679303595024},"e-79":{"id":"e-79","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-80"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|9b1cbab1-48cf-b6a5-02e9-a2417be05fe5","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|9b1cbab1-48cf-b6a5-02e9-a2417be05fe5","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":1100,"direction":"BOTTOM","effectIn":true},"createdOn":1679304041297},"e-81":{"id":"e-81","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInTop","autoStopEventId":"e-82"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|3bf99a05-b39b-7bb6-52e0-2cc421d5f2d2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|3bf99a05-b39b-7bb6-52e0-2cc421d5f2d2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":900,"direction":"TOP","effectIn":true},"createdOn":1679304120641},"e-83":{"id":"e-83","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInRight","autoStopEventId":"e-84"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|5091ae66-2eac-72d4-5d23-8299602f0d84","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|5091ae66-2eac-72d4-5d23-8299602f0d84","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":900,"direction":"RIGHT","effectIn":true},"createdOn":1679304142122},"e-85":{"id":"e-85","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-86"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|cd3d136f-109c-9c3c-94d3-db4719a1800c","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|cd3d136f-109c-9c3c-94d3-db4719a1800c","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679305079212},"e-87":{"id":"e-87","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-88"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|1e88fe0a-0932-23bc-eb46-af61ad703b3e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|1e88fe0a-0932-23bc-eb46-af61ad703b3e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679305141132},"e-89":{"id":"e-89","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-90"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|30dbbf71-5519-4cf2-fca0-0f315e439910","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|30dbbf71-5519-4cf2-fca0-0f315e439910","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679305219212},"e-91":{"id":"e-91","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-92"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|df2e64fd-3747-dd74-8919-43fd6842d30e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|df2e64fd-3747-dd74-8919-43fd6842d30e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679305266709},"e-93":{"id":"e-93","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-94"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|f4cce356-3767-67a7-3b4a-4ca06335efe6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|f4cce356-3767-67a7-3b4a-4ca06335efe6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":"BOTTOM","effectIn":true},"createdOn":1679305333053},"e-95":{"id":"e-95","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-96"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|e815f046-73ee-0a65-4b88-427bb11fce12","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|e815f046-73ee-0a65-4b88-427bb11fce12","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":500,"direction":"BOTTOM","effectIn":true},"createdOn":1679305369453},"e-97":{"id":"e-97","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-98"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|08b00170-bee8-5392-e0c6-fef6bcf35e37","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|08b00170-bee8-5392-e0c6-fef6bcf35e37","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":700,"direction":"BOTTOM","effectIn":true},"createdOn":1679305395846},"e-99":{"id":"e-99","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-100"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|165c4851-0983-2c2c-3c5c-17d1b74b53ba","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|165c4851-0983-2c2c-3c5c-17d1b74b53ba","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679305542277},"e-101":{"id":"e-101","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-102"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|7f40d37a-bf12-4c9d-b33a-5111c227d2eb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|7f40d37a-bf12-4c9d-b33a-5111c227d2eb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679305654078},"e-103":{"id":"e-103","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInRight","autoStopEventId":"e-104"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|faf6975f-f4f2-a7ef-7015-9c5f4ce6ec59","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|faf6975f-f4f2-a7ef-7015-9c5f4ce6ec59","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":400,"direction":"RIGHT","effectIn":true},"createdOn":1679305693646},"e-105":{"id":"e-105","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-106"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".section-title-wrap","originalId":"6666fcda3ffd3947b1b20825|641529b1-fbc6-54a6-fd73-0b448ff58a5e","appliesTo":"CLASS"},"targets":[{"selector":".section-title-wrap","originalId":"6666fcda3ffd3947b1b20825|641529b1-fbc6-54a6-fd73-0b448ff58a5e","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679305854086},"e-109":{"id":"e-109","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-110"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|8a9dc4a8-4ba0-3a0f-e9d9-bfb44031e833","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|8a9dc4a8-4ba0-3a0f-e9d9-bfb44031e833","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":"BOTTOM","effectIn":true},"createdOn":1679306335424},"e-111":{"id":"e-111","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-112"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|3f6d1a74-f657-fa38-ee99-63e523509f55","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|3f6d1a74-f657-fa38-ee99-63e523509f55","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679307216319},"e-113":{"id":"e-113","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-114"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|1b411c32-b146-3904-fefe-43f34450d809","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|1b411c32-b146-3904-fefe-43f34450d809","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679307244674},"e-115":{"id":"e-115","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FLIP_EFFECT","instant":false,"config":{"actionListId":"flipInLeft","autoStopEventId":"e-116"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|95280b80-0526-7513-fe46-fab249d937ac","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|95280b80-0526-7513-fe46-fab249d937ac","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"LEFT","effectIn":true},"createdOn":1679307264802},"e-117":{"id":"e-117","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-118"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|5e410ce7-d527-3911-c59c-6d83c4010874","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|5e410ce7-d527-3911-c59c-6d83c4010874","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":"LEFT","effectIn":true},"createdOn":1679307327426},"e-119":{"id":"e-119","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-120"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|16c19b1a-7b31-39e7-7070-275cb1348cdc","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|16c19b1a-7b31-39e7-7070-275cb1348cdc","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679307419371},"e-121":{"id":"e-121","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-122"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|760644d8-7568-f22c-a5ae-f636fa1d6837","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|760644d8-7568-f22c-a5ae-f636fa1d6837","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679307737756},"e-123":{"id":"e-123","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInTop","autoStopEventId":"e-124"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|6bf67e97-607e-7b08-3e64-7a33fe3f86a2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|6bf67e97-607e-7b08-3e64-7a33fe3f86a2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"TOP","effectIn":true},"createdOn":1679307786139},"e-125":{"id":"e-125","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-126"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|5440e64e-8e04-b1cd-74d4-5d24e799fbcf","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|5440e64e-8e04-b1cd-74d4-5d24e799fbcf","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679307952181},"e-127":{"id":"e-127","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInTop","autoStopEventId":"e-128"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|bd506700-dad7-838f-b3ac-953b3b1462cf","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|bd506700-dad7-838f-b3ac-953b3b1462cf","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"TOP","effectIn":true},"createdOn":1679308925152},"e-137":{"id":"e-137","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-138"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc05","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc05","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679309025127},"e-139":{"id":"e-139","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-140"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc0b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc0b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":"BOTTOM","effectIn":true},"createdOn":1679309025127},"e-141":{"id":"e-141","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-142"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc11","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc11","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":500,"direction":"BOTTOM","effectIn":true},"createdOn":1679309025127},"e-143":{"id":"e-143","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-144"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc17","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc17","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":700,"direction":"BOTTOM","effectIn":true},"createdOn":1679309025127},"e-145":{"id":"e-145","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-146"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679309311382},"e-147":{"id":"e-147","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-148"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679309311382},"e-149":{"id":"e-149","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"FLIP_EFFECT","instant":false,"config":{"actionListId":"flipInLeft","autoStopEventId":"e-150"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782f8","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782f8","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"LEFT","effectIn":true},"createdOn":1679309311382},"e-151":{"id":"e-151","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInLeft","autoStopEventId":"e-152"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782fb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782fb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":"LEFT","effectIn":true},"createdOn":1679309311382},"e-153":{"id":"e-153","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-154"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679311701142},"e-155":{"id":"e-155","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-156"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|3222e0b4-9177-2b14-1c9e-276a52825bee","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|3222e0b4-9177-2b14-1c9e-276a52825bee","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":300,"direction":"BOTTOM","effectIn":true},"createdOn":1679311756709},"e-157":{"id":"e-157","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-158"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|37219033-0f0b-8af9-dc88-db151aa3fd86","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|37219033-0f0b-8af9-dc88-db151aa3fd86","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":400,"direction":"BOTTOM","effectIn":true},"createdOn":1679311781120},"e-159":{"id":"e-159","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-160"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|fa069c52-c8fc-86b4-df66-665e90363bfe","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|fa069c52-c8fc-86b4-df66-665e90363bfe","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":500,"direction":"BOTTOM","effectIn":true},"createdOn":1679311800534},"e-161":{"id":"e-161","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-162"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|c51c09f4-9ac1-c8f6-ab6c-0cfca39dccb5","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|c51c09f4-9ac1-c8f6-ab6c-0cfca39dccb5","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679387197787},"e-163":{"id":"e-163","name":"","animationType":"custom","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-20","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-164"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".single-contact-info","originalId":"6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474","appliesTo":"CLASS"},"targets":[{"selector":".single-contact-info","originalId":"6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679395025796},"e-164":{"id":"e-164","name":"","animationType":"custom","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-21","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-163"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".single-contact-info","originalId":"6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474","appliesTo":"CLASS"},"targets":[{"selector":".single-contact-info","originalId":"6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679395025799},"e-165":{"id":"e-165","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-166"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20825|0fce1094-d8e7-db00-f544-a586d59f291d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20825|0fce1094-d8e7-db00-f544-a586d59f291d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679457306729},"e-167":{"id":"e-167","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-168"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20835|21b89470-7d48-8a9a-7a5f-beb24a1e7652","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20835|21b89470-7d48-8a9a-7a5f-beb24a1e7652","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679460865160},"e-169":{"id":"e-169","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-170"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|560a2f01-aa70-b9ef-398e-107c4c89ad13","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|560a2f01-aa70-b9ef-398e-107c4c89ad13","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550900727},"e-171":{"id":"e-171","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-172"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|ef816a72-fb3b-33fe-1195-fc9f94c54dd6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|ef816a72-fb3b-33fe-1195-fc9f94c54dd6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550904756},"e-173":{"id":"e-173","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-174"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|016a4b47-31a4-afcb-7476-9bd1aa4d6995","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|016a4b47-31a4-afcb-7476-9bd1aa4d6995","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550905303},"e-175":{"id":"e-175","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-176"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|f555ff94-2feb-1b72-c32c-9ee5df566cc0","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|f555ff94-2feb-1b72-c32c-9ee5df566cc0","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550905827},"e-177":{"id":"e-177","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-178"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|d5b9a33c-7c12-9946-03b0-6c38d55078fd","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|d5b9a33c-7c12-9946-03b0-6c38d55078fd","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550906327},"e-179":{"id":"e-179","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-180"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|446094e2-0add-fa7b-20d8-e775a8c87e5f","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|446094e2-0add-fa7b-20d8-e775a8c87e5f","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550906788},"e-181":{"id":"e-181","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-182"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|2f84103e-7594-5137-7153-dda8647cfe0e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|2f84103e-7594-5137-7153-dda8647cfe0e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550908340},"e-183":{"id":"e-183","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-184"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|c9e642a2-154a-2ae2-99ed-8dffe0eb772e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|c9e642a2-154a-2ae2-99ed-8dffe0eb772e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679550908666},"e-185":{"id":"e-185","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-186"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".breadcrumb-wrap","originalId":"6666fcda3ffd3947b1b2082a|b0815fbf-f326-6b37-79a6-8696b910c6fc","appliesTo":"CLASS"},"targets":[{"selector":".breadcrumb-wrap","originalId":"6666fcda3ffd3947b1b2082a|b0815fbf-f326-6b37-79a6-8696b910c6fc","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679563292908},"e-189":{"id":"e-189","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-190"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|4bd38bb3-14bb-d8ac-6003-c8dadc948458","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|4bd38bb3-14bb-d8ac-6003-c8dadc948458","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679563720484},"e-191":{"id":"e-191","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-192"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082a|b415050b-27ac-0f1e-0ce1-0ffeb13d1e72","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082a|b415050b-27ac-0f1e-0ce1-0ffeb13d1e72","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679563794956},"e-193":{"id":"e-193","name":"","animationType":"custom","eventTypeId":"PAGE_START","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-14","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-194"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829","appliesTo":"PAGE","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679564411591},"e-195":{"id":"e-195","name":"","animationType":"custom","eventTypeId":"PAGE_START","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-15","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-196"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829","appliesTo":"PAGE","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829","appliesTo":"PAGE","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679564597710},"e-197":{"id":"e-197","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-198"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|e759c083-5a41-cd58-92e6-9adb00cdcb2b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|e759c083-5a41-cd58-92e6-9adb00cdcb2b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679564756511},"e-199":{"id":"e-199","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-200"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679564897559},"e-201":{"id":"e-201","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-202"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|5a38ccf0-67a7-078e-cf53-5513559eee88","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|5a38ccf0-67a7-078e-cf53-5513559eee88","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":400,"direction":"BOTTOM","effectIn":true},"createdOn":1679564918023},"e-203":{"id":"e-203","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-204"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|245f65f5-9fb7-49eb-b719-0a642f1ad6e6","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|245f65f5-9fb7-49eb-b719-0a642f1ad6e6","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679564954710},"e-205":{"id":"e-205","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-206"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|4188ae31-d01c-16fe-42cf-a1a98eeabab7","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|4188ae31-d01c-16fe-42cf-a1a98eeabab7","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679564972602},"e-207":{"id":"e-207","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-208"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082e|d7a359b3-a0bc-664f-bff4-07a9721bbfb2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082e|d7a359b3-a0bc-664f-bff4-07a9721bbfb2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":100,"direction":"BOTTOM","effectIn":true},"createdOn":1679565362504},"e-209":{"id":"e-209","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-210"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47a9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47a9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679565492120},"e-211":{"id":"e-211","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-212"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea843e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea843e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679565521384},"e-213":{"id":"e-213","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-214"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20831|8fd6ec39-8f93-aa73-9ce3-b745f89280dd","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20831|8fd6ec39-8f93-aa73-9ce3-b745f89280dd","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566031221},"e-215":{"id":"e-215","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-216"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20831|0e00e9ee-9d64-f790-4a23-6631aecd30e4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20831|0e00e9ee-9d64-f790-4a23-6631aecd30e4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":200,"direction":"BOTTOM","effectIn":true},"createdOn":1679566057522},"e-217":{"id":"e-217","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-218"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082d|2a2242bd-9529-8d14-2735-a83d5eec6285","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082d|2a2242bd-9529-8d14-2735-a83d5eec6285","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566122307},"e-219":{"id":"e-219","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-220"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|f53a7d19-e14b-b44f-ce2f-97142d65f628","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|f53a7d19-e14b-b44f-ce2f-97142d65f628","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566218850},"e-221":{"id":"e-221","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-222"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20828|36974462-8776-866e-9da8-b4e04f3559dd","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20828|36974462-8776-866e-9da8-b4e04f3559dd","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566631177},"e-223":{"id":"e-223","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-224"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20827|6b0ec90e-bc42-4792-87fa-988abfe4ed0b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20827|6b0ec90e-bc42-4792-87fa-988abfe4ed0b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566699413},"e-225":{"id":"e-225","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-226"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000b","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000b","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566755362},"e-227":{"id":"e-227","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-228"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566767180},"e-229":{"id":"e-229","name":"","animationType":"preset","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","instant":false,"config":{"actionListId":"slideInBottom","autoStopEventId":"e-230"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a3000000000012","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a3000000000012","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":0,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1679566788628},"e-231":{"id":"e-231","name":"","animationType":"custom","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-22","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-232"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".header-search-icon-wrap","originalId":"6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a","appliesTo":"CLASS"},"targets":[{"selector":".header-search-icon-wrap","originalId":"6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a","appliesTo":"CLASS"}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679896093659},"e-232":{"id":"e-232","name":"","animationType":"custom","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-23","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-231"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".header-search-icon-wrap","originalId":"6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a","appliesTo":"CLASS"},"targets":[{"selector":".header-search-icon-wrap","originalId":"6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a","appliesTo":"CLASS"}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1679896093664},"e-261":{"id":"e-261","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-262"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066378599},"e-262":{"id":"e-262","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-261"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066378599},"e-263":{"id":"e-263","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-264"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066410703},"e-264":{"id":"e-264","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-263"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066410703},"e-265":{"id":"e-265","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-266"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066452237},"e-266":{"id":"e-266","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-265"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066452237},"e-267":{"id":"e-267","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-268"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066490820},"e-268":{"id":"e-268","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-267"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066490820},"e-269":{"id":"e-269","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-270"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066519509},"e-270":{"id":"e-270","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-269"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066519509},"e-271":{"id":"e-271","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-272"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066557254},"e-272":{"id":"e-272","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-271"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066557254},"e-273":{"id":"e-273","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-274"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066586148},"e-274":{"id":"e-274","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-273"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066586148},"e-275":{"id":"e-275","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-276"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066612257},"e-276":{"id":"e-276","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-275"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066612257},"e-277":{"id":"e-277","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-278"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066636751},"e-278":{"id":"e-278","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-277"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066636751},"e-279":{"id":"e-279","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-280"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066674724},"e-280":{"id":"e-280","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-279"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066674724},"e-281":{"id":"e-281","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-282"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066703542},"e-282":{"id":"e-282","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-281"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066703542},"e-283":{"id":"e-283","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-284"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066731749},"e-284":{"id":"e-284","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-283"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066731749},"e-285":{"id":"e-285","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-286"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066768320},"e-286":{"id":"e-286","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-285"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066768320},"e-287":{"id":"e-287","name":"","animationType":"preset","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-288"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066811823},"e-288":{"id":"e-288","name":"","animationType":"preset","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-19","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-287"}},"mediaQueries":["main","medium","small","tiny"],"target":{"id":"6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e","appliesTo":"ELEMENT","styleBlockIds":[]},"targets":[{"id":"6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e","appliesTo":"ELEMENT","styleBlockIds":[]}],"config":{"loop":true,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1680066811823}},"actionLists":{"a":{"id":"a","title":"FAQ Open","actionItemGroups":[{"actionItems":[{"id":"a-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".faq-answer","selectorGuids":["312edc36-3c62-02d2-a6af-f6300b4bfcdf"]},"heightValue":0,"widthUnit":"PX","heightUnit":"px","locked":false}}]},{"actionItems":[{"id":"a-n-2","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":400,"target":{"useEventTarget":"SIBLINGS","selector":".faq-answer","selectorGuids":["312edc36-3c62-02d2-a6af-f6300b4bfcdf"]},"widthUnit":"PX","heightUnit":"AUTO","locked":false}},{"id":"a-n-3","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".plus","selectorGuids":["312edc36-3c62-02d2-a6af-f6300b4bfce3"]},"heightValue":0,"widthUnit":"PX","heightUnit":"%","locked":false}}]}],"useFirstGroupAsInitialState":true,"createdOn":1650437898626},"a-2":{"id":"a-2","title":"FAQ Close","actionItemGroups":[{"actionItems":[{"id":"a-2-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"","duration":0,"target":{"useEventTarget":"SIBLINGS","selector":".faq-answer","selectorGuids":["312edc36-3c62-02d2-a6af-f6300b4bfcdf"]},"widthUnit":"PX","heightUnit":"AUTO","locked":false}}]},{"actionItems":[{"id":"a-2-n-2","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":400,"target":{"useEventTarget":"SIBLINGS","selector":".faq-answer","selectorGuids":["312edc36-3c62-02d2-a6af-f6300b4bfcdf"]},"heightValue":0,"widthUnit":"PX","heightUnit":"px","locked":false}},{"id":"a-2-n-3","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":400,"target":{"useEventTarget":"CHILDREN","selector":".plus","selectorGuids":["312edc36-3c62-02d2-a6af-f6300b4bfce3"]},"heightValue":40,"widthUnit":"PX","heightUnit":"%","locked":false}}]}],"useFirstGroupAsInitialState":false,"createdOn":1650437898626},"a-3":{"id":"a-3","title":"Project Content Hover In","actionItemGroups":[{"actionItems":[{"id":"a-3-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".project-content-inner","selectorGuids":["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"]},"yValue":140,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-3-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".project-content-inner","selectorGuids":["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"]},"value":0,"unit":""}}]},{"actionItems":[{"id":"a-3-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".project-content-inner","selectorGuids":["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-3-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".project-content-inner","selectorGuids":["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"]},"value":1,"unit":""}}]}],"useFirstGroupAsInitialState":true,"createdOn":1678695951683},"a-4":{"id":"a-4","title":"Project Content Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-4-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".project-content-inner","selectorGuids":["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"]},"yValue":140,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]},{"actionItems":[{"id":"a-4-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".project-content-inner","selectorGuids":["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"]},"value":0,"unit":""}}]}],"useFirstGroupAsInitialState":false,"createdOn":1678695951683},"a-5":{"id":"a-5","title":"Project Icon Hover In","actionItemGroups":[{"actionItems":[{"id":"a-5-n","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".project-ellipse","selectorGuids":["53732c1b-0738-3630-fa95-e5280d996d8f"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}},{"id":"a-5-n-3","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".project-icon","selectorGuids":["9c4a761a-3733-64fd-9af5-543649289742"]},"globalSwatchId":"","rValue":41,"bValue":50,"gValue":45,"aValue":1}}]},{"actionItems":[{"id":"a-5-n-4","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".project-icon","selectorGuids":["9c4a761a-3733-64fd-9af5-543649289742"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]},{"actionItems":[{"id":"a-5-n-2","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".project-ellipse","selectorGuids":["53732c1b-0738-3630-fa95-e5280d996d8f"]},"globalSwatchId":"","rValue":63,"bValue":100,"gValue":58,"aValue":1}}]}],"useFirstGroupAsInitialState":true,"createdOn":1678697676281},"a-6":{"id":"a-6","title":"Project Icon Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-6-n","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".project-ellipse","selectorGuids":["53732c1b-0738-3630-fa95-e5280d996d8f"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]},{"actionItems":[{"id":"a-6-n-2","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".project-icon","selectorGuids":["9c4a761a-3733-64fd-9af5-543649289742"]},"globalSwatchId":"","rValue":41,"bValue":50,"gValue":45,"aValue":1}}]}],"useFirstGroupAsInitialState":false,"createdOn":1678697676281},"a-7":{"id":"a-7","title":"Hero Video Hover In","actionItemGroups":[{"actionItems":[{"id":"a-7-n-3","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".hero-video-icon","selectorGuids":["8904bb18-7c6e-ce33-c931-c8e243df98a1"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}},{"id":"a-7-n-5","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".hero-video-icon","selectorGuids":["8904bb18-7c6e-ce33-c931-c8e243df98a1"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]},{"actionItems":[{"id":"a-7-n-6","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".hero-video-icon","selectorGuids":["8904bb18-7c6e-ce33-c931-c8e243df98a1"]},"globalSwatchId":"","rValue":63,"bValue":100,"gValue":58,"aValue":1}},{"id":"a-7-n-4","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".hero-video-icon","selectorGuids":["8904bb18-7c6e-ce33-c931-c8e243df98a1"]},"globalSwatchId":"","rValue":63,"bValue":100,"gValue":58,"aValue":1}}]}],"useFirstGroupAsInitialState":true,"createdOn":1678764555542},"a-8":{"id":"a-8","title":"Hero Video Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-8-n-2","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":100,"target":{"useEventTarget":"CHILDREN","selector":".hero-video-icon","selectorGuids":["8904bb18-7c6e-ce33-c931-c8e243df98a1"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]},{"actionItems":[{"id":"a-8-n-3","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":100,"target":{"useEventTarget":"CHILDREN","selector":".hero-video-icon","selectorGuids":["8904bb18-7c6e-ce33-c931-c8e243df98a1"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]}],"useFirstGroupAsInitialState":false,"createdOn":1678764555542},"a-13":{"id":"a-13","title":"Brand Logo Infinite Animate","actionItemGroups":[{"actionItems":[{"id":"a-13-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":600,"target":{"selector":".brand-logo-wrap","selectorGuids":["c58da501-08f6-12f1-c494-4bac6f8ebaba"]},"xValue":0,"xUnit":"%","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"id":"a-13-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":18000,"target":{"selector":".brand-logo-wrap","selectorGuids":["c58da501-08f6-12f1-c494-4bac6f8ebaba"]},"xValue":-50,"xUnit":"%","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"id":"a-13-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":0,"target":{"selector":".brand-logo-wrap","selectorGuids":["c58da501-08f6-12f1-c494-4bac6f8ebaba"]},"xValue":0,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":true,"createdOn":1678873682027},"a-11":{"id":"a-11","title":"Team Hover In","actionItemGroups":[{"actionItems":[{"id":"a-11-n-9","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-name","selectorGuids":["fdb10ddf-2182-16d9-bf30-af105061ffcc"]},"value":0,"unit":""}},{"id":"a-11-n-10","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-designation","selectorGuids":["e7868bef-30a0-54c9-40c5-b7d73f067eca"]},"value":0,"unit":""}},{"id":"a-11-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-designation","selectorGuids":["e7868bef-30a0-54c9-40c5-b7d73f067eca"]},"yValue":40,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-11-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-name","selectorGuids":["fdb10ddf-2182-16d9-bf30-af105061ffcc"]},"yValue":40,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-11-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-social-wrap","selectorGuids":["a93e4bb4-ec55-3913-ec29-f190688c684a"]},"yValue":40,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-11-n-11","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-social-wrap","selectorGuids":["a93e4bb4-ec55-3913-ec29-f190688c684a"]},"value":0,"unit":""}},{"id":"a-11-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-info","selectorGuids":["75a22b9d-004c-b73d-80e0-8035af76c735"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}}]},{"actionItems":[{"id":"a-11-n-5","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-info","selectorGuids":["75a22b9d-004c-b73d-80e0-8035af76c735"]},"yValue":0,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-11-n-12","actionTypeId":"STYLE_OPACITY","config":{"delay":200,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-name","selectorGuids":["fdb10ddf-2182-16d9-bf30-af105061ffcc"]},"value":1,"unit":""}},{"id":"a-11-n-6","actionTypeId":"TRANSFORM_MOVE","config":{"delay":200,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-name","selectorGuids":["fdb10ddf-2182-16d9-bf30-af105061ffcc"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-11-n-13","actionTypeId":"STYLE_OPACITY","config":{"delay":400,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-designation","selectorGuids":["e7868bef-30a0-54c9-40c5-b7d73f067eca"]},"value":1,"unit":""}},{"id":"a-11-n-7","actionTypeId":"TRANSFORM_MOVE","config":{"delay":400,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-designation","selectorGuids":["e7868bef-30a0-54c9-40c5-b7d73f067eca"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-11-n-14","actionTypeId":"STYLE_OPACITY","config":{"delay":600,"easing":"","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-social-wrap","selectorGuids":["a93e4bb4-ec55-3913-ec29-f190688c684a"]},"value":1,"unit":""}},{"id":"a-11-n-8","actionTypeId":"TRANSFORM_MOVE","config":{"delay":600,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-social-wrap","selectorGuids":["a93e4bb4-ec55-3913-ec29-f190688c684a"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":true,"createdOn":1678857929166},"a-12":{"id":"a-12","title":"Team Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-12-n-7","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-info","selectorGuids":["75a22b9d-004c-b73d-80e0-8035af76c735"]},"yValue":100,"xUnit":"PX","yUnit":"%","zUnit":"PX"}},{"id":"a-12-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-social-wrap","selectorGuids":["a93e4bb4-ec55-3913-ec29-f190688c684a"]},"yValue":40,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-12-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-social-wrap","selectorGuids":["a93e4bb4-ec55-3913-ec29-f190688c684a"]},"value":0,"unit":""}},{"id":"a-12-n-3","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-designation","selectorGuids":["e7868bef-30a0-54c9-40c5-b7d73f067eca"]},"value":0,"unit":""}},{"id":"a-12-n-5","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-designation","selectorGuids":["e7868bef-30a0-54c9-40c5-b7d73f067eca"]},"yValue":40,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-12-n","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-name","selectorGuids":["fdb10ddf-2182-16d9-bf30-af105061ffcc"]},"value":0,"unit":""}},{"id":"a-12-n-6","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":500,"target":{"useEventTarget":"CHILDREN","selector":".team-name","selectorGuids":["fdb10ddf-2182-16d9-bf30-af105061ffcc"]},"yValue":40,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1678857929166},"a-14":{"id":"a-14","title":"About Image Move","actionItemGroups":[{"actionItems":[{"id":"a-14-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":3000,"target":{"selector":".about-image-two","selectorGuids":["6ff62c74-29fb-8733-8fc3-cc0c24500b16"]},"yValue":-20,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]},{"actionItems":[{"id":"a-14-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":3000,"target":{"selector":".about-image-two","selectorGuids":["6ff62c74-29fb-8733-8fc3-cc0c24500b16"]},"yValue":20,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1678881428548},"a-15":{"id":"a-15","title":"About Image Move Two","actionItemGroups":[{"actionItems":[{"id":"a-15-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":4000,"target":{"selector":".about-image-three","selectorGuids":["e594cc60-207f-3e8c-bbc6-b004c43af95e"]},"yValue":-20,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]},{"actionItems":[{"id":"a-15-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":4000,"target":{"selector":".about-image-three","selectorGuids":["e594cc60-207f-3e8c-bbc6-b004c43af95e"]},"yValue":20,"xUnit":"PX","yUnit":"px","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1678881704382},"a-16":{"id":"a-16","title":"Menu Hover in","actionItemGroups":[{"actionItems":[{"id":"a-16-n","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".text-main-menu","selectorGuids":["b3bd0270-f28e-b784-722b-0339278c1be7"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}},{"id":"a-16-n-2","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".icon-main-menu","selectorGuids":["8324c3dd-15b2-f68a-e58f-ae330e0593a1"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}}]},{"actionItems":[{"id":"a-16-n-3","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".text-main-menu","selectorGuids":["b3bd0270-f28e-b784-722b-0339278c1be7"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}},{"id":"a-16-n-4","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".icon-main-menu","selectorGuids":["8324c3dd-15b2-f68a-e58f-ae330e0593a1"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]}],"useFirstGroupAsInitialState":true,"createdOn":1679300962522},"a-17":{"id":"a-17","title":"Menu Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-17-n-2","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".icon-main-menu","selectorGuids":["8324c3dd-15b2-f68a-e58f-ae330e0593a1"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}}]},{"actionItems":[{"id":"a-17-n","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".text-main-menu","selectorGuids":["b3bd0270-f28e-b784-722b-0339278c1be7"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}}]}],"useFirstGroupAsInitialState":false,"createdOn":1679300962522},"a-18":{"id":"a-18","title":"Language Hover In","actionItemGroups":[{"actionItems":[{"id":"a-18-n","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".language-text-blog","selectorGuids":["987406d1-f556-d373-8cef-9ac774580ea3"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}},{"id":"a-18-n-2","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".language-icon","selectorGuids":["a0f15e46-dbab-bf2f-00b2-f91c8a39e6c3"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}}]},{"actionItems":[{"id":"a-18-n-3","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".language-text-blog","selectorGuids":["987406d1-f556-d373-8cef-9ac774580ea3"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}},{"id":"a-18-n-4","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".language-icon","selectorGuids":["a0f15e46-dbab-bf2f-00b2-f91c8a39e6c3"]},"globalSwatchId":"","rValue":11,"bValue":92,"gValue":188,"aValue":1}}]}],"useFirstGroupAsInitialState":true,"createdOn":1679301606548},"a-19":{"id":"a-19","title":"Language Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-19-n","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".language-text-blog","selectorGuids":["987406d1-f556-d373-8cef-9ac774580ea3"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}}]},{"actionItems":[{"id":"a-19-n-2","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".language-icon","selectorGuids":["a0f15e46-dbab-bf2f-00b2-f91c8a39e6c3"]},"globalSwatchId":"","rValue":51,"bValue":51,"gValue":51,"aValue":1}}]}],"useFirstGroupAsInitialState":false,"createdOn":1679301606548},"a-20":{"id":"a-20","title":"Contact Info Image Hover In","actionItemGroups":[{"actionItems":[{"id":"a-20-n-5","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":800,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-separator-primary","selectorGuids":["8d83d1ae-4917-2588-7d0e-0e0f4444bb6d"]},"widthValue":42,"widthUnit":"%","heightUnit":"PX","locked":false}},{"id":"a-20-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":800,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-shape-image","selectorGuids":["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"]},"xValue":0,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"id":"a-20-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":300,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-shape-image","selectorGuids":["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"]},"xValue":70,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"id":"a-20-n-6","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":800,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-separator-primary","selectorGuids":["8d83d1ae-4917-2588-7d0e-0e0f4444bb6d"]},"widthValue":100,"widthUnit":"%","heightUnit":"PX","locked":false}},{"id":"a-20-n-4","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":800,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-shape-image","selectorGuids":["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"]},"xValue":0,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":true,"createdOn":1679395049921},"a-21":{"id":"a-21","title":"Contact Info Image Hover Out","actionItemGroups":[{"actionItems":[{"id":"a-21-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"ease","duration":800,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-separator-primary","selectorGuids":["8d83d1ae-4917-2588-7d0e-0e0f4444bb6d"]},"widthValue":42,"widthUnit":"%","heightUnit":"PX","locked":false}}]},{"actionItems":[{"id":"a-21-n-2","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":800,"target":{"useEventTarget":"CHILDREN","selector":".contact-info-shape-image","selectorGuids":["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"]},"xValue":0,"xUnit":"px","yUnit":"PX","zUnit":"PX"}}]}],"useFirstGroupAsInitialState":false,"createdOn":1679395049921},"a-22":{"id":"a-22","title":"Header Search Show","actionItemGroups":[{"actionItems":[{"id":"a-22-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".search-main","selectorGuids":["b17a5a79-3323-e8bb-a317-1f858cb4142d"]},"yValue":52,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-22-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".search-main","selectorGuids":["b17a5a79-3323-e8bb-a317-1f858cb4142d"]},"value":0,"unit":""}}]},{"actionItems":[{"id":"a-22-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".search-main","selectorGuids":["b17a5a79-3323-e8bb-a317-1f858cb4142d"]},"yValue":0,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-22-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".search-main","selectorGuids":["b17a5a79-3323-e8bb-a317-1f858cb4142d"]},"value":1,"unit":""}}]}],"useFirstGroupAsInitialState":true,"createdOn":1679896112610},"a-23":{"id":"a-23","title":"Header Search Hide","actionItemGroups":[{"actionItems":[{"id":"a-23-n","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".search-main","selectorGuids":["b17a5a79-3323-e8bb-a317-1f858cb4142d"]},"yValue":52,"xUnit":"PX","yUnit":"px","zUnit":"PX"}},{"id":"a-23-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"","duration":500,"target":{"useEventTarget":"SIBLINGS","selector":".search-main","selectorGuids":["b17a5a79-3323-e8bb-a317-1f858cb4142d"]},"value":0,"unit":""}}]}],"useFirstGroupAsInitialState":false,"createdOn":1679896112610},"slideInBottom":{"id":"slideInBottom","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":100,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}},{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}}]}]},"fadeIn":{"id":"fadeIn","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}}]}]},"slideInLeft":{"id":"slideInLeft","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":-100,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}},{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]}]},"slideInTop":{"id":"slideInTop","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":-100,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}},{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]}]},"slideInRight":{"id":"slideInRight","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":100,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}},{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]}]},"flipInLeft":{"id":"flipInLeft","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"duration":0,"delay":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":-90,"zValue":0,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"zValue":0,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}}]}]}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}
+    { "events": { "e": { "id": "e", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-18" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".faq-item", "originalId": "6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc7", "appliesTo": "CLASS" }, "targets": [{ "selector": ".faq-item", "originalId": "6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc7", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1651748631297 }, "e-3": { "id": "e-3", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-4" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1650437894959 }, "e-4": { "id": "e-4", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-3" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|bb97160a-f70c-9d51-6c33-9160c8276bc8", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1650437894964 }, "e-5": { "id": "e-5", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-6" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678168576914 }, "e-6": { "id": "e-6", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-5" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|a5f51e44-d2fa-9e0e-1c12-edaa00d4ff4b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678168576914 }, "e-7": { "id": "e-7", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-8" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678168580632 }, "e-8": { "id": "e-8", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-7" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|0c5ba04b-61d7-c6c1-b110-a872547238be", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678168580632 }, "e-9": { "id": "e-9", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-10" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188384682 }, "e-10": { "id": "e-10", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-9" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|a2d13af8-37b1-01d2-c2ab-8a8fb270f383", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188384682 }, "e-11": { "id": "e-11", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-12" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188440860 }, "e-12": { "id": "e-12", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-11" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|8916f793-f7bd-3091-71ff-82984ad275ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188440860 }, "e-13": { "id": "e-13", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-14" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188441504 }, "e-14": { "id": "e-14", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-13" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|a0a0e0af-1cd0-db5c-1b1d-0009194aa980", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188441504 }, "e-15": { "id": "e-15", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-16" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188442096 }, "e-16": { "id": "e-16", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-2", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-15" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|43095b3e-c36d-44e2-6e1a-7cf1f8131cc4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678188442096 }, "e-17": { "id": "e-17", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "FADE_EFFECT", "instant": false, "config": { "actionListId": "fadeIn", "autoStopEventId": "e-67" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".button-primary-2", "originalId": "63391ae20a9495ba2f40c3c6|916cc880-9a02-ea9c-f44a-b112db342cb5", "appliesTo": "CLASS" }, "targets": [{ "selector": ".button-primary-2", "originalId": "63391ae20a9495ba2f40c3c6|916cc880-9a02-ea9c-f44a-b112db342cb5", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": null, "effectIn": true }, "createdOn": 1664773992990 }, "e-19": { "id": "e-19", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-20" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678695945795 }, "e-20": { "id": "e-20", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-19" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ff9e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678695945795 }, "e-21": { "id": "e-21", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-22" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678697664175 }, "e-22": { "id": "e-22", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-21" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|35a7eb3d-591d-7755-6b46-b45fd629ffa9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678697664176 }, "e-23": { "id": "e-23", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-24" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699114539 }, "e-24": { "id": "e-24", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-23" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548daf8", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699114539 }, "e-25": { "id": "e-25", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-26" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699114539 }, "e-26": { "id": "e-26", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-25" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|856765ec-a4d4-b260-e631-aebca548db04", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699114539 }, "e-27": { "id": "e-27", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-28" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699121651 }, "e-28": { "id": "e-28", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-27" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c5323", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699121651 }, "e-29": { "id": "e-29", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-30" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699121651 }, "e-30": { "id": "e-30", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-29" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|e4978d84-2b1b-42a1-66c3-3b92944c532f", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699121651 }, "e-31": { "id": "e-31", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-32" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699130799 }, "e-32": { "id": "e-32", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-31" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121c2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699130799 }, "e-33": { "id": "e-33", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-34" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699130799 }, "e-34": { "id": "e-34", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-33" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|cef3b53d-cb04-8d3c-d2c2-d0a6a42121ce", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699130799 }, "e-35": { "id": "e-35", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-36" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699138791 }, "e-36": { "id": "e-36", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-35" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558add", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699138791 }, "e-37": { "id": "e-37", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-38" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699138791 }, "e-38": { "id": "e-38", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-37" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|7ccfe159-2fa1-7ac7-2e38-de9472558ae9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699138791 }, "e-43": { "id": "e-43", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-44" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699758766 }, "e-44": { "id": "e-44", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-43" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b6420167d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699758766 }, "e-45": { "id": "e-45", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-46" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699758766 }, "e-46": { "id": "e-46", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-45" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|845287dd-7a05-24a4-3e6e-3a1b64201689", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678699758766 }, "e-47": { "id": "e-47", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-7", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-48" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".hero-video-wrap", "originalId": "6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc", "appliesTo": "CLASS" }, "targets": [{ "selector": ".hero-video-wrap", "originalId": "6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678764549865 }, "e-48": { "id": "e-48", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-8", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-47" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".hero-video-wrap", "originalId": "6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc", "appliesTo": "CLASS" }, "targets": [{ "selector": ".hero-video-wrap", "originalId": "6666fcda3ffd3947b1b20825|09770312-598a-adf3-44f2-d7d9272f00bc", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678764549866 }, "e-49": { "id": "e-49", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-50" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765627784 }, "e-50": { "id": "e-50", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-49" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47ad", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765627784 }, "e-51": { "id": "e-51", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-52" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765627784 }, "e-52": { "id": "e-52", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-51" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47b9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765627784 }, "e-53": { "id": "e-53", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-3", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-54" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765860681 }, "e-54": { "id": "e-54", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-4", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-53" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea8442", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765860681 }, "e-55": { "id": "e-55", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-5", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-56" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765860681 }, "e-56": { "id": "e-56", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-6", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-55" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea844e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678765860681 }, "e-58": { "id": "e-58", "name": "", "animationType": "custom", "eventTypeId": "PAGE_FINISH", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-13", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-57" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678782028513 }, "e-61": { "id": "e-61", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-11", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-62" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".single-team", "originalId": "6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b", "appliesTo": "CLASS" }, "targets": [{ "selector": ".single-team", "originalId": "6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678857897145 }, "e-62": { "id": "e-62", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-12", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-61" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".single-team", "originalId": "6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b", "appliesTo": "CLASS" }, "targets": [{ "selector": ".single-team", "originalId": "6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678857897146 }, "e-63": { "id": "e-63", "name": "", "animationType": "custom", "eventTypeId": "PAGE_START", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-14", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-64" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678881422942 }, "e-65": { "id": "e-65", "name": "", "animationType": "custom", "eventTypeId": "PAGE_START", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-15", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-66" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1678881698597 }, "e-67": { "id": "e-67", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-16", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-68" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".dropdown-toggle-main-menu", "originalId": "6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8", "appliesTo": "CLASS" }, "targets": [{ "selector": ".dropdown-toggle-main-menu", "originalId": "6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679300949092 }, "e-68": { "id": "e-68", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-17", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-67" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".dropdown-toggle-main-menu", "originalId": "6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8", "appliesTo": "CLASS" }, "targets": [{ "selector": ".dropdown-toggle-main-menu", "originalId": "6666fcda3ffd3947b1b20825|507cac55-520b-ad13-5bdb-07ff44e46fb8", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679300949094 }, "e-69": { "id": "e-69", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-70" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679301574365 }, "e-70": { "id": "e-70", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-69" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|6e9367ba-cd7e-8d20-9cf3-328b2c0512d4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679301574366 }, "e-71": { "id": "e-71", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInLeft", "autoStopEventId": "e-72" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|78a5cd7f-6c69-736d-0921-7027de9afd62", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|78a5cd7f-6c69-736d-0921-7027de9afd62", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 500, "direction": "LEFT", "effectIn": true }, "createdOn": 1679303453784 }, "e-73": { "id": "e-73", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInLeft", "autoStopEventId": "e-74" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|61ed2c7a-7cad-acf9-9841-6cc58f01cef0", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|61ed2c7a-7cad-acf9-9841-6cc58f01cef0", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 700, "direction": "LEFT", "effectIn": true }, "createdOn": 1679303538296 }, "e-75": { "id": "e-75", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInLeft", "autoStopEventId": "e-76" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|48b2428a-2be8-0d5e-f790-eb74eef24e09", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|48b2428a-2be8-0d5e-f790-eb74eef24e09", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 900, "direction": "LEFT", "effectIn": true }, "createdOn": 1679303568752 }, "e-77": { "id": "e-77", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInLeft", "autoStopEventId": "e-78" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|a0e29bfc-4880-812e-b21a-9580756b6973", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|a0e29bfc-4880-812e-b21a-9580756b6973", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 1100, "direction": "LEFT", "effectIn": true }, "createdOn": 1679303595024 }, "e-79": { "id": "e-79", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-80" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|9b1cbab1-48cf-b6a5-02e9-a2417be05fe5", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|9b1cbab1-48cf-b6a5-02e9-a2417be05fe5", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 1100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679304041297 }, "e-81": { "id": "e-81", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInTop", "autoStopEventId": "e-82" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|3bf99a05-b39b-7bb6-52e0-2cc421d5f2d2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|3bf99a05-b39b-7bb6-52e0-2cc421d5f2d2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 900, "direction": "TOP", "effectIn": true }, "createdOn": 1679304120641 }, "e-83": { "id": "e-83", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInRight", "autoStopEventId": "e-84" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|5091ae66-2eac-72d4-5d23-8299602f0d84", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|5091ae66-2eac-72d4-5d23-8299602f0d84", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 900, "direction": "RIGHT", "effectIn": true }, "createdOn": 1679304142122 }, "e-85": { "id": "e-85", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-86" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|cd3d136f-109c-9c3c-94d3-db4719a1800c", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|cd3d136f-109c-9c3c-94d3-db4719a1800c", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305079212 }, "e-87": { "id": "e-87", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-88" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|1e88fe0a-0932-23bc-eb46-af61ad703b3e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|1e88fe0a-0932-23bc-eb46-af61ad703b3e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305141132 }, "e-89": { "id": "e-89", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-90" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|30dbbf71-5519-4cf2-fca0-0f315e439910", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|30dbbf71-5519-4cf2-fca0-0f315e439910", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305219212 }, "e-91": { "id": "e-91", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-92" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|df2e64fd-3747-dd74-8919-43fd6842d30e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|df2e64fd-3747-dd74-8919-43fd6842d30e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305266709 }, "e-93": { "id": "e-93", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-94" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|f4cce356-3767-67a7-3b4a-4ca06335efe6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|f4cce356-3767-67a7-3b4a-4ca06335efe6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305333053 }, "e-95": { "id": "e-95", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-96" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|e815f046-73ee-0a65-4b88-427bb11fce12", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|e815f046-73ee-0a65-4b88-427bb11fce12", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 500, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305369453 }, "e-97": { "id": "e-97", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-98" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|08b00170-bee8-5392-e0c6-fef6bcf35e37", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|08b00170-bee8-5392-e0c6-fef6bcf35e37", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 700, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305395846 }, "e-99": { "id": "e-99", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-100" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|165c4851-0983-2c2c-3c5c-17d1b74b53ba", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|165c4851-0983-2c2c-3c5c-17d1b74b53ba", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305542277 }, "e-101": { "id": "e-101", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-102" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|7f40d37a-bf12-4c9d-b33a-5111c227d2eb", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|7f40d37a-bf12-4c9d-b33a-5111c227d2eb", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305654078 }, "e-103": { "id": "e-103", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInRight", "autoStopEventId": "e-104" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|faf6975f-f4f2-a7ef-7015-9c5f4ce6ec59", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|faf6975f-f4f2-a7ef-7015-9c5f4ce6ec59", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 400, "direction": "RIGHT", "effectIn": true }, "createdOn": 1679305693646 }, "e-105": { "id": "e-105", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-106" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".section-title-wrap", "originalId": "6666fcda3ffd3947b1b20825|641529b1-fbc6-54a6-fd73-0b448ff58a5e", "appliesTo": "CLASS" }, "targets": [{ "selector": ".section-title-wrap", "originalId": "6666fcda3ffd3947b1b20825|641529b1-fbc6-54a6-fd73-0b448ff58a5e", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679305854086 }, "e-109": { "id": "e-109", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-110" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|8a9dc4a8-4ba0-3a0f-e9d9-bfb44031e833", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|8a9dc4a8-4ba0-3a0f-e9d9-bfb44031e833", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679306335424 }, "e-111": { "id": "e-111", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-112" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|3f6d1a74-f657-fa38-ee99-63e523509f55", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|3f6d1a74-f657-fa38-ee99-63e523509f55", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679307216319 }, "e-113": { "id": "e-113", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-114" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|1b411c32-b146-3904-fefe-43f34450d809", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|1b411c32-b146-3904-fefe-43f34450d809", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679307244674 }, "e-115": { "id": "e-115", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "FLIP_EFFECT", "instant": false, "config": { "actionListId": "flipInLeft", "autoStopEventId": "e-116" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|95280b80-0526-7513-fe46-fab249d937ac", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|95280b80-0526-7513-fe46-fab249d937ac", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "LEFT", "effectIn": true }, "createdOn": 1679307264802 }, "e-117": { "id": "e-117", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInLeft", "autoStopEventId": "e-118" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|5e410ce7-d527-3911-c59c-6d83c4010874", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|5e410ce7-d527-3911-c59c-6d83c4010874", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": "LEFT", "effectIn": true }, "createdOn": 1679307327426 }, "e-119": { "id": "e-119", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-120" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|16c19b1a-7b31-39e7-7070-275cb1348cdc", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|16c19b1a-7b31-39e7-7070-275cb1348cdc", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679307419371 }, "e-121": { "id": "e-121", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-122" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|760644d8-7568-f22c-a5ae-f636fa1d6837", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|760644d8-7568-f22c-a5ae-f636fa1d6837", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679307737756 }, "e-123": { "id": "e-123", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInTop", "autoStopEventId": "e-124" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|6bf67e97-607e-7b08-3e64-7a33fe3f86a2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|6bf67e97-607e-7b08-3e64-7a33fe3f86a2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "TOP", "effectIn": true }, "createdOn": 1679307786139 }, "e-125": { "id": "e-125", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-126" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|5440e64e-8e04-b1cd-74d4-5d24e799fbcf", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|5440e64e-8e04-b1cd-74d4-5d24e799fbcf", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679307952181 }, "e-127": { "id": "e-127", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInTop", "autoStopEventId": "e-128" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|bd506700-dad7-838f-b3ac-953b3b1462cf", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|bd506700-dad7-838f-b3ac-953b3b1462cf", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "TOP", "effectIn": true }, "createdOn": 1679308925152 }, "e-137": { "id": "e-137", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-138" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc05", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc05", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679309025127 }, "e-139": { "id": "e-139", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-140" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc0b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc0b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679309025127 }, "e-141": { "id": "e-141", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-142" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc11", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc11", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 500, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679309025127 }, "e-143": { "id": "e-143", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-144" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc17", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|36a0746b-a5e3-fa39-c009-ec36dfe3cc17", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 700, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679309025127 }, "e-145": { "id": "e-145", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-146" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e8", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e8", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679309311382 }, "e-147": { "id": "e-147", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-148" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782e9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679309311382 }, "e-149": { "id": "e-149", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "FLIP_EFFECT", "instant": false, "config": { "actionListId": "flipInLeft", "autoStopEventId": "e-150" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782f8", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782f8", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "LEFT", "effectIn": true }, "createdOn": 1679309311382 }, "e-151": { "id": "e-151", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInLeft", "autoStopEventId": "e-152" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782fb", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|66bbc420-b66f-2970-ab25-3d4d928782fb", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": "LEFT", "effectIn": true }, "createdOn": 1679309311382 }, "e-153": { "id": "e-153", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-154" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|e3462b4c-c08d-c838-ccad-cada924c6c5b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679311701142 }, "e-155": { "id": "e-155", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-156" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|3222e0b4-9177-2b14-1c9e-276a52825bee", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|3222e0b4-9177-2b14-1c9e-276a52825bee", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 300, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679311756709 }, "e-157": { "id": "e-157", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-158" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|37219033-0f0b-8af9-dc88-db151aa3fd86", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|37219033-0f0b-8af9-dc88-db151aa3fd86", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 400, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679311781120 }, "e-159": { "id": "e-159", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-160" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|fa069c52-c8fc-86b4-df66-665e90363bfe", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|fa069c52-c8fc-86b4-df66-665e90363bfe", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 500, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679311800534 }, "e-161": { "id": "e-161", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-162" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|c51c09f4-9ac1-c8f6-ab6c-0cfca39dccb5", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|c51c09f4-9ac1-c8f6-ab6c-0cfca39dccb5", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679387197787 }, "e-163": { "id": "e-163", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-20", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-164" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".single-contact-info", "originalId": "6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474", "appliesTo": "CLASS" }, "targets": [{ "selector": ".single-contact-info", "originalId": "6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679395025796 }, "e-164": { "id": "e-164", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-21", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-163" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".single-contact-info", "originalId": "6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474", "appliesTo": "CLASS" }, "targets": [{ "selector": ".single-contact-info", "originalId": "6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679395025799 }, "e-165": { "id": "e-165", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-166" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20825|0fce1094-d8e7-db00-f544-a586d59f291d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20825|0fce1094-d8e7-db00-f544-a586d59f291d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679457306729 }, "e-167": { "id": "e-167", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-168" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20835|21b89470-7d48-8a9a-7a5f-beb24a1e7652", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20835|21b89470-7d48-8a9a-7a5f-beb24a1e7652", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679460865160 }, "e-169": { "id": "e-169", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-170" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|560a2f01-aa70-b9ef-398e-107c4c89ad13", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|560a2f01-aa70-b9ef-398e-107c4c89ad13", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550900727 }, "e-171": { "id": "e-171", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-172" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|ef816a72-fb3b-33fe-1195-fc9f94c54dd6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|ef816a72-fb3b-33fe-1195-fc9f94c54dd6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550904756 }, "e-173": { "id": "e-173", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-174" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|016a4b47-31a4-afcb-7476-9bd1aa4d6995", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|016a4b47-31a4-afcb-7476-9bd1aa4d6995", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550905303 }, "e-175": { "id": "e-175", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-176" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|f555ff94-2feb-1b72-c32c-9ee5df566cc0", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|f555ff94-2feb-1b72-c32c-9ee5df566cc0", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550905827 }, "e-177": { "id": "e-177", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-178" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|d5b9a33c-7c12-9946-03b0-6c38d55078fd", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|d5b9a33c-7c12-9946-03b0-6c38d55078fd", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550906327 }, "e-179": { "id": "e-179", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-180" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|446094e2-0add-fa7b-20d8-e775a8c87e5f", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|446094e2-0add-fa7b-20d8-e775a8c87e5f", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550906788 }, "e-181": { "id": "e-181", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-182" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|2f84103e-7594-5137-7153-dda8647cfe0e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|2f84103e-7594-5137-7153-dda8647cfe0e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550908340 }, "e-183": { "id": "e-183", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-184" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|c9e642a2-154a-2ae2-99ed-8dffe0eb772e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|c9e642a2-154a-2ae2-99ed-8dffe0eb772e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679550908666 }, "e-185": { "id": "e-185", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-186" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".breadcrumb-wrap", "originalId": "6666fcda3ffd3947b1b2082a|b0815fbf-f326-6b37-79a6-8696b910c6fc", "appliesTo": "CLASS" }, "targets": [{ "selector": ".breadcrumb-wrap", "originalId": "6666fcda3ffd3947b1b2082a|b0815fbf-f326-6b37-79a6-8696b910c6fc", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679563292908 }, "e-189": { "id": "e-189", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-190" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|4bd38bb3-14bb-d8ac-6003-c8dadc948458", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|4bd38bb3-14bb-d8ac-6003-c8dadc948458", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679563720484 }, "e-191": { "id": "e-191", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-192" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082a|b415050b-27ac-0f1e-0ce1-0ffeb13d1e72", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082a|b415050b-27ac-0f1e-0ce1-0ffeb13d1e72", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679563794956 }, "e-193": { "id": "e-193", "name": "", "animationType": "custom", "eventTypeId": "PAGE_START", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-14", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-194" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679564411591 }, "e-195": { "id": "e-195", "name": "", "animationType": "custom", "eventTypeId": "PAGE_START", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-15", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-196" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829", "appliesTo": "PAGE", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829", "appliesTo": "PAGE", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679564597710 }, "e-197": { "id": "e-197", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-198" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|e759c083-5a41-cd58-92e6-9adb00cdcb2b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|e759c083-5a41-cd58-92e6-9adb00cdcb2b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679564756511 }, "e-199": { "id": "e-199", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-200" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|e6720739-792c-e96a-d3e6-f084cf18a474", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679564897559 }, "e-201": { "id": "e-201", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-202" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|5a38ccf0-67a7-078e-cf53-5513559eee88", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|5a38ccf0-67a7-078e-cf53-5513559eee88", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 400, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679564918023 }, "e-203": { "id": "e-203", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-204" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|245f65f5-9fb7-49eb-b719-0a642f1ad6e6", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|245f65f5-9fb7-49eb-b719-0a642f1ad6e6", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679564954710 }, "e-205": { "id": "e-205", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-206" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|4188ae31-d01c-16fe-42cf-a1a98eeabab7", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|4188ae31-d01c-16fe-42cf-a1a98eeabab7", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679564972602 }, "e-207": { "id": "e-207", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-208" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082e|d7a359b3-a0bc-664f-bff4-07a9721bbfb2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082e|d7a359b3-a0bc-664f-bff4-07a9721bbfb2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 100, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679565362504 }, "e-209": { "id": "e-209", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-210" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47a9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|0722e09f-603d-f804-ef06-36c8099d47a9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679565492120 }, "e-211": { "id": "e-211", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-212" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea843e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|3c0ba9ea-d23f-fa8e-b705-9b8a72ea843e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679565521384 }, "e-213": { "id": "e-213", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-214" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20831|8fd6ec39-8f93-aa73-9ce3-b745f89280dd", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20831|8fd6ec39-8f93-aa73-9ce3-b745f89280dd", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566031221 }, "e-215": { "id": "e-215", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-216" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20831|0e00e9ee-9d64-f790-4a23-6631aecd30e4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20831|0e00e9ee-9d64-f790-4a23-6631aecd30e4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 200, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566057522 }, "e-217": { "id": "e-217", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-218" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082d|2a2242bd-9529-8d14-2735-a83d5eec6285", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082d|2a2242bd-9529-8d14-2735-a83d5eec6285", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566122307 }, "e-219": { "id": "e-219", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-220" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|f53a7d19-e14b-b44f-ce2f-97142d65f628", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|f53a7d19-e14b-b44f-ce2f-97142d65f628", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566218850 }, "e-221": { "id": "e-221", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-222" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20828|36974462-8776-866e-9da8-b4e04f3559dd", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20828|36974462-8776-866e-9da8-b4e04f3559dd", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566631177 }, "e-223": { "id": "e-223", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-224" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20827|6b0ec90e-bc42-4792-87fa-988abfe4ed0b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20827|6b0ec90e-bc42-4792-87fa-988abfe4ed0b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566699413 }, "e-225": { "id": "e-225", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-226" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000b", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000b", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566755362 }, "e-227": { "id": "e-227", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-228" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a300000000000d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566767180 }, "e-229": { "id": "e-229", "name": "", "animationType": "preset", "eventTypeId": "SCROLL_INTO_VIEW", "action": { "id": "", "actionTypeId": "SLIDE_EFFECT", "instant": false, "config": { "actionListId": "slideInBottom", "autoStopEventId": "e-230" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a3000000000012", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20834|640c0e6e97b40f3ecc7354a3000000000012", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": 0, "scrollOffsetUnit": "%", "delay": 0, "direction": "BOTTOM", "effectIn": true }, "createdOn": 1679566788628 }, "e-231": { "id": "e-231", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-22", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-232" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".header-search-icon-wrap", "originalId": "6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a", "appliesTo": "CLASS" }, "targets": [{ "selector": ".header-search-icon-wrap", "originalId": "6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a", "appliesTo": "CLASS" }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679896093659 }, "e-232": { "id": "e-232", "name": "", "animationType": "custom", "eventTypeId": "MOUSE_SECOND_CLICK", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-23", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-231" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "selector": ".header-search-icon-wrap", "originalId": "6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a", "appliesTo": "CLASS" }, "targets": [{ "selector": ".header-search-icon-wrap", "originalId": "6666fcda3ffd3947b1b20825|65807079-b4bb-c415-9cb6-182a24a2f65a", "appliesTo": "CLASS" }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1679896093664 }, "e-261": { "id": "e-261", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-262" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066378599 }, "e-262": { "id": "e-262", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-261" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082a|d13565b2-6f2a-00cf-ebc6-e98ef757e5b4", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066378599 }, "e-263": { "id": "e-263", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-264" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066410703 }, "e-264": { "id": "e-264", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-263" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20833|4e74ebbb-76bc-b7d2-ae15-e86ad8f3d80e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066410703 }, "e-265": { "id": "e-265", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-266" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066452237 }, "e-266": { "id": "e-266", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-265" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20829|c25da152-bf18-bc69-2e9f-081be5381cd9", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066452237 }, "e-267": { "id": "e-267", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-268" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066490820 }, "e-268": { "id": "e-268", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-267" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082c|06a0a025-ad88-eb39-2ff1-b58d1168a4db", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066490820 }, "e-269": { "id": "e-269", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-270" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066519509 }, "e-270": { "id": "e-270", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-269" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20835|443f3f50-5251-f965-a3bb-5aac943e364a", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066519509 }, "e-271": { "id": "e-271", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-272" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066557254 }, "e-272": { "id": "e-272", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-271" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20837|c13f2d5d-aaac-b2f4-ccb5-e61ba0a711bb", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066557254 }, "e-273": { "id": "e-273", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-274" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066586148 }, "e-274": { "id": "e-274", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-273" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082b|d46cb458-8517-3e2e-a93d-8ac9bd2c503d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066586148 }, "e-275": { "id": "e-275", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-276" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066612257 }, "e-276": { "id": "e-276", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-275" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20832|bec38b1f-cfe1-c880-211c-9f5de93fd2fd", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066612257 }, "e-277": { "id": "e-277", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-278" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066636751 }, "e-278": { "id": "e-278", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-277" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082e|4cf9ec35-74bf-98f5-72f4-a5c828f958a2", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066636751 }, "e-279": { "id": "e-279", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-280" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066674724 }, "e-280": { "id": "e-280", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-279" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082f|d5a8ac23-2612-bc63-b105-3872612dc409", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066674724 }, "e-281": { "id": "e-281", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-282" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066703542 }, "e-282": { "id": "e-282", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-281" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20831|2c3899a5-9be9-de73-8177-07a6e79f32ba", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066703542 }, "e-283": { "id": "e-283", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-284" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066731749 }, "e-284": { "id": "e-284", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-283" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b2082d|610b4fcf-8cf8-0f2a-3e51-1de92b6daa87", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066731749 }, "e-285": { "id": "e-285", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-286" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066768320 }, "e-286": { "id": "e-286", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-285" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20830|49f5f873-d59b-1ca6-be71-cba8cd66802d", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066768320 }, "e-287": { "id": "e-287", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OVER", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-18", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-288" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": false, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066811823 }, "e-288": { "id": "e-288", "name": "", "animationType": "preset", "eventTypeId": "MOUSE_OUT", "action": { "id": "", "actionTypeId": "GENERAL_START_ACTION", "config": { "delay": 0, "easing": "", "duration": 0, "actionListId": "a-19", "affectedElements": {}, "playInReverse": false, "autoStopEventId": "e-287" } }, "mediaQueries": ["main", "medium", "small", "tiny"], "target": { "id": "6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e", "appliesTo": "ELEMENT", "styleBlockIds": [] }, "targets": [{ "id": "6666fcda3ffd3947b1b20834|30b34a37-ffea-8991-e2e8-7adb2858f75e", "appliesTo": "ELEMENT", "styleBlockIds": [] }], "config": { "loop": true, "playInReverse": false, "scrollOffsetValue": null, "scrollOffsetUnit": null, "delay": null, "direction": null, "effectIn": null }, "createdOn": 1680066811823 } }, "actionLists": { "a": { "id": "a", "title": "FAQ Open", "actionItemGroups": [{ "actionItems": [{ "id": "a-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".faq-answer", "selectorGuids": ["312edc36-3c62-02d2-a6af-f6300b4bfcdf"] }, "heightValue": 0, "widthUnit": "PX", "heightUnit": "px", "locked": false } }] }, { "actionItems": [{ "id": "a-n-2", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 400, "target": { "useEventTarget": "SIBLINGS", "selector": ".faq-answer", "selectorGuids": ["312edc36-3c62-02d2-a6af-f6300b4bfcdf"] }, "widthUnit": "PX", "heightUnit": "AUTO", "locked": false } }, { "id": "a-n-3", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".plus", "selectorGuids": ["312edc36-3c62-02d2-a6af-f6300b4bfce3"] }, "heightValue": 0, "widthUnit": "PX", "heightUnit": "%", "locked": false } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1650437898626 }, "a-2": { "id": "a-2", "title": "FAQ Close", "actionItemGroups": [{ "actionItems": [{ "id": "a-2-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "useEventTarget": "SIBLINGS", "selector": ".faq-answer", "selectorGuids": ["312edc36-3c62-02d2-a6af-f6300b4bfcdf"] }, "widthUnit": "PX", "heightUnit": "AUTO", "locked": false } }] }, { "actionItems": [{ "id": "a-2-n-2", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 400, "target": { "useEventTarget": "SIBLINGS", "selector": ".faq-answer", "selectorGuids": ["312edc36-3c62-02d2-a6af-f6300b4bfcdf"] }, "heightValue": 0, "widthUnit": "PX", "heightUnit": "px", "locked": false } }, { "id": "a-2-n-3", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 400, "target": { "useEventTarget": "CHILDREN", "selector": ".plus", "selectorGuids": ["312edc36-3c62-02d2-a6af-f6300b4bfce3"] }, "heightValue": 40, "widthUnit": "PX", "heightUnit": "%", "locked": false } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1650437898626 }, "a-3": { "id": "a-3", "title": "Project Content Hover In", "actionItemGroups": [{ "actionItems": [{ "id": "a-3-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".project-content-inner", "selectorGuids": ["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"] }, "yValue": 140, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-3-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".project-content-inner", "selectorGuids": ["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"] }, "value": 0, "unit": "" } }] }, { "actionItems": [{ "id": "a-3-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".project-content-inner", "selectorGuids": ["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-3-n-4", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".project-content-inner", "selectorGuids": ["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"] }, "value": 1, "unit": "" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1678695951683 }, "a-4": { "id": "a-4", "title": "Project Content Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-4-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".project-content-inner", "selectorGuids": ["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"] }, "yValue": 140, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-4-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".project-content-inner", "selectorGuids": ["7bc4640b-1d6b-aca4-c9d8-4e96d1dd3962"] }, "value": 0, "unit": "" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1678695951683 }, "a-5": { "id": "a-5", "title": "Project Icon Hover In", "actionItemGroups": [{ "actionItems": [{ "id": "a-5-n", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".project-ellipse", "selectorGuids": ["53732c1b-0738-3630-fa95-e5280d996d8f"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }, { "id": "a-5-n-3", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".project-icon", "selectorGuids": ["9c4a761a-3733-64fd-9af5-543649289742"] }, "globalSwatchId": "", "rValue": 41, "bValue": 50, "gValue": 45, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-5-n-4", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".project-icon", "selectorGuids": ["9c4a761a-3733-64fd-9af5-543649289742"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-5-n-2", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".project-ellipse", "selectorGuids": ["53732c1b-0738-3630-fa95-e5280d996d8f"] }, "globalSwatchId": "", "rValue": 63, "bValue": 100, "gValue": 58, "aValue": 1 } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1678697676281 }, "a-6": { "id": "a-6", "title": "Project Icon Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-6-n", "actionTypeId": "STYLE_BACKGROUND_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".project-ellipse", "selectorGuids": ["53732c1b-0738-3630-fa95-e5280d996d8f"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-6-n-2", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".project-icon", "selectorGuids": ["9c4a761a-3733-64fd-9af5-543649289742"] }, "globalSwatchId": "", "rValue": 41, "bValue": 50, "gValue": 45, "aValue": 1 } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1678697676281 }, "a-7": { "id": "a-7", "title": "Hero Video Hover In", "actionItemGroups": [{ "actionItems": [{ "id": "a-7-n-3", "actionTypeId": "STYLE_BORDER", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".hero-video-icon", "selectorGuids": ["8904bb18-7c6e-ce33-c931-c8e243df98a1"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }, { "id": "a-7-n-5", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".hero-video-icon", "selectorGuids": ["8904bb18-7c6e-ce33-c931-c8e243df98a1"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-7-n-6", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".hero-video-icon", "selectorGuids": ["8904bb18-7c6e-ce33-c931-c8e243df98a1"] }, "globalSwatchId": "", "rValue": 63, "bValue": 100, "gValue": 58, "aValue": 1 } }, { "id": "a-7-n-4", "actionTypeId": "STYLE_BORDER", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".hero-video-icon", "selectorGuids": ["8904bb18-7c6e-ce33-c931-c8e243df98a1"] }, "globalSwatchId": "", "rValue": 63, "bValue": 100, "gValue": 58, "aValue": 1 } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1678764555542 }, "a-8": { "id": "a-8", "title": "Hero Video Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-8-n-2", "actionTypeId": "STYLE_BORDER", "config": { "delay": 0, "easing": "ease", "duration": 100, "target": { "useEventTarget": "CHILDREN", "selector": ".hero-video-icon", "selectorGuids": ["8904bb18-7c6e-ce33-c931-c8e243df98a1"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-8-n-3", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 100, "target": { "useEventTarget": "CHILDREN", "selector": ".hero-video-icon", "selectorGuids": ["8904bb18-7c6e-ce33-c931-c8e243df98a1"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1678764555542 }, "a-13": { "id": "a-13", "title": "Brand Logo Infinite Animate", "actionItemGroups": [{ "actionItems": [{ "id": "a-13-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 600, "target": { "selector": ".brand-logo-wrap", "selectorGuids": ["c58da501-08f6-12f1-c494-4bac6f8ebaba"] }, "xValue": 0, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-13-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 18000, "target": { "selector": ".brand-logo-wrap", "selectorGuids": ["c58da501-08f6-12f1-c494-4bac6f8ebaba"] }, "xValue": -50, "xUnit": "%", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-13-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 0, "target": { "selector": ".brand-logo-wrap", "selectorGuids": ["c58da501-08f6-12f1-c494-4bac6f8ebaba"] }, "xValue": 0, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1678873682027 }, "a-11": { "id": "a-11", "title": "Team Hover In", "actionItemGroups": [{ "actionItems": [{ "id": "a-11-n-9", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-name", "selectorGuids": ["fdb10ddf-2182-16d9-bf30-af105061ffcc"] }, "value": 0, "unit": "" } }, { "id": "a-11-n-10", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-designation", "selectorGuids": ["e7868bef-30a0-54c9-40c5-b7d73f067eca"] }, "value": 0, "unit": "" } }, { "id": "a-11-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-designation", "selectorGuids": ["e7868bef-30a0-54c9-40c5-b7d73f067eca"] }, "yValue": 40, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-11-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-name", "selectorGuids": ["fdb10ddf-2182-16d9-bf30-af105061ffcc"] }, "yValue": 40, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-11-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-social-wrap", "selectorGuids": ["a93e4bb4-ec55-3913-ec29-f190688c684a"] }, "yValue": 40, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-11-n-11", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-social-wrap", "selectorGuids": ["a93e4bb4-ec55-3913-ec29-f190688c684a"] }, "value": 0, "unit": "" } }, { "id": "a-11-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-info", "selectorGuids": ["75a22b9d-004c-b73d-80e0-8035af76c735"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-11-n-5", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-info", "selectorGuids": ["75a22b9d-004c-b73d-80e0-8035af76c735"] }, "yValue": 0, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-11-n-12", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 200, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-name", "selectorGuids": ["fdb10ddf-2182-16d9-bf30-af105061ffcc"] }, "value": 1, "unit": "" } }, { "id": "a-11-n-6", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 200, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-name", "selectorGuids": ["fdb10ddf-2182-16d9-bf30-af105061ffcc"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-11-n-13", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 400, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-designation", "selectorGuids": ["e7868bef-30a0-54c9-40c5-b7d73f067eca"] }, "value": 1, "unit": "" } }, { "id": "a-11-n-7", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 400, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-designation", "selectorGuids": ["e7868bef-30a0-54c9-40c5-b7d73f067eca"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-11-n-14", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 600, "easing": "", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-social-wrap", "selectorGuids": ["a93e4bb4-ec55-3913-ec29-f190688c684a"] }, "value": 1, "unit": "" } }, { "id": "a-11-n-8", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 600, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-social-wrap", "selectorGuids": ["a93e4bb4-ec55-3913-ec29-f190688c684a"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1678857929166 }, "a-12": { "id": "a-12", "title": "Team Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-12-n-7", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-info", "selectorGuids": ["75a22b9d-004c-b73d-80e0-8035af76c735"] }, "yValue": 100, "xUnit": "PX", "yUnit": "%", "zUnit": "PX" } }, { "id": "a-12-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-social-wrap", "selectorGuids": ["a93e4bb4-ec55-3913-ec29-f190688c684a"] }, "yValue": 40, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-12-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-social-wrap", "selectorGuids": ["a93e4bb4-ec55-3913-ec29-f190688c684a"] }, "value": 0, "unit": "" } }, { "id": "a-12-n-3", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-designation", "selectorGuids": ["e7868bef-30a0-54c9-40c5-b7d73f067eca"] }, "value": 0, "unit": "" } }, { "id": "a-12-n-5", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-designation", "selectorGuids": ["e7868bef-30a0-54c9-40c5-b7d73f067eca"] }, "yValue": 40, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-12-n", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-name", "selectorGuids": ["fdb10ddf-2182-16d9-bf30-af105061ffcc"] }, "value": 0, "unit": "" } }, { "id": "a-12-n-6", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 500, "target": { "useEventTarget": "CHILDREN", "selector": ".team-name", "selectorGuids": ["fdb10ddf-2182-16d9-bf30-af105061ffcc"] }, "yValue": 40, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1678857929166 }, "a-14": { "id": "a-14", "title": "About Image Move", "actionItemGroups": [{ "actionItems": [{ "id": "a-14-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 3000, "target": { "selector": ".about-image-two", "selectorGuids": ["6ff62c74-29fb-8733-8fc3-cc0c24500b16"] }, "yValue": -20, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-14-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 3000, "target": { "selector": ".about-image-two", "selectorGuids": ["6ff62c74-29fb-8733-8fc3-cc0c24500b16"] }, "yValue": 20, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1678881428548 }, "a-15": { "id": "a-15", "title": "About Image Move Two", "actionItemGroups": [{ "actionItems": [{ "id": "a-15-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 4000, "target": { "selector": ".about-image-three", "selectorGuids": ["e594cc60-207f-3e8c-bbc6-b004c43af95e"] }, "yValue": -20, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-15-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 4000, "target": { "selector": ".about-image-three", "selectorGuids": ["e594cc60-207f-3e8c-bbc6-b004c43af95e"] }, "yValue": 20, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1678881704382 }, "a-16": { "id": "a-16", "title": "Menu Hover in", "actionItemGroups": [{ "actionItems": [{ "id": "a-16-n", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".text-main-menu", "selectorGuids": ["b3bd0270-f28e-b784-722b-0339278c1be7"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }, { "id": "a-16-n-2", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".icon-main-menu", "selectorGuids": ["8324c3dd-15b2-f68a-e58f-ae330e0593a1"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-16-n-3", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".text-main-menu", "selectorGuids": ["b3bd0270-f28e-b784-722b-0339278c1be7"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }, { "id": "a-16-n-4", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".icon-main-menu", "selectorGuids": ["8324c3dd-15b2-f68a-e58f-ae330e0593a1"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1679300962522 }, "a-17": { "id": "a-17", "title": "Menu Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-17-n-2", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".icon-main-menu", "selectorGuids": ["8324c3dd-15b2-f68a-e58f-ae330e0593a1"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-17-n", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".text-main-menu", "selectorGuids": ["b3bd0270-f28e-b784-722b-0339278c1be7"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1679300962522 }, "a-18": { "id": "a-18", "title": "Language Hover In", "actionItemGroups": [{ "actionItems": [{ "id": "a-18-n", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".language-text-blog", "selectorGuids": ["987406d1-f556-d373-8cef-9ac774580ea3"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }, { "id": "a-18-n-2", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".language-icon", "selectorGuids": ["a0f15e46-dbab-bf2f-00b2-f91c8a39e6c3"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-18-n-3", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".language-text-blog", "selectorGuids": ["987406d1-f556-d373-8cef-9ac774580ea3"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }, { "id": "a-18-n-4", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".language-icon", "selectorGuids": ["a0f15e46-dbab-bf2f-00b2-f91c8a39e6c3"] }, "globalSwatchId": "", "rValue": 11, "bValue": 92, "gValue": 188, "aValue": 1 } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1679301606548 }, "a-19": { "id": "a-19", "title": "Language Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-19-n", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".language-text-blog", "selectorGuids": ["987406d1-f556-d373-8cef-9ac774580ea3"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }] }, { "actionItems": [{ "id": "a-19-n-2", "actionTypeId": "STYLE_TEXT_COLOR", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".language-icon", "selectorGuids": ["a0f15e46-dbab-bf2f-00b2-f91c8a39e6c3"] }, "globalSwatchId": "", "rValue": 51, "bValue": 51, "gValue": 51, "aValue": 1 } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1679301606548 }, "a-20": { "id": "a-20", "title": "Contact Info Image Hover In", "actionItemGroups": [{ "actionItems": [{ "id": "a-20-n-5", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 800, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-separator-primary", "selectorGuids": ["8d83d1ae-4917-2588-7d0e-0e0f4444bb6d"] }, "widthValue": 42, "widthUnit": "%", "heightUnit": "PX", "locked": false } }, { "id": "a-20-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 800, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-shape-image", "selectorGuids": ["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"] }, "xValue": 0, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-20-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 300, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-shape-image", "selectorGuids": ["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"] }, "xValue": 70, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "id": "a-20-n-6", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 800, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-separator-primary", "selectorGuids": ["8d83d1ae-4917-2588-7d0e-0e0f4444bb6d"] }, "widthValue": 100, "widthUnit": "%", "heightUnit": "PX", "locked": false } }, { "id": "a-20-n-4", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 800, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-shape-image", "selectorGuids": ["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"] }, "xValue": 0, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1679395049921 }, "a-21": { "id": "a-21", "title": "Contact Info Image Hover Out", "actionItemGroups": [{ "actionItems": [{ "id": "a-21-n", "actionTypeId": "STYLE_SIZE", "config": { "delay": 0, "easing": "ease", "duration": 800, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-separator-primary", "selectorGuids": ["8d83d1ae-4917-2588-7d0e-0e0f4444bb6d"] }, "widthValue": 42, "widthUnit": "%", "heightUnit": "PX", "locked": false } }] }, { "actionItems": [{ "id": "a-21-n-2", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "ease", "duration": 800, "target": { "useEventTarget": "CHILDREN", "selector": ".contact-info-shape-image", "selectorGuids": ["f3fbc008-e0ad-5fb1-5b4d-788950643fe9"] }, "xValue": 0, "xUnit": "px", "yUnit": "PX", "zUnit": "PX" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1679395049921 }, "a-22": { "id": "a-22", "title": "Header Search Show", "actionItemGroups": [{ "actionItems": [{ "id": "a-22-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".search-main", "selectorGuids": ["b17a5a79-3323-e8bb-a317-1f858cb4142d"] }, "yValue": 52, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-22-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".search-main", "selectorGuids": ["b17a5a79-3323-e8bb-a317-1f858cb4142d"] }, "value": 0, "unit": "" } }] }, { "actionItems": [{ "id": "a-22-n-3", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".search-main", "selectorGuids": ["b17a5a79-3323-e8bb-a317-1f858cb4142d"] }, "yValue": 0, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-22-n-4", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".search-main", "selectorGuids": ["b17a5a79-3323-e8bb-a317-1f858cb4142d"] }, "value": 1, "unit": "" } }] }], "useFirstGroupAsInitialState": true, "createdOn": 1679896112610 }, "a-23": { "id": "a-23", "title": "Header Search Hide", "actionItemGroups": [{ "actionItems": [{ "id": "a-23-n", "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".search-main", "selectorGuids": ["b17a5a79-3323-e8bb-a317-1f858cb4142d"] }, "yValue": 52, "xUnit": "PX", "yUnit": "px", "zUnit": "PX" } }, { "id": "a-23-n-2", "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "", "duration": 500, "target": { "useEventTarget": "SIBLINGS", "selector": ".search-main", "selectorGuids": ["b17a5a79-3323-e8bb-a317-1f858cb4142d"] }, "value": 0, "unit": "" } }] }], "useFirstGroupAsInitialState": false, "createdOn": 1679896112610 }, "slideInBottom": { "id": "slideInBottom", "useFirstGroupAsInitialState": true, "actionItemGroups": [{ "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 0 } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": 100, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": 0, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }, { "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 1 } }] }] }, "fadeIn": { "id": "fadeIn", "useFirstGroupAsInitialState": true, "actionItemGroups": [{ "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 0 } }] }, { "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 1 } }] }] }, "slideInLeft": { "id": "slideInLeft", "useFirstGroupAsInitialState": true, "actionItemGroups": [{ "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 0 } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": -100, "yValue": 0, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 1 } }, { "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": 0, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }] }, "slideInTop": { "id": "slideInTop", "useFirstGroupAsInitialState": true, "actionItemGroups": [{ "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 0 } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": -100, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 1 } }, { "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": 0, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }] }, "slideInRight": { "id": "slideInRight", "useFirstGroupAsInitialState": true, "actionItemGroups": [{ "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 0 } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 100, "yValue": 0, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }, { "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 1 } }, { "actionTypeId": "TRANSFORM_MOVE", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": 0, "xUnit": "PX", "yUnit": "PX", "zUnit": "PX" } }] }] }, "flipInLeft": { "id": "flipInLeft", "useFirstGroupAsInitialState": true, "actionItemGroups": [{ "actionItems": [{ "actionTypeId": "STYLE_OPACITY", "config": { "duration": 0, "delay": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 0 } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_ROTATE", "config": { "delay": 0, "duration": 0, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": -90, "zValue": 0, "xUnit": "DEG", "yUnit": "DEG", "zUnit": "DEG" } }] }, { "actionItems": [{ "actionTypeId": "TRANSFORM_ROTATE", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "xValue": 0, "yValue": 0, "zValue": 0, "xUnit": "DEG", "yUnit": "DEG", "zUnit": "DEG" } }, { "actionTypeId": "STYLE_OPACITY", "config": { "delay": 0, "easing": "outQuart", "duration": 1000, "target": { "id": "N/A", "appliesTo": "TRIGGER_ELEMENT", "useEventTarget": true }, "value": 1 } }] }] } }, "site": { "mediaQueries": [{ "key": "main", "min": 992, "max": 10000 }, { "key": "medium", "min": 768, "max": 991 }, { "key": "small", "min": 480, "max": 767 }, { "key": "tiny", "min": 0, "max": 479 }] } }
   );
-  
+
+});
