@@ -1,17 +1,29 @@
-<script setup></script>
+<script setup>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t, availableLocales: availableLocalesOld, locale } = useI18n();
+
+const availableLocales = computed(() =>
+  availableLocalesOld
+    .filter((l) => l != locale.value)
+    .map((l) => ({ title: t(`locale.${l}`), path: l })),
+);
+console.log(availableLocales);
+</script>
 
 <template>
   <header class="header-section">
     <div class="container header-large-container w-container">
       <div class="header-wrap">
         <div class="header-logo">
-          <a
-            href="index.html"
+          <router-link
+            :to="{ name: 'home' }"
             aria-current="page"
-            class="header-logo-link w-inline-block w--current"
-            >
+            class="header-logo-link w-inline-block"
+          >
             <img src="@/assets/images/logo.png" loading="lazy" alt="Logo" class="header-logo-image"
-          /></a>
+          /></router-link>
         </div>
         <div class="header-menu">
           <div
@@ -24,16 +36,18 @@
             class="navbar-main-menu w-nav"
           >
             <nav role="navigation" class="nav-main-menu w-nav-menu">
-              <a
-                href="index.html"
+              <router-link
+                :to="{ name: 'home' }"
                 aria-current="page"
-                class="nav-main-menu-link w-nav-link w--current"
-                >Home</a
+                class="nav-main-menu-link w-nav-link"
+                >{{ t('nav.home') }}</router-link
               >
-              <a href="about-us.html" class="nav-main-menu-link w-nav-link">About</a>
+              <router-link :to="{ name: 'about' }" class="nav-main-menu-link w-nav-link">{{
+                t('nav.about')
+              }}</router-link>
               <div data-hover="false" data-delay="0" class="nav-main-menu-dropdown w-dropdown">
                 <div class="dropdown-toggle-main-menu w-dropdown-toggle">
-                  <div class="text-main-menu">Pages</div>
+                  <div class="text-main-menu">{{ t('nav.pages') }}</div>
                   <div class="icon-main-menu w-embed">
                     <svg
                       width="13"
@@ -50,17 +64,29 @@
                   </div>
                 </div>
                 <nav class="dropdown-list-main-menu w-dropdown-list">
-                  <a href="services.html" class="dropdown-link-main-menu w-dropdown-link"
-                    >Services</a
+                  <router-link
+                    :to="{ name: 'services' }"
+                    class="dropdown-link-main-menu w-dropdown-link"
+                    >{{ t('nav.services') }}
+                  </router-link>
+                  <router-link
+                    :to="{ name: 'projects' }"
+                    class="dropdown-link-main-menu w-dropdown-link"
+                    >{{ t('nav.projects') }}</router-link
                   >
-                  <a href="projects.html" class="dropdown-link-main-menu w-dropdown-link"
-                    >Projects</a
+                  <router-link
+                    :to="{ name: 'teams' }"
+                    class="dropdown-link-main-menu w-dropdown-link"
+                    >{{ t('nav.teams') }}</router-link
                   >
-                  <a href="teams.html" class="dropdown-link-main-menu w-dropdown-link">Teams</a>
                 </nav>
               </div>
-              <a href="blog.html" class="nav-main-menu-link w-nav-link">Blog</a>
-              <a href="contact.html" class="nav-main-menu-link w-nav-link">Contact</a>
+              <router-link :to="{ name: 'blog' }" class="nav-main-menu-link w-nav-link">{{
+                t('nav.blog')
+              }}</router-link>
+              <router-link :to="{ name: 'contact' }" class="nav-main-menu-link w-nav-link">{{
+                t('nav.contact')
+              }}</router-link>
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
@@ -70,14 +96,17 @@
         <div class="header-action">
           <div class="language-wrap">
             <div class="flag-wrap">
-              <img src="@/assets/images/flag_1flag.png" loading="lazy" alt="Flag" class="image" />
+              <img v-if="locale === 'uz'" src="@/assets/images/flag_uz.png" loading="lazy" alt="Flag" class="image" />
+              <img v-else-if="locale === 'ru'" src="@/assets/images/flag_ru.png" loading="lazy" alt="Flag" class="image" />
             </div>
             <div data-hover="false" data-delay="0" class="language-dropdown w-dropdown">
               <div
                 data-w-id="6e9367ba-cd7e-8d20-9cf3-328b2c0512d4"
                 class="language-dropdown-toggle w-dropdown-toggle"
               >
-                <div style="color: rgb(51, 51, 51)" class="language-text-blog">English</div>
+                <div style="color: rgb(51, 51, 51)" class="language-text-blog">
+                  {{ t(`locale.${locale}`) }}
+                </div>
                 <div style="color: rgb(51, 51, 51)" class="language-icon w-embed">
                   <svg
                     width="13"
@@ -94,9 +123,13 @@
                 </div>
               </div>
               <nav class="language-dropdown-list w-dropdown-list">
-                <a href="#" class="language-dropdown-link w-dropdown-link">Arabic</a>
-                <a href="#" class="language-dropdown-link w-dropdown-link">Spanish</a>
-                <a href="#" class="language-dropdown-link w-dropdown-link">Deutsch</a>
+                <router-link
+                  v-for="locale in availableLocales"
+                  :key="locale.path"
+                  :to="locale.path"
+                  class="language-dropdown-link w-dropdown-link"
+                  >{{ locale.title }}</router-link
+                >
               </nav>
             </div>
           </div>
@@ -150,16 +183,18 @@
               class="navbar-mobile w-nav"
             >
               <nav role="navigation" class="nav-mobile-menu w-nav-menu">
-                <a
-                  href="index.html"
+                <router-link
+                  :to="{ name: 'home' }"
                   aria-current="page"
-                  class="nav-link-mobile-menu w-nav-link w--current"
-                  >Home</a
+                  class="nav-link-mobile-menu w-nav-link"
+                  >{{ t('nav.home') }}</router-link
                 >
-                <a href="about-us.html" class="nav-link-mobile-menu w-nav-link">About</a>
+                <router-link :to="{ name: 'about' }" class="nav-link-mobile-menu w-nav-link">{{
+                  t('nav.about')
+                }}</router-link>
                 <div data-hover="false" data-delay="0" class="dropdown-mobile-menu w-dropdown">
                   <div class="dropdown-toggle-mobile-menu w-dropdown-toggle">
-                    <div class="text-block-mobile-menu">Pages</div>
+                    <div class="text-block-mobile-menu">{{ t('nav.pages') }}</div>
                     <div class="dropdown-icon-mobile-menu w-embed">
                       <svg
                         width="13"
@@ -176,17 +211,29 @@
                     </div>
                   </div>
                   <nav class="dropdown-list-mobile-menu w-dropdown-list">
-                    <a href="services.html" class="dropdown-link-mobile-menu w-dropdown-link"
-                      >Services</a
+                    <router-link
+                      :to="{ name: 'services' }"
+                      class="dropdown-link-mobile-menu w-dropdown-link"
+                      >{{ t('nav.services') }}</router-link
                     >
-                    <a href="projects.html" class="dropdown-link-mobile-menu w-dropdown-link"
-                      >Projects</a
+                    <router-link
+                      :to="{ name: 'projects' }"
+                      class="dropdown-link-mobile-menu w-dropdown-link"
+                      >{{ t('nav.projects') }}</router-link
                     >
-                    <a href="teams.html" class="dropdown-link-mobile-menu w-dropdown-link">Teams</a>
+                    <router-link
+                      :to="{ name: 'teams' }"
+                      class="dropdown-link-mobile-menu w-dropdown-link"
+                      >{{ t('nav.teams') }}</router-link
+                    >
                   </nav>
                 </div>
-                <a href="blog.html" class="nav-link-mobile-menu w-nav-link">Blog</a>
-                <a href="contact.html" class="nav-link-mobile-menu w-nav-link">Contact</a>
+                <router-link :to="{ name: 'blog' }" class="nav-link-mobile-menu w-nav-link">{{
+                  t('nav.blog')
+                }}</router-link>
+                <router-link :to="{ name: 'contact' }" class="nav-link-mobile-menu w-nav-link">{{
+                  t('nav.contact')
+                }}</router-link>
               </nav>
               <div class="menu-button-mobile w-nav-button">
                 <div class="icon-mobile-menu w-embed">

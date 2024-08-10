@@ -1,5 +1,16 @@
 {
-    "nav": {
-        "home": "Bosh sahifa"
-    }
+  "locale": {
+    "uz": "O'zbek tili",
+    "ru": "Rus tili"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Biz haqimizda",
+    "pages": "Sahifalar",
+    "services": "Xizmatlar",
+    "projects": "Loyihalar",
+    "teams": "Jamoalar",
+    "blog": "Blog",
+    "contact": "Biz bilan bog'lanish"
+  }
 }
