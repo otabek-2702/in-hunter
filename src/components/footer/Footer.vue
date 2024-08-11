@@ -8,24 +8,26 @@
           <div class="footer-widget footer-about">
             <div class="footer-logo">
               <a
-                href="index.html"
+                href="/"
                 aria-current="page"
                 class="footer-logo-link w-inline-block w--current"
-                ><img
+              >
+                <img
                   src="@/assets/images/logo-white.png"
                   loading="lazy"
                   alt="Footer Logo"
                   class="footer-logo-image"
-              /></a>
+                />
+              </a>
             </div>
-            <p class="footer-excerpt">4965 Graystone Lakes, Milledgeville banahay703@snece.com</p>
+            <p class="footer-excerpt">{{ t('footer.address') }}</p>
             <div class="footer-contact">
-              <div class="footer-contact-title">Call Us</div>
-              <div class="contact-number">+00 123 456 789</div>
+              <div class="footer-contact-title">{{ t('footer.callUs') }}</div>
+              <div class="contact-number">{{ t('footer.phoneNumber') }}</div>
             </div>
             <div class="footer-social-icon-wrap">
-              <a
-                href="https://twitter.com/"
+              <router-link
+                to="https://twitter.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -43,9 +45,9 @@
                     ></path>
                   </svg>
                 </div>
-              </a>
-              <a
-                href="https://www.facebook.com/"
+              </router-link>
+              <router-link
+                to="https://www.facebook.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -63,9 +65,9 @@
                     ></path>
                   </svg>
                 </div>
-              </a>
-              <a
-                href="https://www.skype.com"
+              </router-link>
+              <router-link
+                to="https://www.skype.com"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -83,9 +85,9 @@
                     ></path>
                   </svg>
                 </div>
-              </a>
-              <a
-                href="https://www.linkedin.com/"
+              </router-link>
+              <router-link
+                to="https://www.linkedin.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -111,9 +113,9 @@
                     ></path>
                   </svg>
                 </div>
-              </a>
-              <a
-                href="https://www.instagram.com/"
+              </router-link>
+              <router-link
+                to="https://www.instagram.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -139,31 +141,48 @@
                     ></path>
                   </svg>
                 </div>
-              </a>
+              </router-link>
             </div>
           </div>
+
           <div class="footer-widget footer-widget-margin">
-            <h4 class="footer-title">Our Services</h4>
+            <h4 class="footer-title">{{ t('footer.ourServices') }}</h4>
             <div class="footer-list-wrap">
-              <a href="services.html" class="footer-list">DEI Consulting</a>
-              <a href="services.html" class="footer-list">HR Technology</a>
-              <a href="services.html" class="footer-list">HR Compliance</a>
-              <a href="services.html" class="footer-list">Talent Acquisition</a>
-              <a href="services.html" class="footer-list">Comp &amp; Benefits</a>
+              <router-link :to="{name: 'services'}" class="footer-list">{{
+                t('footer.services.deiConsulting')
+              }}</router-link>
+              <router-link :to="{name: 'services'}" class="footer-list">{{
+                t('footer.services.hrTechnology')
+              }}</router-link>
+              <router-link :to="{name: 'services'}" class="footer-list">{{
+                t('footer.services.hrCompliance')
+              }}</router-link>
+              <router-link :to="{name: 'services'}" class="footer-list">{{
+                t('footer.services.talentAcquisition')
+              }}</router-link>
+              <router-link :to="{name: 'services'}" class="footer-list">{{
+                t('footer.services.compBenefits')
+              }}</router-link>
             </div>
           </div>
+
           <div class="footer-widget footer-widget-margin-two">
-            <h4 class="footer-title">Quick links</h4>
+            <h4 class="footer-title">{{ t('footer.quickLinks.label') }}</h4>
             <div class="footer-list-wrap">
-              <a href="about-us.html" class="footer-list">About Us</a>
-              <a href="contact.html" class="footer-list">Contact Us</a>
-              <a href="style-guide.html" class="footer-list">Style Guide</a>
-              <a href="license.html" class="footer-list">License</a>
-              <a href="changelog.html" class="footer-list">Changelog</a>
+              <router-link :to="{name: 'about'}" class="footer-list">{{ t('nav.about') }}</router-link>
+              <router-link :to="{name: 'contact'}" class="footer-list">{{ t('nav.contact') }}</router-link>
+              <!-- <router-link :to="style-guide.html" class="footer-list">{{
+                t('footer.quickLinks.styleGuide')
+              }}</router-link>
+              <router-link :to="license.html" class="footer-list">{{ t('footer.quickLinks.license') }}</router-link>
+              <router-link :to="changelog.html" class="footer-list">{{
+                t('footer.quickLinks.changelog')
+              }}</router-link> -->
             </div>
           </div>
+
           <div class="footer-widget">
-            <h4 class="footer-title">Subscribe</h4>
+            <h4 class="footer-title">{{ t('footer.subscribe') }}</h4>
             <div class="newsletter-wrap">
               <div class="newsletter-form-block w-form">
                 <form
@@ -181,22 +200,23 @@
                     maxlength="256"
                     name="email"
                     data-name="Email"
-                    placeholder="Enter Your Mail"
+                    :placeholder="t('footer.enterEmail')"
                     type="email"
                     id="email"
                     required=""
-                  /><input
+                  />
+                  <input
                     type="submit"
-                    data-wait="Please wait..."
+                    data-wait="t('footer.pleaseWait')"
                     class="button-primary-3 newsletter-button w-button"
-                    value="Sign Up"
+                    :value="t('footer.signUp')"
                   />
                 </form>
                 <div class="w-form-done">
-                  <div>Thank you! Your submission has been received!</div>
+                  <div>{{ t('footer.thankYou') }}</div>
                 </div>
                 <div class="w-form-fail">
-                  <div>Oops! Something went wrong while submitting the form.</div>
+                  <div>{{ t('footer.somethingWentWrong') }}</div>
                 </div>
               </div>
             </div>
@@ -207,13 +227,21 @@
     <div class="footer-bottom">
       <div class="container w-container">
         <div class="copyright-text">
-          © 2023
-          <a href="https://brandbes.com/" target="_blank" class="copyright-link">Brandbes</a>. All
-          rights reserved.
+          © 2024
+          <a href="https://codestorm.com/" target="_blank" class="copyright-link">{{
+            t('footer.brandbes')
+          }}</a>
+          {{ t('footer.allRightsReserved') }}
         </div>
       </div>
     </div>
   </footer>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
+</script>
 
 <style scoped></style>

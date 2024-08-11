@@ -12,5 +12,44 @@
     "teams": "Jamoalar",
     "blog": "Blog",
     "contact": "Biz bilan bog'lanish"
+  },
+  "footer": {
+    "address": "4965 Graystone Lakes, Milledgeville banahay703@snece.com",
+    "callUs": "Bizga qo'ng'iroq qiling",
+    "phoneNumber": "+00 123 456 789",
+    "ourServices": "Bizning xizmatlarimiz",
+    "services": {
+      "deiConsulting": "DEI Konsalting",
+      "hrTechnology": "HR Texnologiya",
+      "hrCompliance": "HR Muvofiqlik",
+      "talentAcquisition": "Iqtidorlarni Jalb Qilish",
+      "compBenefits": "Maosh va Imtiyozlar"
+    },
+    "quickLinks": {
+      "label": "Tezkor havolalar"
+    },
+    "subscribe": "Obuna bo'ling",
+    "enterEmail": "Emailingizni kiriting",
+    "pleaseWait": "Iltimos, kuting...",
+    "signUp": "Ro'yxatdan o'tish",
+    "thankYou": "Rahmat! Sizning arizangiz qabul qilindi!",
+    "somethingWentWrong": "Xato! Forma yuborishda muammo yuzaga keldi.",
+    "brandbes": "CodeStorm",
+    "allRightsReserved": "Barcha huquqlar himoyalangan."
+  },
+  "error": {
+    "title": "Sahifa Topilmadi",
+    "excerpt": "Qidirayotgan sahifangiz mavjud emas yoki ko'chirilgan",
+    "backToHome": "Bosh sahifaga qaytish"
+  },
+  "about": {
+    "card_experience": "HR sohasidagi tajriba — 35 yil",
+    "card_excerpt": "Ko'p muvaffaqiyat hikoyalarimiz mavjud",
+    "section_sub_title": "Acuvic eng yaxshi echim",
+    "heading_1": "Digitalga xush kelibsiz",
+    "heading_span": "HR Konsalting",
+    "heading_2": "&amp; Agentlik. Sayohatni baham ko'ring.",
+    "excerpt": "Lorem Ipsum'ning ko'plab variantlari mavjud, ammo ularning aksariyati qo'shilgan hazil yoki tasodifiy so'zlar bilan o'zgartirilgan, ular hech bo'lmaganda biroz ishonarli ko'rinmaydi. Agar siz Lorem Ipsum bo'lagidan foydalanmoqchi bo'lsangiz, siz ishonchli bo'lishingiz kerak",
+    "explore_more": "Ko'proq ma'lumot"
   }
 }

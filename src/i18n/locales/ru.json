@@ -12,5 +12,44 @@
     "teams": "Команды",
     "blog": "Блог",
     "contact": "Контакты"
+  },
+  "footer": {
+    "address": "4965 Graystone Lakes, Milledgeville banahay703@snece.com",
+    "callUs": "Позвоните нам",
+    "phoneNumber": "+00 123 456 789",
+    "ourServices": "Наши услуги",
+    "services": {
+      "deiConsulting": "DEI Консалтинг",
+      "hrTechnology": "HR Технологии",
+      "hrCompliance": "HR Соответствие",
+      "talentAcquisition": "Привлечение талантов",
+      "compBenefits": "Зарплата и льготы"
+    },
+    "quickLinks": {
+      "label": "Быстрые ссылки"
+    },
+    "subscribe": "Подписаться",
+    "enterEmail": "Введите вашу почту",
+    "pleaseWait": "Пожалуйста, подождите...",
+    "signUp": "Зарегистрироваться",
+    "thankYou": "Спасибо! Ваша заявка принята!",
+    "somethingWentWrong": "Ой! Что-то пошло не так при отправке формы.",
+    "brandbes": "CodeStorm",
+    "allRightsReserved": "Все права защищены."
+  },
+  "error": {
+   "title": "Страница не найдена",
+    "excerpt": "Страница, которую вы ищете, не существует или была перемещена",
+    "backToHome": "Вернуться на главную"
+  },
+  "about": {
+    "card_experience": "лет \n Опыт работы в HR ",
+    "card_excerpt": "У нас много успешных историй",
+    "section_sub_title": "Acuvic — лучшее решение",
+    "heading_1": "Добро пожаловать в Digital",
+    "heading_span": "HR-консалтинг",
+    "heading_2": "&amp; Агентство. Разделите путь.",
+    "excerpt": "Существует множество вариантов Lorem Ipsum, но большинство из них были изменены с помощью введенного юмора или случайных слов, которые даже не выглядят немного правдоподобно. Если вы собираетесь использовать отрывок из Lorem Ipsum, вам нужно быть уверенным",
+    "explore_more": "Узнать больше"
   }
 }

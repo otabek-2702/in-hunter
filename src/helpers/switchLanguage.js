@@ -1,6 +1,5 @@
 import i18n from "@/i18n"
 
-
 const getUserLocale = () => {
     const locale = window.navigator.language ||
         window.navigator.userLanguage ||
@@ -30,19 +29,17 @@ export const guessDefaultLocale = () => {
 }
 
 export const switchLanguage = (passedLocale) => {
-    if (isLocaleSupported(passedLocale)) {
-        i18n.global.locale.value = passedLocale ??guessDefaultLocale()
-        document.querySelector("html").setAttribute("lang", passedLocale ?? guessDefaultLocale())
-        localStorage.setItem('lang', passedLocale ?? guessDefaultLocale())
-    }
-    
+    i18n.global.locale.value = passedLocale
+    document.querySelector("html").setAttribute("lang", passedLocale)
+    localStorage.setItem('lang', passedLocale)
+
 }
 
-export const routeMiddleware = (to, _from, next) =>{
+export const routeMiddleware = (to, _from, next) => {
     const paramLocale = to.params.locale
 
     if (!isLocaleSupported(paramLocale)) {
-        return next(guessDefaultLocale())
+        return next(to.fullPath.replace(paramLocale, guessDefaultLocale))
     }
 
     switchLanguage(paramLocale)

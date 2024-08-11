@@ -1,15 +1,19 @@
 <script setup>
-import { computed } from 'vue';
+import { switchLanguage } from '@/helpers/switchLanguage';
+import { computed, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
 
 const { t, availableLocales: availableLocalesOld, locale } = useI18n();
+const router = useRouter()
+
+
 
 const availableLocales = computed(() =>
   availableLocalesOld
     .filter((l) => l !== locale.value)
     .map((l) => ({ title: t(`locale.${l}`), path: l })),
 );
-console.log(availableLocales);
 </script>
 
 <template>
@@ -124,11 +128,11 @@ console.log(availableLocales);
               </div>
               <nav class="language-dropdown-list w-dropdown-list">
                 <router-link
-                  v-for="locale in availableLocales"
-                  :key="locale.path"
-                  :to="locale.path"
+                  v-for="lang in availableLocales"
+                  :key="lang.path"
+                  :to="router.currentRoute.value.fullPath.replace(locale, lang.path)"
                   class="language-dropdown-link w-dropdown-link"
-                  >{{ locale.title }}</router-link
+                  >{{ lang.title }}</router-link
                 >
               </nav>
             </div>
