@@ -9,7 +9,7 @@ const router = createRouter({
     {
       path: '/:locale?',
       component: RouterView,
-      beforeEnter: routeMiddleware,
+      // beforeEnter: routeMiddleware,
       children: [
         {
           path: "",
@@ -50,5 +50,7 @@ const router = createRouter({
     }
   ]
 })
+
+router.beforeEach(routeMiddleware)
 
 export default router
