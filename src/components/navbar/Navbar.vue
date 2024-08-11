@@ -17,13 +17,13 @@ console.log(availableLocales);
     <div class="container header-large-container w-container">
       <div class="header-wrap">
         <div class="header-logo">
-          <router-link
-            :to="{ name: 'home' }"
+          <a
+            href="/"
             aria-current="page"
             class="header-logo-link w-inline-block"
           >
             <img src="@/assets/images/logo.png" loading="lazy" alt="Logo" class="header-logo-image"
-          /></router-link>
+          /></a>
         </div>
         <div class="header-menu">
           <div

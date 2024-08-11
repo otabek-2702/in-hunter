@@ -16,7 +16,7 @@ const isLocaleSupported = (locale) => {
     return i18n.global.availableLocales.includes(locale)
 }
 
-export const guessDefaultLanguage = () => {
+export const guessDefaultLocale = () => {
     const userPersistedLocale = localStorage.getItem('lang')
     if (isLocaleSupported(userPersistedLocale)) return userPersistedLocale
 
@@ -31,11 +31,11 @@ export const guessDefaultLanguage = () => {
 
 export const switchLanguage = (passedLocale) => {
     if (isLocaleSupported(passedLocale)) {
-        i18n.global.locale.value = passedLocale
-        document.querySelector("html").setAttribute("lang", passedLocale)
-        localStorage.setItem('lang', passedLocale)
+        i18n.global.locale.value = passedLocale ??guessDefaultLocale()
+        document.querySelector("html").setAttribute("lang", passedLocale ?? guessDefaultLocale())
+        localStorage.setItem('lang', passedLocale ?? guessDefaultLocale())
     }
-    guessDefaultLanguage()
+    
 }
 
 export const routeMiddleware = (to, _from, next) =>{

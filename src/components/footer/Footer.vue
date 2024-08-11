@@ -171,6 +171,7 @@
                   name="email-form"
                   data-name="Email Form"
                   method="get"
+                  action="/"
                   class="newsletter-form"
                   data-wf-page-id="6666fcda3ffd3947b1b20825"
                   data-wf-element-id="b70a971d-f80f-4890-29c3-370648dedf2d"
