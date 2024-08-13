@@ -14,7 +14,7 @@
     "contact": "Biz bilan bog'lanish"
   },
   "footer": {
-    "address": "4965 Graystone Lakes, Milledgeville banahay703@snece.com",
+    "address": "4965 Graystone Lakes, Milledgeville banahay703mail.com",
     "callUs": "Bizga qo'ng'iroq qiling",
     "phoneNumber": "+00 123 456 789",
     "ourServices": "Bizning xizmatlarimiz",
@@ -43,13 +43,71 @@
     "backToHome": "Bosh sahifaga qaytish"
   },
   "about": {
-    "card_experience": "HR sohasidagi tajriba — 35 yil",
+    "card_experience": "yil HR sohasidagi tajriba",
     "card_excerpt": "Ko'p muvaffaqiyat hikoyalarimiz mavjud",
     "section_sub_title": "Acuvic eng yaxshi echim",
     "heading_1": "Digitalga xush kelibsiz",
     "heading_span": "HR Konsalting",
-    "heading_2": "&amp; Agentlik. Sayohatni baham ko'ring.",
+    "heading_2": "va Agentlik. Sayohatni baham ko'ring.",
     "excerpt": "Lorem Ipsum'ning ko'plab variantlari mavjud, ammo ularning aksariyati qo'shilgan hazil yoki tasodifiy so'zlar bilan o'zgartirilgan, ular hech bo'lmaganda biroz ishonarli ko'rinmaydi. Agar siz Lorem Ipsum bo'lagidan foydalanmoqchi bo'lsangiz, siz ishonchli bo'lishingiz kerak",
     "explore_more": "Ko'proq ma'lumot"
+  },
+  "video": {
+    "description": "O‘zbek tilidagi video"
+  },
+  "hero": {
+    "subTitle": "Acuvic — eng yaxshi yechim",
+    "title": {
+      "line1": "HR maslahatlari uchun",
+      "line2": "Oson yechim"
+    },
+    "excerpt": "To'g'ri murabbiylik munosabatlari professional o'sish uchun kuchli vosita bo'lishi mumkin. To'g'ri yo'ldan boring.",
+    "buttonText": "Ko'proq bilib oling",
+    "videoPopupText": "Biz qanday ishlaymiz"
+  },
+  "home": {
+    "funfact": {
+      "sectionSubTitle": "Bizning Yutuqlarimiz",
+      "sectionTitle": {
+        "line1": "100% Muvaffaqiyat &",
+        "line2": "Mijozlar tomonidan",
+        "line3": "Eng yuqori baholangan"
+      },
+      "facts": {
+        "clients": {
+          "number": "340+",
+          "title": "Faol mijozlar"
+        },
+        "reviews": {
+          "number": "256+",
+          "title": "5 Yulduzli Sharhlar"
+        },
+        "teamMembers": {
+          "number": "390+",
+          "title": "Jamoa A'zolari"
+        },
+        "projectsDone": {
+          "number": "259+",
+          "title": "Loyihalar bajarilgan"
+        }
+      }
+    },
+    "testimonials": {
+    "vincent": {
+      "name": "Vinsent Rays",
+      "designation": "IT Mutaxassisi",
+      "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+    },
+    "effie": {
+      "name": "Effi Gamez",
+      "designation": "Dasturchi",
+      "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+    },
+    "donna": {
+      "name": "Donna Polk",
+      "designation": "Dizayner",
+      "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+    }
+  }
   }
 }
