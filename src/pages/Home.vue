@@ -227,4 +227,90 @@ const testimonials = [
       </div>
     </div>
   </div>
+
+  <!-- <div class="faq-area">
+    <div class="container w-container">
+      <div class="faq-wrap">
+        <div class="faq-content-wrap">
+          <div class="section-title-wrap section-title-wrap-left">
+            <div class="section-sub-title">{{ t('home.home.faq.subtitle') }}</div>
+            <h2 class="section-title" v-html="t('home.home.faq.title')"></h2>
+          </div>
+          <div class="faq-content">
+            <div v-for="(item, index) in t('home.home.faq.items', true)" :key="index" class="faq-item">
+              <a href="#" class="faq-question w-inline-block">
+                <h3 class="faq-title">{{ item.question }}</h3>
+                <div class="p-m-wrap">
+                  <div class="minus"></div>
+                  <div class="plus"></div>
+                </div>
+              </a>
+              <div style="height:0px" class="faq-answer">
+                <div class="faq-answer-inner">
+                  <p class="paragraph">{{ item.answer }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-image-wrap">
+          <div class="faq-image-inner">
+            <img src="@/assets/images/faq-img.png" loading="lazy" sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 45vw, (max-width: 1279px) 446px, 514px" srcset="@/assets/images/faq-img-p-500.png 500w, @/assets/images/faq-img.png 511w" alt="Faq Image" class="faq-image">
+            <div class="faq-shape-one-wrap"><img src="@/assets/images/faq-shape-1_1faq-shape-1.png" loading="lazy" alt="Faq Shape Image" class="faq-shape-image-one"></div>
+            <div class="faq-shape-two-wrap"><img src="@/assets/images/faq-shape-2_1faq-shape-2.png" loading="lazy" alt="Faq Shape Image" class="faq-shape-image-two"></div>
+          </div>
+        </div>
+      </div>
+      <div class="faq-shape-three-wrap">
+        <img class="faq-shape-image-three" src="@/assets/images/faq-shape-3.png" alt="Faq Shape Image"  sizes="(max-width: 479px) 100vw, (max-width: 1279px) 150px, (max-width: 1919px) 300px, 603px" loading="lazy" srcset="@/assets/images/faq-shape-3-p-500.png 500w, @/assets/images/faq-shape-3.png 603w">
+      </div>
+    </div>
+  </div> -->
+
+  <div class="faq-area">
+    <div class="container w-container">
+      <div class="faq-wrap">
+        <div class="faq-content-wrap">
+          <div data-w-id="165c4851-0983-2c2c-3c5c-17d1b74b53ba" 
+            class="section-title-wrap section-title-wrap-left">
+            <div class="section-sub-title">{{ t('home.faq.subtitle') }}</div>
+            <h2 class="section-title">{{ t('home.faq.title') }}</h2>
+          </div>
+          <div class="faq-content">
+            <div class="faq-item"  v-for="accordion in t('home.faq.items')">
+              <a data-w-id="bb97160a-f70c-9d51-6c33-9160c8276bc8" href="#" class="faq-question w-inline-block">
+                <h3 class="faq-title">{{ accordion.question }}</h3>
+                <div class="p-m-wrap">
+                  <div class="minus"></div>
+                  <div class="plus"></div>
+                </div>
+              </a>
+              <div style="height:0px" class="faq-answer">
+                <div class="faq-answer-inner">
+                  <p class="paragraph">{{ accordion.answer }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-image-wrap">
+          <div data-w-id="7f40d37a-bf12-4c9d-b33a-5111c227d2eb"  class="faq-image-inner"><img
+              src="@/assets/images/faq-img.png" loading="lazy"
+              sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 45vw, (max-width: 1279px) 446px, 514px"
+              srcset="@/assets/images/faq-img-p-500.png 500w, @/assets/images/faq-img.png 511w" alt="Faq Image"
+              class="faq-image">
+            <div class="faq-shape-one-wrap"><img src="@/assets/images/faq-shape-1_1faq-shape-1.png" loading="lazy"
+                alt="Faq Shape Image" class="faq-shape-image-one"></div>
+            <div class="faq-shape-two-wrap"><img src="@/assets/images/faq-shape-2_1faq-shape-2.png" loading="lazy"
+                alt="Faq Shape Image" class="faq-shape-image-two"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-shape-three-wrap"><img class="faq-shape-image-three" src="@/assets/images/faq-shape-3.png"
+        alt="Faq Shape Image" 
+        sizes="(max-width: 479px) 100vw, (max-width: 1279px) 150px, (max-width: 1919px) 300px, 603px"
+        data-w-id="faf6975f-f4f2-a7ef-7015-9c5f4ce6ec59" loading="lazy"
+        srcset="@/assets/images/faq-shape-3-p-500.png 500w, @/assets/images/faq-shape-3.png 603w"></div>
+  </div>
 </template>

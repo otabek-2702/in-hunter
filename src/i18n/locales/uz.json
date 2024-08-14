@@ -93,21 +93,39 @@
       }
     },
     "testimonials": {
-    "vincent": {
-      "name": "Vinsent Rays",
-      "designation": "IT Mutaxassisi",
-      "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+      "vincent": {
+        "name": "Vinsent Rays",
+        "designation": "IT Mutaxassisi",
+        "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+      },
+      "effie": {
+        "name": "Effi Gamez",
+        "designation": "Dasturchi",
+        "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+      },
+      "donna": {
+        "name": "Donna Polk",
+        "designation": "Dizayner",
+        "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+      }
     },
-    "effie": {
-      "name": "Effi Gamez",
-      "designation": "Dasturchi",
-      "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
-    },
-    "donna": {
-      "name": "Donna Polk",
-      "designation": "Dizayner",
-      "excerpt": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan."
+    "faq": {
+      "subtitle": "Nima uchun bizni tanlash kerak",
+      "title": "Nima uchun bizni tanlashingiz kerakligi haqida bir nechta sabablar",
+      "items": [
+        {
+          "question": "Hamkorlik tizimi",
+          "answer": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan, jumladan, tasodifiy so'zlar yoki kulgili iboralar qo'shilgan, ular hech qanday darajada ishonarli ko'rinmaydi. Agar siz Lorem Ipsum matnini ishlatmoqchi bo'lsangiz."
+        },
+        {
+          "question": "Biznes innovatsiyasi",
+          "answer": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan, jumladan, tasodifiy so'zlar yoki kulgili iboralar qo'shilgan, ular hech qanday darajada ishonarli ko'rinmaydi. Agar siz Lorem Ipsum matnini ishlatmoqchi bo'lsangiz."
+        },
+        {
+          "question": "Pension rejalashtirish",
+          "answer": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan, jumladan, tasodifiy so'zlar yoki kulgili iboralar qo'shilgan, ular hech qanday darajada ishonarli ko'rinmaydi. Agar siz Lorem Ipsum matnini ishlatmoqchi bo'lsangiz."
+        }
+      ]
     }
-  }
   }
 }
