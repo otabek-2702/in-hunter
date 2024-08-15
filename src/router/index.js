@@ -14,9 +14,10 @@ const router = createRouter({
         {
           path: "",
           name: 'home',
-          component: Home
+          component: Home,
+          meta: { breadcrumbs: false }
         },
-        
+
         {
           path: 'about',
           name: 'about',
@@ -35,7 +36,7 @@ const router = createRouter({
         {
           path: 'services',
           name: 'services',
-          // component: () => import('../pages/Services.vue') 
+          component: () => import('../pages/Services.vue') 
         },
         {
           path: 'projects',
@@ -56,6 +57,13 @@ const router = createRouter({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (!Object.prototype.hasOwnProperty.call(to?.meta, "breadcrumbs")) {
+    to.meta.breadcrumbs = true;
+  }
+  next();
+});
 
 router.beforeEach(routeMiddleware)
 

@@ -1232,7 +1232,7 @@
           $(brandElement).attr("style", fullScreen ? "display: none !important;" : "");
         }
         function createBadge() {
-          var $brand = $('<a class="w-webflow-badge"></a>').attr("href", "https://webflow.com?utm_campaign=brandjs");
+          var $brand = $('<router-link class="w-webflow-badge"></a>').attr("href", "https://webflow.com?utm_campaign=brandjs");
           var $logoArt = $("<img>").attr("src", "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg").attr("alt", "").css({
             marginRight: "4px",
             width: "26px"
@@ -9052,7 +9052,7 @@
       init_IX2ParametersReducer();
       ({ ixElements: ixElements2 } = import_shared2.IX2ElementsReducer);
       IX2Reducer_default = (0, import_redux.combineReducers)({
-        // @ts-expect-error - TS2322 - Type '(state: FixMeAny | null | undefined, action: {    type: typeof IX2_RAW_DATA_IMPORTED;    payload: {        ixData: FixMeAny;    };}) => any' is not assignable to type 'Reducer<any>'.
+        // @ts-expect-error - TS2322 - Type '(state: FixMeAny | null | undefined, action: {    type: typeof IX2_RAW_DATA_IMPORTED;    payload: {        ixData: FixMeAny;    };}) => any' is not assignable to type 'Reducer<router-linkny>'.
         ixData,
         ixRequest,
         ixSession,

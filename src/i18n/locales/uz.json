@@ -50,7 +50,25 @@
     "heading_span": "HR Konsalting",
     "heading_2": "va Agentlik. Sayohatni baham ko'ring.",
     "excerpt": "Lorem Ipsum'ning ko'plab variantlari mavjud, ammo ularning aksariyati qo'shilgan hazil yoki tasodifiy so'zlar bilan o'zgartirilgan, ular hech bo'lmaganda biroz ishonarli ko'rinmaydi. Agar siz Lorem Ipsum bo'lagidan foydalanmoqchi bo'lsangiz, siz ishonchli bo'lishingiz kerak",
-    "explore_more": "Ko'proq ma'lumot"
+    "explore_more": "Ko'proq ma'lumot",
+    "activeClients": "Faol mijozlar",
+    "fiveStarReviews": "5 yulduzli sharhlar",
+    "teamMember": "Jamoa a'zosi",
+    "projectDone": "Bajarilgan loyihalar",
+    "team": {
+      "ourTeam": "JAMOAMIZ",
+      "ourHeroes": "Intellekt Jamoasining Qahramonlari",
+      "teamExcerpt": "Lorem Ipsum'ning ko'plab variantlari mavjud, ammo ularning aksariyati qandaydir shaklda o'zgartirilgan.",
+      "allTeamMembers": "Barcha Jamoa A'zolari",
+      "amelieLemmens": "Amelie Lemmens",
+      "itExpert": "IT Mutaxassisi",
+      "pamelaKFree": "Pamela K. Free",
+      "developer": "Dasturchi",
+      "jamesMcGehee": "James McGehee",
+      "manager": "Menejer",
+      "juliaHarkins": "Julia Harkins",
+      "designer": "Dizayner"
+    }
   },
   "video": {
     "description": "O‘zbek tilidagi video"
