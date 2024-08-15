@@ -21,8 +21,8 @@ export const guessDefaultLocale = () => {
 
     const userPreferredLocale = getUserLocale()
 
-    if (isLocaleSupported(userPersistedLocale.locale)) return userPreferredLocale.locale
-    if (isLocaleSupported(userPersistedLocale.localeNoRegion)) return userPersistedLocale.localeNoRegion
+    if (isLocaleSupported(userPreferredLocale.locale)) return userPreferredLocale.locale
+    if (isLocaleSupported(userPreferredLocale.localeNoRegion)) return userPreferredLocale.localeNoRegion
 
     return import.meta.env.VITE_DEFAULT_LOCALE
 
@@ -39,7 +39,10 @@ export const routeMiddleware = (to, _from, next) => {
     const paramLocale = to.params.locale
 
     if (!isLocaleSupported(paramLocale)) {
-        return next(to.fullPath.replace(paramLocale, guessDefaultLocale))
+        if (paramLocale) {
+            return next(to.fullPath.replace(paramLocale, guessDefaultLocale()))
+        }
+        return next(guessDefaultLocale())
     }
 
     switchLanguage(paramLocale)

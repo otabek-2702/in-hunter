@@ -12,8 +12,7 @@ const router = createRouter({
       component: RouterView,
       children: [
         {
-          path: "/:locale?",
-          alias: "/:locale?/",
+          path: "",
           name: 'home',
           component: Home
         },
