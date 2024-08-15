@@ -127,5 +127,12 @@
         }
       ]
     }
+  },
+  "call-to-action-area": {
+    "sectionSubTitle": "Hammasi Acuvicda",
+    "sectionTitle": "Yangi loyiha bormi?<br>Acuvic orqali men bilan bog'laning.",
+    "callToActionExcerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
+    "hireMe": "Meni yollang",
+    "learnMore": "Batafsil ma'lumot"
   }
 }

@@ -4,18 +4,20 @@ import { routeMiddleware } from '@/helpers/switchLanguage'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
-  linkExactActiveClass: 'w--current',
+  linkActiveClass: 'w--current',
+  // linkExactActiveClass: 'w--current',
   routes: [
     {
       path: '/:locale?',
       component: RouterView,
-      // beforeEnter: routeMiddleware,
       children: [
         {
-          path: "",
+          path: "/:locale?",
+          alias: "/:locale?/",
           name: 'home',
           component: Home
         },
+        
         {
           path: 'about',
           name: 'about',
@@ -51,7 +53,7 @@ const router = createRouter({
     {
       path: '/:locale?/:pathMatch(.*)*', // Catch-all route for 404
       name: 'NotFound',
-      component: () => import('../pages/NotFound.vue') 
+      component: () => import('../pages/NotFound.vue')
     }
   ]
 })

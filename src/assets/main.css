@@ -116,7 +116,7 @@ ul {
 }
 
 li {
-  background-image: url('../images/check.svg');
+  background-image: url('@/assets/images/check.svg');
   background-position: 0%;
   background-repeat: no-repeat;
   background-size: auto;
@@ -436,7 +436,7 @@ blockquote {
 }
 
 .hero-section {
-  background-image: url('../images/bg-hero.png');
+  background-image: url('@/assets/images/bg-hero.png');
   background-position: 50%;
   background-size: cover;
   background-attachment: scroll;
@@ -2081,7 +2081,7 @@ blockquote {
 }
 
 .breadcrumb {
-  background-image: url('../images/breadcrumb-bg.png');
+  background-image: url('@/assets/images/breadcrumb-bg.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: auto;

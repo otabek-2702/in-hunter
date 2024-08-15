@@ -2,8 +2,12 @@
 import { onMounted } from 'vue';
 import Footer from './components/footer/Footer.vue';
 import Navbar from './components/navbar/Navbar.vue';
+import { useRoute } from 'vue-router';
+
+const reRenderCount = ref()
 
 onMounted(() => {
+  
   $('html').attr('data-wf-page', '6666fcda3ffd3947b1b20825');
   $('html').attr('data-wf-site', '6666fcd93ffd3947b1b2078b');
   window.Webflow && window.Webflow.destroy();
@@ -15,7 +19,7 @@ onMounted(() => {
 
 <template>
   <Navbar />
-  <router-view></router-view>
+  <router-view :key=""></router-view>
   <Footer />
 </template>
 
