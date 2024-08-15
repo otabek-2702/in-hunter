@@ -1,8 +1,7 @@
 <script setup>
-import { switchLanguage } from "@/helpers/switchLanguage";
-import { computed, watch } from "vue";
-import { useI18n } from "vue-i18n";
-import { useRouter } from "vue-router";
+import { computed, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
+import { useRouter } from 'vue-router';
 
 const { t, availableLocales: availableLocalesOld, locale } = useI18n();
 const router = useRouter();
@@ -10,7 +9,7 @@ const router = useRouter();
 const availableLocales = computed(() =>
   availableLocalesOld
     .filter((l) => l !== locale.value)
-    .map((l) => ({ title: t(`locale.${l}`), path: l }))
+    .map((l) => ({ title: t(`locale.${l}`), path: l })),
 );
 </script>
 
@@ -19,17 +18,8 @@ const availableLocales = computed(() =>
     <div class="container header-large-container w-container">
       <div class="header-wrap">
         <div class="header-logo">
-          <a
-            href="/"
-            aria-current="page"
-            class="header-logo-link w-inline-block"
-            
-          >
-            <img
-              src="@/assets/images/logo.png"
-              loading="lazy"
-              alt="Logo"
-              class="header-logo-image"
+          <a href="/" aria-current="page" class="header-logo-link w-inline-block">
+            <img src="@/assets/images/logo.png" loading="lazy" alt="Logo" class="header-logo-image"
           /></a>
         </div>
         <div class="header-menu">
@@ -47,21 +37,14 @@ const availableLocales = computed(() =>
                 :to="{ name: 'home' }"
                 aria-current="page"
                 class="nav-main-menu-link w-nav-link"
-                :class="{'w--current': router.currentRoute.name === 'home'}"
-                >{{ t("nav.home") }}</router-link
+                >{{ t('nav.home') }}</router-link
               >
-              <router-link
-                :to="{ name: 'about' }"
-                class="nav-main-menu-link w-nav-link"
-                >{{ t("nav.about") }}</router-link
-              >
-              <div
-                data-hover="false"
-                data-delay="0"
-                class="nav-main-menu-dropdown w-dropdown"
-              >
+              <router-link :to="{ name: 'about-us' }" class="nav-main-menu-link w-nav-link">{{
+                t('nav.about-us')
+              }}</router-link>
+              <div data-hover="false" data-delay="0" class="nav-main-menu-dropdown w-dropdown">
                 <div class="dropdown-toggle-main-menu w-dropdown-toggle">
-                  <div class="text-main-menu">{{ t("nav.pages") }}</div>
+                  <div class="text-main-menu">{{ t('nav.pages') }}</div>
                   <div class="icon-main-menu w-embed">
                     <svg
                       width="13"
@@ -81,30 +64,26 @@ const availableLocales = computed(() =>
                   <router-link
                     :to="{ name: 'services' }"
                     class="dropdown-link-main-menu w-dropdown-link"
-                    >{{ t("nav.services") }}
+                    >{{ t('nav.services') }}
                   </router-link>
                   <router-link
                     :to="{ name: 'projects' }"
                     class="dropdown-link-main-menu w-dropdown-link"
-                    >{{ t("nav.projects") }}</router-link
+                    >{{ t('nav.projects') }}</router-link
                   >
                   <router-link
                     :to="{ name: 'teams' }"
                     class="dropdown-link-main-menu w-dropdown-link"
-                    >{{ t("nav.teams") }}</router-link
+                    >{{ t('nav.teams') }}</router-link
                   >
                 </nav>
               </div>
-              <router-link
-                :to="{ name: 'blog' }"
-                class="nav-main-menu-link w-nav-link"
-                >{{ t("nav.blog") }}</router-link
-              >
-              <router-link
-                :to="{ name: 'contact' }"
-                class="nav-main-menu-link w-nav-link"
-                >{{ t("nav.contact") }}</router-link
-              >
+              <router-link :to="{ name: 'blog' }" class="nav-main-menu-link w-nav-link">{{
+                t('nav.blog')
+              }}</router-link>
+              <router-link :to="{ name: 'contact-us' }" class="nav-main-menu-link w-nav-link">{{
+                t('nav.contact-us')
+              }}</router-link>
             </nav>
             <div class="w-nav-button">
               <div class="w-icon-nav-menu"></div>
@@ -129,11 +108,7 @@ const availableLocales = computed(() =>
                 class="image"
               />
             </div>
-            <div
-              data-hover="false"
-              data-delay="0"
-              class="language-dropdown w-dropdown"
-            >
+            <div data-hover="false" data-delay="0" class="language-dropdown w-dropdown">
               <div
                 data-w-id="6e9367ba-cd7e-8d20-9cf3-328b2c0512d4"
                 class="language-dropdown-toggle w-dropdown-toggle"
@@ -141,10 +116,7 @@ const availableLocales = computed(() =>
                 <div style="color: rgb(51, 51, 51)" class="language-text-blog">
                   {{ t(`locale.${locale}`) }}
                 </div>
-                <div
-                  style="color: rgb(51, 51, 51)"
-                  class="language-icon w-embed"
-                >
+                <div style="color: rgb(51, 51, 51)" class="language-icon w-embed">
                   <svg
                     width="13"
                     height="13"
@@ -163,12 +135,7 @@ const availableLocales = computed(() =>
                 <router-link
                   v-for="lang in availableLocales"
                   :key="lang.path"
-                  :to="
-                    router.currentRoute.value.fullPath.replace(
-                      locale,
-                      lang.path
-                    )
-                  "
+                  :to="router.currentRoute.value.fullPath.replace(locale, lang.path)"
                   class="language-dropdown-link w-dropdown-link"
                   >{{ lang.title }}</router-link
                 >
@@ -211,11 +178,7 @@ const availableLocales = computed(() =>
                 type="search"
                 id="search"
                 required=""
-              /><input
-                type="submit"
-                class="search-button-main w-button"
-                value="Search"
-              />
+              /><input type="submit" class="search-button-main w-button" value="Search" />
             </form>
           </div>
           <div class="mobile-menu">
@@ -233,21 +196,15 @@ const availableLocales = computed(() =>
                   :to="{ name: 'home' }"
                   aria-current="page"
                   class="nav-link-mobile-menu w-nav-link"
-                  >{{ t("nav.home") }}</router-link
+                  >{{ t('nav.home') }}</router-link
                 >
-                <router-link
-                  :to="{ name: 'about' }"
-                  class="nav-link-mobile-menu w-nav-link"
-                  >{{ t("nav.about") }}</router-link
-                >
-                <div
-                  data-hover="false"
-                  data-delay="0"
-                  class="dropdown-mobile-menu w-dropdown"
-                >
+                <router-link :to="{ name: 'about-us' }" class="nav-link-mobile-menu w-nav-link">{{
+                  t('nav.about-us')
+                }}</router-link>
+                <div data-hover="false" data-delay="0" class="dropdown-mobile-menu w-dropdown">
                   <div class="dropdown-toggle-mobile-menu w-dropdown-toggle">
                     <div class="text-block-mobile-menu">
-                      {{ t("nav.pages") }}
+                      {{ t('nav.pages') }}
                     </div>
                     <div class="dropdown-icon-mobile-menu w-embed">
                       <svg
@@ -268,30 +225,26 @@ const availableLocales = computed(() =>
                     <router-link
                       :to="{ name: 'services' }"
                       class="dropdown-link-mobile-menu w-dropdown-link"
-                      >{{ t("nav.services") }}</router-link
+                      >{{ t('nav.services') }}</router-link
                     >
                     <router-link
                       :to="{ name: 'projects' }"
                       class="dropdown-link-mobile-menu w-dropdown-link"
-                      >{{ t("nav.projects") }}</router-link
+                      >{{ t('nav.projects') }}</router-link
                     >
                     <router-link
                       :to="{ name: 'teams' }"
                       class="dropdown-link-mobile-menu w-dropdown-link"
-                      >{{ t("nav.teams") }}</router-link
+                      >{{ t('nav.teams') }}</router-link
                     >
                   </nav>
                 </div>
-                <router-link
-                  :to="{ name: 'blog' }"
-                  class="nav-link-mobile-menu w-nav-link"
-                  >{{ t("nav.blog") }}</router-link
-                >
-                <router-link
-                  :to="{ name: 'contact' }"
-                  class="nav-link-mobile-menu w-nav-link"
-                  >{{ t("nav.contact") }}</router-link
-                >
+                <router-link :to="{ name: 'blog' }" class="nav-link-mobile-menu w-nav-link">{{
+                  t('nav.blog')
+                }}</router-link>
+                <router-link :to="{ name: 'contact-us' }" class="nav-link-mobile-menu w-nav-link">{{
+                  t('nav.contact-us')
+                }}</router-link>
               </nav>
               <div class="menu-button-mobile w-nav-button">
                 <div class="icon-mobile-menu w-embed">

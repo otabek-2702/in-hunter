@@ -1,138 +1,47 @@
 <script setup>
-import AboutArea from "@/components/about-area/AboutArea.vue";
-import { useI18n } from "vue-i18n";
-import { onMounted } from "vue";
-import CallToActionArea from "@/components/call-to-action-area/CallToActionArea.vue";
+import AboutArea from '@/components/about-area/AboutArea.vue';
+import { useI18n } from 'vue-i18n';
+import { onMounted } from 'vue';
+import CallToActionArea from '@/components/call-to-action-area/CallToActionArea.vue';
+import Breadcrumbs from '@/components/breadcrumbs/Breadcrumbs.vue';
 
 onMounted(() => {
-  $("html").attr("data-wf-page", "6666fcda3ffd3947b1b20825");
-  $("html").attr("data-wf-site", "6666fcd93ffd3947b1b2078b");
+  $('html').attr('data-wf-page', '6666fcda3ffd3947b1b20825');
+  $('html').attr('data-wf-site', '6666fcd93ffd3947b1b2078b');
   window.Webflow && window.Webflow.destroy();
   window.Webflow && window.Webflow.ready();
-  window.Webflow && window.Webflow.require("ix2").init();
-  document.dispatchEvent(new Event("readystatechange"));
+  window.Webflow && window.Webflow.require('ix2').init();
+  document.dispatchEvent(new Event('readystatechange'));
 });
 
 const { t } = useI18n();
 
-const funfacts = [
-  {
-    number: "340+",
-    translationKey: "about.activeClients",
-    separatorClass: "funfact-separator",
-    dataWid: "36a0746b-a5e3-fa39-c009-ec36dfe3cc05",
-  },
-  {
-    number: "256+",
-    translationKey: "about.fiveStarReviews",
-    separatorClass: "funfact-separator funfact-separetor-two",
-    dataWid: "36a0746b-a5e3-fa39-c009-ec36dfe3cc0b",
-  },
-  {
-    number: "390+",
-    translationKey: "about.teamMember",
-    separatorClass: "funfact-separator funfact-separetor-three",
-    dataWid: "36a0746b-a5e3-fa39-c009-ec36dfe3cc11",
-  },
-  {
-    number: "259+",
-    translationKey: "about.projectDone",
-    separatorClass: "",
-    dataWid: "36a0746b-a5e3-fa39-c009-ec36dfe3cc17",
-  },
-];
 </script>
 
 <template>
-  <div class="breadcrumb">
-    <div class="container w-container">
-      <div class="breadcrumb-wrap">
-        <h1 class="breadcrumb-heading">About Us</h1>
-        <div class="breadcrumb-meta-wrap">
-          <router-link
-            :to="{ name: 'home' }"
-            class="back-link-breadcrumb w-inline-block"
-          >
-            <div class="breadcrumb-icon w-embed">
-              <svg
-                width="21"
-                height="17"
-                viewbox="0 0 21 17"
-                fill="currentColor"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.5007 3.51758L3.01119 9.69191C3.01119 9.70063 3.009 9.71345 3.00462 9.73092C3.00033 9.74826 2.99805 9.76085 2.99805 9.76979V16.022C2.99805 16.2477 3.08058 16.4433 3.2456 16.6081C3.41057 16.7729 3.60592 16.8558 3.83171 16.8558H8.83332V11.854H12.1682V16.856H17.1698C17.3955 16.856 17.5911 16.7733 17.7559 16.6081C17.9209 16.4435 18.0037 16.2477 18.0037 16.022V9.76979C18.0037 9.73512 17.9989 9.70893 17.9906 9.69191L10.5007 3.51758Z"
-                  fill="currentColor"
-                ></path>
-                <path
-                  d="M20.8551 8.28464L18.0027 5.91399V0.599553C18.0027 0.47806 17.9637 0.378146 17.8853 0.299949C17.8075 0.221843 17.7076 0.18279 17.5859 0.18279H15.085C14.9634 0.18279 14.8635 0.221843 14.7853 0.299949C14.7072 0.378146 14.6682 0.478105 14.6682 0.599553V3.1395L11.49 0.482211C11.2125 0.256425 10.8824 0.143555 10.5003 0.143555C10.1182 0.143555 9.78822 0.256425 9.51038 0.482211L0.14474 8.28464C0.0579205 8.35398 0.0103361 8.44733 0.00148536 8.56458C-0.00731981 8.68174 0.0230192 8.78407 0.0925937 8.87084L0.90016 9.83476C0.969734 9.91286 1.0608 9.96063 1.17371 9.9781C1.27796 9.98686 1.38221 9.95638 1.48646 9.88695L10.5 2.37099L19.5137 9.8869C19.5833 9.94749 19.6743 9.97774 19.7872 9.97774H19.8264C19.9391 9.96058 20.03 9.9125 20.0999 9.83457L20.9076 8.8708C20.977 8.78384 21.0075 8.68169 20.9984 8.56439C20.9895 8.44746 20.9418 8.35412 20.8551 8.28464Z"
-                  fill="currentColor"
-                ></path>
-              </svg>
-            </div>
-            <div class="back-text-breadcrumb">Home</div>
-          </router-link>
-          <div class="breadcrumb-line-shape">
-            <div class="breadcrumb-right-icon w-embed">
-              <svg
-                width="6"
-                height="11"
-                viewbox="0 0 6 11"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 9.92709L4.67453 6.25255C5.10849 5.8186 5.10849 5.10849 4.67453 4.67453L1 1"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </div>
-          </div>
-          <div class="current-page-title">About Us</div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <Breadcrumbs />
   <AboutArea />
   <div class="funfact-area-two">
     <div class="container w-container">
       <div class="funfact-wrap">
-        <div
-          data-w-id="df2e64fd-3747-dd74-8919-43fd6842d30e"
-          class="single-funfact"
-        >
-          <div class="funfact-number">340+</div>
-          <div class="funfact-title">{{ t("about.activeClients") }}</div>
-          <div class="funfact-separator"></div>
+        <div data-w-id="df2e64fd-3747-dd74-8919-43fd6842d30e"  class="single-funfact">
+          <div class="funfact-number">{{ t('about-us.funfactAreaTwo.facts.clients.number') }}</div>
+          <div class="funfact-title" style="max-width: 160px">{{ t('about-us.funfactAreaTwo.facts.clients.title') }}</div>
+          <div class="funfact-separator" style="height: 100%"></div>
         </div>
-        <div
-          data-w-id="f4cce356-3767-67a7-3b4a-4ca06335efe6"
-          class="single-funfact"
-        >
-          <div class="funfact-number">256+</div>
-          <div class="funfact-title">{{ t("about.fiveStarReviews") }}</div>
-          <div class="funfact-separator funfact-separetor-two"></div>
+        <div data-w-id="f4cce356-3767-67a7-3b4a-4ca06335efe6"  class="single-funfact">
+          <div class="funfact-number">{{ t('about-us.funfactAreaTwo.facts.reviews.number') }}</div>
+          <div class="funfact-title" style="max-width: 160px">{{ t('about-us.funfactAreaTwo.facts.reviews.title') }}</div>
+          <div class="funfact-separator funfact-separetor-two" style="height: 100%"> </div>
         </div>
-        <div
-          data-w-id="e815f046-73ee-0a65-4b88-427bb11fce12"
-          class="single-funfact"
-        >
-          <div class="funfact-number">390+</div>
-          <div class="funfact-title">{{ t("about.teamMember") }}</div>
-          <div class="funfact-separator funfact-separetor-three"></div>
+        <div data-w-id="e815f046-73ee-0a65-4b88-427bb11fce12"  class="single-funfact">
+          <div class="funfact-number">{{ t('about-us.funfactAreaTwo.facts.teamMembers.number') }}</div>
+          <div class="funfact-title" style="max-width: 160px">{{ t('about-us.funfactAreaTwo.facts.teamMembers.title') }}</div>
+          <div class="funfact-separator funfact-separetor-three" style="height: 100%"></div>
         </div>
-        <div
-          data-w-id="08b00170-bee8-5392-e0c6-fef6bcf35e37"
-          class="single-funfact"
-        >
-          <div class="funfact-number">259+</div>
-          <div class="funfact-title">{{ t("about.projectDone") }}</div>
-          <div class="funfact-separator"></div>
+        <div data-w-id="08b00170-bee8-5392-e0c6-fef6bcf35e37"  class="single-funfact">
+          <div class="funfact-number">{{ t('about-us.funfactAreaTwo.facts.projectsDone.number') }}</div>
+          <div class="funfact-title" style="max-width: 160px">{{ t('about-us.funfactAreaTwo.facts.projectsDone.title') }}</div>
         </div>
       </div>
     </div>
@@ -141,23 +50,18 @@ const funfacts = [
     <div class="container w-container">
       <div class="team-wrap">
         <div class="team-left">
-          <div
-            class="section-title-wrap section-title-wrap-left st-margin-bottom-none"
-          >
-            <div class="section-sub-title">{{ t("about.team.ourTeam") }}</div>
-            <h2 class="section-title">{{ t("about.team.ourHeroes") }}</h2>
-            <p class="team-excerpt">{{ t("about.team.teamExcerpt") }}</p>
-            <a href="teams.html" class="button-primary w-button">{{
-              t("about.team.allTeamMembers")
-            }}</a>
+          <div class="section-title-wrap section-title-wrap-left st-margin-bottom-none">
+            <div class="section-sub-title">{{ t('about-us.team.ourTeam') }}</div>
+            <h2 class="section-title">{{ t('about-us.team.ourHeroes') }}</h2>
+            <p class="team-excerpt">{{ t('about-us.team.teamExcerpt') }}</p>
+            <router-link :to="{name: 'teams'}" class="button-primary w-button">{{
+              t('about-us.team.allTeamMembers')
+            }}</router-link>
           </div>
         </div>
         <div class="team-right">
           <div class="team-info-wrap">
-            <div
-              data-w-id="e3462b4c-c08d-c838-ccad-cada924c6c5b"
-              class="single-team"
-            >
+            <div data-w-id="e3462b4c-c08d-c838-ccad-cada924c6c5b" class="single-team">
               <img
                 src="@/assets/images/team-1.png"
                 loading="lazy"
@@ -165,9 +69,9 @@ const funfacts = [
                 class="team-image"
               />
               <div class="team-info">
-                <div class="team-name">{{ t("about.team.amelieLemmens") }}</div>
+                <div class="team-name">{{ t('about-us.team.amelieLemmens') }}</div>
                 <div class="team-designation">
-                  {{ t("about.team.itExpert") }}
+                  {{ t('about-us.team.itExpert') }}
                 </div>
                 <div class="team-social-wrap">
                   <a
@@ -261,10 +165,7 @@ const funfacts = [
                 </div>
               </div>
             </div>
-            <div
-              data-w-id="3222e0b4-9177-2b14-1c9e-276a52825bee"
-              class="single-team"
-            >
+            <div data-w-id="3222e0b4-9177-2b14-1c9e-276a52825bee" class="single-team">
               <img
                 src="@/assets/images/team-2.png"
                 loading="lazy"
@@ -273,10 +174,10 @@ const funfacts = [
               />
               <div class="team-info">
                 <div class="team-name">
-                  <strong>{{ t("about.team.pamelaKFree") }}</strong>
+                  <strong>{{ t('about-us.team.pamelaKFree') }}</strong>
                 </div>
                 <div class="team-designation">
-                  <strong>{{ t("about.team.developer") }}</strong>
+                  <strong>{{ t('about-us.team.developer') }}</strong>
                 </div>
                 <div class="team-social-wrap">
                   <a
@@ -370,10 +271,7 @@ const funfacts = [
                 </div>
               </div>
             </div>
-            <div
-              data-w-id="37219033-0f0b-8af9-dc88-db151aa3fd86"
-              class="single-team"
-            >
+            <div data-w-id="37219033-0f0b-8af9-dc88-db151aa3fd86" class="single-team">
               <img
                 src="@/assets/images/team-3.png"
                 loading="lazy"
@@ -382,10 +280,10 @@ const funfacts = [
               />
               <div class="team-info">
                 <div class="team-name">
-                  <strong>{{ t("about.team.jamesMcGehee") }}</strong>
+                  <strong>{{ t('about-us.team.jamesMcGehee') }}</strong>
                 </div>
                 <div class="team-designation">
-                  <strong>{{ t("about.team.manager") }}</strong>
+                  <strong>{{ t('about-us.team.manager') }}</strong>
                 </div>
                 <div class="team-social-wrap">
                   <a
@@ -479,10 +377,7 @@ const funfacts = [
                 </div>
               </div>
             </div>
-            <div
-              data-w-id="fa069c52-c8fc-86b4-df66-665e90363bfe"
-              class="single-team"
-            >
+            <div data-w-id="fa069c52-c8fc-86b4-df66-665e90363bfe" class="single-team">
               <img
                 src="@/assets/images/team-4.png"
                 loading="lazy"
@@ -491,10 +386,10 @@ const funfacts = [
               />
               <div class="team-info">
                 <div class="team-name">
-                  <strong>{{ t("about.team.juliaHarkins") }}</strong>
+                  <strong>{{ t('about-us.team.juliaHarkins') }}</strong>
                 </div>
                 <div class="team-designation">
-                  <strong>{{ t("about.team.designer") }}</strong>
+                  <strong>{{ t('about-us.team.designer') }}</strong>
                 </div>
                 <div class="team-social-wrap">
                   <a

@@ -5,13 +5,13 @@
   },
   "nav": {
     "home": "Bosh sahifa",
-    "about": "Biz haqimizda",
+    "about-us": "Biz haqimizda",
     "pages": "Sahifalar",
     "services": "Xizmatlar",
     "projects": "Loyihalar",
     "teams": "Jamoalar",
     "blog": "Blog",
-    "contact": "Biz bilan bog'lanish"
+    "contact-us": "Biz bilan bog'lanish"
   },
   "footer": {
     "address": "4965 Graystone Lakes, Milledgeville banahay703mail.com",
@@ -42,19 +42,44 @@
     "excerpt": "Qidirayotgan sahifangiz mavjud emas yoki ko'chirilgan",
     "backToHome": "Bosh sahifaga qaytish"
   },
-  "about": {
-    "card_experience": "yil HR sohasidagi tajriba",
-    "card_excerpt": "Ko'p muvaffaqiyat hikoyalarimiz mavjud",
-    "section_sub_title": "Acuvic eng yaxshi echim",
-    "heading_1": "Digitalga xush kelibsiz",
-    "heading_span": "HR Konsalting",
-    "heading_2": "va Agentlik. Sayohatni baham ko'ring.",
-    "excerpt": "Lorem Ipsum'ning ko'plab variantlari mavjud, ammo ularning aksariyati qo'shilgan hazil yoki tasodifiy so'zlar bilan o'zgartirilgan, ular hech bo'lmaganda biroz ishonarli ko'rinmaydi. Agar siz Lorem Ipsum bo'lagidan foydalanmoqchi bo'lsangiz, siz ishonchli bo'lishingiz kerak",
-    "explore_more": "Ko'proq ma'lumot",
-    "activeClients": "Faol mijozlar",
-    "fiveStarReviews": "5 yulduzli sharhlar",
-    "teamMember": "Jamoa a'zosi",
-    "projectDone": "Bajarilgan loyihalar",
+  "about-us": {
+    "solution": "Acuvic Eng Yaxshi Yechim",
+    "welcome": "Raqamli HR Konsalting va Agentligiga Xush Kelibsiz. Sayohatni Baham Ko‘ring.",
+    "experience": "35",
+    "experienceYears": "Yillik Tajriba\nHR sohasida",
+    "successStories": "Bizda Ko'plab Muvaffaqiyat Hikoyalari Bor",
+    "getAppointment": "Uchrashuvga Qaytish",
+    "subTitle": "Hammasi Acuvicda",
+    "heading": "Yangi loyiha bormi?",
+    "headingSpan": "Acuvic orqali men bilan bog'laning.",
+    "excerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
+    "appointment": "Meni yollang",
+    "funfact-area-two": {
+      "sectionSubTitle": "Bizning Yutuqlarimiz",
+      "sectionTitle": {
+        "line1": "100% Muvaffaqiyat &",
+        "line2": "Mijozlar tomonidan",
+        "line3": "Eng yuqori baholangan"
+      },
+      "facts": {
+        "clients": {
+          "number": "340+",
+          "title": "Faol mijozlar"
+        },
+        "reviews": {
+          "number": "256+",
+          "title": "5 Yulduzli Sharhlar"
+        },
+        "teamMembers": {
+          "number": "390+",
+          "title": "Jamoa A'zolari"
+        },
+        "projectsDone": {
+          "number": "259+",
+          "title": "Loyihalar bajarilgan"
+        }
+      }
+    },
     "team": {
       "ourTeam": "JAMOAMIZ",
       "ourHeroes": "Intellekt Jamoasining Qahramonlari",
@@ -152,5 +177,34 @@
     "callToActionExcerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
     "hireMe": "Meni yollang",
     "learnMore": "Batafsil ma'lumot"
+  },
+  "contact-us": {
+    "contactInfoArea": {
+      "serviceSubtitle": "24/7 Xizmat",
+      "callToActionTitle": "Bugun Biz bilan Bog'laning",
+      "phoneNumber1": "+00 123 456 789",
+      "phoneNumber2": "+00 123 456 789",
+      "dropALineSubtitle": "Pochta Yuboring",
+      "mailInformationTitle": "Mail Ma'lumotlari",
+      "email1": "yourmail",
+      "email2": "yourmail",
+      "addressSubtitle": "Manzil",
+      "locationTitle": "Bizning Joylashuvimiz",
+      "addressLine1": "Sizning manzilingiz bu yerga yoziladi",
+      "addressLine2": "123/bg- New York"
+    },
+    "contactMapFormArea": {
+      "requestSubtitle": "Maxsus So'rov Yuboring",
+      "projectTitle": "Loyihangiz Haqida Ayting",
+      "firstNamePlaceholder": "Ismingiz",
+      "lastNamePlaceholder": "Familiyangiz",
+      "emailPlaceholder": "Email",
+      "subjectPlaceholder": "Mavzu",
+      "messagePlaceholder": "Xabar",
+      "waitMessage": "Iltimos kuting...",
+      "sendMessage": "Xabar Yuboring",
+      "successMessage": "Rahmat! Sizning so'rovingiz qabul qilindi!",
+      "errorMessage": "Afsus! Formani yuborishda xatolik yuz berdi."
+    }
   }
 }

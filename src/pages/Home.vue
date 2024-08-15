@@ -76,7 +76,7 @@ const testimonials = [
           </p>
           <div data-w-id="a0e29bfc-4880-812e-b21a-9580756b6973" class="hero-button-video-wrap">
             <div class="hero-button">
-              <router-link :to="{ name: 'about' }" class="button-primary w-button">
+              <router-link :to="{ name: 'about-us' }" class="button-primary w-button">
                 {{ t('hero.buttonText') }}
               </router-link>
             </div>

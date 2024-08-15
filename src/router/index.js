@@ -15,13 +15,12 @@ const router = createRouter({
           path: "",
           name: 'home',
           component: Home,
-          meta: { breadcrumbs: false }
         },
 
         {
-          path: 'about',
-          name: 'about',
-          component: () => import('../pages/About.vue')
+          path: 'about-us',
+          name: 'about-us',
+          component: () => import('../pages/AboutUs.vue')
         },
         {
           path: 'blog',
@@ -29,14 +28,14 @@ const router = createRouter({
           // component: () => import('../pages/Blog.vue') 
         },
         {
-          path: 'contact',
-          name: 'contact',
-          // component: () => import('../pages/Contact.vue') 
+          path: 'contact-us',
+          name: 'contact-us',
+          component: () => import('../pages/ContactUs.vue') 
         },
         {
           path: 'services',
           name: 'services',
-          component: () => import('../pages/Services.vue') 
+          component: () => import('../pages/Services.vue')
         },
         {
           path: 'projects',
@@ -58,12 +57,6 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  if (!Object.prototype.hasOwnProperty.call(to?.meta, "breadcrumbs")) {
-    to.meta.breadcrumbs = true;
-  }
-  next();
-});
 
 router.beforeEach(routeMiddleware)
 

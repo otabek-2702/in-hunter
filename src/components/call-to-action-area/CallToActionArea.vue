@@ -20,10 +20,10 @@
           </div>
           <p class="call-to-action-excerpt">{{ t('call-to-action-area.callToActionExcerpt') }}</p>
           <div class="call-to-action-button-wrap">
-            <a href="contact.html" class="button-primary call-to-action-button w-button">{{
+            <router-link :to="{name: 'contact-us'}" class="button-primary call-to-action-button w-button">{{
               t('call-to-action-area.hireMe')
-            }}</a>
-            <a href="about-us.html" class="botton-outline w-button">{{ t('call-to-action-area.learnMore') }}</a>
+            }}</router-link>
+            <router-link :to="{name: 'about-us'}" class="botton-outline w-button">{{ t('call-to-action-area.learnMore') }}</router-link>
           </div>
         </div>
       </div>

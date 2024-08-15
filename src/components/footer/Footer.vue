@@ -7,11 +7,7 @@
         <div class="footer-wrap">
           <div class="footer-widget footer-about">
             <div class="footer-logo">
-              <a
-                href="/"
-                aria-current="page"
-                class="footer-logo-link w-inline-block w--current"
-              >
+              <a href="/" aria-current="page" class="footer-logo-link w-inline-block w--current">
                 <img
                   src="@/assets/images/logo-white.png"
                   loading="lazy"
@@ -26,8 +22,8 @@
               <div class="contact-number">{{ t('footer.phoneNumber') }}</div>
             </div>
             <div class="footer-social-icon-wrap">
-              <router-link
-                to="https://twitter.com/"
+              <a
+                href="https://twitter.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -45,7 +41,7 @@
                     ></path>
                   </svg>
                 </div>
-              </router-link>
+              </a>
               <router-link
                 to="https://www.facebook.com/"
                 target="_blank"
@@ -148,19 +144,19 @@
           <div class="footer-widget footer-widget-margin">
             <h4 class="footer-title">{{ t('footer.ourServices') }}</h4>
             <div class="footer-list-wrap">
-              <router-link :to="{name: 'services'}" class="footer-list">{{
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
                 t('footer.services.deiConsulting')
               }}</router-link>
-              <router-link :to="{name: 'services'}" class="footer-list">{{
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
                 t('footer.services.hrTechnology')
               }}</router-link>
-              <router-link :to="{name: 'services'}" class="footer-list">{{
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
                 t('footer.services.hrCompliance')
               }}</router-link>
-              <router-link :to="{name: 'services'}" class="footer-list">{{
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
                 t('footer.services.talentAcquisition')
               }}</router-link>
-              <router-link :to="{name: 'services'}" class="footer-list">{{
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
                 t('footer.services.compBenefits')
               }}</router-link>
             </div>
@@ -169,15 +165,12 @@
           <div class="footer-widget footer-widget-margin-two">
             <h4 class="footer-title">{{ t('footer.quickLinks.label') }}</h4>
             <div class="footer-list-wrap">
-              <router-link :to="{name: 'about'}" class="footer-list">{{ t('nav.about') }}</router-link>
-              <router-link :to="{name: 'contact'}" class="footer-list">{{ t('nav.contact') }}</router-link>
-              <!-- <router-link :to="style-guide.html" class="footer-list">{{
-                t('footer.quickLinks.styleGuide')
+              <router-link :to="{ name: 'about-us' }" class="footer-list">{{
+                t('nav.about-us')
               }}</router-link>
-              <router-link :to="license.html" class="footer-list">{{ t('footer.quickLinks.license') }}</router-link>
-              <router-link :to="changelog.html" class="footer-list">{{
-                t('footer.quickLinks.changelog')
-              }}</router-link> -->
+              <router-link :to="{ name: 'contact-us' }" class="footer-list">{{
+                t('nav.contact-us')
+              }}</router-link>
             </div>
           </div>
 
