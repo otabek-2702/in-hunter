@@ -5,13 +5,13 @@
   },
   "nav": {
     "home": "Главная",
-    "about": "О нас",
+    "about-us": "О нас",
     "pages": "Страницы",
     "services": "Услуги",
     "projects": "Проекты",
     "teams": "Команды",
     "blog": "Блог",
-    "contact": "Контакты"
+    "contact-us": "Контакты"
   },
   "footer": {
     "address": "4965 Graystone Lakes, Milledgeville banahaygan703",
