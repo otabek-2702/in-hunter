@@ -178,6 +178,49 @@
     "hireMe": "Meni yollang",
     "learnMore": "Batafsil ma'lumot"
   },
+  "services-page-area": {
+    "noItemsFound": "Hech narsa topilmadi."
+  },
+  "projects-categories-area": {
+    "noItemsFound": "Hech narsa topilmadi."
+  },
+  "teams": {
+    "amelie": {
+      "name": "Ameli Lemmens",
+      "designation": "IT Mutaxassisi"
+    },
+    "vincent": {
+      "name": "Vinson Rais",
+      "designation": "Dasturchi"
+    },
+    "effie": {
+      "name": "Effi Gamez",
+      "designation": "Dizayner"
+    },
+    "donna": {
+      "name": "Donna Polk",
+      "designation": "Menedjer"
+    },
+    "julia": {
+      "name": "Julia Harkins",
+      "designation": "IT Mutaxassisi"
+    },
+    "james": {
+      "name": "Jeyms McGixi",
+      "designation": "Menedjer"
+    },
+    "pamela": {
+      "name": "Pamela K. Free",
+      "designation": "Dasturchi"
+    },
+    "terry": {
+      "name": "Terry D. Kortiz",
+      "designation": "Dizayner"
+    }
+  },
+  "blog": {
+    "noItemsFound": "Hech qanday mahsulot topilmadi."
+  },
   "contact-us": {
     "contactInfoArea": {
       "serviceSubtitle": "24/7 Xizmat",

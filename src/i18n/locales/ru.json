@@ -178,7 +178,50 @@
     "hireMe": "Нанять меня",
     "learnMore": "Узнать больше"
   },
-  "contact-us":{
+  "services-page-area": {
+    "noItemsFound": "Элементы не найдены."
+  },
+  "projects-categories-area": {
+    "noItemsFound": "Элементы не найдены."
+  },
+  "teams": {
+    "amelie": {
+      "name": "Амели Лемменс",
+      "designation": "ИТ-эксперт"
+    },
+    "vincent": {
+      "name": "Винсент Райс",
+      "designation": "Разработчик"
+    },
+    "effie": {
+      "name": "Эффи Гамес",
+      "designation": "Дизайнер"
+    },
+    "donna": {
+      "name": "Донна Полк",
+      "designation": "Менеджер"
+    },
+    "julia": {
+      "name": "Джулия Харкинс",
+      "designation": "ИТ-эксперт"
+    },
+    "james": {
+      "name": "Джеймс МаГи",
+      "designation": "Менеджер"
+    },
+    "pamela": {
+      "name": "Памела К. Фри",
+      "designation": "Разработчик"
+    },
+    "terry": {
+      "name": "Терри Д. Кортез",
+      "designation": "Дизайнер"
+    }
+  },
+  "blog": {
+    "noItemsFound": "Элементы не найдены."
+  },
+  "contact-us": {
     "contactInfoArea": {
       "serviceSubtitle": "Служба поддержки 24/7",
       "callToActionTitle": "Позвоните нам сегодня",

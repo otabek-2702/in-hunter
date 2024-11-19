@@ -2,13 +2,12 @@
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
-    const route = useRoute()
-const {t} = useI18n()
-    console.log(route)
+const route = useRoute();
+const { t } = useI18n();
 </script>
 
 <template>
-    <div class="breadcrumb">
+  <div class="breadcrumb">
     <div class="container w-container">
       <div class="breadcrumb-wrap">
         <h1 class="breadcrumb-heading">{{ t('nav.' + route.name) }}</h1>
@@ -32,7 +31,7 @@ const {t} = useI18n()
                 ></path>
               </svg>
             </div>
-            <div class="back-text-breadcrumb">{{t('nav.home')}}</div>
+            <div class="back-text-breadcrumb">{{ t('nav.home') }}</div>
           </router-link>
           <div class="breadcrumb-line-shape">
             <div class="breadcrumb-right-icon w-embed">
@@ -54,13 +53,11 @@ const {t} = useI18n()
               </svg>
             </div>
           </div>
-          <div class="current-page-title">{{ t('nav.'+ route.name) }}</div>
+          <div class="current-page-title">{{ t('nav.' + route.name) }}</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

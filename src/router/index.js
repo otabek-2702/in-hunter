@@ -23,16 +23,6 @@ const router = createRouter({
           component: () => import('../pages/AboutUs.vue')
         },
         {
-          path: 'blog',
-          name: 'blog',
-          // component: () => import('../pages/Blog.vue') 
-        },
-        {
-          path: 'contact-us',
-          name: 'contact-us',
-          component: () => import('../pages/ContactUs.vue') 
-        },
-        {
           path: 'services',
           name: 'services',
           component: () => import('../pages/Services.vue')
@@ -40,12 +30,22 @@ const router = createRouter({
         {
           path: 'projects',
           name: 'projects',
-          // component: () => import('../pages/Projects.vue') 
+          component: () => import('../pages/Projects.vue') 
         },
         {
           path: 'teams',
           name: 'teams',
-          // component: () => import('../pages/Teams.vue') 
+          component: () => import('../pages/Teams.vue') 
+        },
+        {
+          path: 'blog',
+          name: 'blog',
+          component: () => import('../pages/Blog.vue') 
+        },
+        {
+          path: 'contact-us',
+          name: 'contact-us',
+          component: () => import('../pages/ContactUs.vue') 
         },
       ]
     },

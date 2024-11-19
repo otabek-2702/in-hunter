@@ -2,26 +2,13 @@
 import Breadcrumbs from '@/components/breadcrumbs/Breadcrumbs.vue';
 import {  Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { useI18n } from 'vue-i18n';
 import { ref } from 'vue';
-import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
-const router = useRouter();
 
-const services = ref([
-  {
-    id: '21b89470-7d48-8a9a-7a5f-beb24a1e7652',
-    image: '', // Add image URL here
-    title: t('servicePage.service1.title'),
-    excerpt: t('servicePage.service1.excerpt'),
-    link: '/service1',
-  },
-  // Add more services as needed
-]);
+const services = ref([0,1,2])
 
-const previousPage = ref('#'); // Replace with actual previous page link
-const nextPage = ref('#'); // Replace with actual next page link
 </script>
 
 <template>
@@ -29,7 +16,7 @@ const nextPage = ref('#'); // Replace with actual next page link
 
   <div class="service-page-area">
     <div class="container w-container">
-      <div v-if="services.length" class="collection-list-wrapper-service w-dyn-list">
+      <div data-w-id="0722e09f-603d-f804-ef06-36c8099d47a9" v-if="services.length" class="collection-list-wrapper-service w-dyn-list">
         <swiper
           :navigation="true"
           :spaceBetween="30"
