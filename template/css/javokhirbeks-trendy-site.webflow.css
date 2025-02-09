@@ -102,7 +102,7 @@ a {
 }
 
 a:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 ul {
@@ -125,7 +125,7 @@ li {
 blockquote {
   color: #fff;
   letter-spacing: .02em;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-left: 0 #e2e2e2;
   border-radius: 5px;
   margin-top: 37px;
@@ -178,7 +178,7 @@ blockquote {
   letter-spacing: .04em;
   white-space: nowrap;
   cursor: pointer;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-radius: 5px;
   padding: 14px 43px;
   font-size: 14px;
@@ -199,7 +199,7 @@ blockquote {
 }
 
 .button-primary.button-secondary:hover {
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
 }
 
 .button-primary.button-secondary.service-button {
@@ -244,8 +244,8 @@ blockquote {
 }
 
 .botton-outline:hover {
-  color: #0bbc5c;
-  border-color: #0bbc5c;
+  color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .header-wrap {
@@ -280,7 +280,7 @@ blockquote {
 }
 
 .nav-main-menu-link:hover, .nav-main-menu-link.w--current, .nav-main-menu-link.w--current:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .dropdown-toggle-main-menu {
@@ -305,7 +305,7 @@ blockquote {
 
 .dropdown-list-main-menu {
   border: 0 #000;
-  border-top: 2px solid #0bbc5c;
+  border-top: 2px solid var(--main-color);
   min-width: 190px;
   padding: 28px 25px;
 }
@@ -333,7 +333,7 @@ blockquote {
 }
 
 .dropdown-link-main-menu:hover, .dropdown-link-main-menu.w--current {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .language-wrap {
@@ -360,7 +360,7 @@ blockquote {
   z-index: 5;
   background-color: #fff;
   border: 0 #000;
-  border-top: 2px solid #0bbc5c;
+  border-top: 2px solid var(--main-color);
   min-width: 140px;
   margin-top: 8px;
   padding: 20px 25px;
@@ -378,7 +378,7 @@ blockquote {
 }
 
 .language-dropdown-link:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .language-icon {
@@ -401,7 +401,7 @@ blockquote {
 }
 
 .header-search-icon:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .mobile-menu {
@@ -489,14 +489,14 @@ blockquote {
 }
 
 .hero-video-popup-text {
-  color: #0bbc5c;
+  color: var(--main-color);
   letter-spacing: .04em;
   font-weight: 700;
 }
 
 .hero-video-icon {
-  color: #0bbc5c;
-  border: 1px solid #0bbc5c;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
   border-radius: 100%;
   justify-content: center;
   align-items: center;
@@ -569,7 +569,7 @@ blockquote {
 }
 
 .heading-span {
-  color: #0bbc5c;
+  color: var(--main-color);
   font-weight: 500;
 }
 
@@ -597,7 +597,7 @@ blockquote {
 }
 
 .about-img-card-wrap {
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-radius: 5px;
   padding: 10px 30px 30px;
   position: absolute;
@@ -680,7 +680,7 @@ blockquote {
 }
 
 .service-title:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .service-excerpt {
@@ -710,7 +710,7 @@ blockquote {
 }
 
 .video-popup-link {
-  background-color: #0bbc5ce6;
+  background-color: var(--main-color)e6;
   border-radius: 100%;
   justify-content: center;
   align-items: center;
@@ -787,7 +787,7 @@ blockquote {
 }
 
 .funfact-number {
-  color: #0bbc5c;
+  color: var(--main-color);
   margin-bottom: 18px;
   font-size: 48px;
   font-weight: 700;
@@ -948,7 +948,7 @@ blockquote {
 }
 
 .project-title:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .project-icon-link {
@@ -963,7 +963,7 @@ blockquote {
 
 .project-ellipse {
   z-index: 1;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-radius: 100%;
   width: 24px;
   height: 24px;
@@ -1208,7 +1208,7 @@ blockquote {
 
 .service-category-link:hover, .service-category-link.w--current {
   color: #fff;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
 }
 
 .service-details-image {
@@ -1270,7 +1270,7 @@ blockquote {
 }
 
 .field-style-quick-contact:focus {
-  border-color: #0bbc5c;
+  border-color: var(--main-color);
 }
 
 .field-style-quick-contact.text-area-quick-contact {
@@ -1285,7 +1285,7 @@ blockquote {
 .download-pdf-link {
   grid-column-gap: 13px;
   grid-row-gap: 13px;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   justify-content: center;
   align-items: center;
   padding: 17px 10px;
@@ -1299,7 +1299,7 @@ blockquote {
 }
 
 .download-pdf-icon {
-  color: #0bbc5c;
+  color: var(--main-color);
   width: 13px;
   height: 17px;
   line-height: 1em;
@@ -1456,8 +1456,8 @@ blockquote {
 
 .tag-name:hover {
   color: #fff;
-  background-color: #0bbc5c;
-  border-color: #0bbc5c;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .blog-details-search-wrap {
@@ -1500,12 +1500,12 @@ blockquote {
 }
 
 .search-input-blog:focus {
-  border-color: #0bbc5c;
+  border-color: var(--main-color);
 }
 
 .search-button-blog {
   z-index: 2;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   height: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -1571,7 +1571,7 @@ blockquote {
 }
 
 .blog-recent-post-title:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .blog-details-sidebar-title {
@@ -1584,7 +1584,7 @@ blockquote {
 }
 
 .blog-details-sidebar-title-shape {
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   width: 3px;
   height: 16px;
   position: absolute;
@@ -1603,7 +1603,7 @@ blockquote {
 }
 
 .file-size {
-  color: #0bbc5c;
+  color: var(--main-color);
   border-top: 1px solid #dcdcdc;
   padding-top: 8px;
   padding-bottom: 8px;
@@ -1682,7 +1682,7 @@ blockquote {
 
 .quick-blog-link:hover, .quick-blog-link.w--current {
   color: #fff;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
 }
 
 .quick-blog-text {
@@ -1827,7 +1827,7 @@ blockquote {
 }
 
 .blog-main-title:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .blog-page-area {
@@ -1845,7 +1845,7 @@ blockquote {
 
 .previous-common:hover {
   color: #fff;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
 }
 
 .next-common {
@@ -1856,8 +1856,8 @@ blockquote {
 
 .next-common:hover {
   color: #fff;
-  background-color: #0bbc5c;
-  border-color: #0bbc5c;
+  background-color: var(--main-color);
+  border-color: var(--main-color);
 }
 
 .text-common-next {
@@ -1935,7 +1935,7 @@ blockquote {
 
 .lightbox-link-project-video {
   color: #fff;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-radius: 50px;
   justify-content: center;
   align-items: center;
@@ -2020,7 +2020,7 @@ blockquote {
 
 .link-block-quick-project:hover, .link-block-quick-project.w--current {
   color: #fff;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
 }
 
 .icon-quick-project {
@@ -2042,7 +2042,7 @@ blockquote {
 }
 
 .project-category:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .project-categories-area {
@@ -2120,11 +2120,11 @@ blockquote {
 }
 
 .back-text-breadcrumb:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .current-page-title {
-  color: #0bbc5c;
+  color: var(--main-color);
   text-transform: uppercase;
   font-size: 17px;
   font-weight: 500;
@@ -2137,7 +2137,7 @@ blockquote {
 }
 
 .breadcrumb-right-icon {
-  color: #0bbc5c;
+  color: var(--main-color);
   width: 4px;
   line-height: 1em;
 }
@@ -2187,7 +2187,7 @@ blockquote {
 }
 
 .team-info {
-  background-image: linear-gradient(#4db1b8d4, #0bbc5cd6);
+  background-image: linear-gradient(#4db1b8d4, var(--main-color)d6);
   border-radius: 10px;
   flex-direction: column;
   justify-content: center;
@@ -2317,7 +2317,7 @@ blockquote {
 }
 
 .contact-number {
-  color: #0bbc5c;
+  color: var(--main-color);
   font-weight: 700;
 }
 
@@ -2336,7 +2336,7 @@ blockquote {
 }
 
 .footer-social-link-block:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .footer-list {
@@ -2349,7 +2349,7 @@ blockquote {
 }
 
 .footer-list:hover {
-  color: #0bbc5c;
+  color: var(--main-color);
 }
 
 .newsletter-field {
@@ -2365,7 +2365,7 @@ blockquote {
 }
 
 .copyright-link {
-  color: #0bbc5c;
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -2436,7 +2436,7 @@ blockquote {
 
 .contact-info-separator-primary {
   z-index: 2;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   width: 98px;
   height: 1px;
   position: absolute;
@@ -2527,11 +2527,11 @@ blockquote {
 }
 
 .search-result-input:focus {
-  border-color: #0bbc5c;
+  border-color: var(--main-color);
 }
 
 .search-result-link {
-  color: #0bbc5c;
+  color: var(--main-color);
   font-weight: 600;
   text-decoration: none;
 }
@@ -2625,7 +2625,7 @@ blockquote {
 
 .initial-released {
   color: #fff;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-radius: 5px;
   padding: 12px 20px;
   font-size: 18px;
@@ -2679,7 +2679,7 @@ blockquote {
 
 .license-single-item {
   background-color: #fff;
-  border: 1px solid #0bbc5c;
+  border: 1px solid var(--main-color);
   border-radius: 10px;
   padding: 40px;
   box-shadow: 0 6px 15px #0000001a;
@@ -2739,7 +2739,7 @@ blockquote {
 }
 
 .color-box.primary-box-color {
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
 }
 
 .color-box.secondary-box-color {
@@ -2830,7 +2830,7 @@ blockquote {
   letter-spacing: .04em;
   white-space: nowrap;
   cursor: pointer;
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   border-radius: 5px;
   padding: 14px 43px;
   font-size: 14px;
@@ -2874,7 +2874,7 @@ blockquote {
 }
 
 .search-button-main {
-  background-color: #0bbc5c;
+  background-color: var(--main-color);
   height: 100%;
   padding: 0 26px 0 25px;
   transition: background-color .3s;
@@ -3189,7 +3189,7 @@ blockquote {
   }
 
   .header-search-icon:hover {
-    color: #0bbc5c;
+    color: var(--main-color);
   }
 
   .mobile-menu {
@@ -3217,7 +3217,7 @@ blockquote {
   }
 
   .icon-mobile-menu:hover {
-    color: #0bbc5c;
+    color: var(--main-color);
   }
 
   .nav-mobile-menu {
@@ -3236,7 +3236,7 @@ blockquote {
   }
 
   .nav-link-mobile-menu:hover {
-    color: #0bbc5c;
+    color: var(--main-color);
   }
 
   .dropdown-mobile-menu {
@@ -3259,13 +3259,13 @@ blockquote {
   }
 
   .text-block-mobile-menu:hover {
-    color: #0bbc5c;
+    color: var(--main-color);
   }
 
   .dropdown-list-mobile-menu {
     background-color: #fff;
     border: 0 #000;
-    border-top: 2px solid #0bbc5c;
+    border-top: 2px solid var(--main-color);
     margin-top: 8px;
     padding: 20px;
     box-shadow: 0 4px 20px #0000001a;
@@ -3276,7 +3276,7 @@ blockquote {
   }
 
   .dropdown-link-mobile-menu.w--current {
-    color: #0bbc5c;
+    color: var(--main-color);
   }
 
   .dropdown-icon-mobile-menu {

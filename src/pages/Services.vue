@@ -2,10 +2,19 @@
 import Breadcrumbs from '@/components/breadcrumbs/Breadcrumbs.vue';
 import {  Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 const { t } = useI18n();
+
+onMounted(() => {
+  $('html').attr('data-wf-page', '6666fcda3ffd3947b1b20825');
+  $('html').attr('data-wf-site', '6666fcd93ffd3947b1b2078b');
+  window.Webflow && window.Webflow.destroy();
+  window.Webflow && window.Webflow.ready();
+  window.Webflow && window.Webflow.require('ix2').init();
+  document.dispatchEvent(new Event('readystatechange'));
+});
 
 const services = ref([0,1,2])
 

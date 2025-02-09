@@ -153,7 +153,7 @@
       }
     },
     "faq": {
-      "subtitle": "Nima uchun bizni tanlash kerak",
+      "subTitle": "Nima uchun bizni tanlash kerak",
       "title": "Nima uchun bizni tanlashingiz kerakligi haqida bir nechta sabablar",
       "items": [
         {
@@ -225,8 +225,6 @@
     "contactInfoArea": {
       "serviceSubtitle": "24/7 Xizmat",
       "callToActionTitle": "Bugun Biz bilan Bog'laning",
-      "phoneNumber1": "+00 123 456 789",
-      "phoneNumber2": "+00 123 456 789",
       "dropALineSubtitle": "Pochta Yuboring",
       "mailInformationTitle": "Mail Ma'lumotlari",
       "email1": "yourmail",
