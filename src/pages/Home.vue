@@ -147,7 +147,7 @@ onMounted(() => {
     </div>
     <div class="hero-shape-img-wrap-one">
       <img
-        src="@/assets/images/hero-shape-left-top-pri.png"
+        src="@/assets/images/hero-shape-left-top.png"
         loading="lazy"
         data-w-id="3bf99a05-b39b-7bb6-52e0-2cc421d5f2d2"
         alt="Hero Shape Image"
@@ -157,14 +157,14 @@ onMounted(() => {
     <div class="hero-shape-img-wrap-two">
       <img
         class="hero-shape-img-two"
-        src="@/assets/images/hero-shape-right-bottom-pri.png"
+        src="@/assets/images/hero-shape-right-bottom.png"
         alt="Hero Shape Image"
         sizes="(max-width: 479px) 100vw, (max-width: 767px) 237px, (max-width: 991px) 250px, (max-width: 1279px) 400px, (max-width: 1919px) 300px, 547px"
         data-w-id="5091ae66-2eac-72d4-5d23-8299602f0d84"
         loading="lazy"
         srcset="
           @/assets/images/hero-shape-right-bottom-p-500.png 500w,
-          @/assets/images/hero-shape-right-bottom-pri.png   547w
+          @/assets/images/hero-shape-right-bottom.png   547w
         "
       />
     </div>

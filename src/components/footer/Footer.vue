@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <footer class="footer-area">
     <div class="footer-top">
@@ -7,19 +5,23 @@
         <div class="footer-wrap">
           <div class="footer-widget footer-about">
             <div class="footer-logo">
-              <a href="/" aria-current="page" class="footer-logo-link w-inline-block w--current">
+              <a
+                href="/"
+                aria-current="page"
+                class="footer-logo-link w-inline-block w--current"
+              >
                 <img
-                  src="@/assets/images/logo-white.png"
+                  src="@/assets/images/logo.png"
                   loading="lazy"
                   alt="Footer Logo"
                   class="footer-logo-image"
                 />
               </a>
             </div>
-            <p class="footer-excerpt">{{ t('footer.address') }}</p>
+            <p class="footer-excerpt">{{ t("footer.address") }}</p>
             <div class="footer-contact">
-              <div class="footer-contact-title">{{ t('footer.callUs') }}</div>
-              <div class="contact-number">{{ t('footer.phoneNumber') }}</div>
+              <div class="footer-contact-title">{{ t("footer.callUs") }}</div>
+              <div class="contact-number">{{ t("footer.phoneNumber") }}</div>
             </div>
             <div class="footer-social-icon-wrap">
               <a
@@ -142,40 +144,40 @@
           </div>
 
           <div class="footer-widget footer-widget-margin">
-            <h4 class="footer-title">{{ t('footer.ourServices') }}</h4>
+            <h4 class="footer-title">{{ t("footer.ourServices") }}</h4>
             <div class="footer-list-wrap">
               <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t('footer.services.deiConsulting')
+                t("footer.services.deiConsulting")
               }}</router-link>
               <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t('footer.services.hrTechnology')
+                t("footer.services.hrTechnology")
               }}</router-link>
               <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t('footer.services.hrCompliance')
+                t("footer.services.hrCompliance")
               }}</router-link>
               <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t('footer.services.talentAcquisition')
+                t("footer.services.talentAcquisition")
               }}</router-link>
               <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t('footer.services.compBenefits')
+                t("footer.services.compBenefits")
               }}</router-link>
             </div>
           </div>
 
           <div class="footer-widget footer-widget-margin-two">
-            <h4 class="footer-title">{{ t('footer.quickLinks.label') }}</h4>
+            <h4 class="footer-title">{{ t("footer.quickLinks.label") }}</h4>
             <div class="footer-list-wrap">
               <router-link :to="{ name: 'about-us' }" class="footer-list">{{
-                t('nav.about-us')
+                t("nav.about-us")
               }}</router-link>
               <router-link :to="{ name: 'contact-us' }" class="footer-list">{{
-                t('nav.contact-us')
+                t("nav.contact-us")
               }}</router-link>
             </div>
           </div>
 
           <div class="footer-widget">
-            <h4 class="footer-title">{{ t('footer.subscribe') }}</h4>
+            <h4 class="footer-title">{{ t("footer.subscribe") }}</h4>
             <div class="newsletter-wrap">
               <div class="newsletter-form-block w-form">
                 <form
@@ -206,10 +208,10 @@
                   />
                 </form>
                 <div class="w-form-done">
-                  <div>{{ t('footer.thankYou') }}</div>
+                  <div>{{ t("footer.thankYou") }}</div>
                 </div>
                 <div class="w-form-fail">
-                  <div>{{ t('footer.somethingWentWrong') }}</div>
+                  <div>{{ t("footer.somethingWentWrong") }}</div>
                 </div>
               </div>
             </div>
@@ -220,11 +222,14 @@
     <div class="footer-bottom">
       <div class="container w-container">
         <div class="copyright-text">
-          © 2024
-          <a href="https://codestorm.com/" target="_blank" class="copyright-link">{{
-            t('footer.brandbes')
-          }}</a>
-          {{ t('footer.allRightsReserved') }}
+          © {{ currentYear }}
+          <a
+            href="https://codestorm.com/"
+            target="_blank"
+            class="copyright-link"
+            >{{ t("footer.brandbes") }}</a
+          >
+          {{ t("footer.allRightsReserved") }}
         </div>
       </div>
     </div>
@@ -232,9 +237,12 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n';
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 
 const { t } = useI18n();
+
+const currentYear = computed(() => new Date().getFullYear());
 </script>
 
 <style scoped></style>

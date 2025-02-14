@@ -15,7 +15,7 @@ const { t } = useI18n();
           <div class="contact-info-image-title-wrap">
             <div class="contact-info-image-wrap">
               <img
-                src="@/assets/images/contact-info-1_1contact-info-1-pri.png"
+                src="@/assets/images/contact-info-1_1contact-info-1.png"
                 loading="lazy"
                 alt="Contact Info Image"
                 class="contact-info-image"
@@ -46,7 +46,7 @@ const { t } = useI18n();
           <div class="contact-info-image-title-wrap">
             <div class="contact-info-image-wrap">
               <img
-                src="@/assets/images/contact-info-2_1contact-info-2-pri.png"
+                src="@/assets/images/contact-info-2_1contact-info-2.png"
                 loading="lazy"
                 alt="Contact Info Image"
                 class="contact-info-image"
@@ -77,7 +77,7 @@ const { t } = useI18n();
           <div class="contact-info-image-title-wrap">
             <div class="contact-info-image-wrap">
               <img
-                src="@/assets/images/contact-info-3_1contact-info-3-pri.png"
+                src="@/assets/images/contact-info-3_1contact-info-3.png"
                 loading="lazy"
                 alt="Contact Info Image"
                 class="contact-info-image"

@@ -5,12 +5,12 @@
         <div class="call-to-action-image-wrap">
           <img
             class="call-to-action-image"
-            src="@/assets/images/cta-img-pri.png"
+            src="@/assets/images/cta-img.png"
             alt="Call To Action Image"
             sizes="(max-width: 479px) 100vw, (max-width: 767px) 96vw, (max-width: 991px) 47vw, (max-width: 1279px) 446px, 550px"
             data-w-id="3f6d1a74-f657-fa38-ee99-63e523509f55"
             loading="lazy"
-            srcset="@/assets/images/cta-img-p-500.png 500w, @/assets/images/cta-img-pri.png 546w"
+            srcset="@/assets/images/cta-img-p-500.png 500w, @/assets/images/cta-img.png 546w"
           />
         </div>
         <div data-w-id="1b411c32-b146-3904-fefe-43f34450d809" class="call-to-action-content">
@@ -30,7 +30,7 @@
     </div>
     <div data-w-id="95280b80-0526-7513-fe46-fab249d937ac" class="call-to-action-shape-one">
       <img
-        src="@/assets/images/cta-shape-1_1cta-shape-1-pri.png"
+        src="@/assets/images/cta-shape-1.png"
         loading="lazy"
         alt="Call To Action Shape Image"
         class="call-to-action-shape-image-one"
@@ -38,7 +38,7 @@
     </div>
     <div class="call-to-action-shape-two">
       <img
-        src="@/assets/images/cta-shape-2-pri.png"
+        src="@/assets/images/cta-shape-2.png"
         loading="lazy"
         data-w-id="5e410ce7-d527-3911-c59c-6d83c4010874"
         alt="Call To Action Shape Image"

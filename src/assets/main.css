@@ -258,6 +258,10 @@ blockquote {
   display: flex;
 }
 
+.header-logo {
+  max-width: 160px;
+}
+
 .header-action {
   grid-column-gap: 22px;
   grid-row-gap: 22px;
@@ -2301,6 +2305,10 @@ blockquote {
 
 .footer-widget.footer-widget-margin-two {
   width: 20%;
+}
+
+.footer-widget .footer-logo {
+  max-width: 160px;
 }
 
 .footer-top {

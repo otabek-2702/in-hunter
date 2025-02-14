@@ -57,14 +57,14 @@
     <div class="about-shape">
       <img
         class="about-shape-image"
-        src="@/assets/images/about-shape-pri.png"
+        src="@/assets/images/about-shape.png"
         alt="About Image"
         sizes="(max-width: 479px) 100vw, (max-width: 991px) 400px, (max-width: 1279px) 600px, 738px"
         data-w-id="bd506700-dad7-838f-b3ac-953b3b1462cf"
         loading="lazy"
         srcset="
           @/assets/images/about-shape-p-500.png 500w,
-          @/assets/images/about-shape-pri.png       738w
+          @/assets/images/about-shape.png       738w
         "
       />
     </div>
