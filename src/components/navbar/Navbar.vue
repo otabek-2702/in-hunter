@@ -113,10 +113,10 @@ const availableLocales = computed(() =>
                 data-w-id="6e9367ba-cd7e-8d20-9cf3-328b2c0512d4"
                 class="language-dropdown-toggle w-dropdown-toggle"
               >
-                <div style="color: rgb(51, 51, 51)" class="language-text-blog">
+                <div class="my-language-text-blog">
                   {{ t(`locale.${locale}`) }}
                 </div>
-                <div style="color: rgb(51, 51, 51)" class="language-icon w-embed">
+                <div class="my-language-icon w-embed">
                   <svg
                     width="13"
                     height="13"

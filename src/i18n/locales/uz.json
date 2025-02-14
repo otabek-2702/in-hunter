@@ -43,15 +43,15 @@
     "backToHome": "Bosh sahifaga qaytish"
   },
   "about-us": {
-    "solution": "Acuvic Eng Yaxshi Yechim",
+    "solution": "InHunter Eng Yaxshi Yechim",
     "welcome": "Raqamli HR Konsalting va Agentligiga Xush Kelibsiz. Sayohatni Baham Ko‘ring.",
     "experience": "35",
     "experienceYears": "Yillik Tajriba\nHR sohasida",
     "successStories": "Bizda Ko'plab Muvaffaqiyat Hikoyalari Bor",
     "getAppointment": "Uchrashuvga Qaytish",
-    "subTitle": "Hammasi Acuvicda",
+    "subTitle": "Hammasi InHunterda",
     "heading": "Yangi loyiha bormi?",
-    "headingSpan": "Acuvic orqali men bilan bog'laning.",
+    "headingSpan": "InHunter orqali men bilan bog'laning.",
     "excerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
     "appointment": "Meni yollang",
     "funfactAreaTwo": {
@@ -99,7 +99,7 @@
     "description": "O‘zbek tilidagi video"
   },
   "hero": {
-    "subTitle": "Acuvic — eng yaxshi yechim",
+    "subTitle": "InHunter — eng yaxshi yechim",
     "title": {
       "line1": "HR maslahatlari uchun",
       "line2": "Oson yechim"
@@ -172,14 +172,26 @@
     }
   },
   "call-to-action-area": {
-    "sectionSubTitle": "Hammasi Acuvicda",
-    "sectionTitle": "Yangi loyiha bormi? Acuvic orqali men bilan bog'laning.",
+    "sectionSubTitle": "Hammasi InHunterda",
+    "sectionTitle": "Yangi loyiha bormi? InHunter orqali men bilan bog'laning.",
     "callToActionExcerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
     "hireMe": "Meni yollang",
     "learnMore": "Batafsil ma'lumot"
   },
-  "services-page-area": {
-    "noItemsFound": "Hech narsa topilmadi."
+  "services": {
+    "noItemsFound": "Hech narsa topilmadi.",
+    "card1Title": "Turli xillik, tenglik va inklyuzivlik bo‘yicha maslahat",
+    "card1Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
+    "card2Title": "Kompensatsiya va imtiyozlar",
+    "card2Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
+    "card3Title": "HR texnologiyalari",
+    "card3Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
+    "card4Title": "Iqtidorlarni jalb qilish",
+    "card4Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
+    "card5Title": "Liderlik bo‘yicha maslahat",
+    "card5Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
+    "card6Title": "Merosxo‘rlik rejalashtirish",
+    "card6Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling."
   },
   "projects-categories-area": {
     "noItemsFound": "Hech narsa topilmadi."

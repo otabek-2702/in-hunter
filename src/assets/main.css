@@ -4,7 +4,7 @@
 :root {
   --white: white;
   --black: black;
-  --main-color: #cf1850;
+  --main-color: #CE1750;
 }
 
 .w-pagination-wrapper {
@@ -358,7 +358,12 @@ blockquote {
   display: flex;
 }
 
-.language-text-blog {
+.language-dropdown-toggle:hover>* {
+  color: var(--main-color);
+  transition: ease-in .3s;
+}
+
+.my-language-text-blog {
   color: rgb(51, 51, 51);
   font-size: 16px;
   font-weight: 500;
@@ -390,7 +395,7 @@ blockquote {
   color: var(--main-color);
 }
 
-.language-icon {
+.my-language-icon {
   width: 8px;
   margin-top: 1px;
   margin-left: 8px;
