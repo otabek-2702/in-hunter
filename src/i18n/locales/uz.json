@@ -180,6 +180,12 @@
   },
   "services": {
     "noItemsFound": "Hech narsa topilmadi.",
+    "subTitle": "Bizning xizmatlarimiz",
+    "title": {
+      "part1": "Biznesga",
+      "highlited": "moslashtirilgan",
+      "part2": "yechim"
+    },
     "card1Title": "Turli xillik, tenglik va inklyuzivlik bo‘yicha maslahat",
     "card1Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
     "card2Title": "Kompensatsiya va imtiyozlar",

@@ -26,7 +26,7 @@ const services = ref([
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/6407108590c3f642f4ffd6d4_service-icon-6.svg",
   },
-  
+
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/6407104f50d228b707edb218_service-icon-5.svg",
   },
@@ -44,6 +44,17 @@ const services = ref([
 
   <div class="service-page-area">
     <div class="container w-container">
+      <div
+        data-w-id="cd3d136f-109c-9c3c-94d3-db4719a1800c"
+        class="section-title-wrap"
+      >
+        <div class="section-sub-title">{{ t("services.subTitle") }}</div>
+        <h2 class="section-title">
+          {{ t("services.title.part1") }}
+          <span class="heading-span">{{ t("services.title.highlited") }} </span>
+          {{ t("services.title.part2") }}
+        </h2>
+      </div>
       <div
         data-w-id="0722e09f-603d-f804-ef06-36c8099d47a9"
         v-if="services.length"
@@ -89,7 +100,6 @@ const services = ref([
               </div>
             </div>
           </swiper-slide>
-         
         </swiper>
       </div>
       <div v-else class="w-dyn-empty">
@@ -102,7 +112,7 @@ const services = ref([
 <style>
 .swiper-button-prev,
 .swiper-button-next {
- background: transparent;
+  background: transparent;
 }
 
 /* Сдвигаем внутрь */

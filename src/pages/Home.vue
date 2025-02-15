@@ -6,6 +6,7 @@ import TestimonialImg2 from "@/assets/images/testimonial-2.png";
 import CallToActionArea from "@/components/call-to-action-area/CallToActionArea.vue";
 import { onMounted } from "vue";
 import { computed } from "vue";
+import Services from "./Services.vue";
 
 const { t, tm } = useI18n();
 
@@ -164,14 +165,15 @@ onMounted(() => {
         loading="lazy"
         srcset="
           @/assets/images/hero-shape-right-bottom-p-500.png 500w,
-          @/assets/images/hero-shape-right-bottom.png   547w
+          @/assets/images/hero-shape-right-bottom.png       547w
         "
       />
     </div>
   </div>
 
   <AboutArea />
-  <!-- services are -->
+  
+  <Services />
 
   <div class="funfact-area">
     <div class="container w-container">
