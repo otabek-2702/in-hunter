@@ -92,7 +92,7 @@ const services = ref([
                   alt="Service Image"
                   class="service-image"
                 />
-                <router-link href="#" class="service-title-link w-inline-block">
+                <router-link to="" class="service-title-link w-inline-block">
                   <h3 class="service-title">
                     {{ t(`services.card${item.id}Title`) }}
                   </h3>
