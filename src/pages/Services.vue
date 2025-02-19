@@ -19,22 +19,28 @@ onMounted(() => {
 const services = ref([
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/641a8c39ff592432c7a3c538_service-icon-7.svg",
+    id: 1,
   },
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/640710bec01537eec3ab22b1_service-icon-4.svg",
+    id: 2,
   },
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/6407108590c3f642f4ffd6d4_service-icon-6.svg",
+    id: 3,
   },
 
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/6407104f50d228b707edb218_service-icon-5.svg",
+    id: 4,
   },
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/640700e8f3b8803da7c8670d_service-icon-3.png",
+    id: 5,
   },
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/6406fb7cb8fd3fd9cc1eae66_service-icon-2.png",
+    id: 6,
   },
 ]);
 </script>
@@ -88,7 +94,7 @@ const services = ref([
                 />
                 <router-link href="#" class="service-title-link w-inline-block">
                   <h3 class="service-title">
-                    {{ t(`services.card${i + 1}Title`) }}
+                    {{ t(`services.card${item.id}Title`) }}
                   </h3>
                 </router-link>
                 <p class="service-excerpt"></p>

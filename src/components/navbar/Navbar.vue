@@ -66,11 +66,11 @@ const availableLocales = computed(() =>
                     class="dropdown-link-main-menu w-dropdown-link"
                     >{{ t('nav.services') }}
                   </router-link>
-                  <router-link
+                  <!-- <router-link
                     :to="{ name: 'projects' }"
                     class="dropdown-link-main-menu w-dropdown-link"
                     >{{ t('nav.projects') }}</router-link
-                  >
+                  > -->
                   <router-link
                     :to="{ name: 'teams' }"
                     class="dropdown-link-main-menu w-dropdown-link"
@@ -78,9 +78,9 @@ const availableLocales = computed(() =>
                   >
                 </nav>
               </div>
-              <router-link :to="{ name: 'blog' }" class="nav-main-menu-link w-nav-link">{{
+              <!-- <router-link :to="{ name: 'blog' }" class="nav-main-menu-link w-nav-link">{{
                 t('nav.blog')
-              }}</router-link>
+              }}</router-link> -->
               <router-link :to="{ name: 'contact-us' }" class="nav-main-menu-link w-nav-link">{{
                 t('nav.contact-us')
               }}</router-link>

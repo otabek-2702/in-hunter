@@ -47,7 +47,7 @@
           </h2>
           <p class="about-excerpt">{{ t("about-us.excerpt") }}</p>
           <router-link
-            :to="{ name: 'about-us' }"
+            :to="{ name: 'contact-us' }"
             class="button-primary w-button"
             >{{ t("about-us.appointment") }}</router-link
           >
