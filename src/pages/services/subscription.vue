@@ -1,8 +1,9 @@
 <script setup>
 import { useI18n } from "vue-i18n";
 
-const { t } = useI18n();
-const benefits = 4;
+const { t, tm } = useI18n();
+
+const benefits = 5;
 </script>
 <template>
   <img
@@ -94,7 +95,9 @@ const benefits = 4;
   </ul>
 
   <h2 class="service-details-title">
-    {{ t("service-subscription.full-payment.part-one") }}<span class="heading-span">10%</span>  {{ t("service-subscription.full-payment.part-two") }}
+    {{ t("service-subscription.full-payment.part-one")
+    }}<span class="heading-span">10%</span>
+    {{ t("service-subscription.full-payment.part-two") }}
   </h2>
 
   <div class="faq-item service-faq-item">
