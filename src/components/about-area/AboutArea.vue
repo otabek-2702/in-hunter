@@ -45,7 +45,7 @@
             {{ t("about-us.heading") }}
             <span class="heading-span">{{ t("about-us.headingSpan") }}</span>
           </h2>
-          <p class="about-excerpt">{{ t("about-us.excerpt") }}</p>
+          <p class="about-excerpt"><b>{{ t("about-us.excerptBold") }}</b>{{ t("about-us.excerpt") }}</p>
           <router-link
             :to="{ name: 'contact-us' }"
             class="button-primary w-button"

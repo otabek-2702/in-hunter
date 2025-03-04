@@ -46,7 +46,7 @@ const { t } = useI18n();
       </div>
     </div>
   </div>
-  <div class="team-area">
+  <!-- <div class="team-area">
     <div class="container w-container">
       <div class="team-wrap">
         <div class="team-left">
@@ -487,6 +487,6 @@ const { t } = useI18n();
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <CallToActionArea />
 </template>

@@ -21,7 +21,7 @@
             <p class="footer-excerpt">{{ t("footer.address") }}</p>
             <div class="footer-contact">
               <div class="footer-contact-title">{{ t("footer.callUs") }}</div>
-              <div class="contact-number">{{ t("footer.phoneNumber") }}</div>
+              <div class="contact-number">+998 93 066 80 40</div>
             </div>
             <div class="footer-social-icon-wrap">
               <a

@@ -32,7 +32,8 @@
             ></h2>
           </div>
           <p class="call-to-action-excerpt">
-            {{ t("call-to-action-area.callToActionExcerpt") }}
+            <b> {{ t("call-to-action-area.excerptBold") }} </b>
+            {{ t("call-to-action-area.excerpt") }}
           </p>
           <div class="call-to-action-button-wrap">
             <router-link

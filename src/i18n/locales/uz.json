@@ -16,7 +16,6 @@
   "footer": {
     "address": "4965 Graystone Lakes, Milledgeville banahay703mail.com",
     "callUs": "Bizga qo'ng'iroq qiling",
-    "phoneNumber": "+00 123 456 789",
     "ourServices": "Bizning xizmatlarimiz",
     "services": {
       "deiConsulting": "DEI Konsalting",
@@ -45,15 +44,16 @@
   "about-us": {
     "solution": "InHunter Eng Yaxshi Yechim",
     "welcome": "Raqamli HR Konsalting va Agentligiga Xush Kelibsiz. Sayohatni Baham Ko‘ring.",
-    "experience": "35",
-    "experienceYears": "Yillik Tajriba\nHR sohasida",
+    "experience": "40",
+    "experienceYears": "dan ortiq Muvaffaqiyatli \nLoyihalar",
     "successStories": "Bizda Ko'plab Muvaffaqiyat Hikoyalari Bor",
     "getAppointment": "Uchrashuvga Qaytish",
     "subTitle": "Hammasi InHunterda",
     "heading": "Yangi loyiha bormi?",
     "headingSpan": "InHunter orqali men bilan bog'laning.",
-    "excerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
-    "appointment": "Meni yollang",
+    "excerptBold": "Bizning maqsadimiz - ",
+    "excerpt": "iqtidorli kadrlar bilan ta'minlash orqali biznesning rivojlanishi va o‘sishiga yordam berish.",
+    "appointment": "Bizni yollang",
     "funfactAreaTwo": {
       "sectionSubTitle": "Bizning Yutuqlarimiz",
       "sectionTitle": {
@@ -63,12 +63,12 @@
       },
       "facts": {
         "clients": {
-          "number": "340+",
-          "title": "Faol mijozlar"
+          "number": "40+",
+          "title": "muvaffaqiyatli loyihalar"
         },
         "reviews": {
-          "number": "256+",
-          "title": "5 Yulduzli Sharhlar"
+          "number": "500+",
+          "title": "yopilgan ish o‘rinlari"
         },
         "teamMembers": {
           "number": "390+",
@@ -104,7 +104,7 @@
       "line1": "HR maslahatlari uchun",
       "line2": "Oson yechim"
     },
-    "excerpt": "To'g'ri murabbiylik munosabatlari professional o'sish uchun kuchli vosita bo'lishi mumkin. To'g'ri yo'ldan boring.",
+    "excerpt": "Rekruting va HR sohasida ilg'or yechimlarni taklif qiluvchi professional mutaxassislar jamoasi.",
     "buttonText": "Ko'proq bilib oling",
     "videoPopupText": "Biz qanday ishlaymiz"
   },
@@ -118,12 +118,12 @@
       },
       "facts": {
         "clients": {
-          "number": "340+",
-          "title": "Faol mijozlar"
+          "number": "40+",
+          "title": "muvaffaqiyatli loyihalar"
         },
         "reviews": {
-          "number": "256+",
-          "title": "5 Yulduzli Sharhlar"
+          "number": "500+",
+          "title": "yopilgan ish o‘rinlari"
         },
         "teamMembers": {
           "number": "390+",
@@ -157,16 +157,16 @@
       "title": "Nima uchun bizni tanlashingiz kerakligi haqida bir nechta sabablar",
       "items": [
         {
-          "question": "Hamkorlik tizimi",
-          "answer": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan, jumladan, tasodifiy so'zlar yoki kulgili iboralar qo'shilgan, ular hech qanday darajada ishonarli ko'rinmaydi. Agar siz Lorem Ipsum matnini ishlatmoqchi bo'lsangiz."
+          "question": "Xodimlar izlash va yollashning - Original algoritmi",
+          "answer": "Bizning o‘ziga xos yondashuvimiz tufayli har bir mijozning ehtiyojlariga mos keladigan eng yaxshi nomzodlarni aniqlash va tanlash imkoniyatiga egamiz. Ushbu algoritm samaradorlik va tezkorlikni ta’minlaydi, natijada kompaniyangiz uchun eng mos mutaxassislarni tezda topamiz."
         },
         {
-          "question": "Biznes innovatsiyasi",
-          "answer": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan, jumladan, tasodifiy so'zlar yoki kulgili iboralar qo'shilgan, ular hech qanday darajada ishonarli ko'rinmaydi. Agar siz Lorem Ipsum matnini ishlatmoqchi bo'lsangiz."
+          "question": "Tez, sifatli va hamyonbop",
+          "answer": "Bizning xizmatlarimiz tezkor natijalarga erishishga yo‘naltirilgan bo‘lib, yuqori sifatni kafolatlaydi. Shu bilan birga, bozordagi eng maqbul narxlarni taklif qilamiz, bu esa sizga vaqt va mablag‘ni tejash imkonini beradi."
         },
         {
-          "question": "Pension rejalashtirish",
-          "answer": "Ko'plab Lorem Ipsum variantlari mavjud, ammo ularning aksariyati bir yoki boshqa shaklda o'zgartirilgan, jumladan, tasodifiy so'zlar yoki kulgili iboralar qo'shilgan, ular hech qanday darajada ishonarli ko'rinmaydi. Agar siz Lorem Ipsum matnini ishlatmoqchi bo'lsangiz."
+          "question": "Barcha xizmatlar kafolatlangan",
+          "answer": "Biz taqdim etayotgan xizmatlarimiz uchun kafolat beramiz. Agar yollangan xodim belgilangan muddat ichida o‘zini oqlamasa, uni bepul almashtirish imkoniyatini taqdim etamiz. Bu esa sizning biznesingiz uchun qo‘shimcha xavfsizlik kafolatini beradi."
         }
       ]
     }
@@ -174,9 +174,14 @@
   "call-to-action-area": {
     "sectionSubTitle": "Hammasi InHunterda",
     "sectionTitle": "Yangi loyiha bormi? InHunter orqali men bilan bog'laning.",
-    "callToActionExcerpt": "Lorem Ipsumning ko'plab variatsiyalari mavjud, ammo ularning aksariyati hazil bilan o'zgartirilgan.",
+    "excerptBold": "Bizning maqsadimiz - ",
+    "excerpt": "iqtidorli kadrlar bilan ta'minlash orqali biznesning rivojlanishi va o‘sishiga yordam berish.",
     "hireMe": "Meni yollang",
     "learnMore": "Batafsil ma'lumot"
+  },
+  "service-layout": {
+    "standardLink": "Standart",
+    "packagesLink": "Paketlar"
   },
   "services": {
     "noItemsFound": "Hech narsa topilmadi.",
@@ -186,18 +191,10 @@
       "highlited": "moslashtirilgan",
       "part2": "yechim"
     },
-    "card1Title": "Turli xillik, tenglik va inklyuzivlik bo‘yicha maslahat",
-    "card1Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
-    "card2Title": "Kompensatsiya va imtiyozlar",
-    "card2Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
-    "card3Title": "HR texnologiyalari",
-    "card3Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
-    "card4Title": "Iqtidorlarni jalb qilish",
-    "card4Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
-    "card5Title": "Liderlik bo‘yicha maslahat",
-    "card5Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling.",
-    "card6Title": "Merosxo‘rlik rejalashtirish",
-    "card6Description": "Kelajakdagi kasbingiz va martabangiz uchun ruhiy shifo va yo‘l-yo‘riq oling."
+    "card1Title": "STANDART",
+    "card1Description": "Har bir ish o‘rni uchun belgilangan to'lov",
+    "card2Title": "PAKETLAR",
+    "card2Description": "Mijoz ehtiyojlariga qarab xizmat paketlari"
   },
   "projects-categories-area": {
     "noItemsFound": "Hech narsa topilmadi."

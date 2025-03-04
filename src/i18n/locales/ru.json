@@ -16,7 +16,7 @@
   "footer": {
     "address": "4965 Graystone Lakes, Milledgeville banahaygan703",
     "callUs": "Позвоните нам",
-    "phoneNumber": "+00 123 456 789",
+    "phoneNumber": "+998 93 066 80 40",
     "ourServices": "Наши услуги",
     "services": {
       "deiConsulting": "DEI Консалтинг",
@@ -53,7 +53,7 @@
     "heading": "Есть новый проект?",
     "headingSpan": "Свяжитесь со мной через InHunter.",
     "excerpt": "Существует множество вариаций Lorem Ipsum, но большинство из них были изменены для того, чтобы они выглядели как случайный текст.",
-    "appointment": "Нанять меня",
+    "appointment": "Нанимайте нас",
     "funfactAreaTwo": {
       "sectionSubTitle": "Наши Достижения",
       "sectionTitle": {
@@ -174,7 +174,7 @@
   "call-to-action-area": {
     "sectionSubTitle": "Все в InHunter",
     "sectionTitle": "Есть новый проект? Свяжитесь со мной через InHunter.",
-    "callToActionExcerpt": "Существует множество вариантов Lorem Ipsum, но большинство из них были изменены в какой-то форме через вставленный юмор.",
+    "excerpt": "Существует множество вариантов Lorem Ipsum, но большинство из них были изменены в какой-то форме через вставленный юмор.",
     "hireMe": "Нанять меня",
     "learnMore": "Узнать больше"
   },

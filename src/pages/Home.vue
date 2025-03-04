@@ -6,7 +6,8 @@ import TestimonialImg2 from "@/assets/images/testimonial-2.png";
 import CallToActionArea from "@/components/call-to-action-area/CallToActionArea.vue";
 import { onMounted } from "vue";
 import { computed } from "vue";
-import Services from "./Services.vue";
+import { clientLogos } from "@/data/clientLogos";
+import ServicesArea from "./ServicesArea.vue";
 
 const { t, tm } = useI18n();
 
@@ -172,8 +173,8 @@ onMounted(() => {
   </div>
 
   <AboutArea />
-  
-  <Services />
+
+  <ServicesArea />
 
   <div class="funfact-area">
     <div class="container w-container">
@@ -408,81 +409,9 @@ onMounted(() => {
           "
           class="brand-logo-wrap"
         >
-          <div class="single-brand-logo">
+          <div class="single-brand-logo" v-for="(src, index) in clientLogos">
             <img
-              src="@/assets/images/brand-logo-1.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-2.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-3.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-4.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-1.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-1.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-1.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-1.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-1.png"
-              loading="lazy"
-              alt="Brand Logo"
-              class="brand-logo-image"
-            />
-          </div>
-          <div class="single-brand-logo">
-            <img
-              src="@/assets/images/brand-logo-1.png"
+              :src="src"
               loading="lazy"
               alt="Brand Logo"
               class="brand-logo-image"

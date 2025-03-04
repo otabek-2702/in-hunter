@@ -1,4 +1,18 @@
-<script setup></script>
+<script setup>
+import { onMounted, ref } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { t } = useI18n();
+
+onMounted(() => {
+  $("html").attr("data-wf-page", "6666fcda3ffd3947b1b20825");
+  $("html").attr("data-wf-site", "6666fcd93ffd3947b1b2078b");
+  window.Webflow && window.Webflow.destroy();
+  window.Webflow && window.Webflow.ready();
+  window.Webflow && window.Webflow.require("ix2").init();
+  document.dispatchEvent(new Event("readystatechange"));
+});
+</script>
 
 <template>
   <div class="service-details-area">
@@ -20,10 +34,45 @@
                 >
                   <div class="single-service-category">
                     <router-link
-                      href="#"
+                      :to="{ name: 'servicesStandard' }"
                       class="service-category-link w-inline-block"
                     >
-                      <div class="sidebar-service-title w-dyn-bind-empty"></div>
+                      <div class="sidebar-service-title">
+                        {{ t("service-layout.standardLink") }}
+                      </div>
+                      <div class="service-icon w-embed">
+                        <svg
+                          width="7"
+                          height="14"
+                          viewbox="0 0 7 14"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M1 12.1589L5.59317 7.56569C6.13561 7.02325 6.13561 6.13561 5.59317 5.59317L1 1"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </router-link>
+                  </div>
+                </div>
+                <div
+                  role="listitem"
+                  class="collection-item-service-details w-dyn-item"
+                >
+                  <div class="single-service-category">
+                    <router-link
+                      :to="{ name: 'servicesPackages' }"
+                      class="service-category-link w-inline-block"
+                    >
+                      <div class="sidebar-service-title">
+                        {{ t("service-layout.packagesLink") }}
+                      </div>
                       <div class="service-icon w-embed">
                         <svg
                           width="7"
@@ -46,12 +95,9 @@
                   </div>
                 </div>
               </div>
-              <div class="w-dyn-empty">
-                <div>No items found.</div>
-              </div>
             </div>
           </div>
-          <div class="quick-contact-wrap">
+          <!-- <div class="quick-contact-wrap">
             <h3 class="quick-contact-title">Quick Contact</h3>
             <div class="quick-contact-form">
               <div class="from-block-quick-contact w-form">
@@ -107,9 +153,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="download-pdf-wrap">
-            <router-link href="#" class="download-pdf-link w-inline-block">
+          </div> -->
+          <!-- <div class="download-pdf-wrap">
+            <router-link href="" class="download-pdf-link w-inline-block">
               <div class="download-pdf-text">Download PDF</div>
               <div class="download-pdf-icon-wrap">
                 <div class="download-pdf-icon w-embed">
@@ -140,109 +186,10 @@
                 </div>
               </div>
             </router-link>
-          </div>
+          </div> -->
         </div>
         <div class="service-details-right-content">
-          <img
-            alt="Service Details Image"
-            loading="lazy"
-            src=""
-            class="service-details-image w-dyn-bind-empty"
-          />
-          <h2 class="service-details-title w-dyn-bind-empty"></h2>
-          <p class="service-summary w-dyn-bind-empty"></p>
-          <p class="service-summary w-dyn-bind-empty"></p>
-          <p class="service-summary w-dyn-bind-empty"></p>
-          <h2 class="service-details-title-two w-dyn-bind-empty"></h2>
-          <p class="service-summary w-dyn-bind-empty"></p>
-          <div class="service-details-meta-wrap">
-            <img
-              alt=" Service Details Meta Image"
-              loading="lazy"
-              src=""
-              class="service-details-meta-image w-dyn-bind-empty"
-            /><img
-              alt="Service Details Meta Image"
-              loading="lazy"
-              src=""
-              class="service-details-meta-image w-dyn-bind-empty"
-            />
-          </div>
-          <p class="service-summary w-dyn-bind-empty"></p>
-          <div class="service-details-faq">
-            <div class="faq-item service-faq-item">
-              <router-link
-                data-w-id="a2d13af8-37b1-01d2-c2ab-8a8fb270f383"
-                href="#"
-                class="faq-question service-faq-question w-inline-block"
-              >
-                <h3 class="faq-title w-dyn-bind-empty"></h3>
-                <div class="p-m-wrap">
-                  <div class="minus"></div>
-                  <div class="plus"></div>
-                </div>
-              </router-link>
-              <div style="height: 0px" class="faq-answer">
-                <div class="faq-answer-inner service-faq-answer-inner">
-                  <p class="paragraph w-dyn-bind-empty"></p>
-                </div>
-              </div>
-            </div>
-            <div class="faq-item service-faq-item">
-              <router-link
-                data-w-id="8916f793-f7bd-3091-71ff-82984ad275ad"
-                href="#"
-                class="faq-question service-faq-question w-inline-block"
-              >
-                <h3 class="faq-title w-dyn-bind-empty"></h3>
-                <div class="p-m-wrap">
-                  <div class="minus"></div>
-                  <div class="plus"></div>
-                </div>
-              </router-link>
-              <div style="height: 0px" class="faq-answer">
-                <div class="faq-answer-inner service-faq-answer-inner">
-                  <p class="paragraph w-dyn-bind-empty"></p>
-                </div>
-              </div>
-            </div>
-            <div class="faq-item service-faq-item">
-              <router-link
-                data-w-id="a0a0e0af-1cd0-db5c-1b1d-0009194aa980"
-                href="#"
-                class="faq-question service-faq-question w-inline-block"
-              >
-                <h3 class="faq-title w-dyn-bind-empty"></h3>
-                <div class="p-m-wrap">
-                  <div class="minus"></div>
-                  <div class="plus"></div>
-                </div>
-              </router-link>
-              <div style="height: 0px" class="faq-answer">
-                <div class="faq-answer-inner service-faq-answer-inner">
-                  <p class="paragraph w-dyn-bind-empty"></p>
-                </div>
-              </div>
-            </div>
-            <div class="faq-item service-faq-item">
-              <router-link
-                data-w-id="43095b3e-c36d-44e2-6e1a-7cf1f8131cc4"
-                href="#"
-                class="faq-question service-faq-question w-inline-block"
-              >
-                <h3 class="faq-title w-dyn-bind-empty"></h3>
-                <div class="p-m-wrap">
-                  <div class="minus"></div>
-                  <div class="plus"></div>
-                </div>
-              </router-link>
-              <div style="height: 0px" class="faq-answer">
-                <div class="faq-answer-inner service-faq-answer-inner">
-                  <p class="paragraph w-dyn-bind-empty"></p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <router-view></router-view>
         </div>
       </div>
     </div>
