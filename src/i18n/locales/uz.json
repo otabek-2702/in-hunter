@@ -25,7 +25,8 @@
       "compBenefits": "Maosh va Imtiyozlar"
     },
     "quickLinks": {
-      "label": "Tezkor havolalar"
+      "label": "Tezkor havolalar",
+      "tg-bot": "Anketa to'ldirish"
     },
     "subscribe": "Obuna bo'ling",
     "enterEmail": "Emailingizni kiriting",
@@ -181,7 +182,7 @@
   },
   "service-layout": {
     "standardLink": "Standart",
-    "packagesLink": "Paketlar"
+    "subscriptionLink": "Obuna"
   },
   "services": {
     "noItemsFound": "Hech narsa topilmadi.",
@@ -193,8 +194,53 @@
     },
     "card1Title": "STANDART",
     "card1Description": "Har bir ish o‘rni uchun belgilangan to'lov",
-    "card2Title": "PAKETLAR",
+    "card2Title": "OBUNA",
     "card2Description": "Mijoz ehtiyojlariga qarab xizmat paketlari"
+  },
+  "service-standard": {
+    "standard": "STANDART",
+    "office": { "title": "Ofis", "right": "xodimlari" },
+    "midLevel": {
+      "left": "",
+      "title": "O‘rta toifa lavozimdagi",
+      "right": "xodimlar"
+    },
+    "highLevel": {
+      "left": "",
+      "title": "Yuqori lavozimdagi",
+      "right": "xodimlar"
+    },
+    "salary": { "left": "Yillik ish aqining", "right": "" },
+    "prepayment": {
+      "part-one": "Oldindan to‘lov kelishilgan summadan ",
+      "part-two": " tashkil qiladi, qolgan qismi xodim ishga chiqganidan son‘g  ",
+      "part-three": "ish kuni ichida."
+    }
+  },
+  "service-subscription": {
+    "subscription": "OBUNA",
+    "month": "oy",
+    "work-place": "ish o‘rni",
+    "price-suffix": "mln. so‘m",
+    "per-position": "ish o‘rni uchun",
+    "saving-money": { "left": "", "right": "mln. so‘m tejaysiz!" },
+    "best-result": "Qisqa muddat ichida eng yaxshi natija!",
+
+    "positionsPerMonth": { "left": "oyiga ", "right": " ish o‘rni" },
+    "benefits0": "Rekruting xizmatlarining to'liq spektri",
+    "benefits1": "Rekruting bo‘limi uchun sarflanadigan pul va vaqtni tejash",
+    "benefits2": "hh.uz resurslari va boshqa platformalardan foydalanish uchun pul va vaqtni tejash",
+    "benefits3": "Barcha darajadagi ish o'rinlari - oddiydan yuqori lavozimgacha",
+    "benefits4": "Bir martalik tarifdan ko'ra 50mln so‘mga foydaliroq",
+    "full-payment": {
+      "part-one": "100% to'lov oshirilganda ",
+      "part-two": " chegirma bor"
+    },
+    "prepayment": {
+      "part-one": "Oldindan to‘lov kelishilgan summadan ",
+      "part-two": " tashkil qiladi, qolgan qismi xodim ishga chiqganidan son‘g  ",
+      "part-three": "ish kuni ichida."
+    }
   },
   "projects-categories-area": {
     "noItemsFound": "Hech narsa topilmadi."

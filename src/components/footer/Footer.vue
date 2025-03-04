@@ -23,8 +23,42 @@
               <div class="footer-contact-title">{{ t("footer.callUs") }}</div>
               <div class="contact-number">+998 93 066 80 40</div>
             </div>
-            <div class="footer-social-icon-wrap">
+          </div>
+
+          <div class="footer-widget footer-widget-margin">
+            <h4 class="footer-title">{{ t("footer.ourServices") }}</h4>
+            <div class="footer-list-wrap">
+              <router-link
+                :to="{ name: 'servicesStandard' }"
+                class="footer-list"
+                >{{ t("service-layout.standardLink") }}</router-link
+              >
+              <router-link
+                :to="{ name: 'servicesSubscription' }"
+                class="footer-list"
+                >{{ t("service-layout.subscriptionLink") }}</router-link
+              >
+            </div>
+          </div>
+
+          <div class="footer-widget footer-widget-margin-two">
+            <h4 class="footer-title">{{ t("footer.quickLinks.label") }}</h4>
+            <div class="footer-list-wrap">
               <a
+                href="https://t.me/InHunterBot"
+                target="_blank"
+                class="footer-list"
+                >{{ t("footer.quickLinks.tg-bot") }}</a
+              >
+              <router-link :to="{ name: 'about-us' }" class="footer-list">{{
+                t("nav.about-us")
+              }}</router-link>
+              <router-link :to="{ name: 'contact-us' }" class="footer-list">{{
+                t("nav.contact-us")
+              }}</router-link>
+            </div>
+            <div class="footer-social-icon-wrap">
+              <!-- <a
                 href="https://twitter.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
@@ -44,7 +78,7 @@
                   </svg>
                 </div>
               </a>
-              <router-link
+              <a
                 to="https://www.facebook.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
@@ -63,8 +97,8 @@
                     ></path>
                   </svg>
                 </div>
-              </router-link>
-              <router-link
+              </a>
+              <a
                 to="https://www.skype.com"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
@@ -83,8 +117,8 @@
                     ></path>
                   </svg>
                 </div>
-              </router-link>
-              <router-link
+              </a>
+              <a
                 to="https://www.linkedin.com/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
@@ -111,9 +145,9 @@
                     ></path>
                   </svg>
                 </div>
-              </router-link>
-              <router-link
-                to="https://www.instagram.com/"
+              </a> -->
+              <a
+                href="https://www.instagram.com/inhunter.uz/"
                 target="_blank"
                 class="footer-social-link-block w-inline-block"
               >
@@ -139,44 +173,33 @@
                     ></path>
                   </svg>
                 </div>
-              </router-link>
+              </a>
+
+              <a
+                href="https://t.me/InHunterBot"
+                target="_blank"
+                class="footer-social-link-block w-inline-block"
+              >
+                <div class="footer-social-icon w-embed">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="27"
+                    height="27"
+                    viewBox="0 0 64 64"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 41.941 41.941 50 32 50 C 22.059 50 14 41.941 14 32 C 14 22.059 22.059 14 32 14 z M 41.041016 23.337891 C 40.533078 23.279297 39.894891 23.418531 39.181641 23.675781 C 37.878641 24.145781 21.223719 31.217953 20.261719 31.626953 C 19.350719 32.014953 18.487328 32.437828 18.486328 33.048828 C 18.486328 33.478828 18.741312 33.721656 19.445312 33.972656 C 20.177313 34.234656 22.023281 34.79275 23.113281 35.09375 C 24.163281 35.38275 25.357344 35.130844 26.027344 34.714844 C 26.736344 34.273844 34.928625 28.7925 35.515625 28.3125 C 36.102625 27.8325 36.571797 28.448688 36.091797 28.929688 C 35.611797 29.410688 29.988094 34.865094 29.246094 35.621094 C 28.346094 36.539094 28.985844 37.490094 29.589844 37.871094 C 30.278844 38.306094 35.239328 41.632016 35.986328 42.166016 C 36.733328 42.700016 37.489594 42.941406 38.183594 42.941406 C 38.877594 42.941406 39.242891 42.026797 39.587891 40.966797 C 39.992891 39.725797 41.890047 27.352062 42.123047 24.914062 C 42.194047 24.175062 41.960906 23.683844 41.503906 23.464844 C 41.365656 23.398594 41.210328 23.357422 41.041016 23.337891 z"
+                    ></path>
+                  </svg>
+                </div>
+              </a>
             </div>
           </div>
 
-          <div class="footer-widget footer-widget-margin">
-            <h4 class="footer-title">{{ t("footer.ourServices") }}</h4>
-            <div class="footer-list-wrap">
-              <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t("footer.services.deiConsulting")
-              }}</router-link>
-              <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t("footer.services.hrTechnology")
-              }}</router-link>
-              <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t("footer.services.hrCompliance")
-              }}</router-link>
-              <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t("footer.services.talentAcquisition")
-              }}</router-link>
-              <router-link :to="{ name: 'services' }" class="footer-list">{{
-                t("footer.services.compBenefits")
-              }}</router-link>
-            </div>
-          </div>
-
-          <div class="footer-widget footer-widget-margin-two">
-            <h4 class="footer-title">{{ t("footer.quickLinks.label") }}</h4>
-            <div class="footer-list-wrap">
-              <router-link :to="{ name: 'about-us' }" class="footer-list">{{
-                t("nav.about-us")
-              }}</router-link>
-              <router-link :to="{ name: 'contact-us' }" class="footer-list">{{
-                t("nav.contact-us")
-              }}</router-link>
-            </div>
-          </div>
-
-          <div class="footer-widget">
+          <!-- <div class="footer-widget">
             <h4 class="footer-title">{{ t("footer.subscribe") }}</h4>
             <div class="newsletter-wrap">
               <div class="newsletter-form-block w-form">
@@ -215,7 +238,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

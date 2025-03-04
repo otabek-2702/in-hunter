@@ -172,7 +172,7 @@ const availableLocales = computed(() =>
               </nav>
             </div>
           </div>
-          <div class="header-search">
+          <!-- <div class="header-search">
             <div class="header-search-icon-wrap">
               <div class="header-search-icon w-embed">
                 <svg
@@ -214,7 +214,7 @@ const availableLocales = computed(() =>
                 value="Search"
               />
             </form>
-          </div>
+          </div> -->
           <div class="mobile-menu">
             <div
               data-animation="default"

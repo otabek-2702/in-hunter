@@ -1,12 +1,19 @@
 import { createRouter, createWebHistory, RouterView } from "vue-router";
 import Home from "@/pages/Home.vue";
-import ServiceLayout from "@/layouts/service-layout.vue"
+import ServiceLayout from "@/layouts/service-layout.vue";
 import { routeMiddleware } from "@/helpers/switchLanguage";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
   linkActiveClass: "w--current",
   // linkExactActiveClass: 'w--current',
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    }
+
+    return { top: 0, behavior: "smooth" };
+  },
   routes: [
     {
       path: "/:locale?",
@@ -42,8 +49,8 @@ const router = createRouter({
                 },
                 {
                   path: "packages",
-                  name: "servicesPackages",
-                  component: () => import("../pages/services/packages.vue"),
+                  name: "servicesSubscription",
+                  component: () => import("../pages/services/subscription.vue"),
                 },
               ],
             },
@@ -85,5 +92,8 @@ const router = createRouter({
 });
 
 router.beforeEach(routeMiddleware);
+router.afterEach(() => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 export default router;

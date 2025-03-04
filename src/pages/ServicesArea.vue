@@ -24,7 +24,7 @@ const services = ref([
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/640710bec01537eec3ab22b1_service-icon-4.svg",
     id: 2,
-    link: { name: "servicesPackages" },
+    link: { name: "servicesSubscription" },
   },
 ]);
 </script>

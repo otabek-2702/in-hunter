@@ -67,11 +67,11 @@ onMounted(() => {
                 >
                   <div class="single-service-category">
                     <router-link
-                      :to="{ name: 'servicesPackages' }"
+                      :to="{ name: 'servicesSubscription' }"
                       class="service-category-link w-inline-block"
                     >
                       <div class="sidebar-service-title">
-                        {{ t("service-layout.packagesLink") }}
+                        {{ t("service-layout.subscriptionLink") }}
                       </div>
                       <div class="service-icon w-embed">
                         <svg
