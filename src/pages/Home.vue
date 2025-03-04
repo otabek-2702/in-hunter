@@ -6,8 +6,17 @@ import TestimonialImg2 from "@/assets/images/testimonial-2.png";
 import CallToActionArea from "@/components/call-to-action-area/CallToActionArea.vue";
 import { onMounted } from "vue";
 import { computed } from "vue";
-import { clientLogos } from "@/data/clientLogos";
 import ServicesArea from "./ServicesArea.vue";
+// import clientLogo1 from "@/assets/images/client/client-logo-1.png"
+// import clientLogo2 from "@/assets/images/client/client-logo-2.png"
+// import clientLogo3 from "@/assets/images/client/client-logo-3.png"
+// import clientLogo4 from "@/assets/images/client/client-logo-4.png"
+// import clientLogo5 from "@/assets/images/client/client-logo-5.png"
+// import clientLogo6 from "@/assets/images/client/client-logo-6.png"
+// import clientLogo7 from "@/assets/images/client/client-logo-7.png"
+// import clientLogo8 from "@/assets/images/client/client-logo-8.png"
+// import clientLogo9 from "@/assets/images/client/client-logo-9.png"
+// import clientLogo10 from "@/assets/images/client/client-logo-10.png"
 
 const { t, tm } = useI18n();
 
@@ -61,6 +70,10 @@ const testimonials = computed(() => [
     image: TestimonialImg1,
   },
 ]);
+
+const logos = import.meta.glob("@/assets/images/client/client-logo-*.png", { eager: true });
+
+const clientLogos = Object.values(logos);
 
 onMounted(() => {
   $("html").attr("data-wf-page", "6666fcda3ffd3947b1b20825");
