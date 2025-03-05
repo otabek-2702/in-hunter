@@ -71,9 +71,9 @@ const testimonials = computed(() => [
   },
 ]);
 
-const logos = import.meta.glob("@/assets/images/client/client-logo-*.png", { eager: true });
+const logos = import.meta.glob("@/assets/images/client/*.png", { eager: true });
 
-const clientLogos = Object.keys(logos);
+const clientLogos = Object.values(logos).map((logo) => logo.default);
 
 onMounted(() => {
   $("html").attr("data-wf-page", "6666fcda3ffd3947b1b20825");
