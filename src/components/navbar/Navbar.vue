@@ -24,7 +24,7 @@ const availableLocales = computed(() =>
             class="header-logo-link w-inline-block"
           >
             <img
-              src="@/assets/images/logo.png"
+              src="@/assets/images/logo-text-xl.png"
               loading="lazy"
               alt="Logo"
               class="header-logo-image"

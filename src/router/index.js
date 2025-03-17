@@ -5,8 +5,8 @@ import { routeMiddleware } from "@/helpers/switchLanguage";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.VITE_BASE_URL),
-  linkActiveClass: "w--current",
-  // linkExactActiveClass: 'w--current',
+  // linkActiveClass: "w--current",
+  linkExactActiveClass: "w--current",
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition;
@@ -93,7 +93,9 @@ const router = createRouter({
 
 router.beforeEach(routeMiddleware);
 router.afterEach(() => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 10);
 });
 
 export default router;

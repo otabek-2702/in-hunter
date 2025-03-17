@@ -1,11 +1,68 @@
 <script setup>
+import { ref } from "vue";
 import Breadcrumbs from "@/components/breadcrumbs/Breadcrumbs.vue";
-import { onMounted } from "vue";
 import { useI18n } from "vue-i18n";
+import { toast } from "vue3-toastify";
 
 const { t } = useI18n();
 
+const formData = ref({
+  firstName: "",
+  lastName: "",
+  email: "",
+  subject: "",
+  message: "",
+});
+const isFormSended = ref(false);
 
+const submitForm = async (event) => {
+  event.preventDefault();
+  // Show loading toast
+  const toastId = toast.loading(t("contact-us.contactMapFormArea.waitMessage"));
+
+  try {
+    const response = await fetch(import.meta.env.VITE_POST_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData.value),
+    });
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const result = await response.json();
+
+    // Update loading toast to success
+    toast.update(toastId, {
+      render: t("contact-us.contactMapFormArea.successMessage"),
+      type: "success",
+      isLoading: false,
+      autoClose: 2000,
+    });
+    formData.value = {
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
+    isFormSended.value = true;
+  } catch (error) {
+    console.error("Error:", error);
+
+    // Update loading toast to error
+    toast.update(toastId, {
+      render: t("contact-us.contactMapFormArea.errorMessage"),
+      type: "error",
+      isLoading: false,
+      autoClose: 2000,
+    });
+    isFormSended.value = false;
+  }
+};
 </script>
 
 <template>
@@ -38,8 +95,12 @@ const { t } = useI18n();
           </div>
           <div class="contact-info-inner">
             <div class="contact-info-separator-primary"></div>
-            <div class="contact-info">+998 93 066 80 40</div>
-            <div class="contact-info">+998 93 066 80 40</div>
+            <div class="contact-info">
+              <a href="tel:+998930668040">+998 93 066 80 40</a>
+            </div>
+            <div class="contact-info">
+              <a href="tel:+998930668040">+998 93 066 80 40</a>
+            </div>
           </div>
           <img
             src="@/assets/images/contact-info-shape-1_1contact-info-shape-1.png"
@@ -134,8 +195,9 @@ const { t } = useI18n();
           data-w-id="245f65f5-9fb7-49eb-b719-0a642f1ad6e6"
           class="contact-map-wrap"
         >
+          <!-- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.703521325889!2d72.33324707515494!3d40.503938650328344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bc5fa16d8cc9c1%3A0x65d08f0988bc93f5!2sSmart%20English!5e0!3m2!1sru!2s!4v1723746729987!5m2!1sru!2s" -->
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.703521325889!2d72.33324707515494!3d40.503938650328344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bc5fa16d8cc9c1%3A0x65d08f0988bc93f5!2sSmart%20English!5e0!3m2!1sru!2s!4v1723746729987!5m2!1sru!2s"
+            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d927.0065666737609!2d69.22100967122834!3d41.28663160033211!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sus!4v1742203731613!5m2!1sru!2sus"
             class="contact-map"
             width="600"
             s="p"
@@ -162,18 +224,11 @@ const { t } = useI18n();
             </h2>
           </div>
           <div class="form-block-contact w-form">
-            <form
-              id="email-form"
-              name="email-form"
-              data-name="Email Form"
-              method="get"
-              class="form-contact"
-              data-wf-page-id="6666fcda3ffd3947b1b2082c"
-              data-wf-element-id="3020a109-88a2-b54b-58ac-e8a0607ce8ba"
-            >
+            <form class="form-contact" @submit="submitForm">
               <div class="contact-form-grid">
                 <div class="contact-form-column">
                   <input
+                    v-model="formData.firstName"
                     class="contact-form-input-field w-input"
                     maxlength="256"
                     name="field"
@@ -187,6 +242,7 @@ const { t } = useI18n();
                 </div>
                 <div class="contact-form-column">
                   <input
+                    v-model="formData.lastName"
                     class="contact-form-input-field w-input"
                     maxlength="256"
                     name="field-5"
@@ -200,6 +256,7 @@ const { t } = useI18n();
                 </div>
                 <div class="contact-form-column">
                   <input
+                    v-model="formData.email"
                     class="contact-form-input-field w-input"
                     maxlength="256"
                     name="field-2"
@@ -214,6 +271,7 @@ const { t } = useI18n();
                 </div>
                 <div class="contact-form-column">
                   <input
+                    v-model="formData.subject"
                     class="contact-form-input-field w-input"
                     maxlength="256"
                     name="field-3"
@@ -227,6 +285,7 @@ const { t } = useI18n();
                 </div>
                 <div class="contact-form-column">
                   <textarea
+                    v-model="formData.message"
                     :placeholder="
                       t('contact-us.contactMapFormArea.messagePlaceholder')
                     "
@@ -240,17 +299,23 @@ const { t } = useI18n();
               </div>
               <input
                 type="submit"
-                data-wait=" t('contact-us.contactMapFormArea.waitMessage') "
                 class="button-primary contact-button w-button"
                 :value="t('contact-us.contactMapFormArea.sendMessage')"
+                v-if="!isFormSended"
               />
+              <div
+                class="w-form-done"
+                style="display: block"
+                v-if="isFormSended"
+              >
+                <div>
+                  {{ t("contact-us.contactMapFormArea.successMessage") }}
+                </div>
+              </div>
             </form>
-            <div class="w-form-done">
-              <div>{{ t("contact-us.contactMapFormArea.successMessage") }}</div>
-            </div>
-            <div class="w-form-fail">
+            <!-- <div class="w-form-fail">
               <div>{{ t("contact-us.contactMapFormArea.errorMessage") }}</div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -258,4 +323,8 @@ const { t } = useI18n();
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.w-form-done {
+  margin-top: 25px;
+}
+</style>

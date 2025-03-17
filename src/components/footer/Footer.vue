@@ -21,23 +21,19 @@
             <p class="footer-excerpt">{{ t("footer.address") }}</p>
             <div class="footer-contact">
               <div class="footer-contact-title">{{ t("footer.callUs") }}</div>
-              <div class="contact-number">+998 93 066 80 40</div>
+              <a href="tel:+998 93 066 80 40" class="contact-number">+998 93 066 80 40</a>
             </div>
           </div>
 
           <div class="footer-widget footer-widget-margin">
             <h4 class="footer-title">{{ t("footer.ourServices") }}</h4>
             <div class="footer-list-wrap">
-              <router-link
-                :to="{ name: 'servicesStandard' }"
-                class="footer-list"
-                >{{ t("service-layout.standardLink") }}</router-link
-              >
-              <router-link
-                :to="{ name: 'servicesSubscription' }"
-                class="footer-list"
-                >{{ t("service-layout.subscriptionLink") }}</router-link
-              >
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
+                t("service-layout.standardLink")
+              }}</router-link>
+              <router-link :to="{ name: 'services' }" class="footer-list">{{
+                t("service-layout.subscriptionLink")
+              }}</router-link>
             </div>
           </div>
 

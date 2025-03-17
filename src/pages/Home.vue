@@ -265,7 +265,7 @@ onMounted(() => {
     </div>
   </div>
 
-  <div class="testimonial-area">
+  <!-- <div class="testimonial-area">
     <div class="container w-container">
       <div
         data-w-id="5440e64e-8e04-b1cd-74d4-5d24e799fbcf"
@@ -314,7 +314,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="faq-area">
     <div class="container w-container">

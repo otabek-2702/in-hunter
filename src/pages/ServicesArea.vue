@@ -19,12 +19,12 @@ const services = ref([
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/641a8c39ff592432c7a3c538_service-icon-7.svg",
     id: 1,
-    link: { name: "servicesStandard" },
+    link: { name: "services" },
   },
   {
     img: "https://cdn.prod.website-files.com/6406f54b722f3281fe1586fe/640710bec01537eec3ab22b1_service-icon-4.svg",
     id: 2,
-    link: { name: "servicesSubscription" },
+    link: { name: "services" },
   },
 ]);
 </script>
@@ -139,5 +139,8 @@ const services = ref([
 
 .collection-item-service {
   padding: 0 20px;
+}
+.swiper-wrapper{
+  justify-content: center;
 }
 </style>
