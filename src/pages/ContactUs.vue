@@ -98,9 +98,7 @@ const submitForm = async (event) => {
             <div class="contact-info">
               <a href="tel:+998930668040">+998 93 066 80 40</a>
             </div>
-            <div class="contact-info">
-              <a href="tel:+998930668040">+998 93 066 80 40</a>
-            </div>
+            
           </div>
           <img
             src="@/assets/images/contact-info-shape-1_1contact-info-shape-1.png"
@@ -134,11 +132,9 @@ const submitForm = async (event) => {
           <div class="contact-info-inner">
             <div class="contact-info-separator-primary"></div>
             <div class="contact-info">
-              {{ t("contact-us.contactInfoArea.email1") }}
+              {{ t("contact-us.contactInfoArea.email") }}
             </div>
-            <div class="contact-info">
-              {{ t("contact-us.contactInfoArea.email2") }}
-            </div>
+          
           </div>
           <img
             src="@/assets/images/contact-info-shape-2_1contact-info-shape-2.png"
@@ -172,11 +168,9 @@ const submitForm = async (event) => {
           <div class="contact-info-inner">
             <div class="contact-info-separator-primary"></div>
             <div class="contact-info">
-              {{ t("contact-us.contactInfoArea.addressLine1") }}
+              {{ t("contact-us.contactInfoArea.addressLine") }}
             </div>
-            <div class="contact-info">
-              {{ t("contact-us.contactInfoArea.addressLine2") }}
-            </div>
+            
           </div>
           <img
             src="@/assets/images/contact-info-shape-3_1contact-info-shape-3.png"

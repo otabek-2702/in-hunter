@@ -14,7 +14,7 @@
     "contact-us": "Biz bilan bog'lanish"
   },
   "footer": {
-    "address": "4965 Graystone Lakes, Milledgeville banahay703mail.com",
+    "address": "Toshkent sh. Chilonzor-3, 80-uy",
     "callUs": "Bizga qo'ng'iroq qiling",
     "ourServices": "Bizning xizmatlarimiz",
     "services": {
@@ -54,7 +54,7 @@
     "headingSpan": "InHunter orqali men bilan bog'laning.",
     "excerptBold": "Bizning maqsadimiz - ",
     "excerpt": "iqtidorli kadrlar bilan ta'minlash orqali biznesning rivojlanishi va o‘sishiga yordam berish.",
-    "appointment": "Bizni yollang",
+    "appointment": "Biz bilan bog‘lanish",
     "funfactAreaTwo": {
       "sectionSubTitle": "Bizning Yutuqlarimiz",
       "sectionTitle": {
@@ -77,7 +77,7 @@
         },
         "projectsDone": {
           "number": "50+",
-          "title": "Loyihalar bajarilgan"
+          "title": "Muvaffaqiyatli ideyalar"
         }
       }
     },
@@ -132,7 +132,7 @@
         },
         "projectsDone": {
           "number": "50+",
-          "title": "Loyihalar bajarilgan"
+          "title": "Muvaffaqiyatli ideyalar"
         }
       }
     },
@@ -177,7 +177,7 @@
     "sectionTitle": "Yangi loyiha bormi? InHunter orqali men bilan bog'laning.",
     "excerptBold": "Bizning maqsadimiz - ",
     "excerpt": "iqtidorli kadrlar bilan ta'minlash orqali biznesning rivojlanishi va o‘sishiga yordam berish.",
-    "hireMe": "Meni yollang",
+    "hireMe": "Biz bilan bog‘lanish",
     "learnMore": "Batafsil ma'lumot"
   },
   "service-layout": {
@@ -288,12 +288,10 @@
       "callToActionTitle": "Bugun Biz bilan Bog'laning",
       "dropALineSubtitle": "Pochta Yuboring",
       "mailInformationTitle": "Mail Ma'lumotlari",
-      "email1": "yourmail",
-      "email2": "yourmail",
+      "email": "telegram.org@mail.ru",
       "addressSubtitle": "Manzil",
       "locationTitle": "Bizning Joylashuvimiz",
-      "addressLine1": "Sizning manzilingiz bu yerga yoziladi",
-      "addressLine2": "123/bg- New York"
+      "addressLine": "Toshkent sh. Chilonzor-3, 80-uy"
     },
     "contactMapFormArea": {
       "requestSubtitle": "Maxsus So'rov Yuboring",

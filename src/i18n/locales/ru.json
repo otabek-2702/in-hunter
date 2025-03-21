@@ -14,7 +14,7 @@
     "contact-us": "Контакты"
   },
   "footer": {
-    "address": "4965 Graystone Lakes, Milledgeville banahaygan703",
+    "address": "Ташкент, Чиланзар-3, дом 80",
     "callUs": "Позвоните нам",
     "phoneNumber": "+998 93 066 80 40",
     "ourServices": "Наши услуги",
@@ -55,7 +55,7 @@
     "headingSpan": "Свяжитесь со мной через InHunter.",
     "excerptBold": "Наша цель - ",
     "excerpt": "помогать бизнесу расти и процветать, предоставляя талантливых кадров",
-    "appointment": "Нанимайте нас",
+    "appointment": "Связаться с нами",
     "funfactAreaTwo": {
       "sectionSubTitle": "Наши Достижения",
       "sectionTitle": {
@@ -78,7 +78,7 @@
         },
         "projectsDone": {
           "number": "50+",
-          "title": "Завершенные Проекты"
+          "title": "Реализованные идеи"
         }
       }
     },
@@ -133,7 +133,7 @@
         },
         "projectsDone": {
           "number": "50+",
-          "title": "Проекты выполнены"
+          "title": "Реализованные идеи"
         }
       }
     },
@@ -178,7 +178,7 @@
     "sectionTitle": "Есть новый проект? Свяжитесь со мной через InHunter.",
     "excerptBold": "Наша цель - ",
     "excerpt": "помогать бизнесу расти и процветать, предоставляя талантливых кадров",
-    "hireMe": "Нанять меня",
+    "hireMe": "Связаться с нами",
     "learnMore": "Узнать больше"
   },
   "service-layout": {
@@ -290,12 +290,10 @@
       "callToActionTitle": "Позвоните нам сегодня",
       "dropALineSubtitle": "Напишите нам",
       "mailInformationTitle": "Почтовая информация",
-      "email1": "yourmail",
-      "email2": "yourmail",
+      "email": "telegram.org@mail.ru",
       "addressSubtitle": "Адрес",
       "locationTitle": "Наше местоположение",
-      "addressLine1": "Ваш адрес здесь",
-      "addressLine2": "123/bg- New York"
+      "addressLine": "Ташкент, Чиланзар-3, дом 80"
     },
     "contactMapFormArea": {
       "requestSubtitle": "Сделайте специальный запрос",
